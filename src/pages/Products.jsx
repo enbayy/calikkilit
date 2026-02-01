@@ -744,6 +744,64 @@ function Products() {
       return '/462_sikistirmalikilit.jpg'
     }
     
+    // Sıkıştırmalı Kilit ürünleri için özel resim mapping (077, 177, 377, 477, 270, 072, 070, 170)
+    if (code && (itemName.includes('Sıkıştırmalı Kilit') || itemName.includes('Fonksiyonel Kilit') || itemName.includes('Kaldır-Çevir'))) {
+      // 270 > Sıkıştırmalı Kilit 2 için özel kontrol
+      if (code === '270' && itemName.includes('Sıkıştırmalı Kilit 2')) {
+        return '/sikistirmalikilit/270sikistirmalikilit2.jpg'
+      }
+      
+      const sikistirmaliKilitImageMap = {
+        '077': '/sikistirmalikilit/077sikistirmalikilit.jpg',
+        '177': '/sikistirmalikilit/177sikistirmalikilit.jpg',
+        '377': '/sikistirmalikilit/377sikistirmalikilit.jpg',
+        '477': '/sikistirmalikilit/477sikistirmalikilit.jpg',
+        '270': '/sikistirmalikilit/270sikistirmalikilit.jpeg',
+        '072': '/sikistirmalikilit/072sikistirmalikilit.jpg',
+        '070': '/sikistirmalikilit/070sikistirmalikilit.jpg',
+        '170': '/sikistirmalikilit/170sikistirmalikilit.jpg',
+      }
+      
+      if (sikistirmaliKilitImageMap[code]) {
+        return sikistirmaliKilitImageMap[code]
+      }
+    }
+    
+    // Sürgü Kilit ürünleri için özel resim mapping
+    if (code && itemName.includes('Sürgü Kilit')) {
+      const surguKilitImageMap = {
+        '071': '/surgukilit/071surgukilit.jpg',
+        '171': '/surgukilit/171surgukilit.jpg',
+        '271': '/surgukilit/271surgukilit.jpg',
+        '371': '/surgukilit/371surgukilit.jpg',
+        '471': '/surgukilit/471surgukilit.jpg',
+        '571': '/surgukilit/571surgukilit.jpg',
+        '671': '/surgukilit/671surgukilit.jpg',
+      }
+      
+      if (surguKilitImageMap[code]) {
+        return surguKilitImageMap[code]
+      }
+    }
+    
+    // Diğer Ürünler için özel resim mapping
+    if (code && (itemName.includes('Perde Sacı Kilidi') || itemName.includes('Allen Göbekli Pano Kilidi') || itemName.includes('Kancalı Kilit') || itemName.includes('Elektronik Kancalı Kilit') || itemName.includes('Acil Durum Durdurma Butonu') || itemName.includes('Mini Butonlu Kilit'))) {
+      const digerUrunImageMap = {
+        '073': '/cu-digerurunler/073perdesacikilit.jpg',
+        '075': '/cu-digerurunler/075allengobekli.jpg',
+        '176': '/cu-digerurunler/176kancalikilit.png',
+        '2800': '/cu-digerurunler/2800kancalikilit.jpg',
+        '2810': '/cu-digerurunler/2810kancalikilitbuyuk.jpg',
+        '3331': '/cu-digerurunler/3331elektronikkancalikilit.jpg',
+        '3501': '/cu-digerurunler/3501acildurum.jpg',
+        '466': '/cu-digerurunler/466minibutonlu.jpg',
+      }
+      
+      if (digerUrunImageMap[code]) {
+        return digerUrunImageMap[code]
+      }
+    }
+    
     // Ürün bazlı özel mapping
     const imageMap = {
       'ALÜMİNYUM GÖVDELİ DİŞLİ POMPALAR': '/aligodi.png',

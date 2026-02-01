@@ -550,6 +550,9 @@ function SectionProducts() {
       't-kollu-kabin-kilitleri': 'T Kollu Kabin Kilitleri',
       'kilima-santral-urunleri': 'KİLİMA SANTRAL ÜRÜNLERİ',
       'cesitli-urunler': 'ÇEŞİTLİ ÜRÜNLER',
+      'sikistirmali-kilitler': 'Sıkıştırmalı Kilitler',
+      'surgu-kilitler': 'Sürgü Kilitler',
+      'diger-urunler': 'Diğer Ürünler',
       'diller-anahtarlar-cubuk-ve-lamalar': 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR',
       'ceyrek-donuslu-kilitler': 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
       'silindirli-kilitler': 'SİLİNDİRLİ KİLİTLER',
@@ -594,6 +597,45 @@ function SectionProducts() {
         '462 > Sıkıştırmalı Kilit',
       ]
     }
+    // Sıkıştırmalı Kilitler için özel ürün listesi
+    if (sectionTitle === 'Sıkıştırmalı Kilitler') {
+      return [
+        '077 > Sıkıştırmalı Kilit',
+        '177 > Sıkıştırmalı Kilit',
+        '377 > Sıkıştırmalı Kilit',
+        '477 > Sıkıştırmalı Kilit',
+        '072 > Fonksiyonel Kilit',
+        '070 > Kaldır-Çevir',
+        '170 > Kaldır-Çevir',
+        '270 > Sıkıştırmalı Kilit',
+        '270 > Sıkıştırmalı Kilit 2',
+      ]
+    }
+    // Sürgü Kilitler için özel ürün listesi
+    if (sectionTitle === 'Sürgü Kilitler') {
+      return [
+        '071 > Sürgü Kilit',
+        '171 > Mini Sürgü Kilit',
+        '271 > Sürgü Kilit',
+        '371 > Sürgü Kilit',
+        '471 > Mini Sürgü Kilit',
+        '571 > Fişeli Sürgü Kilit',
+        '671 > Fişeli Sürgü Kilit',
+      ]
+    }
+    // Diğer Ürünler için özel ürün listesi
+    if (sectionTitle === 'Diğer Ürünler') {
+      return [
+        '073 > Perde Sacı Kilidi',
+        '075 > Allen Göbekli Pano Kilidi',
+        '176 > Kancalı Kilit',
+        '2800 > Kancalı Kilit',
+        '2810 > Kancalı Kilit (Büyük)',
+        '3331 > Elektronik Kancalı Kilit',
+        '3501 > Acil Durum Durdurma Butonu',
+        '466 > Mini Butonlu Kilit',
+      ]
+    }
     for (const group of catalogGroups) {
       for (const section of group.sections) {
         if (section.title === sectionTitle) {
@@ -612,6 +654,9 @@ function SectionProducts() {
     'Kabin Kilitleri': '/trafovekabinkilitleri.png',
     'KİLİMA SANTRAL ÜRÜNLERİ': '/klimasantralurunleri.png',
     'ÇEŞİTLİ ÜRÜNLER': '/cesitliurunler.jpg',
+    'Sıkıştırmalı Kilitler': '/cesitliurunler.jpg',
+    'Sürgü Kilitler': '/cesitliurunler.jpg',
+    'Diğer Ürünler': '/cesitliurunler.jpg',
     'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR': '/dilleranahtarlarcubuklarve.png',
     'ÇEYREK DÖNÜŞLÜ KİLİTLER': '/ceyrekdonuslukilitler.png',
     'SİLİNDİRLİ KİLİTLER': '/silindirlikilitler.png',
@@ -750,6 +795,73 @@ function SectionProducts() {
       if (kolluKilitImageMap[code]) {
         return kolluKilitImageMap[code]
       }
+    }
+    
+    // Sıkıştırmalı Kilit ürünleri için özel resim mapping
+    if (code && (itemName.includes('Sıkıştırmalı Kilit') || itemName.includes('Fonksiyonel Kilit') || itemName.includes('Kaldır-Çevir'))) {
+      // 270 > Sıkıştırmalı Kilit 2 için özel kontrol
+      if (code === '270' && itemName.includes('Sıkıştırmalı Kilit 2')) {
+        return '/sikistirmalikilit/270sikistirmalikilit2.jpg'
+      }
+      
+      const sikistirmaliKilitImageMap = {
+        '077': '/sikistirmalikilit/077sikistirmalikilit.jpg',
+        '177': '/sikistirmalikilit/177sikistirmalikilit.jpg',
+        '377': '/sikistirmalikilit/377sikistirmalikilit.jpg',
+        '477': '/sikistirmalikilit/477sikistirmalikilit.jpg',
+        '270': '/sikistirmalikilit/270sikistirmalikilit.jpeg',
+        '072': '/sikistirmalikilit/072sikistirmalikilit.jpg',
+        '070': '/sikistirmalikilit/070sikistirmalikilit.jpg',
+        '170': '/sikistirmalikilit/170sikistirmalikilit.jpg',
+      }
+      
+      if (sikistirmaliKilitImageMap[code]) {
+        return sikistirmaliKilitImageMap[code]
+      }
+      
+      // Kod bulunamazsa genel resim
+      return '/cesitliurunler.jpg'
+    }
+    
+    // Sürgü Kilit ürünleri için özel resim mapping
+    if (code && itemName.includes('Sürgü Kilit')) {
+      const surguKilitImageMap = {
+        '071': '/surgukilit/071surgukilit.jpg',
+        '171': '/surgukilit/171surgukilit.jpg',
+        '271': '/surgukilit/271surgukilit.jpg',
+        '371': '/surgukilit/371surgukilit.jpg',
+        '471': '/surgukilit/471surgukilit.jpg',
+        '571': '/surgukilit/571surgukilit.jpg',
+        '671': '/surgukilit/671surgukilit.jpg',
+      }
+      
+      if (surguKilitImageMap[code]) {
+        return surguKilitImageMap[code]
+      }
+      
+      // Kod bulunamazsa genel resim
+      return '/cesitliurunler.jpg'
+    }
+    
+    // Diğer Ürünler için özel resim mapping
+    if (code && (itemName.includes('Perde Sacı Kilidi') || itemName.includes('Allen Göbekli Pano Kilidi') || itemName.includes('Kancalı Kilit') || itemName.includes('Elektronik Kancalı Kilit') || itemName.includes('Acil Durum Durdurma Butonu') || itemName.includes('Mini Butonlu Kilit'))) {
+      const digerUrunImageMap = {
+        '073': '/cu-digerurunler/073perdesacikilit.jpg',
+        '075': '/cu-digerurunler/075allengobekli.jpg',
+        '176': '/cu-digerurunler/176kancalikilit.png',
+        '2800': '/cu-digerurunler/2800kancalikilit.jpg',
+        '2810': '/cu-digerurunler/2810kancalikilitbuyuk.jpg',
+        '3331': '/cu-digerurunler/3331elektronikkancalikilit.jpg',
+        '3501': '/cu-digerurunler/3501acildurum.jpg',
+        '466': '/cu-digerurunler/466minibutonlu.jpg',
+      }
+      
+      if (digerUrunImageMap[code]) {
+        return digerUrunImageMap[code]
+      }
+      
+      // Kod bulunamazsa genel resim
+      return '/cesitliurunler.jpg'
     }
     
     // Ürün bazlı özel mapping
@@ -1008,6 +1120,64 @@ function SectionProducts() {
               img = '/078_profilbaglantıparcasi.jpg'
             } else if (sectionTitle === 'KİLİMA SANTRAL ÜRÜNLERİ' && item.includes('462 > Sıkıştırmalı Kilit')) {
               img = '/462_sikistirmalikilit.jpg'
+            } else if (sectionTitle === 'Sıkıştırmalı Kilitler') {
+              // Sıkıştırmalı Kilitler section'ı için özel resim mapping
+              const code = item.match(/^(\d+)\s*>/)?.[1]
+              if (code) {
+                // 270 > Sıkıştırmalı Kilit 2 için özel kontrol
+                if (code === '270' && item.includes('Sıkıştırmalı Kilit 2')) {
+                  img = '/sikistirmalikilit/270sikistirmalikilit2.jpg'
+                } else {
+                  const sikistirmaliKilitImageMap = {
+                    '077': '/sikistirmalikilit/077sikistirmalikilit.jpg',
+                    '177': '/sikistirmalikilit/177sikistirmalikilit.jpg',
+                    '377': '/sikistirmalikilit/377sikistirmalikilit.jpg',
+                    '477': '/sikistirmalikilit/477sikistirmalikilit.jpg',
+                    '270': '/sikistirmalikilit/270sikistirmalikilit.jpeg',
+                    '072': '/sikistirmalikilit/072sikistirmalikilit.jpg',
+                    '070': '/sikistirmalikilit/070sikistirmalikilit.jpg',
+                    '170': '/sikistirmalikilit/170sikistirmalikilit.jpg',
+                  }
+                  img = sikistirmaliKilitImageMap[code] || '/cesitliurunler.jpg'
+                }
+              } else {
+                img = '/cesitliurunler.jpg'
+              }
+            } else if (sectionTitle === 'Sürgü Kilitler') {
+              // Sürgü Kilitler section'ı için özel resim mapping
+              const code = item.match(/^(\d+)\s*>/)?.[1]
+              if (code) {
+                const surguKilitImageMap = {
+                  '071': '/surgukilit/071surgukilit.jpg',
+                  '171': '/surgukilit/171surgukilit.jpg',
+                  '271': '/surgukilit/271surgukilit.jpg',
+                  '371': '/surgukilit/371surgukilit.jpg',
+                  '471': '/surgukilit/471surgukilit.jpg',
+                  '571': '/surgukilit/571surgukilit.jpg',
+                  '671': '/surgukilit/671surgukilit.jpg',
+                }
+                img = surguKilitImageMap[code] || '/cesitliurunler.jpg'
+              } else {
+                img = '/cesitliurunler.jpg'
+              }
+            } else if (sectionTitle === 'Diğer Ürünler') {
+              // Diğer Ürünler section'ı için özel resim mapping
+              const code = item.match(/^(\d+)\s*>/)?.[1]
+              if (code) {
+                const digerUrunImageMap = {
+                  '073': '/cu-digerurunler/073perdesacikilit.jpg',
+                  '075': '/cu-digerurunler/075allengobekli.jpg',
+                  '176': '/cu-digerurunler/176kancalikilit.png',
+                  '2800': '/cu-digerurunler/2800kancalikilit.jpg',
+                  '2810': '/cu-digerurunler/2810kancalikilitbuyuk.jpg',
+                  '3331': '/cu-digerurunler/3331elektronikkancalikilit.jpg',
+                  '3501': '/cu-digerurunler/3501acildurum.jpg',
+                  '466': '/cu-digerurunler/466minibutonlu.jpg',
+                }
+                img = digerUrunImageMap[code] || '/cesitliurunler.jpg'
+              } else {
+                img = '/cesitliurunler.jpg'
+              }
             }
             const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
             // Ürün adından sayıyı çıkar (örn: "001 > Kollu Kilit" -> code: "001", name: "Kollu Kilit")
@@ -1017,19 +1187,29 @@ function SectionProducts() {
             
             // TRAFO VE KABİN KİLİTLERİ için özel kontrol - "Kabin Kilitleri" ve "T Kollu Kabin Kilitleri" section sayfasına yönlendir
             const isSubSection = sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' && (item === 'Kabin Kilitleri' || item === 'T Kollu Kabin Kilitleri')
+            // ÇEŞİTLİ ÜRÜNLER için özel kontrol - "Sıkıştırmalı Kilitler", "Sürgü Kilitler" ve "Diğer Ürünler" section sayfasına yönlendir
+            const isSikistirmaliKilitler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Sıkıştırmalı Kilitler'
+            const isSurguKilitler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Sürgü Kilitler'
+            const isDigerUrunler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Diğer Ürünler'
             const sectionSlugMap = {
               'Kabin Kilitleri': 'kabin-kilitleri',
               'T Kollu Kabin Kilitleri': 't-kollu-kabin-kilitleri',
+              'Sıkıştırmalı Kilitler': 'sikistirmali-kilitler',
+              'Sürgü Kilitler': 'surgu-kilitler',
+              'Diğer Ürünler': 'diger-urunler',
             }
-            const sectionSlug = isSubSection ? sectionSlugMap[item] : null
+            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler) ? sectionSlugMap[item] : null
             
             // Alt section'lar için resim belirleme
             const getSubSectionImage = (sectionName) => {
               const subSectionImageMap = {
                 'Kabin Kilitleri': '/kabinkilitleri.jpg',
                 'T Kollu Kabin Kilitleri': '/t_kollu_kabinkilitleri.jpg',
+                'Sıkıştırmalı Kilitler': '/cesitliurunler.jpg',
+                'Sürgü Kilitler': '/cesitliurunler.jpg',
+                'Diğer Ürünler': '/cesitliurunler.jpg',
               }
-              return subSectionImageMap[sectionName] || '/trafovekabinkilitleri.png'
+              return subSectionImageMap[sectionName] || (sectionName === 'Sıkıştırmalı Kilitler' || sectionName === 'Sürgü Kilitler' || sectionName === 'Diğer Ürünler' ? '/cesitliurunler.jpg' : '/trafovekabinkilitleri.png')
             }
             
             return (
@@ -1041,7 +1221,7 @@ function SectionProducts() {
               >
                 {/* Ürün Görseli */}
                 <div className="relative flex h-80 items-center justify-center overflow-hidden bg-white p-6">
-                  {isSubSection ? (
+                  {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler) ? (
                     <img 
                       src={getSubSectionImage(item)} 
                       alt={item} 
@@ -1067,11 +1247,11 @@ function SectionProducts() {
                         </span>
                       )}
                       <h3 className="line-clamp-2 flex-1 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#16a34a]">
-                        {isSubSection ? item : productName}
+                        {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler) ? item : productName}
                       </h3>
                     </div>
                     {/* ÇEŞİTLİ ÜRÜNLER, TRAFO VE KABİN KİLİTLERİ, DİLLER ve ÇEYREK DÖNÜŞLÜ KİLİTLER için Ürün Grup Çeşitleri yazısı */}
-                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && (
+                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && (
                       <p className="mb-3 text-xs text-slate-500">Ürün Grup Çeşitleri</p>
                     )}
                   </div>
