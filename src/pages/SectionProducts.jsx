@@ -653,10 +653,10 @@ function SectionProducts() {
     'TRAFO VE KABİN KİLİTLERİ': '/trafovekabinkilitleri.png',
     'Kabin Kilitleri': '/trafovekabinkilitleri.png',
     'KİLİMA SANTRAL ÜRÜNLERİ': '/klimasantralurunleri.png',
-    'ÇEŞİTLİ ÜRÜNLER': '/cesitliurunler.jpg',
-    'Sıkıştırmalı Kilitler': '/cesitliurunler.jpg',
-    'Sürgü Kilitler': '/cesitliurunler.jpg',
-    'Diğer Ürünler': '/cesitliurunler.jpg',
+    'ÇEŞİTLİ ÜRÜNLER': '/cesitliurunler/cucesitli.jpg',
+    'Sıkıştırmalı Kilitler': '/cesitliurunler/cu-sikistirmali.jpg',
+    'Sürgü Kilitler': '/cesitliurunler/cusurgulu.jpg',
+    'Diğer Ürünler': '/cesitliurunler/cucesitli.jpg',
     'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR': '/dilleranahtarlarcubuklarve.png',
     'ÇEYREK DÖNÜŞLÜ KİLİTLER': '/ceyrekdonuslukilitler.png',
     'SİLİNDİRLİ KİLİTLER': '/silindirlikilitler.png',
@@ -820,7 +820,7 @@ function SectionProducts() {
       }
       
       // Kod bulunamazsa genel resim
-      return '/cesitliurunler.jpg'
+      return '/cesitliurunler/cu-sikistirmali.jpg'
     }
     
     // Sürgü Kilit ürünleri için özel resim mapping
@@ -840,7 +840,7 @@ function SectionProducts() {
       }
       
       // Kod bulunamazsa genel resim
-      return '/cesitliurunler.jpg'
+      return '/cesitliurunler/cusurgulu.jpg'
     }
     
     // Diğer Ürünler için özel resim mapping
@@ -861,7 +861,7 @@ function SectionProducts() {
       }
       
       // Kod bulunamazsa genel resim
-      return '/cesitliurunler.jpg'
+      return '/cesitliurunler/cucesitli.jpg'
     }
     
     // Ürün bazlı özel mapping
@@ -1138,10 +1138,10 @@ function SectionProducts() {
                     '070': '/sikistirmalikilit/070sikistirmalikilit.jpg',
                     '170': '/sikistirmalikilit/170sikistirmalikilit.jpg',
                   }
-                  img = sikistirmaliKilitImageMap[code] || '/cesitliurunler.jpg'
+                  img = sikistirmaliKilitImageMap[code] || '/cesitliurunler/cu-sikistirmali.jpg'
                 }
               } else {
-                img = '/cesitliurunler.jpg'
+                img = '/cesitliurunler/cu-sikistirmali.jpg'
               }
             } else if (sectionTitle === 'Sürgü Kilitler') {
               // Sürgü Kilitler section'ı için özel resim mapping
@@ -1156,9 +1156,9 @@ function SectionProducts() {
                   '571': '/surgukilit/571surgukilit.jpg',
                   '671': '/surgukilit/671surgukilit.jpg',
                 }
-                img = surguKilitImageMap[code] || '/cesitliurunler.jpg'
+                img = surguKilitImageMap[code] || '/cesitliurunler/cusurgulu.jpg'
               } else {
-                img = '/cesitliurunler.jpg'
+                img = '/cesitliurunler/cusurgulu.jpg'
               }
             } else if (sectionTitle === 'Diğer Ürünler') {
               // Diğer Ürünler section'ı için özel resim mapping
@@ -1174,9 +1174,9 @@ function SectionProducts() {
                   '3501': '/cu-digerurunler/3501acildurum.jpg',
                   '466': '/cu-digerurunler/466minibutonlu.jpg',
                 }
-                img = digerUrunImageMap[code] || '/cesitliurunler.jpg'
+                img = digerUrunImageMap[code] || '/cesitliurunler/cucesitli.jpg'
               } else {
-                img = '/cesitliurunler.jpg'
+                img = '/cesitliurunler/cucesitli.jpg'
               }
             }
             const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
@@ -1205,11 +1205,11 @@ function SectionProducts() {
               const subSectionImageMap = {
                 'Kabin Kilitleri': '/kabinkilitleri.jpg',
                 'T Kollu Kabin Kilitleri': '/t_kollu_kabinkilitleri.jpg',
-                'Sıkıştırmalı Kilitler': '/cesitliurunler.jpg',
-                'Sürgü Kilitler': '/cesitliurunler.jpg',
-                'Diğer Ürünler': '/cesitliurunler.jpg',
+                'Sıkıştırmalı Kilitler': '/cesitliurunler/cu-sikistirmali.jpg',
+                'Sürgü Kilitler': '/cesitliurunler/cusurgulu.jpg',
+                'Diğer Ürünler': '/cesitliurunler/cucesitli.jpg',
               }
-              return subSectionImageMap[sectionName] || (sectionName === 'Sıkıştırmalı Kilitler' || sectionName === 'Sürgü Kilitler' || sectionName === 'Diğer Ürünler' ? '/cesitliurunler.jpg' : '/trafovekabinkilitleri.png')
+              return subSectionImageMap[sectionName] || (sectionName === 'Sıkıştırmalı Kilitler' ? '/cesitliurunler/cu-sikistirmali.jpg' : sectionName === 'Sürgü Kilitler' ? '/cesitliurunler/cusurgulu.jpg' : sectionName === 'Diğer Ürünler' ? '/cesitliurunler/cucesitli.jpg' : '/trafovekabinkilitleri.png')
             }
             
             return (

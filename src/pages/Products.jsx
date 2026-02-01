@@ -464,7 +464,7 @@ function Products() {
     'İSPANYOLET SİSTEMLİ KİLİTLER': '/ispanyoletsistemlikilitler.png',
     'TRAFO VE KABİN KİLİTLERİ': '/trafovekabinkilitleri.png',
     'KİLİMA SANTRAL ÜRÜNLERİ': '/klimasantralurunleri.png',
-    'ÇEŞİTLİ ÜRÜNLER': '/cesitliurunler.jpg',
+    'ÇEŞİTLİ ÜRÜNLER': '/cesitliurunler/cucesitli.jpg',
     'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR': '/dilleranahtarlarcubuklarve.png',
     'ÇEYREK DÖNÜŞLÜ KİLİTLER': '/ceyrekdonuslukilitler.png',
     'SİLİNDİRLİ KİLİTLER': '/silindirlikilitler.png',
