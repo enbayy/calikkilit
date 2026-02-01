@@ -554,6 +554,7 @@ function SectionProducts() {
       'surgu-kilitler': 'Sürgü Kilitler',
       'diger-urunler': 'Diğer Ürünler',
       'diller-anahtarlar-cubuk-ve-lamalar': 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR',
+      'diller': 'Diller',
       'ceyrek-donuslu-kilitler': 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
       'silindirli-kilitler': 'SİLİNDİRLİ KİLİTLER',
       'mobilya-ve-celik-esya-kilitleri': 'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ',
@@ -634,6 +635,31 @@ function SectionProducts() {
         '3331 > Elektronik Kancalı Kilit',
         '3501 > Acil Durum Durdurma Butonu',
         '466 > Mini Butonlu Kilit',
+      ]
+    }
+    // Diller için özel ürün listesi
+    if (sectionTitle === 'Diller') {
+      return [
+        'CC > Tırnaklı Diller 1',
+        'CC > Tırnaklı Diller 2',
+        'CC > Tırnaklı Diller 3',
+        'CC > Tırnaklı Diller 4',
+        'CC > Tırnaklı Diller 5',
+        'CC > Tırnaksız Diller 1',
+        'CC > Tırnaksız Diller 2',
+        'CC > Tırnaksız Diller 3',
+        'CC > Tırnaksız Diller 4',
+        'CC > Tırnaksız Diller 5',
+        'CC > Paslanmaz Çelik Diller (Tırnaklı) 1',
+        'CC > Paslanmaz Çelik Diller (Tırnaksız)',
+        'CC > Paslanmaz Çelik Diller (Tırnaklı) 2',
+        'CC > Diğer Diller 1',
+        'CC > Diğer Diller 2',
+        'CC > Diğer Diller 3',
+        'CC > Diğer Diller 4',
+        '320.02.180 > Geçme Dil Aparatı',
+        '30403485 > Kancalı Diller',
+        '30403499 > İspanyolet Dil Adaptörü',
       ]
     }
     for (const group of catalogGroups) {
@@ -843,6 +869,46 @@ function SectionProducts() {
       return '/cesitliurunler/cusurgulu.jpg'
     }
     
+    // Diller için özel resim mapping (CC kodlu ve diğer diller)
+    if (itemName.startsWith('CC >') || itemName.includes('Tırnaklı Diller') || itemName.includes('Tırnaksız Diller') || itemName.includes('Paslanmaz Çelik Diller') || itemName.includes('Diğer Diller')) {
+      const dillerImageMap = {
+        'CC > Tırnaklı Diller 1': '/dilleranahtarlar/diller/ccTirnakliDiller1.jpg',
+        'CC > Tırnaklı Diller 2': '/dilleranahtarlar/diller/ccTirnakliDiller2.jpg',
+        'CC > Tırnaklı Diller 3': '/dilleranahtarlar/diller/ccTirnakliDiller3.jpg',
+        'CC > Tırnaklı Diller 4': '/dilleranahtarlar/diller/ccTirnakliDiller4.jpg',
+        'CC > Tırnaklı Diller 5': '/dilleranahtarlar/diller/ccTirnakliDiller5.jpg',
+        'CC > Tırnaksız Diller 1': '/dilleranahtarlar/diller/ccTirnaksizDiller1.jpg',
+        'CC > Tırnaksız Diller 2': '/dilleranahtarlar/diller/ccTirnaksizDiller2.jpg',
+        'CC > Tırnaksız Diller 3': '/dilleranahtarlar/diller/ccTirnaksizDiller3.jpg',
+        'CC > Tırnaksız Diller 4': '/dilleranahtarlar/diller/ccTirnaksizDiller4.jpg',
+        'CC > Tırnaksız Diller 5': '/dilleranahtarlar/diller/ccTirnaksizDiller5.jpg',
+        'CC > Paslanmaz Çelik Diller (Tırnaklı) 1': '/dilleranahtarlar/diller/ccPaslanmazCelikDillerTirnakli.jpg',
+        'CC > Paslanmaz Çelik Diller (Tırnaklı) 2': '/dilleranahtarlar/diller/ccPaslanmazCelikDillerTirnakli2.jpg',
+        'CC > Paslanmaz Çelik Diller (Tırnaksız)': '/dilleranahtarlar/diller/ccPaslanmazCelikDillerTirnaksiz.jpg',
+        'CC > Diğer Diller 1': '/dilleranahtarlar/diller/ccDigerDiller1.jpg',
+        'CC > Diğer Diller 2': '/dilleranahtarlar/diller/ccDigerDiller2.jpg',
+        'CC > Diğer Diller 3': '/dilleranahtarlar/diller/ccDigerDiller3.jpg',
+        'CC > Diğer Diller 4': '/dilleranahtarlar/diller/ccDigerDiller4.jpg',
+      }
+      
+      if (dillerImageMap[itemName]) {
+        return dillerImageMap[itemName]
+      }
+    }
+    
+    // Diğer diller için özel resim mapping (320.02.180, 30403485, 30403499)
+    if (itemName.includes('Geçme Dil Aparatı') || itemName.includes('Kancalı Diller') || itemName.includes('İspanyolet Dil Adaptörü')) {
+      if (itemName.includes('Geçme Dil Aparatı')) {
+        return '/dilleranahtarlar/diller/gecmedil_aparati.jpg'
+      }
+      if (itemName.includes('Kancalı Diller')) {
+        return '/dilleranahtarlar/diller/kancali_dil.jpg'
+      }
+      if (itemName.includes('İspanyolet Dil Adaptörü')) {
+        return '/dilleranahtarlar/diller/dil_ispanyolet_adaptorleri.jpg'
+      }
+    }
+    
     // Diğer Ürünler için özel resim mapping
     if (code && (itemName.includes('Perde Sacı Kilidi') || itemName.includes('Allen Göbekli Pano Kilidi') || itemName.includes('Kancalı Kilit') || itemName.includes('Elektronik Kancalı Kilit') || itemName.includes('Acil Durum Durdurma Butonu') || itemName.includes('Mini Butonlu Kilit'))) {
       const digerUrunImageMap = {
@@ -874,6 +940,13 @@ function SectionProducts() {
       'PALETLİ POMPA': '/paletli-pompa.png',
       'PİSTONLU POMPA': '/pistonlu-pompa.png',
       'TANDEM POMPALAR': '/tandem-pompalar.png',
+      // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel resimler
+      'Diller': '/dilleranahtarlar/diller.jpg',
+      'İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/ispanyoletcubuk-ve-aksesuarlari.jpg',
+      'İspanyolet Lama ve Aksesuarları': '/dilleranahtarlar/ispanyoletLama.jpg',
+      'Paslanmaz İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletcubuk.png',
+      'Paslanmaz İspanyolet Lama ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletlama.png',
+      'Anahtarlar': '/dilleranahtarlar/anahtarlar.jpg',
     }
     
     // Kategori bazlı resim atama (kollu kilitler için özel resim yoksa)
@@ -1191,14 +1264,17 @@ function SectionProducts() {
             const isSikistirmaliKilitler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Sıkıştırmalı Kilitler'
             const isSurguKilitler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Sürgü Kilitler'
             const isDigerUrunler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Diğer Ürünler'
+            // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel kontrol - "Diller" section sayfasına yönlendir
+            const isDiller = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Diller'
             const sectionSlugMap = {
               'Kabin Kilitleri': 'kabin-kilitleri',
               'T Kollu Kabin Kilitleri': 't-kollu-kabin-kilitleri',
               'Sıkıştırmalı Kilitler': 'sikistirmali-kilitler',
               'Sürgü Kilitler': 'surgu-kilitler',
               'Diğer Ürünler': 'diger-urunler',
+              'Diller': 'diller',
             }
-            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler) ? sectionSlugMap[item] : null
+            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller) ? sectionSlugMap[item] : null
             
             // Alt section'lar için resim belirleme
             const getSubSectionImage = (sectionName) => {
@@ -1208,6 +1284,13 @@ function SectionProducts() {
                 'Sıkıştırmalı Kilitler': '/cesitliurunler/cu-sikistirmali.jpg',
                 'Sürgü Kilitler': '/cesitliurunler/cusurgulu.jpg',
                 'Diğer Ürünler': '/cesitliurunler/cucesitli.jpg',
+                // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel resimler
+                'Diller': '/dilleranahtarlar/diller.jpg',
+                'İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/ispanyoletcubuk-ve-aksesuarlari.jpg',
+                'İspanyolet Lama ve Aksesuarları': '/dilleranahtarlar/ispanyoletLama.jpg',
+                'Paslanmaz İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletcubuk.png',
+                'Paslanmaz İspanyolet Lama ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletlama.png',
+                'Anahtarlar': '/dilleranahtarlar/anahtarlar.jpg',
               }
               return subSectionImageMap[sectionName] || (sectionName === 'Sıkıştırmalı Kilitler' ? '/cesitliurunler/cu-sikistirmali.jpg' : sectionName === 'Sürgü Kilitler' ? '/cesitliurunler/cusurgulu.jpg' : sectionName === 'Diğer Ürünler' ? '/cesitliurunler/cucesitli.jpg' : '/trafovekabinkilitleri.png')
             }
@@ -1221,7 +1304,7 @@ function SectionProducts() {
               >
                 {/* Ürün Görseli */}
                 <div className="relative flex h-80 items-center justify-center overflow-hidden bg-white p-6">
-                  {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler) ? (
+                  {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller) ? (
                     <img 
                       src={getSubSectionImage(item)} 
                       alt={item} 
@@ -1246,12 +1329,34 @@ function SectionProducts() {
                           {productCode}
                         </span>
                       )}
+                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller) && item.startsWith('CC >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller) && productName.startsWith('CC >')) ? (
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold min-w-[2rem]">
+                          CC
+                        </span>
+                      ) : null}
+                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller) && item.startsWith('320.02.180 >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller) && productName.startsWith('320.02.180 >')) ? (
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold">
+                          320.02.180
+                        </span>
+                      ) : null}
                       <h3 className="line-clamp-2 flex-1 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#16a34a]">
-                        {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler) ? item : productName}
+                        {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller) ? (
+                          item.startsWith('CC >') ? (
+                            item.replace('CC >', '').trim()
+                          ) : item.startsWith('320.02.180 >') ? (
+                            item.replace('320.02.180 >', '').trim()
+                          ) : item
+                        ) : productName.startsWith('CC >') ? (
+                          productName.replace('CC >', '').trim()
+                        ) : productName.startsWith('320.02.180 >') ? (
+                          productName.replace('320.02.180 >', '').trim()
+                        ) : (
+                          productName
+                        )}
                       </h3>
                     </div>
                     {/* ÇEŞİTLİ ÜRÜNLER, TRAFO VE KABİN KİLİTLERİ, DİLLER ve ÇEYREK DÖNÜŞLÜ KİLİTLER için Ürün Grup Çeşitleri yazısı */}
-                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && (
+                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && !isDiller && (
                       <p className="mb-3 text-xs text-slate-500">Ürün Grup Çeşitleri</p>
                     )}
                   </div>

@@ -1693,6 +1693,480 @@ const productDetails = {
       { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
     ],
   },
+  'CC > Tırnaklı Diller 1': {
+    code: 'CC',
+    name: 'Tırnaklı Diller 1',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaklidil/tirnaklidilurun1.png',
+    versions: [
+      { stokKodu: '30403033Y', CC: '30', CH: '0', CL: '45', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '21', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30403439Y', CC: '17', CH: '1', CL: '45', LH18: '19', LH18_5: '19.5', LH20: '21', LH21: '22', LH30: '31', LH32: '33', LH35: '36', LH40: '41', LH50: '51', LH60: '61' },
+      { stokKodu: '30403159Y', CC: '35', CH: '2', CL: '45', LH18: '20', LH18_5: '20.5', LH20: '22', LH21: '23', LH30: '32', LH32: '34', LH35: '37', LH40: '42', LH50: '52', LH60: '62' },
+      { stokKodu: '30403063Y', CC: '31', CH: '3', CL: '45', LH18: '21', LH18_5: '21.5', LH20: '23', LH21: '24', LH30: '33', LH32: '35', LH35: '38', LH40: '43', LH50: '53', LH60: '63' },
+      { stokKodu: '30403149Y', CC: '33', CH: '4', CL: '45', LH18: '22', LH18_5: '22.5', LH20: '24', LH21: '25', LH30: '34', LH32: '37', LH35: '39', LH40: '44', LH50: '54', LH60: '64' },
+      { stokKodu: '30403160Y', CC: '34', CH: '6', CL: '45', LH18: '24', LH18_5: '24.5', LH20: '26', LH21: '27', LH30: '36', LH32: '38', LH35: '41', LH40: '46', LH50: '56', LH60: '66' },
+      { stokKodu: '30403161Y', CC: '36', CH: '8', CL: '45', LH18: '26', LH18_5: '26.5', LH20: '28', LH21: '29', LH30: '38', LH32: '40', LH35: '43', LH40: '48', LH50: '58', LH60: '68' },
+      { stokKodu: '30403162Y', CC: '47', CH: '10', CL: '45', LH18: '28', LH18_5: '28.5', LH20: '30', LH21: '31', LH30: '40', LH32: '42', LH35: '45', LH40: '50', LH50: '60', LH60: '70' },
+      { stokKodu: '30403045Y', CC: '44', CH: '12', CL: '45', LH18: '30', LH18_5: '30.5', LH20: '32', LH21: '33', LH30: '42', LH32: '44', LH35: '47', LH40: '42', LH50: '62', LH60: '72' },
+      { stokKodu: '30403163Y', CC: '48', CH: '14', CL: '45', LH18: '32', LH18_5: '32.5', LH20: '34', LH21: '35', LH30: '44', LH32: '46', LH35: '49', LH40: '54', LH50: '64', LH60: '74' },
+      { stokKodu: '30403151Y', CC: '49', CH: '16', CL: '45', LH18: '34', LH18_5: '34.5', LH20: '36', LH21: '37', LH30: '46', LH32: '48', LH35: '51', LH40: '56', LH50: '66', LH60: '76' },
+      { stokKodu: '30403165Y', CC: '55', CH: '18', CL: '45', LH18: '36', LH18_5: '36.5', LH20: '38', LH21: '39', LH30: '48', LH32: '50', LH35: '53', LH40: '58', LH50: '68', LH60: '78' },
+      { stokKodu: '30403166Y', CC: '56', CH: '20', CL: '45', LH18: '38', LH18_5: '38.5', LH20: '40', LH21: '41', LH30: '50', LH32: '52', LH35: '55', LH40: '60', LH50: '70', LH60: '80' },
+      { stokKodu: '30403167Y', CC: '57', CH: '22', CL: '45', LH18: '40', LH18_5: '40.5', LH20: '42', LH21: '43', LH30: '52', LH32: '54', LH35: '57', LH40: '62', LH50: '72', LH60: '82' },
+      { stokKodu: '30403168Y', CC: '58', CH: '24', CL: '45', LH18: '42', LH18_5: '42.5', LH20: '44', LH21: '45', LH30: '54', LH32: '56', LH35: '59', LH40: '64', LH50: '74', LH60: '84' },
+      { stokKodu: '30403169Y', CC: '37', CH: '-2', CL: '45', LH18: '16', LH18_5: '16.5', LH20: '18', LH21: '19', LH30: '28', LH32: '30', LH35: '33', LH40: '38', LH50: '48', LH60: '58' },
+      { stokKodu: '30403170Y', CC: '38', CH: '-4', CL: '45', LH18: '14', LH18_5: '14.5', LH20: '16', LH21: '17', LH30: '26', LH32: '28', LH35: '31', LH40: '36', LH50: '46', LH60: '56' },
+      { stokKodu: '30403171Y', CC: '39', CH: '-6', CL: '45', LH18: '12', LH18_5: '12.5', LH20: '14', LH21: '15', LH30: '24', LH32: '26', LH35: '29', LH40: '34', LH50: '44', LH60: '54' },
+      { stokKodu: '30403172Y', CC: '59', CH: '-8', CL: '45', LH18: '10', LH18_5: '10.5', LH20: '12', LH21: '13', LH30: '22', LH32: '24', LH35: '27', LH40: '32', LH50: '42', LH60: '52' },
+      { stokKodu: '30403173Y', CC: '60', CH: '-10', CL: '45', LH18: '8', LH18_5: '8.5', LH20: '10', LH21: '11', LH30: '20', LH32: '22', LH35: '25', LH40: '30', LH50: '40', LH60: '50' },
+      { stokKodu: '30403174Y', CC: '61', CH: '-12', CL: '45', LH18: '6', LH18_5: '6.5', LH20: '8', LH21: '9', LH30: '18', LH32: '20', LH35: '23', LH40: '28', LH50: '38', LH60: '48' },
+      { stokKodu: '30403175Y', CC: '62', CH: '-14', CL: '45', LH18: '4', LH18_5: '4.5', LH20: '6', LH21: '7', LH30: '16', LH32: '18', LH35: '21', LH40: '26', LH50: '36', LH60: '46' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaklı Diller 2': {
+    code: 'CC',
+    name: 'Tırnaklı Diller 2',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaklidil/tirnaklidilurun2.png',
+    versions: [
+      { stokKodu: '30403187Y', CC: '11', CH: '-2', CL: '35', LH18: '16', LH18_5: '16.5', LH20: '18', LH21: '19', LH30: '28', LH32: '30', LH35: '33', LH40: '38', LH50: '48', LH60: '58' },
+      { stokKodu: '30403185Y', CC: '12', CH: '0', CL: '35', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '21', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30403186Y', CC: '13', CH: '2', CL: '35', LH18: '20', LH18_5: '20.5', LH20: '22', LH21: '23', LH30: '32', LH32: '34', LH35: '37', LH40: '42', LH50: '52', LH60: '62' },
+      { stokKodu: '30403188Y', CC: '14', CH: '4', CL: '35', LH18: '22', LH18_5: '22.5', LH20: '24', LH21: '25', LH30: '34', LH32: '36', LH35: '39', LH40: '44', LH50: '54', LH60: '64' },
+      { stokKodu: '30403470Y', CC: '15', CH: '6', CL: '35', LH18: '24', LH18_5: '24.5', LH20: '26', LH21: '27', LH30: '36', LH32: '38', LH35: '41', LH40: '46', LH50: '56', LH60: '66' },
+      { stokKodu: '30403471Y', CC: '16', CH: '7', CL: '35', LH18: '25', LH18_5: '25.5', LH20: '27', LH21: '28', LH30: '37', LH32: '39', LH35: '42', LH40: '47', LH50: '57', LH60: '67' },
+      { stokKodu: '30403189Y', CC: '23', CH: '10', CL: '35', LH18: '28', LH18_5: '28.5', LH20: '30', LH21: '31', LH30: '40', LH32: '42', LH35: '45', LH40: '50', LH50: '60', LH60: '70' },
+      { stokKodu: '30403046Y', CC: '52', CH: '26', CL: '35', LH18: '44', LH18_5: '44.5', LH20: '46', LH21: '47', LH30: '56', LH32: '58', LH35: '61', LH40: '66', LH50: '76', LH60: '86' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaklı Diller 3': {
+    code: 'CC',
+    name: 'Tırnaklı Diller 3',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaklidil/tirnaklidilurun3.png',
+    versions: [
+      { stokKodu: '30403031Y', CC: '10', CH: '0', CL: '29', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '21', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30403032Y', CC: '20', CH: '0', CL: '38', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '21', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30403036Y', CC: '70', CH: '0', CL: '66', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '21', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30403034Y', CC: '40', CH: '0', CL: '51', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '21', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30403037Y', CC: '21', CH: '3', CL: '38', LH18: '21', LH18_5: '21.5', LH20: '23', LH21: '24', LH30: '33', LH32: '35', LH35: '38', LH40: '43', LH50: '53', LH60: '63' },
+      { stokKodu: '30403038Y', CC: '41', CH: '3', CL: '51', LH18: '21', LH18_5: '21.5', LH20: '23', LH21: '24', LH30: '33', LH32: '35', LH35: '38', LH40: '43', LH50: '53', LH60: '63' },
+      { stokKodu: '30403129Y', CC: '22', CH: '6', CL: '37', LH18: '24', LH18_5: '24.5', LH20: '26', LH21: '27', LH30: '36', LH32: '38', LH35: '41', LH40: '46', LH50: '56', LH60: '66' },
+      { stokKodu: '30403039Y', CC: '32', CH: '7', CL: '44', LH18: '25', LH18_5: '25.5', LH20: '27', LH21: '28', LH30: '37', LH32: '39', LH35: '42', LH40: '47', LH50: '57', LH60: '67' },
+      { stokKodu: '30403040Y', CC: '42', CH: '7', CL: '49', LH18: '25', LH18_5: '25.5', LH20: '27', LH21: '28', LH30: '37', LH32: '39', LH35: '42', LH40: '47', LH50: '57', LH60: '67' },
+      { stokKodu: '30403043Y', CC: '43', CH: '10', CL: '48', LH18: '28', LH18_5: '28.5', LH20: '30', LH21: '31', LH30: '40', LH32: '42', LH35: '45', LH40: '50', LH50: '60', LH60: '70' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaklı Diller 4': {
+    code: 'CC',
+    name: 'Tırnaklı Diller 4',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaklidil/tirnaklidilurun4.png',
+    versions: [
+      { stokKodu: '30403140Y', CC: '03', CH: '0', CL: '51', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30403522Y', CC: '06', CH: '0', CL: '45', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30403047Y', CC: '01', CH: '7', CL: '49', LH18: '25', LH18_5: '25.5', LH20: '27', LH21: '', LH30: '37', LH32: '39', LH35: '42', LH40: '47', LH50: '57', LH60: '67' },
+      { stokKodu: '30403524Y', CC: '07', CH: '2', CL: '45', LH18: '20', LH18_5: '20.5', LH20: '22', LH21: '', LH30: '32', LH32: '34', LH35: '37', LH40: '42', LH50: '52', LH60: '62' },
+      { stokKodu: '30403526Y', CC: '08', CH: '3', CL: '45', LH18: '21', LH18_5: '21.5', LH20: '23', LH21: '', LH30: '33', LH32: '35', LH35: '38', LH40: '43', LH50: '53', LH60: '63' },
+      { stokKodu: '30403528Y', CC: '09', CH: '4', CL: '45', LH18: '22', LH18_5: '22.5', LH20: '24', LH21: '', LH30: '34', LH32: '36', LH35: '39', LH40: '44', LH50: '54', LH60: '64' },
+      { stokKodu: '30403530Y', CC: '100', CH: '5', CL: '45', LH18: '23', LH18_5: '23.5', LH20: '25', LH21: '', LH30: '35', LH32: '37', LH35: '40', LH40: '45', LH50: '55', LH60: '65' },
+      { stokKodu: '30403532Y', CC: '101', CH: '6', CL: '45', LH18: '24', LH18_5: '24.5', LH20: '26', LH21: '', LH30: '36', LH32: '38', LH35: '41', LH40: '46', LH50: '56', LH60: '66' },
+      { stokKodu: '30403534Y', CC: '102', CH: '7', CL: '45', LH18: '25', LH18_5: '25.5', LH20: '27', LH21: '', LH30: '37', LH32: '39', LH35: '42', LH40: '47', LH50: '57', LH60: '67' },
+      { stokKodu: '30403147Y', CC: '02', CH: '12', CL: '46', LH18: '30', LH18_5: '30.5', LH20: '32', LH21: '', LH30: '42', LH32: '44', LH35: '47', LH40: '52', LH50: '62', LH60: '72' },
+      { stokKodu: '30403536Y', CC: '103', CH: '14', CL: '45', LH18: '32', LH18_5: '32.5', LH20: '34', LH21: '', LH30: '44', LH32: '46', LH35: '49', LH40: '54', LH50: '64', LH60: '74' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaklı Diller 5': {
+    code: 'CC',
+    name: 'Tırnaklı Diller 5',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaklidil/tirnaklidilurun5.png',
+    versions: [
+      { stokKodu: '30402004Y', CC: '90', CH: '0', CL: '35', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '21', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30402011Y', CC: '93', CH: '0', CL: '25', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '21', LH30: '30', LH32: '32', LH35: '35', LH40: '40', LH50: '50', LH60: '60' },
+      { stokKodu: '30402005Y', CC: '91', CH: '6', CL: '35', LH18: '24', LH18_5: '24.5', LH20: '26', LH21: '27', LH30: '36', LH32: '38', LH35: '41', LH40: '46', LH50: '56', LH60: '66' },
+      { stokKodu: '30402008Y', CC: '92', CH: '4', CL: '45', LH18: '22', LH18_5: '22.5', LH20: '24', LH21: '25', LH30: '34', LH32: '36', LH35: '39', LH40: '44', LH50: '54', LH60: '64' },
+      { stokKodu: '30402013Y', CC: '94', CH: '-4', CL: '45', LH18: '14', LH18_5: '14.5', LH20: '16', LH21: '17', LH30: '26', LH32: '28', LH35: '41', LH40: '36', LH50: '56', LH60: '66' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaksız Diller 1': {
+    code: 'CC',
+    name: 'Tırnaksız Diller 1',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaksizdil/tirnaksizdilurun1.png',
+    versions: [
+      { stokKodu: '30403117Y', CC: '30', CH: '0', CL: '45', LH14: '14', LH18_5: '18.5', LH19: '19', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403557Y', CC: '17', CH: '1', CL: '45', LH14: '15', LH18_5: '19.5', LH19: '20', LH20: '21', LH22: '23', LH25: '26', LH32: '33', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403581Y', CC: '35', CH: '2', CL: '45', LH14: '16', LH18_5: '20.5', LH19: '21', LH20: '22', LH22: '24', LH25: '27', LH32: '34', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403054Y', CC: '31', CH: '3', CL: '45', LH14: '17', LH18_5: '21.5', LH19: '22', LH20: '23', LH22: '25', LH25: '28', LH32: '35', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403197Y', CC: '33', CH: '4', CL: '45', LH14: '18', LH18_5: '22.5', LH19: '23', LH20: '24', LH22: '26', LH25: '29', LH32: '36', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403128Y', CC: '34', CH: '6', CL: '45', LH14: '20', LH18_5: '24.5', LH19: '25', LH20: '26', LH22: '29', LH25: '31', LH32: '38', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403583Y', CC: '36', CH: '8', CL: '45', LH14: '22', LH18_5: '26.5', LH19: '27', LH20: '28', LH22: '30', LH25: '33', LH32: '40', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403584Y', CC: '47', CH: '10', CL: '45', LH14: '24', LH18_5: '28.5', LH19: '29', LH20: '30', LH22: '32', LH25: '35', LH32: '42', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403123Y', CC: '44', CH: '12', CL: '45', LH14: '26', LH18_5: '30.5', LH19: '31', LH20: '32', LH22: '34', LH25: '37', LH32: '44', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403422Y', CC: '48', CH: '14', CL: '45', LH14: '28', LH18_5: '32.5', LH19: '33', LH20: '34', LH22: '36', LH25: '39', LH32: '46', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403410Y', CC: '49', CH: '16', CL: '45', LH14: '30', LH18_5: '34.5', LH19: '35', LH20: '36', LH22: '38', LH25: '41', LH32: '48', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403429Y', CC: '55', CH: '18', CL: '45', LH14: '32', LH18_5: '36.5', LH19: '37', LH20: '38', LH22: '40', LH25: '43', LH32: '50', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403585Y', CC: '56', CH: '20', CL: '45', LH14: '34', LH18_5: '38.5', LH19: '39', LH20: '40', LH22: '42', LH25: '45', LH32: '52', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403586Y', CC: '57', CH: '22', CL: '45', LH14: '36', LH18_5: '40.5', LH19: '41', LH20: '42', LH22: '44', LH25: '47', LH32: '54', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403411Y', CC: '58', CH: '24', CL: '45', LH14: '38', LH18_5: '42.5', LH19: '43', LH20: '44', LH22: '46', LH25: '49', LH32: '56', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403425Y', CC: '37', CH: '-2', CL: '45', LH14: '12', LH18_5: '16.5', LH19: '17', LH20: '18', LH22: '20', LH25: '23', LH32: '30', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403198Y', CC: '38', CH: '-4', CL: '45', LH14: '10', LH18_5: '14.5', LH19: '15', LH20: '16', LH22: '18', LH25: '21', LH32: '28', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403423Y', CC: '39', CH: '-6', CL: '45', LH14: '8', LH18_5: '12.5', LH19: '13', LH20: '14', LH22: '16', LH25: '19', LH32: '26', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403412Y', CC: '59', CH: '-8', CL: '45', LH14: '6', LH18_5: '10.5', LH19: '11', LH20: '12', LH22: '14', LH25: '17', LH32: '24', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403552Y', CC: '60', CH: '-10', CL: '45', LH14: '4', LH18_5: '8.5', LH19: '9', LH20: '10', LH22: '12', LH25: '15', LH32: '22', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403587Y', CC: '61', CH: '-12', CL: '45', LH14: '2', LH18_5: '6.5', LH19: '7', LH20: '8', LH22: '10', LH25: '13', LH32: '20', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403420Y', CC: '62', CH: '-14', CL: '45', LH14: '0', LH18_5: '4.5', LH19: '5', LH20: '6', LH22: '8', LH25: '11', LH32: '18', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaksız Diller 2': {
+    code: 'CC',
+    name: 'Tırnaksız Diller 2',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaksizdil/tirnaksizdilurun2.png',
+    versions: [
+      { stokKodu: '30403069Y', CC: '11', CH: '-2', CL: '35', LH14: '12', LH18_5: '16.5', LH19: '18', LH20: '18', LH22: '20', LH25: '23', LH32: '30', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403444Y', CC: '12', CH: '0', CL: '35', LH14: '14', LH18_5: '18.5', LH19: '20', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403519Y', CC: '13', CH: '2', CL: '35', LH14: '16', LH18_5: '20.5', LH19: '22', LH20: '22', LH22: '24', LH25: '27', LH32: '34', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403588Y', CC: '14', CH: '4', CL: '35', LH14: '18', LH18_5: '22.5', LH19: '24', LH20: '24', LH22: '26', LH25: '29', LH32: '36', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403477Y', CC: '15', CH: '6', CL: '35', LH14: '20', LH18_5: '24.5', LH19: '26', LH20: '26', LH22: '28', LH25: '31', LH32: '38', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403589Y', CC: '16', CH: '7', CL: '35', LH14: '21', LH18_5: '25.5', LH19: '27', LH20: '27', LH22: '29', LH25: '32', LH32: '39', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403407Y', CC: '23', CH: '10', CL: '35', LH14: '24', LH18_5: '28.5', LH19: '30', LH20: '30', LH22: '32', LH25: '35', LH32: '42', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403075Y', CC: '52', CH: '26', CL: '35', LH14: '40', LH18_5: '44.5', LH19: '46', LH20: '36', LH22: '48', LH25: '51', LH32: '58', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaksız Diller 3': {
+    code: 'CC',
+    name: 'Tırnaksız Diller 3',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaksizdil/tirnaksizdilurun3.png',
+    versions: [
+      { stokKodu: '30403006Y', CC: '10', CH: '0', CL: '29', LH14: '14', LH18_5: '18.5', LH19: '19', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403130Y', CC: '20', CH: '0', CL: '38', LH14: '14', LH18_5: '18.5', LH19: '19', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403117Y', CC: '30', CH: '0', CL: '45', LH14: '14', LH18_5: '18.5', LH19: '19', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403003Y', CC: '40', CH: '0', CL: '51', LH14: '14', LH18_5: '18.5', LH19: '19', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403005Y', CC: '70', CH: '0', CL: '66', LH14: '14', LH18_5: '18.5', LH19: '19', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403064Y', CC: '21', CH: '3', CL: '38', LH14: '17', LH18_5: '21.5', LH19: '22', LH20: '23', LH22: '25', LH25: '28', LH32: '35', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403054Y', CC: '31', CH: '3', CL: '45', LH14: '17', LH18_5: '21.5', LH19: '22', LH20: '23', LH22: '25', LH25: '28', LH32: '35', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403141Y', CC: '41', CH: '3', CL: '51', LH14: '17', LH18_5: '21.5', LH19: '22', LH20: '23', LH22: '25', LH25: '28', LH32: '35', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403138Y', CC: '22', CH: '6', CL: '37', LH14: '20', LH18_5: '24.5', LH19: '25', LH20: '26', LH22: '28', LH25: '31', LH32: '38', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403128Y', CC: '34', CH: '6', CL: '45', LH14: '20', LH18_5: '24.5', LH19: '25', LH20: '26', LH22: '28', LH25: '31', LH32: '38', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403073Y', CC: '32', CH: '7', CL: '44', LH14: '21', LH18_5: '25.5', LH19: '26', LH20: '27', LH22: '29', LH25: '32', LH32: '39', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403002Y', CC: '42', CH: '7', CL: '49', LH14: '21', LH18_5: '25.5', LH19: '26', LH20: '27', LH22: '29', LH25: '32', LH32: '39', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403004Y', CC: '43', CH: '10', CL: '48', LH14: '24', LH18_5: '28.5', LH19: '29', LH20: '30', LH22: '32', LH25: '35', LH32: '40', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403123Y', CC: '44', CH: '12', CL: '45', LH14: '26', LH18_5: '30.5', LH19: '31', LH20: '32', LH22: '34', LH25: '37', LH32: '44', LH18: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaksız Diller 4': {
+    code: 'CC',
+    name: 'Tırnaksız Diller 4',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaksizdil/tirnaksizdilurun4.png',
+    versions: [
+      { stokKodu: '30403135Y', CC: '03', CH: '0', CL: '51', LH18_5: '18.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403123Y', CC: '06', CH: '0', CL: '45', LH18_5: '18.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403001Y', CC: '01', CH: '7', CL: '49', LH18_5: '25.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403525Y', CC: '07', CH: '2', CL: '45', LH18_5: '20.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403527Y', CC: '08', CH: '3', CL: '45', LH18_5: '21.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403529Y', CC: '09', CH: '4', CL: '45', LH18_5: '22.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403531Y', CC: '100', CH: '5', CL: '45', LH18_5: '23.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403533Y', CC: '101', CH: '6', CL: '45', LH18_5: '24.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403535Y', CC: '102', CH: '7', CL: '45', LH18_5: '25.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403568Y', CC: '02', CH: '12', CL: '46', LH18_5: '30.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403537Y', CC: '103', CH: '14', CL: '45', LH18_5: '32.5', LH14: '', LH18: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Tırnaksız Diller 5': {
+    code: 'CC',
+    name: 'Tırnaksız Diller 5',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/tirnaksizdil/tirnaksizdilurun5.png',
+    versions: [
+      { stokKodu: '30402002Y', CC: '90', CH: '0', CL: '35', LH18_5: '18.5', LH20: '20', LH25: '25', LH14: '', LH18: '', LH19: '', LH21: '', LH22: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30402010Y', CC: '93', CH: '0', CL: '25', LH18_5: '18.5', LH20: '20', LH25: '25', LH14: '', LH18: '', LH19: '', LH21: '', LH22: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30402007Y', CC: '92', CH: '4', CL: '45', LH18_5: '22.5', LH20: '24', LH25: '29', LH14: '', LH18: '', LH19: '', LH21: '', LH22: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30402003Y', CC: '91', CH: '6', CL: '35', LH18_5: '24.5', LH20: '26', LH25: '31', LH14: '', LH18: '', LH19: '', LH21: '', LH22: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30402014Y', CC: '94', CH: '-4', CL: '45', LH18_5: '14.5', LH20: '16', LH25: '21', LH14: '', LH18: '', LH19: '', LH21: '', LH22: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Paslanmaz Çelik Diller (Tırnaklı)': {
+    code: 'CC',
+    name: 'Paslanmaz Çelik Diller (Tırnaklı)',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/paslanmaz/paslanmazcelikdiltirnakliurun.png',
+    versions: [
+      { stokKodu: '30405004Y', CC: '30', CH: '0', CL: '45', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '', LH22: '22', LH25: '', LH30: '30', LH32: '32', LH35: '', LH40: '40', LH50: '50', LH60: '60', LH14: '', LH19: '' },
+      { stokKodu: '30405003Y', CC: '40', CH: '0', CL: '45', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '', LH22: '22', LH25: '', LH30: '30', LH32: '32', LH35: '', LH40: '40', LH50: '50', LH60: '60', LH14: '', LH19: '' },
+      { stokKodu: '30405159Y', CC: '35', CH: '2', CL: '45', LH18: '20', LH18_5: '20.5', LH20: '22', LH21: '', LH22: '24', LH25: '', LH30: '32', LH32: '34', LH35: '', LH40: '42', LH50: '52', LH60: '62', LH14: '', LH19: '' },
+      { stokKodu: '30405063Y', CC: '31', CH: '3', CL: '45', LH18: '21', LH18_5: '21.5', LH20: '23', LH21: '', LH22: '25', LH25: '', LH30: '33', LH32: '35', LH35: '', LH40: '43', LH50: '53', LH60: '63', LH14: '', LH19: '' },
+      { stokKodu: '30405149Y', CC: '33', CH: '4', CL: '45', LH18: '22', LH18_5: '22.5', LH20: '24', LH21: '', LH22: '26', LH25: '', LH30: '34', LH32: '36', LH35: '', LH40: '44', LH50: '54', LH60: '64', LH14: '', LH19: '' },
+      { stokKodu: '30405160Y', CC: '34', CH: '6', CL: '45', LH18: '24', LH18_5: '24.5', LH20: '26', LH21: '', LH22: '28', LH25: '', LH30: '36', LH32: '38', LH35: '', LH40: '46', LH50: '56', LH60: '66', LH14: '', LH19: '' },
+      { stokKodu: '30405040Y', CC: '42', CH: '7', CL: '49', LH18: '25', LH18_5: '25.5', LH20: '27', LH21: '', LH22: '29', LH25: '', LH30: '37', LH32: '39', LH35: '', LH40: '47', LH50: '57', LH60: '67', LH14: '', LH19: '' },
+      { stokKodu: '30405006Y', CC: '36', CH: '8', CL: '45', LH18: '26', LH18_5: '26.5', LH20: '28', LH21: '', LH22: '30', LH25: '', LH30: '38', LH32: '41', LH35: '', LH40: '48', LH50: '58', LH60: '68', LH14: '', LH19: '' },
+      { stokKodu: '30405162Y', CC: '47', CH: '10', CL: '45', LH18: '28', LH18_5: '28.5', LH20: '30', LH21: '', LH22: '32', LH25: '', LH30: '40', LH32: '42', LH35: '', LH40: '50', LH50: '60', LH60: '70', LH14: '', LH19: '' },
+      { stokKodu: '30405045Y', CC: '44', CH: '12', CL: '45', LH18: '30', LH18_5: '30.5', LH20: '32', LH21: '', LH22: '34', LH25: '', LH30: '42', LH32: '44', LH35: '', LH40: '52', LH50: '62', LH60: '72', LH14: '', LH19: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Paslanmaz Çelik Diller (Tırnaklı) 1': {
+    code: 'CC',
+    name: 'Paslanmaz Çelik Diller (Tırnaklı) 1',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/paslanmaz/paslanmazcelikdiltirnakliurun.png',
+    versions: [
+      { stokKodu: '30405004Y', CC: '30', CH: '0', CL: '45', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '', LH22: '22', LH25: '', LH30: '30', LH32: '32', LH35: '', LH40: '40', LH50: '50', LH60: '60', LH14: '', LH19: '' },
+      { stokKodu: '30405003Y', CC: '40', CH: '0', CL: '45', LH18: '18', LH18_5: '18.5', LH20: '20', LH21: '', LH22: '22', LH25: '', LH30: '30', LH32: '32', LH35: '', LH40: '40', LH50: '50', LH60: '60', LH14: '', LH19: '' },
+      { stokKodu: '30405159Y', CC: '35', CH: '2', CL: '45', LH18: '20', LH18_5: '20.5', LH20: '22', LH21: '', LH22: '24', LH25: '', LH30: '32', LH32: '34', LH35: '', LH40: '42', LH50: '52', LH60: '62', LH14: '', LH19: '' },
+      { stokKodu: '30405063Y', CC: '31', CH: '3', CL: '45', LH18: '21', LH18_5: '21.5', LH20: '23', LH21: '', LH22: '25', LH25: '', LH30: '33', LH32: '35', LH35: '', LH40: '43', LH50: '53', LH60: '63', LH14: '', LH19: '' },
+      { stokKodu: '30405149Y', CC: '33', CH: '4', CL: '45', LH18: '22', LH18_5: '22.5', LH20: '24', LH21: '', LH22: '26', LH25: '', LH30: '34', LH32: '36', LH35: '', LH40: '44', LH50: '54', LH60: '64', LH14: '', LH19: '' },
+      { stokKodu: '30405160Y', CC: '34', CH: '6', CL: '45', LH18: '24', LH18_5: '24.5', LH20: '26', LH21: '', LH22: '28', LH25: '', LH30: '36', LH32: '38', LH35: '', LH40: '46', LH50: '56', LH60: '66', LH14: '', LH19: '' },
+      { stokKodu: '30405040Y', CC: '42', CH: '7', CL: '49', LH18: '25', LH18_5: '25.5', LH20: '27', LH21: '', LH22: '29', LH25: '', LH30: '37', LH32: '39', LH35: '', LH40: '47', LH50: '57', LH60: '67', LH14: '', LH19: '' },
+      { stokKodu: '30405006Y', CC: '36', CH: '8', CL: '45', LH18: '26', LH18_5: '26.5', LH20: '28', LH21: '', LH22: '30', LH25: '', LH30: '38', LH32: '41', LH35: '', LH40: '48', LH50: '58', LH60: '68', LH14: '', LH19: '' },
+      { stokKodu: '30405162Y', CC: '47', CH: '10', CL: '45', LH18: '28', LH18_5: '28.5', LH20: '30', LH21: '', LH22: '32', LH25: '', LH30: '40', LH32: '42', LH35: '', LH40: '50', LH50: '60', LH60: '70', LH14: '', LH19: '' },
+      { stokKodu: '30405045Y', CC: '44', CH: '12', CL: '45', LH18: '30', LH18_5: '30.5', LH20: '32', LH21: '', LH22: '34', LH25: '', LH30: '42', LH32: '44', LH35: '', LH40: '52', LH50: '62', LH60: '72', LH14: '', LH19: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Paslanmaz Çelik Diller (Tırnaksız)': {
+    code: 'CC',
+    name: 'Paslanmaz Çelik Diller (Tırnaksız)',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/paslanmaz/paslanmazcelikdiltirnaksizurun.png',
+    versions: [
+      { stokKodu: '30405117Y', CC: '30', CH: '0', CL: '45', LH18_5: '18.5', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405058Y', CC: '40', CH: '0', CL: '51', LH18_5: '18.5', LH20: '20', LH22: '22', LH25: '25', LH32: '32', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405012Y', CC: '35', CH: '2', CL: '45', LH18_5: '20.5', LH20: '22', LH22: '24', LH25: '27', LH32: '34', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405013Y', CC: '31', CH: '3', CL: '45', LH18_5: '21.5', LH20: '23', LH22: '25', LH25: '28', LH32: '35', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405015Y', CC: '34', CH: '4', CL: '45', LH18_5: '22.5', LH20: '24', LH22: '26', LH25: '29', LH32: '36', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405002Y', CC: '42', CH: '7', CL: '49', LH18_5: '25.5', LH20: '27', LH22: '29', LH25: '32', LH32: '39', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405016Y', CC: '36', CH: '8', CL: '45', LH18_5: '26.5', LH20: '28', LH22: '30', LH25: '33', LH32: '40', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405017Y', CC: '47', CH: '10', CL: '45', LH18_5: '28.5', LH20: '30', LH22: '32', LH25: '35', LH32: '42', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405018Y', CC: '44', CH: '12', CL: '45', LH18_5: '30.5', LH20: '32', LH22: '34', LH25: '37', LH32: '44', LH14: '', LH18: '', LH19: '', LH21: '', LH30: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Paslanmaz Çelik Diller (Tırnaklı) 2': {
+    code: 'CC',
+    name: 'Paslanmaz Çelik Diller (Tırnaklı) 2',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/paslanmaz/paslanmazcelikdiltirnakliurun2.png',
+    versions: [
+      { stokKodu: '30405084Y', CC: '10', CH: '0', CL: '33', LH13_5: '13.5', LH14: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405085Y', CC: '11', CH: '7', CL: '30', LH13_5: '20.5', LH14: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405184Y', CC: '20', CH: '0', CL: '25', LH13_5: '13.5', LH14: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30405196Y', CC: '22', CH: '-6', CL: '25', LH13_5: '7.5', LH14: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Diğer Diller 1': {
+    code: 'CC',
+    name: 'Diğer Diller 1',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/digerdiller/digerdiller1.png',
+    versions: [
+      { stokKodu: '30403124Y', CC: '50', CH: '0', CL: '43', LH16_5: '16.5', LH20: '20', LH25: '25', LH29: '29', LH30: '30', LH32: '32', LH13_5: '', LH14: '', LH18: '', LH18_5: '', LH19: '', LH21: '', LH22: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '31403010Y', CC: '56', CH: '0', CL: '23', LH16_5: '16.5', LH20: '20', LH25: '25', LH29: '29', LH30: '30', LH32: '32', LH13_5: '', LH14: '', LH18: '', LH18_5: '', LH19: '', LH21: '', LH22: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '31403011Y', CC: '30', CH: '0', CL: '33', LH16_5: '16.5', LH20: '20', LH25: '25', LH29: '29', LH30: '30', LH32: '32', LH13_5: '', LH14: '', LH18: '', LH18_5: '', LH19: '', LH21: '', LH22: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403157Y', CC: '57', CH: '3', CL: '48', LH16_5: '19.5', LH20: '23', LH25: '28', LH29: '32', LH30: '33', LH32: '35', LH13_5: '', LH14: '', LH18: '', LH18_5: '', LH19: '', LH21: '', LH22: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403125Y', CC: '51', CH: '7', CL: '40', LH16_5: '23.5', LH20: '27', LH25: '32', LH29: '36', LH30: '37', LH32: '39', LH13_5: '', LH14: '', LH18: '', LH18_5: '', LH19: '', LH21: '', LH22: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403110Y', CC: '52', CH: '10', CL: '37', LH16_5: '26.5', LH20: '30', LH25: '35', LH29: '39', LH30: '40', LH32: '42', LH13_5: '', LH14: '', LH18: '', LH18_5: '', LH19: '', LH21: '', LH22: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403111Y', CC: '53', CH: '14', CL: '33', LH16_5: '30.5', LH20: '34', LH25: '39', LH29: '43', LH30: '44', LH32: '46', LH13_5: '', LH14: '', LH18: '', LH18_5: '', LH19: '', LH21: '', LH22: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Diğer Diller 2': {
+    code: 'CC',
+    name: 'Diğer Diller 2',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/digerdiller/digerdiller2.png',
+    versions: [
+      { stokKodu: '30403014Y', CC: '10', CH: '0', CL: '38', LH16_5: '16.5', LH13_5: '', LH13: '', LH14: '', LH16: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403100Y', CC: '30', CH: '0', CL: '33', LH16_5: '16.5', LH13_5: '', LH13: '', LH14: '', LH16: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403019Y', CC: '20', CH: '0', CL: '49', LH16_5: '16.5', LH13_5: '', LH13: '', LH14: '', LH16: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403082Y', CC: '11', CH: '3', CL: '38', LH16_5: '19.5', LH13_5: '', LH13: '', LH14: '', LH16: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403015Y', CC: '12', CH: '7', CL: '36', LH16_5: '23.5', LH13_5: '', LH13: '', LH14: '', LH16: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403016Y', CC: '21', CH: '7', CL: '47', LH16_5: '23.5', LH13_5: '', LH13: '', LH14: '', LH16: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403017Y', CC: '22', CH: '10', CL: '44', LH16_5: '26.5', LH13_5: '', LH13: '', LH14: '', LH16: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403022Y', CC: '13', CH: '0', CL: '39', LH16_5: '16.5', LH13_5: '', LH13: '', LH14: '', LH16: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Diğer Diller 3': {
+    code: 'CC',
+    name: 'Diğer Diller 3',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/digerdiller/digerdiller3.png',
+    versions: [
+      { stokKodu: '30403084Y', CC: '10', CH: '0', CL: '33', LH13_5: '13.5', LH16: '16', LH13: '', LH14: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403184Y', CC: '20', CH: '0', CL: '25', LH13_5: '13.5', LH16: '16', LH13: '', LH14: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403183Y', CC: '21', CH: '6', CL: '25', LH13_5: '19.5', LH16: '22', LH13: '', LH14: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403085Y', CC: '11', CH: '7', CL: '30', LH13_5: '20.5', LH16: '23', LH13: '', LH14: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403196Y', CC: '22', CH: '-6', CL: '25', LH13_5: '7.5', LH16: '10', LH13: '', LH14: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  'CC > Diğer Diller 4': {
+    code: 'CC',
+    name: 'Diğer Diller 4',
+    description: '',
+    materials: {},
+    productImage: '/dilleranahtarlar/diller/digerdiller/digerdiller4.png',
+    versions: [
+      { stokKodu: '30403158Y', CC: '10', CH: '0', CL: '24', LH13: '13', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '31403016Y', CC: '50', CH: '0', CL: '21', LH13: '13', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403029Y', CC: '20', CH: '0', CL: '31', LH13: '13', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403028Y', CC: '30', CH: '0', CL: '36', LH13: '13', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403089Y', CC: '21', CH: '3', CL: '30', LH13: '16', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403030Y', CC: '22', CH: '7', CL: '26', LH13: '20', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403058Y', CC: '40', CH: '0', CL: '31', LH13: '13', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '320.02.180 > Geçme Dil Aparatı': {
+    code: '320.02.180',
+    name: 'Geçme Dil Aparatı',
+    description: '• Kilitleme mesafesinde 2 mm\'lik bir kısalmaya neden olur, Dikkat ediniz',
+    materials: {
+      'Delrin': ''
+    },
+    productImage: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '30403485 > Kancalı Diller': {
+    code: '30403485',
+    name: 'Kancalı Diller',
+    description: '',
+    materials: {
+      'Çelik': ''
+    },
+    surface: 'Çinko kaplama',
+    productImage: '',
+    versions: [
+      { stokKodu: '30403485', CC: '485', CH: '0', CL: '55', LH13: '', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403516', CC: '516', CH: '0', CL: '55', LH13: '', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403672', CC: '672', CH: '-5', CL: '49', LH13: '', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+      { stokKodu: '30403712', CC: '712', CH: '0', CL: '32', LH13: '', LH13_5: '', LH14: '', LH16: '', LH16_5: '', LH18: '', LH18_5: '', LH19: '', LH20: '', LH21: '', LH22: '', LH25: '', LH29: '', LH30: '', LH32: '', LH35: '', LH40: '', LH50: '', LH60: '' },
+    ],
+    relatedProducts: [],
+  },
+  '30403499 > İspanyolet Dil Adaptörü': {
+    code: '30403499',
+    name: 'İspanyolet Dil Adaptörü',
+    description: '',
+    materials: {
+      'Çelik': ''
+    },
+    surface: 'Çinko kaplama',
+    productImage: '',
+    versions: [
+      { urunKodu: '30403495', urunAdi: 'Dil İspanyolet Adaptörü', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: '30403496', urunAdi: 'Dil İspanyolet Adaptörü', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: '30403499', urunAdi: 'Dil İspanyolet Adaptörü', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: '30403563', urunAdi: 'Dil İspanyolet Adaptörü', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: '30403632', urunAdi: 'Dil İspanyolet Adaptörü', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -2347,6 +2821,71 @@ function ProductDetail() {
       return '/cu-digerurunler/466-mini-butonlu-kilit.pdf'
     }
     
+    // CC > Tırnaklı Diller için özel PDF mapping
+    if (fullName?.includes('CC > Tırnaklı Diller 1') || (code === 'CC' && fullName?.includes('Tırnaklı Diller 1'))) {
+      return '/dilleranahtarlar/diller/tirnaklidil/cc-tirnakli-diller1.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaklı Diller 2') || (code === 'CC' && fullName?.includes('Tırnaklı Diller 2'))) {
+      return '/dilleranahtarlar/diller/tirnaklidil/cc-tirnakli-diller2.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaklı Diller 3') || (code === 'CC' && fullName?.includes('Tırnaklı Diller 3'))) {
+      return '/dilleranahtarlar/diller/tirnaklidil/cc-tirnakli-diller3.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaklı Diller 4') || (code === 'CC' && fullName?.includes('Tırnaklı Diller 4'))) {
+      return '/dilleranahtarlar/diller/tirnaklidil/cc-tirnakli-diller4.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaklı Diller 5') || (code === 'CC' && fullName?.includes('Tırnaklı Diller 5'))) {
+      return '/dilleranahtarlar/diller/tirnaklidil/cc-tirnakli-diller5.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaksız Diller 1') || (code === 'CC' && fullName?.includes('Tırnaksız Diller 1'))) {
+      return '/dilleranahtarlar/diller/tirnaksizdil/cc-tirnaksiz-diller1.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaksız Diller 2') || (code === 'CC' && fullName?.includes('Tırnaksız Diller 2'))) {
+      return '/dilleranahtarlar/diller/tirnaksizdil/cc-tirnaksiz-diller2.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaksız Diller 3') || (code === 'CC' && fullName?.includes('Tırnaksız Diller 3'))) {
+      return '/dilleranahtarlar/diller/tirnaksizdil/cc-tirnaksiz-diller3.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaksız Diller 4') || (code === 'CC' && fullName?.includes('Tırnaksız Diller 4'))) {
+      return '/dilleranahtarlar/diller/tirnaksizdil/cc-tirnaksiz-diller4.pdf'
+    }
+    if (fullName?.includes('CC > Tırnaksız Diller 5') || (code === 'CC' && fullName?.includes('Tırnaksız Diller 5'))) {
+      return '/dilleranahtarlar/diller/tirnaksizdil/cc-tirnaksiz-diller5.pdf'
+    }
+    if (fullName?.includes('CC > Paslanmaz Çelik Diller (Tırnaklı) 1') || (code === 'CC' && fullName?.includes('Paslanmaz Çelik Diller (Tırnaklı) 1'))) {
+      return '/dilleranahtarlar/diller/paslanmaz/cc-paslanmaz-celik-diiler-tirnakli.pdf'
+    }
+    if (fullName?.includes('CC > Paslanmaz Çelik Diller (Tırnaklı)') || (code === 'CC' && fullName?.includes('Paslanmaz Çelik Diller (Tırnaklı)'))) {
+      return '/dilleranahtarlar/diller/paslanmaz/cc-paslanmaz-celik-diiler-tirnakli.pdf'
+    }
+    if (fullName?.includes('CC > Paslanmaz Çelik Diller (Tırnaksız)') || (code === 'CC' && fullName?.includes('Paslanmaz Çelik Diller (Tırnaksız)'))) {
+      return '/dilleranahtarlar/diller/paslanmaz/cc-paslanmaz-celik-diller-tirnaksiz.pdf'
+    }
+    if (fullName?.includes('CC > Paslanmaz Çelik Diller (Tırnaklı) 2') || (code === 'CC' && fullName?.includes('Paslanmaz Çelik Diller (Tırnaklı) 2'))) {
+      return '/dilleranahtarlar/diller/paslanmaz/cc-paslanmaz-celik-diller-tirnakli-2.pdf'
+    }
+    if (fullName?.includes('CC > Diğer Diller 1') || (code === 'CC' && fullName?.includes('Diğer Diller 1'))) {
+      return '/dilleranahtarlar/diller/digerdiller/cc-diger-diller1.pdf'
+    }
+    if (fullName?.includes('CC > Diğer Diller 2') || (code === 'CC' && fullName?.includes('Diğer Diller 2'))) {
+      return '/dilleranahtarlar/diller/digerdiller/cc-diger-diller2.pdf'
+    }
+    if (fullName?.includes('CC > Diğer Diller 3') || (code === 'CC' && fullName?.includes('Diğer Diller 3'))) {
+      return '/dilleranahtarlar/diller/digerdiller/cc-diger-diller3.pdf'
+    }
+    if (fullName?.includes('CC > Diğer Diller 4') || (code === 'CC' && fullName?.includes('Diğer Diller 4'))) {
+      return '/dilleranahtarlar/diller/digerdiller/cc-diger-diller4.pdf'
+    }
+    if (fullName?.includes('320.02.180 > Geçme Dil Aparatı') || fullName?.includes('Geçme Dil Aparatı')) {
+      return '/dilleranahtarlar/diller/32002180-gecme-dil-aparati.pdf'
+    }
+    if (fullName?.includes('30403485 > Kancalı Diller') || fullName?.includes('Kancalı Diller')) {
+      return '/dilleranahtarlar/diller/30403485-kancali-diller.pdf'
+    }
+    if (fullName?.includes('30403499 > İspanyolet Dil Adaptörü') || fullName?.includes('İspanyolet Dil Adaptörü')) {
+      return '/dilleranahtarlar/diller/30403499-ispanyolet-dil-adaptoru.pdf'
+    }
+    
     // İspanyolet ürünleri için özel PDF mapping
     if (fullName?.includes('İspanyolet') || fullName?.includes('Dikey Hareketli') || fullName?.includes('Dikey Mekanizmalı') || fullName?.includes('İç Kilitleme') || fullName?.includes('ispanyolet')) {
       const ispanyoletPdfMap = {
@@ -2474,7 +3013,22 @@ function ProductDetail() {
               {/* Sağ Kolon - Ürün Bilgileri */}
               <div className="space-y-6">
                 {/* Ürün Bilgisi */}
-                {productDetail?.description && productDetail.description.trim() !== '' ? (
+                {productDetail?.productImage ? (
+                  <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <h3 className="text-xl font-bold text-slate-900">Ürün Bilgisi</h3>
+                    </div>
+                    <div className="w-full overflow-x-auto">
+                      <img 
+                        src={productDetail.productImage} 
+                        alt={productDetail.name || productName}
+                        className="w-auto h-auto object-contain rounded-lg"
+                        style={{ minWidth: '800px', width: 'auto', height: 'auto' }}
+                      />
+                    </div>
+                  </div>
+                ) : productDetail?.description && productDetail.description.trim() !== '' ? (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
@@ -2546,19 +3100,92 @@ function ProductDetail() {
                 )}
 
                 {/* Versiyon Tablosu - 4001 için */}
-                {productDetail?.versions && (
-                  <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <div className="flex items-center gap-2 mb-6">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                {productDetail?.versions && productDetail.versions.length > 0 && productDetail.code !== '320.02.180' && (() => {
+                  // Helper function to check if a column has any non-empty values
+                  const hasColumnData = (fieldName) => {
+                    return productDetail.versions.some(version => {
+                      const value = version[fieldName]
+                      return value !== undefined && value !== null && value !== ''
+                    })
+                  }
+
+                  return (
+                    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                      <div className="flex items-center gap-2 mb-6">
+                        <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
                       <h3 className="text-xl font-bold text-slate-900">
-                        {productDetail.code === '018' ? 'Trafo Kabin Kilidi (V1)' : 'Ürün Varyasyonları'}
+                        {productDetail.code === '018' ? 'Trafo Kabin Kilidi (V1)' : productDetail.versions[0]?.stokKodu ? 'Stok Kodları ve Ölçüler' : productDetail.code === '320.02.180' ? '' : 'Ürün Varyasyonları'}
                       </h3>
-                    </div>
-                    <div className="overflow-x-auto">
-                      <table className="w-full border-collapse">
-                        <thead>
-                          <tr className="bg-slate-50">
-                            {productDetail.versions[0]?.mekanizmaGovde ? (
+                      </div>
+                      <div className="overflow-x-auto">
+                        <table className="w-full border-collapse">
+                          <thead>
+                            <tr className="bg-slate-50">
+                              {productDetail.versions[0]?.stokKodu ? (
+                                <>
+                                  <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Stok Kodu</th>
+                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CC</th>
+                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CH</th>
+                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CL</th>
+                                  {hasColumnData('LH13') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:13 (H)</th>
+                                  )}
+                                  {hasColumnData('LH13_5') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:13.5 (H)</th>
+                                  )}
+                                  {hasColumnData('LH14') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:14 (H)</th>
+                                  )}
+                                  {hasColumnData('LH16') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:16 (H)</th>
+                                  )}
+                                  {hasColumnData('LH16_5') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:16.5 (H)</th>
+                                  )}
+                                  {hasColumnData('LH18') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:18 (H)</th>
+                                  )}
+                                  {hasColumnData('LH18_5') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:18.5 (H)</th>
+                                  )}
+                                  {hasColumnData('LH19') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:19 (H)</th>
+                                  )}
+                                  {hasColumnData('LH20') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:20 (H)</th>
+                                  )}
+                                  {hasColumnData('LH21') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:21 (H)</th>
+                                  )}
+                                  {hasColumnData('LH22') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:22 (H)</th>
+                                  )}
+                                  {hasColumnData('LH25') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:25 (H)</th>
+                                  )}
+                                  {hasColumnData('LH29') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:29 (H)</th>
+                                  )}
+                                  {hasColumnData('LH30') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:30 (H)</th>
+                                  )}
+                                  {hasColumnData('LH32') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:32 (H)</th>
+                                  )}
+                                  {hasColumnData('LH35') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:35 (H)</th>
+                                  )}
+                                  {hasColumnData('LH40') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:40 (H)</th>
+                                  )}
+                                  {hasColumnData('LH50') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:50 (H)</th>
+                                  )}
+                                  {hasColumnData('LH60') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:60 (H)</th>
+                                  )}
+                                </>
+                              ) : productDetail.versions[0]?.mekanizmaGovde ? (
                               <>
                                 <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Versiyon</th>
                                 <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Mekanizma Gövde</th>
@@ -2615,7 +3242,71 @@ function ProductDetail() {
                         <tbody>
                           {productDetail.versions.map((version, index) => (
                             <tr key={index} className="hover:bg-slate-50 transition-colors">
-                              {version.mekanizmaGovde ? (
+                              {version.stokKodu ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.stokKodu}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CC}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CH}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CL}</td>
+                                  {hasColumnData('LH13') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH13 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH13_5') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH13_5 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH14') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH14 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH16') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH16 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH16_5') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH16_5 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH18') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH18 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH18_5') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH18_5 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH19') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH19 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH20') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH20 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH21') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH21 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH22') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH22 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH25') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH25 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH29') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH29 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH30') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH30 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH32') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH32 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH35') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH35 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH40') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH40 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH50') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH50 || ''}</td>
+                                  )}
+                                  {hasColumnData('LH60') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH60 || ''}</td>
+                                  )}
+                                </>
+                              ) : version.mekanizmaGovde ? (
                                 <>
                                   <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.version}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.mekanizmaGovde}</td>
@@ -2667,7 +3358,8 @@ function ProductDetail() {
                       </table>
                     </div>
                   </div>
-                )}
+                  )
+                })()}
 
                 {/* Katalog Sayfası */}
                 <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">

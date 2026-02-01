@@ -784,6 +784,46 @@ function Products() {
       }
     }
     
+    // Diller için özel resim mapping (CC kodlu ve diğer diller)
+    if (itemName.startsWith('CC >') || itemName.includes('Tırnaklı Diller') || itemName.includes('Tırnaksız Diller') || itemName.includes('Paslanmaz Çelik Diller') || itemName.includes('Diğer Diller')) {
+      const dillerImageMap = {
+        'CC > Tırnaklı Diller 1': '/dilleranahtarlar/diller/ccTirnakliDiller1.jpg',
+        'CC > Tırnaklı Diller 2': '/dilleranahtarlar/diller/ccTirnakliDiller2.jpg',
+        'CC > Tırnaklı Diller 3': '/dilleranahtarlar/diller/ccTirnakliDiller3.jpg',
+        'CC > Tırnaklı Diller 4': '/dilleranahtarlar/diller/ccTirnakliDiller4.jpg',
+        'CC > Tırnaklı Diller 5': '/dilleranahtarlar/diller/ccTirnakliDiller5.jpg',
+        'CC > Tırnaksız Diller 1': '/dilleranahtarlar/diller/ccTirnaksizDiller1.jpg',
+        'CC > Tırnaksız Diller 2': '/dilleranahtarlar/diller/ccTirnaksizDiller2.jpg',
+        'CC > Tırnaksız Diller 3': '/dilleranahtarlar/diller/ccTirnaksizDiller3.jpg',
+        'CC > Tırnaksız Diller 4': '/dilleranahtarlar/diller/ccTirnaksizDiller4.jpg',
+        'CC > Tırnaksız Diller 5': '/dilleranahtarlar/diller/ccTirnaksizDiller5.jpg',
+        'CC > Paslanmaz Çelik Diller (Tırnaklı) 1': '/dilleranahtarlar/diller/ccPaslanmazCelikDillerTirnakli.jpg',
+        'CC > Paslanmaz Çelik Diller (Tırnaklı) 2': '/dilleranahtarlar/diller/ccPaslanmazCelikDillerTirnakli2.jpg',
+        'CC > Paslanmaz Çelik Diller (Tırnaksız)': '/dilleranahtarlar/diller/ccPaslanmazCelikDillerTirnaksiz.jpg',
+        'CC > Diğer Diller 1': '/dilleranahtarlar/diller/ccDigerDiller1.jpg',
+        'CC > Diğer Diller 2': '/dilleranahtarlar/diller/ccDigerDiller2.jpg',
+        'CC > Diğer Diller 3': '/dilleranahtarlar/diller/ccDigerDiller3.jpg',
+        'CC > Diğer Diller 4': '/dilleranahtarlar/diller/ccDigerDiller4.jpg',
+      }
+      
+      if (dillerImageMap[itemName]) {
+        return dillerImageMap[itemName]
+      }
+    }
+    
+    // Diğer diller için özel resim mapping (320.02.180, 30403485, 30403499)
+    if (itemName.includes('Geçme Dil Aparatı') || itemName.includes('Kancalı Diller') || itemName.includes('İspanyolet Dil Adaptörü')) {
+      if (itemName.includes('Geçme Dil Aparatı')) {
+        return '/dilleranahtarlar/diller/gecmedil_aparati.jpg'
+      }
+      if (itemName.includes('Kancalı Diller')) {
+        return '/dilleranahtarlar/diller/kancali_dil.jpg'
+      }
+      if (itemName.includes('İspanyolet Dil Adaptörü')) {
+        return '/dilleranahtarlar/diller/dil_ispanyolet_adaptorleri.jpg'
+      }
+    }
+    
     // Diğer Ürünler için özel resim mapping
     if (code && (itemName.includes('Perde Sacı Kilidi') || itemName.includes('Allen Göbekli Pano Kilidi') || itemName.includes('Kancalı Kilit') || itemName.includes('Elektronik Kancalı Kilit') || itemName.includes('Acil Durum Durdurma Butonu') || itemName.includes('Mini Butonlu Kilit'))) {
       const digerUrunImageMap = {
@@ -812,6 +852,13 @@ function Products() {
       'PALETLİ POMPA': '/paletli-pompa.png',
       'PİSTONLU POMPA': '/pistonlu-pompa.png',
       'TANDEM POMPALAR': '/tandem-pompalar.png',
+      // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel resimler
+      'Diller': '/dilleranahtarlar/diller.jpg',
+      'İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/ispanyoletcubuk-ve-aksesuarlari.jpg',
+      'İspanyolet Lama ve Aksesuarları': '/dilleranahtarlar/ispanyoletLama.jpg',
+      'Paslanmaz İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletcubuk.png',
+      'Paslanmaz İspanyolet Lama ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletlama.png',
+      'Anahtarlar': '/dilleranahtarlar/anahtarlar.jpg',
     }
     
     // Kategori bazlı resim atama (kollu kilitler için özel resim yoksa)
