@@ -1264,6 +1264,394 @@ const productDetails = {
       { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
     ],
   },
+  '077 > Sıkıştırmalı Kilit': {
+    code: '077',
+    name: 'Sıkıştırmalı Kilit',
+    description: '• Gömme buton tasarımı\n• Fişeli ve fişesiz modelleri mevcuttur.\n• 0-24mm veya 24-46mm ayarlanabilir kilitleme aralığı\n• Max 2 mm sac kalınlığı için uygundur.\n• Tek noktadan bağlama sacı kullanılarak kolay montaj olur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'MONTAJ SACI': 'Çelik',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '177 > Sıkıştırmalı Kilit': {
+    code: '177',
+    name: 'Sıkıştırmalı Kilit',
+    description: '• Kalkık buton tasarımı\n• Fişeli , fişesiz ve göbekli modelleri mevcuttur.\n• 0-24mm veya 24-46mm ayarlanabilir kilitleme aralığı\n• Max 2 mm sac kalınlığı için uygundur.\n• Tek noktadan bağlama sacı kullanılarak kolay montaj olur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'MONTAJ SACI': 'Çelik',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '377 > Sıkıştırmalı Kilit': {
+    code: '377',
+    name: 'Sıkıştırmalı Kilit',
+    description: '• Fişeli ve fişesiz modelleri mevcuttur.\n• 36 - 48 mm veya 51 - 63 mm Grip aralıklarında ayarlanabilir.\n• Max 2 mm sac kalınlığı için uygundur.\n• Tek noktadan bağlama sacı kullanılarak montaj olur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'MONTAJ SACI': 'Çelik',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '477 > Sıkıştırmalı Kilit': {
+    code: '477',
+    name: 'Sıkıştırmalı Kilit',
+    description: '• Fişesiz uygulama\n• 9 - 19 mm veya 33 - 43 mm Grip aralıklarında ayarlanabilir.\n• Max 2 mm sac kalınlığı için uygundur.\n• Tek noktadan bağlama sacı kullanılarak montaj olur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'MONTAJ SACI': 'Çelik',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '072 > Fonksiyonel Kilit': {
+    code: '072',
+    name: 'Fonksiyonel Kilit',
+    description: '• Sac ve polyester panolara uygulanır.\n• Geçiş ölçüsü her iki versiyonda da standarttır.\n• Klipsli versiyonda sac kalınlığı 0.8 mm - 2.0 mm arasındadır .',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'DİL': 'Çelik yada PA6 GFR 30',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '070 > Kaldır-Çevir': {
+    code: '070',
+    name: 'Kaldır-Çevir',
+    description: '• Sac ve polyester panolara uygulanır.\n• Sıkıştırma özelliği vardır.',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '170 > Kaldır-Çevir': {
+    code: '170',
+    name: 'Kaldır-Çevir',
+    description: '• Sac ve polyester panolara uygulanır.\n• Titreşime maruz kalan ve ses izolasyonu gereken kabinlerde kullanılır.\n• 5 mm sıkıştırma özelliğine sahiptir.\n• 3 farklı tip dil uygulanır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'YÜZEY': 'Krom kaplama veya siyah boya',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '270 > Sıkıştırmalı Kilit': {
+    code: '270',
+    name: 'Sıkıştırmalı Kilit',
+    description: '• Titreşime maruz kalan ve ses izolasyonu gereken kabinlerde kullanılır.\n• Çeşitli sac kalınlıklarına farklı kesim ölçüsü açılarak uygulanabilir.',
+    materials: {
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'BURÇ': 'SBR Kauçuk',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '270 > Sıkıştırmalı Kilit 2': {
+    code: '270',
+    name: 'Sıkıştırmalı Kilit',
+    description: '• Titreşime maruz kalan ve ses izolasyonu gereken kabinlerde kullanılır.\n• Çeşitli sac kalınlıklarına farklı kesim ölçüsü açılarak uygulanabilir.',
+    materials: {
+      'KOL': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'BURÇ': 'SBR Kauçuk',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '071 > Sürgü Kilit': {
+    code: '071',
+    name: 'Sürgü Kilit',
+    description: '• Kolay montaj imkanı sağlar. Özel dizayn edilmiş paslanmaz yay sayesinde uzun süreli kullanım imkanı sağlar.\n• Sac kalınlığı 0.8 mm-1.5 mm arasındadır.\n• Küçük kapılar ve yan kapılarda uygulanır.\n• Farklı renkler için satış ekibimizle iletişime geçiniz.',
+    materials: {
+      'GÖVDE': 'ABS',
+      'YAY': 'Paslanmaz çelik',
+    },
+    versions: [
+      { urunKodu: '07112', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '0.8 -1.2 mm arası saclar için', kapıKalınlığı: '0.8 -1.2 mm arası saclar için' },
+      { urunKodu: '07115', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '1.2 -1.5 mm arası saclar için', kapıKalınlığı: '1.2 -1.5 mm arası saclar için' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '171 > Mini Sürgü Kilit': {
+    code: '171',
+    name: 'Mini Sürgü Kilit',
+    description: '• Panoların küçük boyutlu iç kapaklarında kullanılır .\n• Sac kalınlığı 0.8 mm - 1.5 mm arasındadır.',
+    materials: {
+      'GÖVDE': 'ABS',
+      'YAY': 'Paslanmaz çelik',
+    },
+    versions: [
+      { urunKodu: '171', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '0.8 -1.2 mm arası saclar için' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '271 > Sürgü Kilit': {
+    code: '271',
+    name: 'Sürgü Kilit',
+    description: '• İki parça tasarım sayesinde montaj yerinde boya çizilmesini engeller.\n• Küçük kapılar ve yan kapaklarda kullanılır.\n• Klips yapısı ile kolay montaj imkanı sağlar.\n• 0.8 - 1.5 mm kalınlıktaki saclar için uygundur.',
+    materials: {
+      'GÖVDE': 'ABS',
+      'YAY': 'Paslanmaz çelik',
+    },
+    versions: [
+      { urunKodu: '271', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '0.8 -1.2 mm arası saclar için' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '371 > Sürgü Kilit': {
+    code: '371',
+    name: 'Sürgü Kilit',
+    description: '• Oval ve estetik bir tasarıma sahiptir.\n• Kolay montaj imkanı sağlar. Özel dizayn edilmiş paslanmaz yay sayesinde uzun süreli kullanım imkanı sağlar.\n• Sac kalınlığı 0.8 mm-1.5 mm arasındadır.\n• Küçük kapılar ve yan kapılarda uygulanır.\n• Farklı renkler için satış ekibimizle iletişime geçiniz.',
+    materials: {
+      'GÖVDE': 'ABS',
+      'YAY': 'Paslanmaz çelik',
+    },
+    versions: [
+      { urunKodu: '37112', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '0.8 -1.2 mm arası saclar için' },
+      { urunKodu: '37115', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '1.2 -1.5 mm arası saclar için' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '471 > Mini Sürgü Kilit': {
+    code: '471',
+    name: 'Mini Sürgü Kilit',
+    description: '• Panoların küçük boyutlu iç kapaklarında kullanılır .\n• Sac kalınlığı 0.8 mm-1.5 mm arasındadır.',
+    materials: {
+      'GÖVDE': 'ABS',
+      'YAY': 'Paslanmaz çelik',
+    },
+    versions: [
+      { urunKodu: '47112', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '0.8 -1.2 mm arası saclar için' },
+      { urunKodu: '47115', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '1.2 -1.5 mm arası saclar için' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '571 > Fişeli Sürgü Kilit': {
+    code: '571',
+    name: 'Fişeli Sürgü Kilit',
+    description: '• Fişeli kilitleme özelliğine sahiptir.\n• İki parçalı özel tasarım sayesinde montaj yerinde boya çizilmesini engeller.\n• Küçük kapılar ve yan kapaklarda kullanılır.\n• Klips yapısı ile kolay montaj imkanı sağlar.\n• 0.8 - 1.5 mm kalınlıktaki saclar için uygundur.',
+    materials: {
+      'GÖVDE': 'ABS',
+      'YAY': 'Paslanmaz çelik',
+      'SİLİNDİR': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    versions: [
+      { urunKodu: '57103', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '0.8 -1.5 mm arası saclar için', silindirFise: 'Paslanmaz toz kapaklı fişe (Aynı şifre)' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '671 > Fişeli Sürgü Kilit': {
+    code: '671',
+    name: 'Fişeli Sürgü Kilit',
+    description: '• Fişeli kilitleme özelliğine sahiptir.\n• İki parçalı özel tasarım sayesinde montaj yerinde boya çizilmesini engeller.\n• Küçük kapılar ve yan kapaklarda kullanılır.\n• Klips yapısı ile kolay montaj imkanı sağlar.\n• 0.8 - 1.5 mm kalınlıktaki saclar için uygundur.',
+    materials: {
+      'GÖVDE': 'ABS',
+      'YAY': 'Paslanmaz çelik',
+      'SİLİNDİR': 'PA6 GFR 30',
+    },
+    versions: [
+      { urunKodu: '67101', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '0.8 -1.5 mm arası saclar için', silindirFise: 'Aynı şifre' },
+      { urunKodu: '67105', urunResmi: '', urunAdi: 'Kapı Kalınlığı (DT)', aciklama: '0.8 -1.5 mm arası saclar için', silindirFise: 'Euro anahtar (5333)' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '073 > Perde Sacı Kilidi': {
+    code: '073',
+    name: 'Perde Sacı Kilidi',
+    description: '• Küçük panellerin gövdeye tutturulmasını sağlar.\n• Çok noktadan çeyrek dönüşlü kilitleme sağlar.\n• Kolay montaj özelliği sağlamaktadır.\n• 24.5 mm eğimli kapaklarda uygulanır.\n• Sac ve profilere montaj imkanı vardır.',
+    materials: {
+      'TUTAMAK': 'ABS',
+      'MONTAJ PARÇASI': 'Çelik',
+    },
+    versions: [
+      { urunKodu: '073', urunResmi: '', urunAdi: 'Perde Sacı Kilidi', malzeme: 'ABS', yuzey: 'Siyah' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '075 > Allen Göbekli Pano Kilidi': {
+    code: '075',
+    name: 'Allen Göbekli Pano Kilidi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'DİL': 'Çelik',
+      'KAPAK': 'Plastik',
+    },
+    versions: [
+      { urunKodu: '669-66', urunResmi: '', urunAdi: 'Allen Anahtar', malzeme: 'Plastik', yuzey: 'Siyah' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '176 > Kancalı Kilit': {
+    code: '176',
+    name: 'Kancalı Kilit',
+    description: '• Jeneratörlerde yan ve arka kapaklarda kilit kullanılmadan kapanma sağlar.\n• Açma işlemi kancanın el ile itilmesi ile gerçekleşir.',
+    materials: {
+      'MALZEME': 'Çelik veya paslanmaz çelik',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '2800 > Kancalı Kilit': {
+    code: '2800',
+    name: 'Kancalı Kilit',
+    description: '• 6 çeşit kaldıraç tipi mevcuttur.\n• Tek veya çift kademeli çalıştırma hareketi vardır.\n• Titreşim ve sesli alanlar için tamponlu versiyonu önerilir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'TAMPON': 'PA6',
+    },
+    surface: 'Çinko kaplama',
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '2810 > Kancalı Kilit (Büyük)': {
+    code: '2810',
+    name: 'Kancalı Kilit (Büyük)',
+    description: '• 3 çeşit kaldıraç tipi mevcuttur.\n• Çift kademeli çalıştırma hareketi vardır.',
+    materials: {
+      'GÖVDE': 'Çelik',
+    },
+    surface: 'Çinko kaplama',
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '3331 > Elektronik Kancalı Kilit': {
+    code: '3331',
+    name: 'Elektronik Kancalı Kilit',
+    description: '• Kapıyı iterek kilitlenmesini sağlar\n• Mekanik olarak da tetiklenebilir.\n• Paslanmaz çelik dil ve tetik\n• Dahili mikro siviç ile kilidin açık olup olmadığını görülebilir.\n• Mikro işlemci kontrollü redüktörlü DC motor yapısı\n• Erişim kontrol sistemleri ile uyumlu',
+    materials: {
+      'GÖVDE': 'Çelik and PA6 GFR 30',
+      'DİL': 'Paslanmaz çelik',
+    },
+    technicalSpecs: {
+      'Çalışma Voltajı': '9 - 24 VDC',
+      'Kablo Uzunluğu': '150 mm',
+      'Akım': 'Max 500 MA',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '3501 > Acil Durum Durdurma Butonu': {
+    code: '3501',
+    name: 'Acil Durum Durdurma Butonu',
+    description: '• Kolay montaj\n• Farklı kontak seçenekleri (max. 3 kontak)\n• Standart kablo .l.u.su 2.5 m spiral boru ölçüsü 2m dir. İsteğe bağlı değişebilr.',
+    materials: {
+      'ÇANAK': 'Polyamid DIN-EN ISO 1043-1 PA6 GFR 30',
+      'KORUYUCU KAPAK': 'PVC',
+      'CONTA': 'EPDM',
+      'SPİRAL BORU': 'PA6',
+      'RAKOR': 'PA66',
+    },
+    versions: [
+      { urunKodu: '3501', urunResmi: '', urunAdi: 'Acil Durdurma Butonu', malzeme: 'Plastik', yuzey: 'Siyah' },
+    ],
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
+  '466 > Mini Butonlu Kilit': {
+    code: '466',
+    name: 'Mini Butonlu Kilit',
+    description: '• Buton sayesinde kolay açma kapama sağlar.\n• Küçük torpido kapakları için uygundur.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'BUTON': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    relatedProducts: [
+      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
+      { name: 'Anahtarlar için tıklayınız.', link: '#' },
+      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
+    ],
+  },
   '112 > Klima Santral Kilidi Aksesuarları': {
     code: '112',
     name: 'Klima Santral Kilidi Aksesuarları',
@@ -1507,6 +1895,124 @@ function ProductDetail() {
       return '/462_sikistirmalikilit.jpg'
     }
     
+    // 077 > Sıkıştırmalı Kilit için özel resim mapping
+    if (code === '077' && productName?.includes('Sıkıştırmalı Kilit')) {
+      return '/sikistirmalikilit/077sikistirmalikilit.jpg'
+    }
+    
+    // 177 > Sıkıştırmalı Kilit için özel resim mapping
+    if (code === '177' && productName?.includes('Sıkıştırmalı Kilit')) {
+      return '/sikistirmalikilit/177sikistirmalikilit.jpg'
+    }
+    
+    // 377 > Sıkıştırmalı Kilit için özel resim mapping
+    if (code === '377' && productName?.includes('Sıkıştırmalı Kilit')) {
+      return '/sikistirmalikilit/377sikistirmalikilit.jpg'
+    }
+    
+    // 477 > Sıkıştırmalı Kilit için özel resim mapping
+    if (code === '477' && productName?.includes('Sıkıştırmalı Kilit')) {
+      return '/sikistirmalikilit/477sikistirmalikilit.jpg'
+    }
+    
+    // 072 > Fonksiyonel Kilit için özel resim mapping
+    if (code === '072' && productName?.includes('Fonksiyonel Kilit')) {
+      return '/sikistirmalikilit/072sikistirmalikilit.jpg'
+    }
+    
+    // 070 > Kaldır-Çevir için özel resim mapping
+    if (code === '070' && productName?.includes('Kaldır-Çevir')) {
+      return '/sikistirmalikilit/070sikistirmalikilit.jpg'
+    }
+    
+    // 170 > Kaldır-Çevir için özel resim mapping
+    if (code === '170' && productName?.includes('Kaldır-Çevir')) {
+      return '/sikistirmalikilit/170sikistirmalikilit.jpg'
+    }
+    
+    // 270 > Sıkıştırmalı Kilit için özel resim mapping
+    if (code === '270' && productName?.includes('Sıkıştırmalı Kilit')) {
+      if (productName?.includes('Sıkıştırmalı Kilit 2')) {
+        return '/sikistirmalikilit/270sikistirmalikilit2.jpg'
+      }
+      return '/sikistirmalikilit/270sikistirmalikilit.jpeg'
+    }
+    
+    // 071 > Sürgü Kilit için özel resim mapping
+    if (code === '071' && productName?.includes('Sürgü Kilit')) {
+      return '/surgukilit/071surgukilit.jpg'
+    }
+    
+    // 171 > Mini Sürgü Kilit için özel resim mapping
+    if (code === '171' && productName?.includes('Mini Sürgü Kilit')) {
+      return '/surgukilit/171surgukilit.jpg'
+    }
+    
+    // 271 > Sürgü Kilit için özel resim mapping
+    if (code === '271' && productName?.includes('Sürgü Kilit')) {
+      return '/surgukilit/271surgukilit.jpg'
+    }
+    
+    // 371 > Sürgü Kilit için özel resim mapping
+    if (code === '371' && productName?.includes('Sürgü Kilit')) {
+      return '/surgukilit/371surgukilit.jpg'
+    }
+    
+    // 471 > Mini Sürgü Kilit için özel resim mapping
+    if (code === '471' && productName?.includes('Mini Sürgü Kilit')) {
+      return '/surgukilit/471surgukilit.jpg'
+    }
+    
+    // 571 > Fişeli Sürgü Kilit için özel resim mapping
+    if (code === '571' && productName?.includes('Fişeli Sürgü Kilit')) {
+      return '/surgukilit/571surgukilit.jpg'
+    }
+    
+    // 671 > Fişeli Sürgü Kilit için özel resim mapping
+    if (code === '671' && productName?.includes('Fişeli Sürgü Kilit')) {
+      return '/surgukilit/671surgukilit.jpg'
+    }
+    
+    // 073 > Perde Sacı Kilidi için özel resim mapping
+    if (code === '073' && productName?.includes('Perde Sacı Kilidi')) {
+      return '/cu-digerurunler/073perdesacikilit.jpg'
+    }
+    
+    // 075 > Allen Göbekli Pano Kilidi için özel resim mapping
+    if (code === '075' && productName?.includes('Allen Göbekli Pano Kilidi')) {
+      return '/cu-digerurunler/075allengobekli.jpg'
+    }
+    
+    // 176 > Kancalı Kilit için özel resim mapping
+    if (code === '176' && productName?.includes('Kancalı Kilit')) {
+      return '/cu-digerurunler/176kancalikilit.png'
+    }
+    
+    // 2800 > Kancalı Kilit için özel resim mapping
+    if (code === '2800' && productName?.includes('Kancalı Kilit')) {
+      return '/cu-digerurunler/2800kancalikilit.jpg'
+    }
+    
+    // 2810 > Kancalı Kilit (Büyük) için özel resim mapping
+    if (code === '2810' && productName?.includes('Kancalı Kilit (Büyük)')) {
+      return '/cu-digerurunler/2810kancalikilitbuyuk.jpg'
+    }
+    
+    // 3331 > Elektronik Kancalı Kilit için özel resim mapping
+    if (code === '3331' && productName?.includes('Elektronik Kancalı Kilit')) {
+      return '/cu-digerurunler/3331elektronikkancalikilit.jpg'
+    }
+    
+    // 3501 > Acil Durum Durdurma Butonu için özel resim mapping
+    if (code === '3501' && productName?.includes('Acil Durum Durdurma Butonu')) {
+      return '/cu-digerurunler/3501acildurum.jpg'
+    }
+    
+    // 466 > Mini Butonlu Kilit için özel resim mapping
+    if (code === '466' && productName?.includes('Mini Butonlu Kilit')) {
+      return '/cu-digerurunler/466minibutonlu.jpg'
+    }
+    
     // T Kollu Kabin Kilitleri için özel resim mapping (Klima içermeyen Kabin Kilitleri için)
     if (!productName?.includes('Klima') && (productName?.includes('T Kollu') || productName?.includes('"T" Kollu') || productName?.includes('\'T\' Kollu') || productName?.includes('Trafo Kilidi'))) {
       const tKolluKabinKilitImageMap = {
@@ -1703,6 +2209,50 @@ function ProductDetail() {
       return '/462-sikistirmali-kilit.pdf'
     }
     
+    // 077 > Sıkıştırmalı Kilit için özel PDF mapping
+    if (code === '077' && fullName?.includes('Sıkıştırmalı Kilit')) {
+      return '/sikistirmalikilit/077-sikistirmali-kilit.pdf'
+    }
+    
+    // 177 > Sıkıştırmalı Kilit için özel PDF mapping
+    if (code === '177' && fullName?.includes('Sıkıştırmalı Kilit')) {
+      return '/sikistirmalikilit/177-sikistirmali-kilit.pdf'
+    }
+    
+    // 377 > Sıkıştırmalı Kilit için özel PDF mapping
+    if (code === '377' && fullName?.includes('Sıkıştırmalı Kilit')) {
+      return '/sikistirmalikilit/377-sikistirmali-kilit.pdf'
+    }
+    
+    // 477 > Sıkıştırmalı Kilit için özel PDF mapping
+    if (code === '477' && fullName?.includes('Sıkıştırmalı Kilit')) {
+      return '/sikistirmalikilit/477-sikistirmali-kilit.pdf'
+    }
+    
+    // 072 > Fonksiyonel Kilit için özel PDF mapping
+    if (code === '072' && fullName?.includes('Fonksiyonel Kilit')) {
+      return '/sikistirmalikilit/072-fonksiyonel-kilit.pdf'
+    }
+    
+    // 070 > Kaldır-Çevir için özel PDF mapping
+    if (code === '070' && fullName?.includes('Kaldır-Çevir')) {
+      return '/sikistirmalikilit/070-kaldir-cevir.pdf'
+    }
+    
+    // 170 > Kaldır-Çevir için özel PDF mapping
+    if (code === '170' && fullName?.includes('Kaldır-Çevir')) {
+      return '/sikistirmalikilit/170-kaldir-cevir.pdf'
+    }
+    
+    // 270 > Sıkıştırmalı Kilit için özel PDF mapping
+    if (code === '270' && fullName?.includes('Sıkıştırmalı Kilit')) {
+      // 270 > Sıkıştırmalı Kilit 2 için özel kontrol
+      if (fullName?.includes('Sıkıştırmalı Kilit 2')) {
+        return '/sikistirmalikilit/270-sikistirmali-kilit 2.pdf'
+      }
+      return '/sikistirmalikilit/270-sikistirmali-kilit.pdf'
+    }
+    
     // T Kollu Kabin Kilitleri için özel PDF mapping
     if (fullName?.includes('T Kollu') || fullName?.includes('"T" Kollu') || fullName?.includes('\'T\' Kollu') || fullName?.includes('Trafo Kilidi')) {
       const tKolluKabinKilitPdfMap = {
@@ -1720,6 +2270,81 @@ function ProductDetail() {
       if (tKolluKabinKilitPdfMap[code]) {
         return tKolluKabinKilitPdfMap[code]
       }
+    }
+    
+    // 071 > Sürgü Kilit için özel PDF mapping
+    if (code === '071' && fullName?.includes('Sürgü Kilit')) {
+      return '/surgukilit/071-surgu-kilit.pdf'
+    }
+    
+    // 171 > Mini Sürgü Kilit için özel PDF mapping
+    if (code === '171' && fullName?.includes('Mini Sürgü Kilit')) {
+      return '/surgukilit/171-mini-surgu-kilit.pdf'
+    }
+    
+    // 271 > Sürgü Kilit için özel PDF mapping
+    if (code === '271' && fullName?.includes('Sürgü Kilit')) {
+      return '/surgukilit/271-surgu-kilit.pdf'
+    }
+    
+    // 371 > Sürgü Kilit için özel PDF mapping
+    if (code === '371' && fullName?.includes('Sürgü Kilit')) {
+      return '/surgukilit/371-surgu-kilit.pdf'
+    }
+    
+    // 471 > Mini Sürgü Kilit için özel PDF mapping
+    if (code === '471' && fullName?.includes('Mini Sürgü Kilit')) {
+      return '/surgukilit/471-mini-surgu-kilit.pdf'
+    }
+    
+    // 571 > Fişeli Sürgü Kilit için özel PDF mapping
+    if (code === '571' && fullName?.includes('Fişeli Sürgü Kilit')) {
+      return '/surgukilit/571-fiseli-surgu-kilit.pdf'
+    }
+    
+    // 671 > Fişeli Sürgü Kilit için özel PDF mapping
+    if (code === '671' && fullName?.includes('Fişeli Sürgü Kilit')) {
+      return '/surgukilit/671-fiseli-surgu-kilit.pdf'
+    }
+    
+    // 073 > Perde Sacı Kilidi için özel PDF mapping
+    if (code === '073' && fullName?.includes('Perde Sacı Kilidi')) {
+      return '/cu-digerurunler/073-perde-saci-kilidi.pdf'
+    }
+    
+    // 075 > Allen Göbekli Pano Kilidi için özel PDF mapping
+    if (code === '075' && fullName?.includes('Allen Göbekli Pano Kilidi')) {
+      return '/cu-digerurunler/075-allen-gobekli-pano-kilidi.pdf'
+    }
+    
+    // 176 > Kancalı Kilit için özel PDF mapping
+    if (code === '176' && fullName?.includes('Kancalı Kilit')) {
+      return '/cu-digerurunler/176-kancali-kilit.pdf'
+    }
+    
+    // 2800 > Kancalı Kilit için özel PDF mapping
+    if (code === '2800' && fullName?.includes('Kancalı Kilit')) {
+      return '/cu-digerurunler/2800-kancali-kilit.pdf'
+    }
+    
+    // 2810 > Kancalı Kilit (Büyük) için özel PDF mapping
+    if (code === '2810' && fullName?.includes('Kancalı Kilit (Büyük)')) {
+      return '/cu-digerurunler/2810-kancali-kilit-buyuk.pdf'
+    }
+    
+    // 3331 > Elektronik Kancalı Kilit için özel PDF mapping
+    if (code === '3331' && fullName?.includes('Elektronik Kancalı Kilit')) {
+      return '/cu-digerurunler/3331-elektronik-kancali-kilit.pdf'
+    }
+    
+    // 3501 > Acil Durum Durdurma Butonu için özel PDF mapping
+    if (code === '3501' && fullName?.includes('Acil Durum Durdurma Butonu')) {
+      return '/cu-digerurunler/3501-acil-durum-durdurma-butonu.pdf'
+    }
+    
+    // 466 > Mini Butonlu Kilit için özel PDF mapping
+    if (code === '466' && fullName?.includes('Mini Butonlu Kilit')) {
+      return '/cu-digerurunler/466-mini-butonlu-kilit.pdf'
     }
     
     // İspanyolet ürünleri için özel PDF mapping
@@ -1889,6 +2514,37 @@ function ProductDetail() {
                   </div>
                 )}
 
+                {/* Yüzey Bilgileri */}
+                {productDetail?.surface && (
+                  <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <h3 className="text-xl font-bold text-slate-900">YÜZEY</h3>
+                    </div>
+                    <div className="text-base text-slate-700">
+                      {productDetail.surface}
+                    </div>
+                  </div>
+                )}
+
+                {/* Teknik Özellikler */}
+                {productDetail?.technicalSpecs && Object.keys(productDetail.technicalSpecs).length > 0 && (
+                  <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <h3 className="text-xl font-bold text-slate-900">TEKNİK ÖZELLİKLER</h3>
+                    </div>
+                    <div className="space-y-4">
+                      {Object.entries(productDetail.technicalSpecs).map(([key, value]) => (
+                        <div key={key} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4 border-b border-slate-100 last:border-0 last:pb-0">
+                          <div className="min-w-[120px] font-semibold text-slate-900 text-sm sm:text-base">{key}:</div>
+                          <div className="text-sm sm:text-base text-slate-600 flex-1">{value}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Versiyon Tablosu - 4001 için */}
                 {productDetail?.versions && (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -1920,6 +2576,17 @@ function ProductDetail() {
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                  </>
+                                ) : productDetail.code === '571' || productDetail.code === '671' ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Kapı Kalınlığı (DT)</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Silindir - Fişe</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                  </>
+                                ) : productDetail.code === '071' || productDetail.code === '171' || productDetail.code === '271' || productDetail.code === '371' || productDetail.code === '471' ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Kapı Kalınlığı (DT)</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
                                   </>
                                 ) : (
                                   <>
@@ -1967,9 +2634,24 @@ function ProductDetail() {
                                 </>
                               ) : version.urunKodu ? (
                                 <>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama}</td>
+                                  {productDetail.code === '571' || productDetail.code === '671' ? (
+                                    <>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.silindirFise}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                    </>
+                                  ) : productDetail.code === '071' || productDetail.code === '171' || productDetail.code === '271' || productDetail.code === '371' || productDetail.code === '471' ? (
+                                    <>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                    </>
+                                  ) : (
+                                    <>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama}</td>
+                                    </>
+                                  )}
                                 </>
                               ) : version.malzeme ? (
                                 <>
