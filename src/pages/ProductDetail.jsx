@@ -2167,6 +2167,372 @@ const productDetails = {
     ],
     relatedProducts: [],
   },
+  'IC > İspanyolet Çubuklar 1': {
+    code: 'IC',
+    name: 'İspanyolet Çubuklar 1',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler\n• İspanyolet dilli kilitler.'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 1-400' },
+      { Lmm: '500', urunKodu: 'IC 1-500' },
+      { Lmm: '600', urunKodu: 'IC 1-600' },
+      { Lmm: '700', urunKodu: 'IC 1-700' },
+      { Lmm: '800', urunKodu: 'IC 1-800' },
+      { Lmm: '900', urunKodu: 'IC 1-900' },
+      { Lmm: '1000', urunKodu: 'IC 1-1000' },
+    ],
+    relatedProducts: [],
+  },
+  'IC > İspanyolet Çubuklar 2': {
+    code: 'IC',
+    name: 'İspanyolet Çubuklar 2',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler\n• İspanyolet dilli kilitler.'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 2 - 400' },
+      { Lmm: '500', urunKodu: 'IC 2 - 500' },
+      { Lmm: '600', urunKodu: 'IC 2 - 600' },
+      { Lmm: '700', urunKodu: 'IC 2 - 700' },
+      { Lmm: '800', urunKodu: 'IC 2 - 800' },
+      { Lmm: '900', urunKodu: 'IC 2 - 900' },
+      { Lmm: '1000', urunKodu: 'IC 2 - 1000' },
+    ],
+    relatedProducts: [],
+  },
+  'IC > İspanyolet Çubuk 3': {
+    code: 'IC',
+    name: 'İspanyolet Çubuk 3',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet dilli kilitler.'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 3 - 400' },
+      { Lmm: '500', urunKodu: 'IC 3 - 500' },
+      { Lmm: '600', urunKodu: 'IC 3 - 600' },
+      { Lmm: '700', urunKodu: 'IC 3 - 700' },
+      { Lmm: '800', urunKodu: 'IC 3 - 800' },
+      { Lmm: '900', urunKodu: 'IC 3 - 900' },
+      { Lmm: '1000', urunKodu: 'IC 3 - 1000' },
+    ],
+    relatedProducts: [],
+  },
+  'IC > İspanyolet Çubuklar 4': {
+    code: 'IC',
+    name: 'İspanyolet Çubuklar 4',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 4 - 400' },
+      { Lmm: '500', urunKodu: 'IC 4 - 500' },
+      { Lmm: '600', urunKodu: 'IC 4 - 600' },
+      { Lmm: '700', urunKodu: 'IC 4 - 700' },
+      { Lmm: '800', urunKodu: 'IC 4 - 800' },
+      { Lmm: '900', urunKodu: 'IC 4 - 900' },
+      { Lmm: '1000', urunKodu: 'IC 4 - 1000' },
+    ],
+    relatedProducts: [],
+  },
+  'IC > İspanyolet Çubuklar 5': {
+    code: 'IC',
+    name: 'İspanyolet Çubuklar 5',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler.\n• İspanyolet dilli kilitler.'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 5 - 400' },
+      { Lmm: '500', urunKodu: 'IC 5 - 500' },
+      { Lmm: '600', urunKodu: 'IC 5 - 600' },
+      { Lmm: '700', urunKodu: 'IC 5 - 700' },
+      { Lmm: '800', urunKodu: 'IC 5 - 800' },
+      { Lmm: '900', urunKodu: 'IC 5 - 900' },
+      { Lmm: '1000', urunKodu: 'IC 5 - 1000' },
+    ],
+    relatedProducts: [],
+  },
+  'IC > İspanyolet Çubuklar 6': {
+    code: 'IC',
+    name: 'İspanyolet Çubuklar 6',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler\n• İspanyolet dilli kilitler.'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 6 - 400', cad3d: '' },
+      { Lmm: '500', urunKodu: 'IC 6 - 500', cad3d: '' },
+      { Lmm: '600', urunKodu: 'IC 6 - 600', cad3d: '' },
+      { Lmm: '700', urunKodu: 'IC 6 - 700', cad3d: '' },
+      { Lmm: '800', urunKodu: 'IC 6 - 800', cad3d: '' },
+      { Lmm: '900', urunKodu: 'IC 6 - 900', cad3d: '' },
+      { Lmm: '1000', urunKodu: 'IC 6 - 1000', cad3d: '' },
+    ],
+    relatedProducts: [],
+  },
+  'CT1 > Çubuk Tutucu': {
+    code: 'CT1',
+    name: 'Çubuk Tutucu',
+    description: '',
+    materials: {
+      'Malzeme': '• Zamak DIN-EN 1774-ZnAl4Cu1\n• Paslanmaz çelik'
+    },
+    surface: 'Çinko kaplama',
+    versions: [
+      { urunKodu: 'CT113', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: 'CT140', malzeme: 'Paslanmaz Çelik', yuzey: 'Kaplamasız' },
+    ],
+    relatedProducts: [],
+  },
+  'CT2 > Çubuk Tutucu': {
+    code: 'CT2',
+    name: 'Çubuk Tutucu',
+    description: '',
+    materials: {
+      'Malzeme': '• Zamak DIN-EN 1774-ZnAl4Cu1'
+    },
+    surface: 'Çinko kaplama',
+    versions: [
+      { urunKodu: 'CT2', malzeme: 'Zamak', yuzey: 'Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  'IL > İspanyolet Lamalar 1': {
+    code: 'IL',
+    name: 'İspanyolet Lamalar 1',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Hmm: '27', Lmm: '1020', urunKodu: 'IL 1 - 27 - 1020' },
+      { Hmm: '13', Lmm: '1020', urunKodu: 'IL 1 - 13 - 1020' },
+    ],
+    relatedProducts: [],
+  },
+  'IL > İspanyolet Lamalar 2': {
+    code: 'IL',
+    name: 'İspanyolet Lamalar 2',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Hmm: '21', Lmm: '1020', urunKodu: 'IL 2 - 21 - 1020' },
+      { Hmm: '16', Lmm: '1020', urunKodu: 'IL 2 - 16 - 1020' },
+    ],
+    relatedProducts: [],
+  },
+  'IL > İspanyolet Lamalar 3': {
+    code: 'IL',
+    name: 'İspanyolet Lamalar 3',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [
+      { Xmm: '21 - 600', urunKodu: 'IL 3 - 21 - 600' },
+      { Xmm: '21 - 500', urunKodu: 'IL 3 - 21 - 500' },
+      { Xmm: '21 - 700', urunKodu: 'IL 3 - 21 - 700' },
+    ],
+    relatedProducts: [],
+  },
+  'IL > İspanyolet Lamalar 4': {
+    code: 'IL',
+    name: 'İspanyolet Lamalar 4',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler'
+    },
+    materials: {
+      'Malzeme': '• Çelik\n• Çinko Kaplama'
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  'ILP > Çok Noktadan Kitleyici Lama 1': {
+    code: 'ILP',
+    name: 'Çok Noktadan Kitleyici Lama 1',
+    description: '',
+    materials: {
+      'Malzeme': 'Çelik'
+    },
+    surface: 'Çinko kaplama',
+    versions: [
+      { Xmm: 'ILP 1 - 575', urunKodu: 'ILP 1 - 575' },
+    ],
+    relatedProducts: [],
+  },
+  'ILP > Çok Noktadan Kitleyici Lama 2': {
+    code: 'ILP',
+    name: 'Çok Noktadan Kitleyici Lama 2',
+    description: '',
+    materials: {
+      'Malzeme': 'Çelik'
+    },
+    surface: 'Çinko kaplama',
+    versions: [
+      { Xmm: '250', urunKodu: 'ILP.2.250' },
+      { Xmm: '300', urunKodu: 'ILP.2.300' },
+      { Xmm: '350', urunKodu: 'ILP.2.350' },
+      { Xmm: '400', urunKodu: 'ILP.2.400' },
+      { Xmm: '450', urunKodu: 'ILP.2.450' },
+      { Xmm: '500', urunKodu: 'ILP.2.500' },
+    ],
+    relatedProducts: [],
+  },
+  'LKY1 > Lama Kitleyici Yatağı': {
+    code: 'LKY1',
+    name: 'Lama Kitleyici Yatağı',
+    description: '',
+    versions: [
+      { urunKodu: 'LKY120', malzeme: 'Plastik', yuzey: 'Kaplamasız' },
+      { urunKodu: 'LKY113', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: 'LKY112', malzeme: 'Zamak', yuzey: 'Siyah Boya' },
+      { urunKodu: 'LKY140', malzeme: 'Paslanmaz Çelik', yuzey: 'Kaplamasız' },
+    ],
+    relatedProducts: [],
+  },
+  'LKY2 > Lama Kitleyici Yatağı': {
+    code: 'LKY2',
+    name: 'Lama Kitleyici Yatağı',
+    description: '',
+    versions: [
+      { urunKodu: 'LKY263', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: 'LKY240', malzeme: 'Paslanmaz Çelik', yuzey: 'Kaplamasız' },
+    ],
+    relatedProducts: [],
+  },
+  'LY1 > Lama Yatağı': {
+    code: 'LY1',
+    name: 'Lama Yatağı',
+    description: '',
+    versions: [
+      { urunKodu: 'LY120', malzeme: 'Plastik', yuzey: 'Kaplamasız' },
+      { urunKodu: 'LY140', malzeme: 'Paslanmaz Çelik', yuzey: 'Kaplamasız' },
+    ],
+    relatedProducts: [],
+  },
+  'LY2 > Lama Yatağı': {
+    code: 'LY2',
+    name: 'Lama Yatağı',
+    description: '',
+    materials: {
+      'Malzeme': 'Polyamide PA6 GFR 30'
+    },
+    versions: [
+      { urunKodu: 'LY2', malzeme: 'Polyamide PA6 GFR 30', yuzey: 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  'LY3 > Lama Yatağı (Kolay Montoj)': {
+    code: 'LY3',
+    name: 'Lama Yatağı (Kolay Montoj)',
+    description: '',
+    materials: {
+      'Malzeme': 'Polyamide PA6 GFR 30'
+    },
+    versions: [
+      { urunKodu: 'LY3', malzeme: 'Polyamide PA6 GFR 30', yuzey: 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  'LY40 > Lama Yatağı': {
+    code: 'LY40',
+    name: 'Lama Yatağı',
+    description: '',
+    materials: {
+      'Malzeme': 'Paslanmaz Çelik'
+    },
+    versions: [
+      { urunKodu: 'LY40', malzeme: 'Paslanmaz Çelik', yuzey: 'Kaplamasız', cad3d: '' },
+    ],
+    relatedProducts: [],
+  },
+  'RCC > Köşe Bağlantı': {
+    code: 'RCC',
+    name: 'Köşe Bağlantı',
+    description: '• Çubukların dikey ve yatay hareketini sağlar.\n• 8 noktadan kilitleme için kullanılır.',
+    materials: {
+      'GÖVDE': 'Polyamide PA6 GFR 30',
+      'ÇUBUK TUTUCU': 'Zamak DIN-EN 1774-ZnAl4Cu1'
+    },
+    versions: [
+      { urunKodu: 'RCC', malzeme: 'Zamak', yuzey: 'Polyamide' },
+    ],
+    relatedProducts: [],
+  },
+  'LKY3 > Lama Kilitleyici Yatağı': {
+    code: 'LKY3',
+    name: 'Lama Kilitleyici Yatağı',
+    description: '',
+    materials: {
+      'Malzeme': 'Zamak DIN-EN 1774-ZnAl4Cu1'
+    },
+    surface: 'Çinko kaplama',
+    versions: [
+      { urunKodu: 'LKY3', urunAdi: 'Lama Kilitleyici Yatağı', malzeme: 'Zamak', yuzey: 'Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  'CY1 > Çubuk Yatağı': {
+    code: 'CY1',
+    name: 'Çubuk Yatağı',
+    description: '',
+    materials: {
+      'Malzeme': '• Polyamide PA6 GFR 30'
+    },
+    versions: [
+      { urunKodu: 'CY120', baglantiCivatasi: 'M6 x 16', H1: '20', H2: '12', H3: '32' },
+      { urunKodu: 'CY124', baglantiCivatasi: 'M6 x 20', H1: '24', H2: '16', H3: '36' },
+      { urunKodu: 'CY126', baglantiCivatasi: 'M6 x 22', H1: '26', H2: '18', H3: '38' },
+    ],
+    relatedProducts: [],
+  },
+  'CY2 > Çubuk Yatağı': {
+    code: 'CY2',
+    name: 'Çubuk Yatağı',
+    description: '',
+    materials: {
+      'Malzeme': '• Delrin'
+    },
+    versions: [
+      { urunKodu: 'CY2', malzeme: 'Delrin', yuzey: 'Beyaz' },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -2240,7 +2606,8 @@ function ProductDetail() {
 
   // Ürün adından kod ve ismi çıkar (örn: "001 > Kollu Kilit (Küçük Versiyon)" -> code: "001", name: "Kollu Kilit (Küçük Versiyon)")
   const extractProductInfo = (name) => {
-    const match = name.match(/^(\d+(?:\s*[A-Z]\d+)?)\s*>\s*(.+)$/)
+    // IC, CT, CY kodları için özel kontrol
+    const match = name.match(/^((?:\d+(?:\s*[A-Z]\d+)?)|(?:IC|CT\d+|CY\d+))\s*>\s*(.+)$/)
     if (match) {
       return { code: match[1], name: match[2] }
     }
@@ -2255,7 +2622,7 @@ function ProductDetail() {
   const productDetail = productDetails[productName]
   
   // Kollu kilit ürünleri için otomatik detay sayfası
-  const isLockProduct = productInfo && (productInfo.name.includes('Kollu Kilit') || productInfo.name.includes('Dikey Hareketli') || productInfo.name.includes('İspanyolet') || productInfo.name.includes('Dikey Mekanizmalı') || productInfo.name.includes('İç Kilitleme') || productInfo.name.includes('ispanyolet') || productInfo.name.includes('Kabin Kilidi') || productInfo.name.includes('T Kollu') || productInfo.name.includes('"T" Kollu') || productInfo.name.includes('\'T\' Kollu') || productInfo.name.includes('Trafo Kilidi') || productInfo.name.includes('Klima Santral Kilidi') || productInfo.name.includes('Klima Kabin Kilidi') || productInfo.name.includes('Fonsiyonel Kilit Menteşe') || productInfo.name.includes('Profil Bağlantı Parçası') || productInfo.name.includes('Sıkıştırmalı Kilit'))
+  const isLockProduct = productInfo && (productInfo.name.includes('Kollu Kilit') || productInfo.name.includes('Dikey Hareketli') || productInfo.name.includes('İspanyolet') || productInfo.name.includes('Dikey Mekanizmalı') || productInfo.name.includes('İç Kilitleme') || productInfo.name.includes('ispanyolet') || productInfo.name.includes('Kabin Kilidi') || productInfo.name.includes('T Kollu') || productInfo.name.includes('"T" Kollu') || productInfo.name.includes('\'T\' Kollu') || productInfo.name.includes('Trafo Kilidi') || productInfo.name.includes('Klima Santral Kilidi') || productInfo.name.includes('Klima Kabin Kilidi') || productInfo.name.includes('Fonsiyonel Kilit Menteşe') || productInfo.name.includes('Profil Bağlantı Parçası') || productInfo.name.includes('Sıkıştırmalı Kilit') || productInfo.name.includes('Çubuk') || productInfo.code === 'IC' || productInfo.code === 'CT1' || productInfo.code === 'CT2' || productInfo.code === 'CY1' || productInfo.code === 'CY2')
   const hasDetail = !!productDetail || isLockProduct
   
   // Kollu kilit resim mapping (ürün koduna göre)
@@ -2507,6 +2874,53 @@ function ProductDetail() {
       
       // Kod bulunamazsa genel resim
       return '/t_kollu_kabinkilitleri.jpg'
+    }
+    
+    // İspanyolet Çubuk ve Aksesuarları için özel resim mapping
+    if (code === 'IC' || code === 'CT1' || code === 'CT2' || code === 'CY1' || code === 'CY2') {
+      const ispanyoletCubukImageMap = {
+        'IC': productName?.includes('İspanyolet Çubuklar 1') ? '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar1.jpg' :
+              productName?.includes('İspanyolet Çubuklar 2') ? '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar2.jpg' :
+              productName?.includes('İspanyolet Çubuk 3') ? '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar3.jpeg' :
+              productName?.includes('İspanyolet Çubuklar 4') ? '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar4.jpeg' :
+              productName?.includes('İspanyolet Çubuklar 5') ? '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar4.jpeg' :
+              productName?.includes('İspanyolet Çubuklar 6') ? '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar6.jpg' :
+              '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar1.jpg',
+        'CT1': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ct1cubuktutucu.jpg',
+        'CT2': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ct2cubuktutucu.jpg',
+        'CY1': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy1cubukyatagi.jpg',
+        'CY2': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy2cubukyatagi.jpg',
+      }
+      
+      if (ispanyoletCubukImageMap[code]) {
+        return ispanyoletCubukImageMap[code]
+      }
+    }
+    
+    // İspanyolet Lama ve Aksesuarları için özel resim mapping
+    if (code === 'IL' || code === 'ILP' || code === 'LKY1' || code === 'LKY2' || code === 'LY1' || code === 'LY2' || code === 'LY3' || code === 'LY40' || code === 'LKY3' || code === 'RCC') {
+      const ispanyoletLamaImageMap = {
+        'IL': productName?.includes('İspanyolet Lamalar 1') ? '/dilleranahtarlar/İspanyoletLama/ispanyoletlama1.jpg' :
+              productName?.includes('İspanyolet Lamalar 2') ? '/dilleranahtarlar/İspanyoletLama/ispanyoletlama2.jpg' :
+              productName?.includes('İspanyolet Lamalar 3') ? '/dilleranahtarlar/İspanyoletLama/ispanyoletlama3.jpg' :
+              productName?.includes('İspanyolet Lamalar 4') ? '/dilleranahtarlar/İspanyoletLama/ispanyoletlama4.jpg' :
+              '/dilleranahtarlar/İspanyoletLama/ispanyoletlama1.jpg',
+        'ILP': productName?.includes('Çok Noktadan Kitleyici Lama 1') ? '/dilleranahtarlar/İspanyoletLama/coknoktadankitleyicilama1.jpg' :
+               productName?.includes('Çok Noktadan Kitleyici Lama 2') ? '/dilleranahtarlar/İspanyoletLama/coknoktadankitleyicilama2.jpg' :
+               '/dilleranahtarlar/İspanyoletLama/coknoktadankitleyicilama1.jpg',
+        'LKY1': '/dilleranahtarlar/İspanyoletLama/lky1lamakitleyiciyatagi.jpg',
+        'LKY2': '/dilleranahtarlar/İspanyoletLama/lky2lamakitleyiciyatagi.jpg',
+        'LY1': '/dilleranahtarlar/İspanyoletLama/ly1lamayatagi.jpg',
+        'LY2': '/dilleranahtarlar/İspanyoletLama/ly2lamayatagi.jpg',
+        'LY3': '/dilleranahtarlar/İspanyoletLama/ly3lamayatagikolaymontaj.jpg',
+        'LY40': '/dilleranahtarlar/İspanyoletLama/ly40lamayatagi.jpg',
+        'LKY3': '/dilleranahtarlar/İspanyoletLama/lky3lamakilitleyiciyatagi.jpg',
+        'RCC': '/dilleranahtarlar/İspanyoletLama/rcckosebaglanti.jpg',
+      }
+      
+      if (ispanyoletLamaImageMap[code]) {
+        return ispanyoletLamaImageMap[code]
+      }
     }
     
     // İspanyolet ürünleri için özel resim mapping
@@ -2886,8 +3300,112 @@ function ProductDetail() {
       return '/dilleranahtarlar/diller/30403499-ispanyolet-dil-adaptoru.pdf'
     }
     
-    // İspanyolet ürünleri için özel PDF mapping
-    if (fullName?.includes('İspanyolet') || fullName?.includes('Dikey Hareketli') || fullName?.includes('Dikey Mekanizmalı') || fullName?.includes('İç Kilitleme') || fullName?.includes('ispanyolet')) {
+    // İspanyolet Çubuk ve Aksesuarları için özel PDF mapping
+    if (code === 'IC' || code === 'CT1' || code === 'CT2' || code === 'CY1' || code === 'CY2') {
+      if (fullName?.includes('İspanyolet Çubuklar 1')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar1.pdf'
+      }
+      if (fullName?.includes('İspanyolet Çubuklar 2')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar2.pdf'
+      }
+      if (fullName?.includes('İspanyolet Çubuk 3')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuk3.pdf'
+      }
+      if (fullName?.includes('İspanyolet Çubuklar 4')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar4.pdf'
+      }
+      if (fullName?.includes('İspanyolet Çubuklar 5')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar5.pdf'
+      }
+      if (fullName?.includes('İspanyolet Çubuklar 6')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar6.pdf'
+      }
+      if (code === 'CT1' && fullName?.includes('Çubuk Tutucu')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ct1-cubuk-tutucu.pdf'
+      }
+      if (code === 'CT2' && fullName?.includes('Çubuk Tutucu')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ct2-cubuk-tutucu.pdf'
+      }
+      if (code === 'CY1' && fullName?.includes('Çubuk Yatağı')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy1-cubuk-yatagi.pdf'
+      }
+      if (code === 'CY2' && fullName?.includes('Çubuk Yatağı')) {
+        return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy2-cubuk-yatagi.pdf'
+      }
+    }
+    
+    // İspanyolet Lama ve Aksesuarları için özel PDF mapping (genel İspanyolet kontrolünden ÖNCE olmalı)
+    if (code === 'IL' || fullName?.includes('İspanyolet Lamalar')) {
+      // IL > İspanyolet Lamalar 1
+      if (fullName?.includes('İspanyolet Lamalar 1') || 
+          fullName?.includes('IL > İspanyolet Lamalar 1') ||
+          (code === 'IL' && (productDetail?.name === 'İspanyolet Lamalar 1' || name === 'İspanyolet Lamalar 1'))) {
+        return '/dilleranahtarlar/İspanyoletLama/il-ispanyolet-lamalar1.pdf'
+      }
+      // IL > İspanyolet Lamalar 2
+      if (fullName?.includes('İspanyolet Lamalar 2') || 
+          fullName?.includes('IL > İspanyolet Lamalar 2') ||
+          (code === 'IL' && (productDetail?.name === 'İspanyolet Lamalar 2' || name === 'İspanyolet Lamalar 2'))) {
+        return '/dilleranahtarlar/İspanyoletLama/il-ispanyolet-lamalar2.pdf'
+      }
+      // IL > İspanyolet Lamalar 3
+      if (fullName?.includes('İspanyolet Lamalar 3') || 
+          fullName?.includes('IL > İspanyolet Lamalar 3') ||
+          (code === 'IL' && (productDetail?.name === 'İspanyolet Lamalar 3' || name === 'İspanyolet Lamalar 3'))) {
+        return '/dilleranahtarlar/İspanyoletLama/il-ispanyolet-lamalar3.pdf'
+      }
+      // IL > İspanyolet Lamalar 4
+      if (fullName?.includes('İspanyolet Lamalar 4') || 
+          fullName?.includes('IL > İspanyolet Lamalar 4') ||
+          (code === 'IL' && (productDetail?.name === 'İspanyolet Lamalar 4' || name === 'İspanyolet Lamalar 4'))) {
+        return '/dilleranahtarlar/İspanyoletLama/il-ispanyolet-lamalar4.pdf'
+      }
+    }
+    
+    // ILP > Çok Noktadan Kitleyici Lama için özel PDF mapping
+    if (code === 'ILP' || fullName?.includes('Çok Noktadan Kitleyici Lama')) {
+      if (fullName?.includes('Çok Noktadan Kitleyici Lama 1') || 
+          fullName?.includes('ILP > Çok Noktadan Kitleyici Lama 1') ||
+          (code === 'ILP' && (productDetail?.name === 'Çok Noktadan Kitleyici Lama 1' || name === 'Çok Noktadan Kitleyici Lama 1'))) {
+        return '/dilleranahtarlar/İspanyoletLama/ilp-cok-noktadan-kitleyici-lama1.pdf'
+      }
+      if (fullName?.includes('Çok Noktadan Kitleyici Lama 2') || 
+          fullName?.includes('ILP > Çok Noktadan Kitleyici Lama 2') ||
+          (code === 'ILP' && (productDetail?.name === 'Çok Noktadan Kitleyici Lama 2' || name === 'Çok Noktadan Kitleyici Lama 2'))) {
+        return '/dilleranahtarlar/İspanyoletLama/ilp-cok-noktadan-kitleyici-lama2.pdf'
+      }
+    }
+    
+    // LKY1, LKY2, LKY3, LY1, LY2, LY3, LY40, RCC için özel PDF mapping
+    if (code === 'LKY1' || code === 'LKY2' || code === 'LKY3' || code === 'LY1' || code === 'LY2' || code === 'LY3' || code === 'LY40' || code === 'RCC') {
+      if (code === 'LKY1' && (fullName?.includes('Lama Kitleyici Yatağı') || productDetail?.name === 'Lama Kitleyici Yatağı' || name === 'Lama Kitleyici Yatağı')) {
+        return '/dilleranahtarlar/İspanyoletLama/lky1-lama-kitleyici-yatagi.pdf'
+      }
+      if (code === 'LKY2' && (fullName?.includes('Lama Kitleyici Yatağı') || productDetail?.name === 'Lama Kitleyici Yatağı' || name === 'Lama Kitleyici Yatağı')) {
+        return '/dilleranahtarlar/İspanyoletLama/lky2-lama-kitleyici-yatagi.pdf'
+      }
+      if (code === 'LKY3' && (fullName?.includes('Lama Kilitleyici Yatağı') || productDetail?.name === 'Lama Kilitleyici Yatağı' || name === 'Lama Kilitleyici Yatağı')) {
+        return '/dilleranahtarlar/İspanyoletLama/lky3-lama-kilitleyici-yatagi.pdf'
+      }
+      if (code === 'LY1' && (fullName?.includes('Lama Yatağı') && !fullName?.includes('Kolay Montoj') && !fullName?.includes('LY2') && !fullName?.includes('LY3') && !fullName?.includes('LY40') || (productDetail?.name === 'Lama Yatağı' && productDetail?.code === 'LY1') || (name === 'Lama Yatağı' && code === 'LY1'))) {
+        return '/dilleranahtarlar/İspanyoletLama/ly1-lama-yatagi.pdf'
+      }
+      if (code === 'LY2' && (fullName?.includes('LY2') || fullName?.includes('Lama Yatağı') || productDetail?.name === 'Lama Yatağı' || name === 'Lama Yatağı')) {
+        return '/dilleranahtarlar/İspanyoletLama/ly2-lama-yatagi.pdf'
+      }
+      if (code === 'LY3' && (fullName?.includes('LY3') || fullName?.includes('Kolay Montoj') || productDetail?.name === 'Lama Yatağı (Kolay Montoj)' || name === 'Lama Yatağı (Kolay Montoj)')) {
+        return '/dilleranahtarlar/İspanyoletLama/ly3-lama-yatagi-kolay-montoj.pdf'
+      }
+      if (code === 'LY40' && (fullName?.includes('LY40') || productDetail?.name === 'Lama Yatağı' || name === 'Lama Yatağı')) {
+        return '/dilleranahtarlar/İspanyoletLama/ly40-lama-yatagi.pdf'
+      }
+      if (code === 'RCC' && (fullName?.includes('Köşe Bağlantı') || productDetail?.name === 'Köşe Bağlantı' || name === 'Köşe Bağlantı')) {
+        return '/dilleranahtarlar/İspanyoletLama/rcc-kose-baglanti.pdf'
+      }
+    }
+    
+    // İspanyolet ürünleri için özel PDF mapping (IL, ILP, LKY1, LKY2, LKY3, LY1, LY2, LY3, LY40, RCC hariç)
+    if ((fullName?.includes('İspanyolet') && !fullName?.includes('İspanyolet Lamalar') && !fullName?.includes('Çok Noktadan Kitleyici Lama')) || fullName?.includes('Dikey Hareketli') || fullName?.includes('Dikey Mekanizmalı') || fullName?.includes('İç Kilitleme') || fullName?.includes('ispanyolet')) {
       const ispanyoletPdfMap = {
         '002': '/002-ispanyolet-sistemli-kollu-kilit.pdf',
         '003': '/003-ispanyolet-sistemli-pano-kilidi.pdf',
@@ -3050,6 +3568,23 @@ function ProductDetail() {
                   </div>
                 ) : null}
 
+                {/* Uygulama Alanı */}
+                {productDetail?.applicationArea && Object.keys(productDetail.applicationArea).length > 0 && (
+                  <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <h3 className="text-xl font-bold text-slate-900">UYGULAMA ALANI</h3>
+                    </div>
+                    <div className="space-y-4">
+                      {Object.entries(productDetail.applicationArea).map(([key, value]) => (
+                        <div key={key} className="text-base leading-relaxed text-slate-700 whitespace-pre-line">
+                          {value}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Malzeme Bilgileri */}
                 {(productDetail?.materials || isLockProduct) && Object.keys(productDetail?.materials || {}).length > 0 && (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -3061,7 +3596,7 @@ function ProductDetail() {
                       {Object.entries(productDetail?.materials || {}).map(([key, value]) => (
                         <div key={key} className="flex flex-col sm:flex-row sm:items-start gap-2 pb-4 border-b border-slate-100 last:border-0 last:pb-0">
                           <div className="min-w-[120px] font-semibold text-slate-900 text-sm sm:text-base">{key}:</div>
-                          <div className="text-sm sm:text-base text-slate-600 flex-1">{value}</div>
+                          <div className="text-sm sm:text-base text-slate-600 flex-1 whitespace-pre-line">{value}</div>
                         </div>
                       ))}
                     </div>
@@ -3124,9 +3659,15 @@ function ProductDetail() {
                               {productDetail.versions[0]?.stokKodu ? (
                                 <>
                                   <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Stok Kodu</th>
-                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CC</th>
-                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CH</th>
-                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CL</th>
+                                  {hasColumnData('CC') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CC</th>
+                                  )}
+                                  {hasColumnData('CH') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CH</th>
+                                  )}
+                                  {hasColumnData('CL') && (
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">CL</th>
+                                  )}
                                   {hasColumnData('LH13') && (
                                     <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">LH:13 (H)</th>
                                   )}
@@ -3187,54 +3728,124 @@ function ProductDetail() {
                                 </>
                               ) : productDetail.versions[0]?.mekanizmaGovde ? (
                               <>
-                                <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Versiyon</th>
+                                {hasColumnData('version') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Versiyon</th>
+                                )}
                                 <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Mekanizma Gövde</th>
-                                <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Mekanizma Lama</th>
-                                <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">A</th>
-                                <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">B</th>
-                                <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">C</th>
-                                <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">D</th>
+                                {hasColumnData('mekanizmaLama') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Mekanizma Lama</th>
+                                )}
+                                {hasColumnData('A') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">A</th>
+                                )}
+                                {hasColumnData('B') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">B</th>
+                                )}
+                                {hasColumnData('C') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">C</th>
+                                )}
+                                {hasColumnData('D') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">D</th>
+                                )}
                               </>
                             ) : productDetail.versions[0]?.urunKodu ? (
                               <>
-                                {productDetail.versions[0]?.malzeme ? (
+                                {productDetail.code === 'CY1' && productDetail.versions[0]?.baglantiCivatasi ? (
                                   <>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
-                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Bağlantı Civatası</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">H1</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">H2</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">H3</th>
+                                  </>
+                                ) : productDetail.versions[0]?.malzeme ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    {hasColumnData('urunAdi') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
+                                    )}
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
-                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                    {hasColumnData('yuzey') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                    )}
                                   </>
                                 ) : productDetail.code === '571' || productDetail.code === '671' ? (
                                   <>
-                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Kapı Kalınlığı (DT)</th>
-                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Silindir - Fişe</th>
+                                    {hasColumnData('aciklama') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Kapı Kalınlığı (DT)</th>
+                                    )}
+                                    {hasColumnData('silindirFise') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Silindir - Fişe</th>
+                                    )}
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
                                   </>
                                 ) : productDetail.code === '071' || productDetail.code === '171' || productDetail.code === '271' || productDetail.code === '371' || productDetail.code === '471' ? (
                                   <>
-                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Kapı Kalınlığı (DT)</th>
+                                    {hasColumnData('aciklama') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Kapı Kalınlığı (DT)</th>
+                                    )}
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                  </>
+                                ) : productDetail.versions[0]?.Hmm && productDetail.versions[0]?.Lmm ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">H mm</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">L mm</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                  </>
+                                ) : productDetail.versions[0]?.Xmm ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">X mm</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                  </>
+                                ) : productDetail.versions[0]?.Lmm ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">L mm</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    {((productDetail.code === 'IC' && productDetail.name === 'İspanyolet Çubuklar 6') || productDetail.code === 'LY40') && hasColumnData('cad3d') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">3D CAD</th>
+                                    )}
+                                  </>
+                                ) : productDetail.versions[0]?.urunKodu && productDetail.versions[0]?.malzeme && productDetail.versions[0]?.yuzey && !productDetail.versions[0]?.urunAdi ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                    {productDetail.code === 'LY40' && hasColumnData('cad3d') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">3D CAD</th>
+                                    )}
                                   </>
                                 ) : (
                                   <>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
-                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
-                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Açıklama</th>
+                                    {hasColumnData('urunAdi') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
+                                    )}
+                                    {hasColumnData('aciklama') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Açıklama</th>
+                                    )}
                                   </>
                                 )}
                               </>
                             ) : productDetail.versions[0]?.malzeme ? (
                               <>
                                 <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
-                                <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
-                                <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Açıklama</th>
+                                {hasColumnData('urunAdi') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
+                                )}
+                                {hasColumnData('aciklama') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Açıklama</th>
+                                )}
                               </>
                             ) : productDetail.versions[0]?.malzeme ? (
                               <>
                                 <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Versiyon</th>
                                 <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
-                                <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
-                                <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Dil</th>
+                                {hasColumnData('yuzey') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                )}
+                                {hasColumnData('dil') && (
+                                  <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Dil</th>
+                                )}
                               </>
                             ) : null}
                           </tr>
@@ -3245,9 +3856,15 @@ function ProductDetail() {
                               {version.stokKodu ? (
                                 <>
                                   <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.stokKodu}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CC}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CH}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CL}</td>
+                                  {hasColumnData('CC') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CC || ''}</td>
+                                  )}
+                                  {hasColumnData('CH') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CH || ''}</td>
+                                  )}
+                                  {hasColumnData('CL') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.CL || ''}</td>
+                                  )}
                                   {hasColumnData('LH13') && (
                                     <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.LH13 || ''}</td>
                                   )}
@@ -3308,39 +3925,101 @@ function ProductDetail() {
                                 </>
                               ) : version.mekanizmaGovde ? (
                                 <>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.version}</td>
+                                  {hasColumnData('version') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.version || ''}</td>
+                                  )}
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.mekanizmaGovde}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.mekanizmaLama}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.A}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.B}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.C}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.D}</td>
+                                  {hasColumnData('mekanizmaLama') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.mekanizmaLama || ''}</td>
+                                  )}
+                                  {hasColumnData('A') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.A || ''}</td>
+                                  )}
+                                  {hasColumnData('B') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.B || ''}</td>
+                                  )}
+                                  {hasColumnData('C') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.C || ''}</td>
+                                  )}
+                                  {hasColumnData('D') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.D || ''}</td>
+                                  )}
+                                </>
+                              ) : productDetail.code === 'CY1' && version.baglantiCivatasi ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.baglantiCivatasi}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H1}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H2}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H3}</td>
                                 </>
                               ) : version.urunKodu && version.malzeme ? (
                                 <>
                                   <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi}</td>
+                                  {hasColumnData('urunAdi') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi || ''}</td>
+                                  )}
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey}</td>
+                                  {hasColumnData('yuzey') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey || ''}</td>
+                                  )}
                                 </>
                               ) : version.urunKodu ? (
                                 <>
                                   {productDetail.code === '571' || productDetail.code === '671' ? (
                                     <>
-                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama}</td>
-                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.silindirFise}</td>
+                                      {hasColumnData('aciklama') && (
+                                        <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama || ''}</td>
+                                      )}
+                                      {hasColumnData('silindirFise') && (
+                                        <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.silindirFise || ''}</td>
+                                      )}
                                       <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
                                     </>
                                   ) : productDetail.code === '071' || productDetail.code === '171' || productDetail.code === '271' || productDetail.code === '371' || productDetail.code === '471' ? (
                                     <>
-                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama}</td>
+                                      {hasColumnData('aciklama') && (
+                                        <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama || ''}</td>
+                                      )}
                                       <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                    </>
+                                  ) : version.Hmm && version.Lmm ? (
+                                    <>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.Hmm}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.Lmm}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                    </>
+                                  ) : version.Xmm ? (
+                                    <>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.Xmm}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                    </>
+                                  ) : version.urunKodu && version.malzeme && version.yuzey && !version.urunAdi ? (
+                                    <>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey}</td>
+                                      {productDetail.code === 'LY40' && hasColumnData('cad3d') && (
+                                        <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.cad3d || ''}</td>
+                                      )}
+                                    </>
+                                  ) : version.Lmm ? (
+                                    <>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.Lmm}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                      {productDetail.code === 'IC' && productDetail.name === 'İspanyolet Çubuklar 6' && hasColumnData('cad3d') && (
+                                        <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.cad3d || ''}</td>
+                                      )}
                                     </>
                                   ) : (
                                     <>
                                       <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
-                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi}</td>
-                                      <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama}</td>
+                                      {hasColumnData('urunAdi') && (
+                                        <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi || ''}</td>
+                                      )}
+                                      {hasColumnData('aciklama') && (
+                                        <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama || ''}</td>
+                                      )}
                                     </>
                                   )}
                                 </>
@@ -3348,8 +4027,12 @@ function ProductDetail() {
                                 <>
                                   <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.version}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey}</td>
-                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.dil}</td>
+                                  {hasColumnData('yuzey') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey || ''}</td>
+                                  )}
+                                  {hasColumnData('dil') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.dil || ''}</td>
+                                  )}
                                 </>
                               ) : null}
                             </tr>

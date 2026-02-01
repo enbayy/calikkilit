@@ -1042,11 +1042,23 @@ function Products() {
               {currentItems.map((item) => {
                 const img = getPumpImage(item)
                 const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
+                
+                // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel kontrol - "Diller", "İspanyolet Çubuk ve Aksesuarları" ve "İspanyolet Lama ve Aksesuarları" section sayfasına yönlendir
+                const isDiller = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Diller'
+                const isIspanyoletCubuk = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'İspanyolet Çubuk ve Aksesuarları'
+                const isIspanyoletLama = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'İspanyolet Lama ve Aksesuarları'
+                const sectionSlugMap = {
+                  'Diller': 'diller',
+                  'İspanyolet Çubuk ve Aksesuarları': 'ispanyolet-cubuk-ve-aksesuarlari',
+                  'İspanyolet Lama ve Aksesuarları': 'ispanyolet-lama-ve-aksesuarlari',
+                }
+                const sectionSlug = (isDiller || isIspanyoletCubuk || isIspanyoletLama) ? sectionSlugMap[item] : null
+                
                 return (
                   <Link
                     key={item}
-                    to={`/urun-detay/${productSlug}`}
-                    state={{ productName: item, productImage: img, productLogo: getProductLogo(item) }}
+                    to={sectionSlug ? `/urunler/${sectionSlug}` : `/urun-detay/${productSlug}`}
+                    state={sectionSlug ? {} : { productName: item, productImage: img, productLogo: getProductLogo(item) }}
                     className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-slate-300 hover:shadow-xl"
                   >
                     <div className="mb-6 flex items-center justify-center">
