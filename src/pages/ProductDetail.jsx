@@ -2617,6 +2617,143 @@ const productDetails = {
     ],
     relatedProducts: [],
   },
+  'IL > Paslanmaz Çelik İspanyolet Lama 1': {
+    code: 'IL',
+    name: 'Paslanmaz Çelik İspanyolet Lama 1',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler.'
+    },
+    accessories: {
+      'Aksesuarlar': '• Lama yatağı (LY)'
+    },
+    versions: [
+      { Hmm: '27', Lmm: '1020', urunKodu: 'IL 4-0-1-27-1020' },
+      { Hmm: '13', Lmm: '1020', urunKodu: 'IL 4-0-1-13-1020' },
+    ],
+    relatedProducts: [],
+  },
+  'IL > Paslanmaz Çelik İspanyolet Lama 2': {
+    code: 'IL',
+    name: 'Paslanmaz Çelik İspanyolet Lama 2',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler.'
+    },
+    accessories: {
+      'Aksesuarlar': '• Lama yatağı (LY)'
+    },
+    versions: [
+      { Hmm: '16', Lmm: '1020', urunKodu: 'IL 4-0-2-16-1020' },
+      { Hmm: '21', Lmm: '1020', urunKodu: 'IL 4-0-2-21-1020' },
+    ],
+    relatedProducts: [],
+  },
+  'ILP > Paslanmaz Çelik Çok Noktadan Kitleyici Lama': {
+    code: 'ILP',
+    name: 'Paslanmaz Çelik Çok Noktadan Kitleyici Lama',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler.'
+    },
+    accessories: {
+      'Aksesuarlar': '• Lama yatağı (LY)\n• Lama kilitleyici yatağı (LKY)'
+    },
+    versions: [
+      { Xmm: '575', urunKodu: 'ILP 4-0-1-575' },
+    ],
+    relatedProducts: [],
+  },
+  '369 > Metal Anahtarlar': {
+    code: '369',
+    name: 'Metal Anahtarlar',
+    description: '',
+    versions: [
+      { urunKodu: '36911', gobekCesidi: 'Tüp Anahtar', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36912', gobekCesidi: 'Tüp Anahtar', malzeme: 'Zamak', yuzey: 'Siyah Boya' },
+      { urunKodu: '46911', gobekCesidi: 'Tüp Anahtar', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '46912', gobekCesidi: 'Tüp Anahtar', malzeme: 'Zamak', yuzey: 'Siyah Boya' },
+    ],
+    relatedProducts: [],
+  },
+  '568 > Çoklu Anahtarlar (Metal)': {
+    code: '568',
+    name: 'Çoklu Anahtarlar (Metal)',
+    description: '',
+    versions: [
+      { urunKodu: '56813', gobekCesidi: '5mm Çentikli, 8mm Kare, Demiryolu', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '569 > Çoklu Anahtarlar (Metal)': {
+    code: '569',
+    name: 'Çoklu Anahtarlar (Metal)',
+    description: '',
+    versions: [
+      { urunKodu: '56913', gobekCesidi: '8mm Kare, Demiryolu', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '668 > Çoklu Anahtar (Metal)': {
+    code: '668',
+    name: 'Çoklu Anahtar (Metal)',
+    description: '',
+    versions: [
+      { urunKodu: '66811', gobekCesidi: '5mm Çentikli, 6mm Altıgen, 8mm Kare, 9mm Üçgen', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '66812', gobekCesidi: '5mm Çentikli, 6mm Altıgen, 8mm Kare, 9mm Üçgen', malzeme: 'Zamak', yuzey: 'Siyah Boya' },
+    ],
+    relatedProducts: [],
+  },
+  '669 > Plastik Anahtarlar': {
+    code: '669',
+    name: 'Plastik Anahtarlar',
+    description: '',
+    versions: [
+      { urunKodu: '66966', gobekCesidi: '6mm Altıgen', malzeme: 'Plastik', yuzey: 'Siyah' },
+      { urunKodu: '66915', gobekCesidi: '5mm Çentikli', malzeme: 'Plastik', yuzey: 'Siyah' },
+      { urunKodu: '66928', gobekCesidi: '8mm Kare', malzeme: 'Plastik', yuzey: 'Siyah' },
+      { urunKodu: '66939', gobekCesidi: '9mm Üçgen', malzeme: 'Plastik', yuzey: 'Siyah' },
+      { urunKodu: '26915', gobekCesidi: '5mm Çentikli', malzeme: 'Plastik', yuzey: 'Siyah' },
+      { urunKodu: '66993', gobekCesidi: 'Tüp Anahtar', malzeme: 'Plastik', yuzey: 'Siyah' },
+      { urunKodu: '76993', gobekCesidi: 'Tüp Anahtar', malzeme: 'Plastik', yuzey: 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  '267 > Metal Anahtarlar (Kısa)': {
+    code: '267',
+    name: 'Metal Anahtarlar (Kısa)',
+    description: '',
+    versions: [
+      { urunKodu: '26713', gobekCesidi: '3mm Çentikli', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '26715', gobekCesidi: '5mm Çentikli', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '26726', gobekCesidi: '6mm Kare', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '26727', gobekCesidi: '7mm Kare', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '26728', gobekCesidi: '8mm Kare', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '26737', gobekCesidi: '7mm Üçgen', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '26738', gobekCesidi: '8mm Üçgen', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '26739', gobekCesidi: '9mm Üçgen', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '368 > Metal Anahtarlar (Uzun)': {
+    code: '368',
+    name: 'Metal Anahtarlar (Uzun)',
+    description: '',
+    versions: [
+      { urunKodu: '36813', gobekCesidi: '3mm Çentikli', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36815', gobekCesidi: '5mm Çentikli', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36826', gobekCesidi: '6mm Kare', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36827', gobekCesidi: '7mm Kare', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36828', gobekCesidi: '8mm Kare', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36896', gobekCesidi: 'Ebr', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36837', gobekCesidi: '8mm Üçgen', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36838', gobekCesidi: '8mm Üçgen', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36839', gobekCesidi: '9mm Üçgen', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36891', gobekCesidi: 'Ay Parçası', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+      { urunKodu: '36868', gobekCesidi: '8mm Altıgen Dişi', malzeme: 'Zamak', yuzey: 'Krom Kaplama' },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -3001,6 +3138,28 @@ function ProductDetail() {
     
     // İspanyolet Lama ve Aksesuarları için özel resim mapping
     if (code === 'IL' || code === 'ILP' || code === 'LKY1' || code === 'LKY2' || code === 'LY1' || code === 'LY2' || code === 'LY3' || code === 'LY40' || code === 'LKY3' || code === 'RCC') {
+      // Paslanmaz İspanyolet Lama kontrolü
+      if (productName?.includes('Paslanmaz Çelik')) {
+        const paslanmazIspanyoletLamaImageMap = {
+          'IL': productName?.includes('Paslanmaz Çelik İspanyolet Lama 1') ? '/dilleranahtarlar/paslanmazispanyoletlama/il-1.png' :
+                productName?.includes('Paslanmaz Çelik İspanyolet Lama 2') ? '/dilleranahtarlar/paslanmazispanyoletlama/il-2.png' :
+                '/dilleranahtarlar/paslanmazispanyoletlama/il-1.png',
+          'ILP': productName?.includes('Paslanmaz Çelik Çok Noktadan Kitleyici Lama') ? '/dilleranahtarlar/paslanmazispanyoletlama/ilp-1.png' :
+                 '/dilleranahtarlar/paslanmazispanyoletlama/ilp-1.png',
+          'LKY1': '/dilleranahtarlar/paslanmazispanyoletlama/lky1.jpg',
+          'LKY2': '/dilleranahtarlar/paslanmazispanyoletlama/lky2.jpg',
+          'LKY3': '/dilleranahtarlar/paslanmazispanyoletlama/lky3.jpg',
+          'LY1': '/dilleranahtarlar/paslanmazispanyoletlama/ly1.jpg',
+          'LY2': '/dilleranahtarlar/paslanmazispanyoletlama/ly2.jpg',
+          'LY40': '/dilleranahtarlar/paslanmazispanyoletlama/ly40.jpg',
+          'RCC': '/dilleranahtarlar/paslanmazispanyoletlama/rcc.jpg',
+        }
+        
+        if (paslanmazIspanyoletLamaImageMap[code]) {
+          return paslanmazIspanyoletLamaImageMap[code]
+        }
+      }
+      
       const ispanyoletLamaImageMap = {
         'IL': productName?.includes('İspanyolet Lamalar 1') ? '/dilleranahtarlar/İspanyoletLama/ispanyoletlama1.jpg' :
               productName?.includes('İspanyolet Lamalar 2') ? '/dilleranahtarlar/İspanyoletLama/ispanyoletlama2.jpg' :
@@ -3022,6 +3181,23 @@ function ProductDetail() {
       
       if (ispanyoletLamaImageMap[code]) {
         return ispanyoletLamaImageMap[code]
+      }
+    }
+    
+    // Anahtarlar için özel resim mapping
+    if (code === '369' || code === '568' || code === '569' || code === '668' || code === '669' || code === '267' || code === '368') {
+      const anahtarlarImageMap = {
+        '369': '/dilleranahtarlar/anahtarlar/369.jpg',
+        '568': '/dilleranahtarlar/anahtarlar/568.jpg',
+        '569': '/dilleranahtarlar/anahtarlar/569.jpg',
+        '668': '/dilleranahtarlar/anahtarlar/668.jpg',
+        '669': '/dilleranahtarlar/anahtarlar/669.jpg',
+        '267': '/dilleranahtarlar/anahtarlar/267.jpg',
+        '368': '/dilleranahtarlar/anahtarlar/368.jpg',
+      }
+      
+      if (anahtarlarImageMap[code]) {
+        return anahtarlarImageMap[code]
       }
     }
     
@@ -3471,17 +3647,27 @@ function ProductDetail() {
     }
     
     // İspanyolet Lama ve Aksesuarları için özel PDF mapping (genel İspanyolet kontrolünden ÖNCE olmalı)
-    if (code === 'IL' || fullName?.includes('İspanyolet Lamalar')) {
+    if (code === 'IL' || fullName?.includes('İspanyolet Lamalar') || fullName?.includes('Paslanmaz Çelik İspanyolet Lama')) {
+      // Paslanmaz İspanyolet Lama PDF'leri
+      if (fullName?.includes('Paslanmaz Çelik İspanyolet Lama 1')) {
+        return '/dilleranahtarlar/paslanmazispanyoletlama/il-paslanmaz-celik-ispanyolet-lama1.pdf'
+      }
+      if (fullName?.includes('Paslanmaz Çelik İspanyolet Lama 2')) {
+        return '/dilleranahtarlar/paslanmazispanyoletlama/il-paslanmaz-celik-ispanyolet-lama2.pdf'
+      }
+      if (fullName?.includes('Paslanmaz Çelik Çok Noktadan Kitleyici Lama')) {
+        return '/dilleranahtarlar/paslanmazispanyoletlama/ilp-paslanmaz-celik-cok-noktadan-kitleyici-lama.pdf'
+      }
       // IL > İspanyolet Lamalar 1
-      if (fullName?.includes('İspanyolet Lamalar 1') || 
-          fullName?.includes('IL > İspanyolet Lamalar 1') ||
-          (code === 'IL' && (productDetail?.name === 'İspanyolet Lamalar 1' || name === 'İspanyolet Lamalar 1'))) {
+      if (fullName?.includes('İspanyolet Lamalar 1') && !fullName?.includes('Paslanmaz') || 
+          (fullName?.includes('IL > İspanyolet Lamalar 1') && !fullName?.includes('Paslanmaz')) ||
+          (code === 'IL' && (productDetail?.name === 'İspanyolet Lamalar 1' || name === 'İspanyolet Lamalar 1') && !fullName?.includes('Paslanmaz'))) {
         return '/dilleranahtarlar/İspanyoletLama/il-ispanyolet-lamalar1.pdf'
       }
       // IL > İspanyolet Lamalar 2
-      if (fullName?.includes('İspanyolet Lamalar 2') || 
-          fullName?.includes('IL > İspanyolet Lamalar 2') ||
-          (code === 'IL' && (productDetail?.name === 'İspanyolet Lamalar 2' || name === 'İspanyolet Lamalar 2'))) {
+      if (fullName?.includes('İspanyolet Lamalar 2') && !fullName?.includes('Paslanmaz') || 
+          (fullName?.includes('IL > İspanyolet Lamalar 2') && !fullName?.includes('Paslanmaz')) ||
+          (code === 'IL' && (productDetail?.name === 'İspanyolet Lamalar 2' || name === 'İspanyolet Lamalar 2') && !fullName?.includes('Paslanmaz'))) {
         return '/dilleranahtarlar/İspanyoletLama/il-ispanyolet-lamalar2.pdf'
       }
       // IL > İspanyolet Lamalar 3
@@ -3499,44 +3685,94 @@ function ProductDetail() {
     }
     
     // ILP > Çok Noktadan Kitleyici Lama için özel PDF mapping
-    if (code === 'ILP' || fullName?.includes('Çok Noktadan Kitleyici Lama')) {
-      if (fullName?.includes('Çok Noktadan Kitleyici Lama 1') || 
-          fullName?.includes('ILP > Çok Noktadan Kitleyici Lama 1') ||
-          (code === 'ILP' && (productDetail?.name === 'Çok Noktadan Kitleyici Lama 1' || name === 'Çok Noktadan Kitleyici Lama 1'))) {
+    if (code === 'ILP' || fullName?.includes('Çok Noktadan Kitleyici Lama') || fullName?.includes('Paslanmaz Çelik Çok Noktadan Kitleyici Lama')) {
+      // Paslanmaz Çok Noktadan Kitleyici Lama
+      if (fullName?.includes('Paslanmaz Çelik Çok Noktadan Kitleyici Lama')) {
+        return '/dilleranahtarlar/paslanmazispanyoletlama/ilp-paslanmaz-celik-cok-noktadan-kitleyici-lama.pdf'
+      }
+      // Normal Çok Noktadan Kitleyici Lama
+      if (fullName?.includes('Çok Noktadan Kitleyici Lama 1') && !fullName?.includes('Paslanmaz') || 
+          (fullName?.includes('ILP > Çok Noktadan Kitleyici Lama 1') && !fullName?.includes('Paslanmaz')) ||
+          (code === 'ILP' && (productDetail?.name === 'Çok Noktadan Kitleyici Lama 1' || name === 'Çok Noktadan Kitleyici Lama 1') && !fullName?.includes('Paslanmaz'))) {
         return '/dilleranahtarlar/İspanyoletLama/ilp-cok-noktadan-kitleyici-lama1.pdf'
       }
-      if (fullName?.includes('Çok Noktadan Kitleyici Lama 2') || 
-          fullName?.includes('ILP > Çok Noktadan Kitleyici Lama 2') ||
-          (code === 'ILP' && (productDetail?.name === 'Çok Noktadan Kitleyici Lama 2' || name === 'Çok Noktadan Kitleyici Lama 2'))) {
+      if (fullName?.includes('Çok Noktadan Kitleyici Lama 2') && !fullName?.includes('Paslanmaz') || 
+          (fullName?.includes('ILP > Çok Noktadan Kitleyici Lama 2') && !fullName?.includes('Paslanmaz')) ||
+          (code === 'ILP' && (productDetail?.name === 'Çok Noktadan Kitleyici Lama 2' || name === 'Çok Noktadan Kitleyici Lama 2') && !fullName?.includes('Paslanmaz'))) {
         return '/dilleranahtarlar/İspanyoletLama/ilp-cok-noktadan-kitleyici-lama2.pdf'
       }
     }
     
     // LKY1, LKY2, LKY3, LY1, LY2, LY3, LY40, RCC için özel PDF mapping
     if (code === 'LKY1' || code === 'LKY2' || code === 'LKY3' || code === 'LY1' || code === 'LY2' || code === 'LY3' || code === 'LY40' || code === 'RCC') {
+      // Paslanmaz section'dan geliyorsa paslanmaz PDF'lerini kullan
+      const isFromPaslanmazSection = location?.state?.fromSection === 'Paslanmaz İspanyolet Lama ve Aksesuarları' ||
+                                      location?.pathname?.includes('paslanmaz-ispanyolet-lama')
+      
       if (code === 'LKY1' && (fullName?.includes('Lama Kitleyici Yatağı') || productDetail?.name === 'Lama Kitleyici Yatağı' || name === 'Lama Kitleyici Yatağı')) {
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletlama/lky1-lama-kitleyici-yatagi.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletLama/lky1-lama-kitleyici-yatagi.pdf'
       }
       if (code === 'LKY2' && (fullName?.includes('Lama Kitleyici Yatağı') || productDetail?.name === 'Lama Kitleyici Yatağı' || name === 'Lama Kitleyici Yatağı')) {
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletlama/lky2-lama-kitleyici-yatagi.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletLama/lky2-lama-kitleyici-yatagi.pdf'
       }
       if (code === 'LKY3' && (fullName?.includes('Lama Kilitleyici Yatağı') || productDetail?.name === 'Lama Kilitleyici Yatağı' || name === 'Lama Kilitleyici Yatağı')) {
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletlama/lky3-lama-kilitleyici-yatagi.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletLama/lky3-lama-kilitleyici-yatagi.pdf'
       }
       if (code === 'LY1' && (fullName?.includes('Lama Yatağı') && !fullName?.includes('Kolay Montoj') && !fullName?.includes('LY2') && !fullName?.includes('LY3') && !fullName?.includes('LY40') || (productDetail?.name === 'Lama Yatağı' && productDetail?.code === 'LY1') || (name === 'Lama Yatağı' && code === 'LY1'))) {
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletlama/ly1-lama-yatagi.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletLama/ly1-lama-yatagi.pdf'
       }
       if (code === 'LY2' && (fullName?.includes('LY2') || fullName?.includes('Lama Yatağı') || productDetail?.name === 'Lama Yatağı' || name === 'Lama Yatağı')) {
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletlama/ly2-lama-yatagi.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletLama/ly2-lama-yatagi.pdf'
       }
       if (code === 'LY3' && (fullName?.includes('LY3') || fullName?.includes('Kolay Montoj') || productDetail?.name === 'Lama Yatağı (Kolay Montoj)' || name === 'Lama Yatağı (Kolay Montoj)')) {
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletlama/ly3-lama-yatagi-kolay-montoj.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletLama/ly3-lama-yatagi-kolay-montoj.pdf'
       }
       if (code === 'LY40' && (fullName?.includes('LY40') || productDetail?.name === 'Lama Yatağı' || name === 'Lama Yatağı')) {
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletlama/ly40-lama-yatagi.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletLama/ly40-lama-yatagi.pdf'
       }
       if (code === 'RCC' && (fullName?.includes('Köşe Bağlantı') || productDetail?.name === 'Köşe Bağlantı' || name === 'Köşe Bağlantı')) {
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletlama/rcc-kose-baglanti.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletLama/rcc-kose-baglanti.pdf'
+      }
+    }
+    
+    // Anahtarlar için özel PDF mapping
+    if (code === '369' || code === '568' || code === '569' || code === '668' || code === '669' || code === '267' || code === '368') {
+      const anahtarlarPdfMap = {
+        '369': '/dilleranahtarlar/anahtarlar/369-metal-anahtarlar.pdf',
+        '568': '/dilleranahtarlar/anahtarlar/568-coklu-anahtarlar-metal.pdf',
+        '569': '/dilleranahtarlar/anahtarlar/569-coklu-anahtarlar-metal.pdf',
+        '668': '/dilleranahtarlar/anahtarlar/668-coklu-anahtar-metal.pdf',
+        '669': '/dilleranahtarlar/anahtarlar/669-plastik-anahtarlar.pdf',
+        '267': '/dilleranahtarlar/anahtarlar/267-metal-anahtarlar-kisa.pdf',
+        '368': '/dilleranahtarlar/anahtarlar/368-metal-anahtarlar-uzun.pdf',
+      }
+      
+      if (anahtarlarPdfMap[code]) {
+        return anahtarlarPdfMap[code]
       }
     }
     
@@ -3911,6 +4147,15 @@ function ProductDetail() {
                                     <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">H2</th>
                                     <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">H3</th>
                                   </>
+                                ) : productDetail.versions[0]?.gobekCesidi ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Göbek Çeşidi</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
+                                    {hasColumnData('yuzey') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                    )}
+                                  </>
                                 ) : productDetail.versions[0]?.malzeme ? (
                                   <>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
@@ -4105,6 +4350,15 @@ function ProductDetail() {
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H1}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H2}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H3}</td>
+                                </>
+                              ) : version.urunKodu && version.gobekCesidi ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.gobekCesidi}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme}</td>
+                                  {hasColumnData('yuzey') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey || ''}</td>
+                                  )}
                                 </>
                               ) : version.urunKodu && version.malzeme ? (
                                 <>

@@ -558,6 +558,8 @@ function SectionProducts() {
       'ispanyolet-cubuk-ve-aksesuarlari': 'İspanyolet Çubuk ve Aksesuarları',
       'ispanyolet-lama-ve-aksesuarlari': 'İspanyolet Lama ve Aksesuarları',
       'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari': 'Paslanmaz İspanyolet Çubuk ve Aksesuarları',
+      'paslanmaz-ispanyolet-lama-ve-aksesuarlari': 'Paslanmaz İspanyolet Lama ve Aksesuarları',
+      'anahtarlar': 'Anahtarlar',
       'ceyrek-donuslu-kilitler': 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
       'silindirli-kilitler': 'SİLİNDİRLİ KİLİTLER',
       'mobilya-ve-celik-esya-kilitleri': 'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ',
@@ -692,6 +694,33 @@ function SectionProducts() {
         'CY2 > Çubuk Yatağı',
       ]
     }
+    // Paslanmaz İspanyolet Lama ve Aksesuarları için özel ürün listesi
+    if (sectionTitle === 'Paslanmaz İspanyolet Lama ve Aksesuarları') {
+      return [
+        'IL > Paslanmaz Çelik İspanyolet Lama 1',
+        'IL > Paslanmaz Çelik İspanyolet Lama 2',
+        'ILP > Paslanmaz Çelik Çok Noktadan Kitleyici Lama',
+        'LKY1 > Lama Kitleyici Yatağı',
+        'LKY2 > Lama Kitleyici Yatağı',
+        'LKY3 > Lama Kilitleyici Yatağı',
+        'LY1 > Lama Yatağı',
+        'LY2 > Lama Yatağı',
+        'LY40 > Lama Yatağı',
+        'RCC > Köşe Bağlantı',
+      ]
+    }
+    
+    if (sectionTitle === 'Anahtarlar') {
+      return [
+        '369 > Metal Anahtarlar',
+        '568 > Çoklu Anahtarlar (Metal)',
+        '569 > Çoklu Anahtarlar (Metal)',
+        '668 > Çoklu Anahtar (Metal)',
+        '669 > Plastik Anahtarlar',
+        '267 > Metal Anahtarlar (Kısa)',
+        '368 > Metal Anahtarlar (Uzun)',
+      ]
+    }
     // İspanyolet Lama ve Aksesuarları için özel ürün listesi
     if (sectionTitle === 'İspanyolet Lama ve Aksesuarları') {
       return [
@@ -735,6 +764,7 @@ function SectionProducts() {
     'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR': '/dilleranahtarlarcubuklarve.png',
     'İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/ispanyoletcubuk-ve-aksesuarlari.jpg',
     'Paslanmaz İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletcubuk.png',
+    'Paslanmaz İspanyolet Lama ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletlama.png',
     'ÇEYREK DÖNÜŞLÜ KİLİTLER': '/ceyrekdonuslukilitler.png',
     'SİLİNDİRLİ KİLİTLER': '/silindirlikilitler.png',
     'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ': '/mobilyavecelikesya.png',
@@ -990,6 +1020,26 @@ function SectionProducts() {
     
     // İspanyolet Lama ve Aksesuarları için özel resim mapping
     if (itemName.startsWith('IL >') || itemName.startsWith('ILP >') || itemName.startsWith('LKY') || itemName.startsWith('LY') || itemName.startsWith('RCC >')) {
+      // Paslanmaz İspanyolet Lama kontrolü
+      if (itemName.includes('Paslanmaz Çelik')) {
+        const paslanmazIspanyoletLamaImageMap = {
+          'IL > Paslanmaz Çelik İspanyolet Lama 1': '/dilleranahtarlar/paslanmazispanyoletlama/il-1.png',
+          'IL > Paslanmaz Çelik İspanyolet Lama 2': '/dilleranahtarlar/paslanmazispanyoletlama/il-2.png',
+          'ILP > Paslanmaz Çelik Çok Noktadan Kitleyici Lama': '/dilleranahtarlar/paslanmazispanyoletlama/ilp-1.png',
+          'LKY1 > Lama Kitleyici Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/lky1.jpg',
+          'LKY2 > Lama Kitleyici Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/lky2.jpg',
+          'LKY3 > Lama Kilitleyici Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/lky3.jpg',
+          'LY1 > Lama Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/ly1.jpg',
+          'LY2 > Lama Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/ly2.jpg',
+          'LY40 > Lama Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/ly40.jpg',
+          'RCC > Köşe Bağlantı': '/dilleranahtarlar/paslanmazispanyoletlama/rcc.jpg',
+        }
+        
+        if (paslanmazIspanyoletLamaImageMap[itemName]) {
+          return paslanmazIspanyoletLamaImageMap[itemName]
+        }
+      }
+      
       const ispanyoletLamaImageMap = {
         'IL > İspanyolet Lamalar 1': '/dilleranahtarlar/İspanyoletLama/ispanyoletlama1.jpg',
         'IL > İspanyolet Lamalar 2': '/dilleranahtarlar/İspanyoletLama/ispanyoletlama2.jpg',
@@ -1384,6 +1434,21 @@ function SectionProducts() {
                 'CY2 > Çubuk Yatağı': '/dilleranahtarlar/paslanmazispanyoletcubuk/cy2.jpg',
               }
               img = paslanmazIspanyoletCubukImageMap[item] || '/dilleranahtarlar/paslanmazispanyoletcubuk.png'
+            } else if (sectionTitle === 'Paslanmaz İspanyolet Lama ve Aksesuarları') {
+              // Paslanmaz İspanyolet Lama ve Aksesuarları section'ı için özel resim mapping
+              const paslanmazIspanyoletLamaImageMap = {
+                'IL > Paslanmaz Çelik İspanyolet Lama 1': '/dilleranahtarlar/paslanmazispanyoletlama/il-1.png',
+                'IL > Paslanmaz Çelik İspanyolet Lama 2': '/dilleranahtarlar/paslanmazispanyoletlama/il-2.png',
+                'ILP > Paslanmaz Çelik Çok Noktadan Kitleyici Lama': '/dilleranahtarlar/paslanmazispanyoletlama/ilp-1.png',
+                'LKY1 > Lama Kitleyici Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/lky1.jpg',
+                'LKY2 > Lama Kitleyici Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/lky2.jpg',
+                'LKY3 > Lama Kilitleyici Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/lky3.jpg',
+                'LY1 > Lama Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/ly1.jpg',
+                'LY2 > Lama Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/ly2.jpg',
+                'LY40 > Lama Yatağı': '/dilleranahtarlar/paslanmazispanyoletlama/ly40.jpg',
+                'RCC > Köşe Bağlantı': '/dilleranahtarlar/paslanmazispanyoletlama/rcc.jpg',
+              }
+              img = paslanmazIspanyoletLamaImageMap[item] || '/dilleranahtarlar/paslanmazispanyoletlama.png'
             } else if (sectionTitle === 'İspanyolet Lama ve Aksesuarları') {
               // İspanyolet Lama ve Aksesuarları section'ı için özel resim mapping
               const ispanyoletLamaImageMap = {
@@ -1403,6 +1468,18 @@ function SectionProducts() {
                 'LKY3 > Lama Kilitleyici Yatağı': '/dilleranahtarlar/İspanyoletLama/lky3lamakilitleyiciyatagi.jpg',
               }
               img = ispanyoletLamaImageMap[item] || '/dilleranahtarlar/ispanyoletLama.jpg'
+            } else if (sectionTitle === 'Anahtarlar') {
+              // Anahtarlar section'ı için özel resim mapping
+              const anahtarlarImageMap = {
+                '369 > Metal Anahtarlar': '/dilleranahtarlar/anahtarlar/369.jpg',
+                '568 > Çoklu Anahtarlar (Metal)': '/dilleranahtarlar/anahtarlar/568.jpg',
+                '569 > Çoklu Anahtarlar (Metal)': '/dilleranahtarlar/anahtarlar/569.jpg',
+                '668 > Çoklu Anahtar (Metal)': '/dilleranahtarlar/anahtarlar/668.jpg',
+                '669 > Plastik Anahtarlar': '/dilleranahtarlar/anahtarlar/669.jpg',
+                '267 > Metal Anahtarlar (Kısa)': '/dilleranahtarlar/anahtarlar/267.jpg',
+                '368 > Metal Anahtarlar (Uzun)': '/dilleranahtarlar/anahtarlar/368.jpg',
+              }
+              img = anahtarlarImageMap[item] || '/dilleranahtarlar/anahtarlar.jpg'
             }
             const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
             // Ürün adından sayıyı çıkar (örn: "001 > Kollu Kilit" -> code: "001", name: "Kollu Kilit")
@@ -1417,11 +1494,13 @@ function SectionProducts() {
             const isSikistirmaliKilitler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Sıkıştırmalı Kilitler'
             const isSurguKilitler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Sürgü Kilitler'
             const isDigerUrunler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Diğer Ürünler'
-            // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel kontrol - "Diller", "İspanyolet Çubuk ve Aksesuarları", "İspanyolet Lama ve Aksesuarları" ve "Paslanmaz İspanyolet Çubuk ve Aksesuarları" section sayfasına yönlendir
+            // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel kontrol - "Diller", "İspanyolet Çubuk ve Aksesuarları", "İspanyolet Lama ve Aksesuarları", "Paslanmaz İspanyolet Çubuk ve Aksesuarları" ve "Paslanmaz İspanyolet Lama ve Aksesuarları" section sayfasına yönlendir
             const isDiller = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Diller'
             const isIspanyoletCubuk = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'İspanyolet Çubuk ve Aksesuarları'
             const isIspanyoletLama = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'İspanyolet Lama ve Aksesuarları'
             const isPaslanmazIspanyoletCubuk = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları'
+            const isPaslanmazIspanyoletLama = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Paslanmaz İspanyolet Lama ve Aksesuarları'
+            const isAnahtarlar = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Anahtarlar'
             const sectionSlugMap = {
               'Kabin Kilitleri': 'kabin-kilitleri',
               'T Kollu Kabin Kilitleri': 't-kollu-kabin-kilitleri',
@@ -1432,8 +1511,10 @@ function SectionProducts() {
               'İspanyolet Çubuk ve Aksesuarları': 'ispanyolet-cubuk-ve-aksesuarlari',
               'İspanyolet Lama ve Aksesuarları': 'ispanyolet-lama-ve-aksesuarlari',
               'Paslanmaz İspanyolet Çubuk ve Aksesuarları': 'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari',
+              'Paslanmaz İspanyolet Lama ve Aksesuarları': 'paslanmaz-ispanyolet-lama-ve-aksesuarlari',
+              'Anahtarlar': 'anahtarlar',
             }
-            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) ? sectionSlugMap[item] : null
+            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama || isAnahtarlar) ? sectionSlugMap[item] : null
             
             // Alt section'lar için resim belirleme
             const getSubSectionImage = (sectionName) => {
@@ -1488,23 +1569,23 @@ function SectionProducts() {
                           {productCode}
                         </span>
                       )}
-                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && item.startsWith('CC >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && productName.startsWith('CC >')) ? (
+                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && item.startsWith('CC >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && productName.startsWith('CC >')) ? (
                         <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold min-w-[2rem]">
                           CC
                         </span>
                       ) : null}
-                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && item.startsWith('320.02.180 >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && productName.startsWith('320.02.180 >')) ? (
+                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && item.startsWith('320.02.180 >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && productName.startsWith('320.02.180 >')) ? (
                         <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold">
                           320.02.180
                         </span>
                       ) : null}
-                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && (item.startsWith('IC >') || item.startsWith('CT') || item.startsWith('CY') || item.startsWith('IL >') || item.startsWith('ILP >') || item.startsWith('LKY') || item.startsWith('LY') || item.startsWith('RCC >'))) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && (productName.startsWith('IC >') || productName.startsWith('CT') || productName.startsWith('CY') || productName.startsWith('IL >') || productName.startsWith('ILP >') || productName.startsWith('LKY') || productName.startsWith('LY') || productName.startsWith('RCC >'))) ? (
+                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && (item.startsWith('IC >') || item.startsWith('CT') || item.startsWith('CY') || item.startsWith('IL >') || item.startsWith('ILP >') || item.startsWith('LKY') || item.startsWith('LY') || item.startsWith('RCC >'))) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && (productName.startsWith('IC >') || productName.startsWith('CT') || productName.startsWith('CY') || productName.startsWith('IL >') || productName.startsWith('ILP >') || productName.startsWith('LKY') || productName.startsWith('LY') || productName.startsWith('RCC >'))) ? (
                         <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold">
-                          {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) ? (item.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '') : (productName.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '')}
+                          {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) ? (item.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '') : (productName.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '')}
                         </span>
                       ) : null}
                       <h3 className="line-clamp-2 flex-1 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#16a34a]">
-                        {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) ? (
+                        {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) ? (
                           item.startsWith('CC >') ? (
                             item.replace('CC >', '').trim()
                           ) : item.startsWith('320.02.180 >') ? (
@@ -1552,7 +1633,7 @@ function SectionProducts() {
                       </h3>
                     </div>
                     {/* ÇEŞİTLİ ÜRÜNLER, TRAFO VE KABİN KİLİTLERİ, DİLLER ve ÇEYREK DÖNÜŞLÜ KİLİTLER için Ürün Grup Çeşitleri yazısı */}
-                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && !isDiller && !isIspanyoletCubuk && !isIspanyoletLama && !isPaslanmazIspanyoletCubuk && (
+                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && !isDiller && !isIspanyoletCubuk && !isIspanyoletLama && !isPaslanmazIspanyoletCubuk && !isPaslanmazIspanyoletLama && !isAnahtarlar && (
                       <p className="mb-3 text-xs text-slate-500">Ürün Grup Çeşitleri</p>
                     )}
                   </div>
