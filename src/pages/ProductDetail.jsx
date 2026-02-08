@@ -2905,6 +2905,573 @@ const productDetails = {
     versions: [],
     relatedProducts: [],
   },
+  'AA > Kovan, Somun, Rondela, Yay, Civata, Oring': {
+    code: 'AA',
+    name: 'Kovan, Somun, Rondela, Yay, Civata, Oring',
+    description: '',
+    materials: {},
+    versions: [
+      { urunAdi: 'Kovan', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30301019Y' },
+      { urunAdi: 'Kovan', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30301035Y' },
+      { urunAdi: 'Kovan', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30301226Y' },
+      { urunAdi: 'Kovan', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30301283Y' },
+      { urunAdi: 'Kovan', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30302061Y' },
+      { urunAdi: 'Somun', malzeme: 'Zamak', yuzey: 'Kaplamasız', urunKodu: '20501015Y' },
+      { urunAdi: 'Somun', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30502002Y' },
+      { urunAdi: 'Rondela', malzeme: 'Plastik', yuzey: 'Siyah', urunKodu: '30802021Y' },
+      { urunAdi: 'Yay', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', urunKodu: '30703001Y' },
+      { urunAdi: 'Civata (6x10 Kombi)', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', urunKodu: '30603002Y' },
+      { urunAdi: 'Civata (5x11 RYSB)', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', urunKodu: '30603055Y' },
+      { urunAdi: '0\'Ring (IP 65)', malzeme: 'Plastik', yuzey: 'Siyah', urunKodu: '30802002Y' },
+    ],
+    relatedProducts: [],
+  },
+  'DD > Göbekler': {
+    code: 'DD',
+    name: 'Göbekler',
+    description: '',
+    materials: {},
+    versions: [
+      { gobek: '3 mm Çentikli', gobekNo: '13', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101127Y' },
+      { gobek: '3 mm Çentikli', gobekNo: '13', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101126Y' },
+      { gobek: '3 mm Çentikli', gobekNo: '13', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102012Y' },
+      { gobek: '5 mm Çentikli', gobekNo: '15', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101099Y' },
+      { gobek: '5 mm Çentikli', gobekNo: '15', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101125Y' },
+      { gobek: '5 mm Çentikli', gobekNo: '15', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102001Y' },
+      { gobek: '8 mm Kare', gobekNo: '28', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101113Y' },
+      { gobek: '8 mm Kare', gobekNo: '28', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101065Y' },
+      { gobek: '8 mm Kare', gobekNo: '28', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102011Y' },
+      { gobek: '6 mm Kare', gobekNo: '26', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101058Y' },
+      { gobek: '6 mm Kare', gobekNo: '26', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101139Y' },
+      { gobek: '6 mm Kare', gobekNo: '26', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102009Y' },
+      { gobek: '7 mm Kare', gobekNo: '27', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101039Y' },
+      { gobek: '7 mm Kare', gobekNo: '27', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101138Y' },
+      { gobek: '7 mm Kare', gobekNo: '27', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102010Y' },
+      { gobek: '9 mm Üçgen', gobekNo: '39', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101066Y' },
+      { gobek: '9 mm Üçgen', gobekNo: '39', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101140Y' },
+      { gobek: '9 mm Üçgen', gobekNo: '39', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102007Y' },
+      { gobek: '7 mm Üçgen', gobekNo: '37', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101124Y' },
+      { gobek: '7 mm Üçgen', gobekNo: '37', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101120Y' },
+      { gobek: '7 mm Üçgen', gobekNo: '37', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102008Y' },
+      { gobek: '8 mm Üçgen', gobekNo: '38', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101114Y' },
+      { gobek: '8 mm Üçgen', gobekNo: '38', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101064Y' },
+      { gobek: '8 mm Üçgen', gobekNo: '38', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102006Y' },
+      { gobek: 'Para açmaz', gobekNo: '42', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101146Y' },
+      { gobek: 'Para açmaz', gobekNo: '42', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101149Y' },
+      { gobek: 'Para açmaz', gobekNo: '42', malzeme: 'Plastik', yuzey: 'Kaplamasız', urunKodu: '30102005Y' },
+      { gobek: 'Para Açmaz (2x4)', gobekNo: '52', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101146Y' },
+      { gobek: 'Para Açmaz (2x4)', gobekNo: '52', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101149Y' },
+      { gobek: 'Tornavida başlı 8 mm kare', gobekNo: '58', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101175Y' },
+      { gobek: 'Tornavida başlı 8 mm kare', gobekNo: '58', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101176Y' },
+      { gobek: '10 mm Altıgen dişi', gobekNo: '61', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101169Y' },
+      { gobek: '10 mm Altıgen dişi', gobekNo: '61', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101170Y' },
+      { gobek: '8 mm Altıgen dişi', gobekNo: '68', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101195Y' },
+      { gobek: '8 mm Altıgen dişi', gobekNo: '68', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101196Y' },
+      { gobek: '5x10 Dikdörtgen', gobekNo: '71', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101188Y' },
+      { gobek: '5x10 Dikdörtgen', gobekNo: '71', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101189Y' },
+      { gobek: '6 mm Kare dişi', gobekNo: '76', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101173Y' },
+      { gobek: '6 mm Kare dişi', gobekNo: '76', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101174Y' },
+      { gobek: 'Demiryolu', gobekNo: '88', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101171Y' },
+      { gobek: 'Demiryolu', gobekNo: '88', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101172Y' },
+      { gobek: 'Ayparçası', gobekNo: '91', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101177Y' },
+      { gobek: 'Ayparçası', gobekNo: '91', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101178Y' },
+      { gobek: 'Tork (T-30)', gobekNo: '92', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101213Y' },
+      { gobek: '11 mm Altıgen erkek', gobekNo: '97', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101675Y' },
+      { gobek: '11 mm Altıgen erkek', gobekNo: '97', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101676Y' },
+      { gobek: 'Fiat', gobekNo: '95', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101677Y' },
+      { gobek: 'Fiat', gobekNo: '95', malzeme: 'Zamak', yuzey: 'Siyah Boyalı', urunKodu: '30101678Y' },
+      { gobek: 'EBR', gobekNo: '86', malzeme: 'Zamak', yuzey: 'Krom Kaplama', urunKodu: '30101939Y' },
+    ],
+    relatedProducts: [],
+  },
+  '060 AX > Çeyrek Dönüşlü Kilit Aksesuarları': {
+    code: '060 AX',
+    name: 'Çeyrek Dönüşlü Kilit Aksesuarları',
+    description: '',
+    materials: {},
+    versions: [
+      { urunKodu: '060 A2', urunAdi: 'Kilit Tutamağı', aciklama: 'Plastik' },
+      { urunKodu: '060 A3', urunAdi: 'Sabitleyici', aciklama: 'Çelik, Çinko Kaplama' },
+      { urunKodu: '060 A5', urunAdi: 'Sabitleyici', aciklama: 'Zamak, Zinc Plated' },
+      { urunKodu: '060 A6', urunAdi: 'Ayar Tası', aciklama: 'Çelik, Çinko Kaplama' },
+      { urunKodu: '060 A7', urunAdi: 'Toz Kapağı Bağımsız', aciklama: 'Paliüretan' },
+      { urunKodu: '060 A8', urunAdi: 'Asma Kilit Sacı', aciklama: 'Çelik, Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '060 > Çeyrek Dönüşlü Yaylı Kilit': {
+    code: '060',
+    name: 'Çeyrek Dönüşlü Yaylı Kilit',
+    description: '• Özel tasarlanmış yay sayesinde 1.5 mm lik yaylanma sağlayarak kapak lardaki boşluğu alır.\n• Kovandaki stop uygulaması sayesinde titreşim halinde dilin kendilğinden düşmesi engellenir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '062 > Çeyrek Dönüşlü Kelebek Kilit': {
+    code: '062',
+    name: 'Çeyrek Dönüşlü Kelebek Kilit',
+    description: '• Kelebek tutamak ve anahtar görevi yapar.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '362 > Çeyrek Dönüşlü Kelebek Kilit': {
+    code: '362',
+    name: 'Çeyrek Dönüşlü Kelebek Kilit',
+    description: '• Kelebek tutamak ve anahtar görevi yapar.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '562 > Asma Klit Hamili Pano Kilidi': {
+    code: '562',
+    name: 'Asma Klit Hamili Pano Kilidi',
+    description: '• İki farklı asma kilit uygulanabilir.\n• Çap 11 de min. 8.5 mm max. 10 mm kanca çapı\n• Çap 8.5 de min. 6 mm max. 7.5 mm kanca çapı',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '262 > Asma Kilit Hamili Pano Kilidi': {
+    code: '262',
+    name: 'Asma Kilit Hamili Pano Kilidi',
+    description: '• Asma kilit uygulanabilir. Asma kilit kanca çapı max. 6 mm olmalıdır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '260 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit': {
+    code: '260',
+    name: 'Asma Kilit Hamili Çeyrek Dönüşlü Kilit',
+    description: '• Çift kilit kullanıldığında çubuk yardımı ile asma kilit uygulanabilir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '162 > Pako Kilit': {
+    code: '162',
+    name: 'Pako Kilit',
+    description: '• Pako şaltere uyumlu olarak dizayn edilmiştir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '064 > Çeyrek Dönüşlü Yaylı Kilit': {
+    code: '064',
+    name: 'Çeyrek Dönüşlü Yaylı Kilit',
+    description: '• Özellikle ahşap ses, ısı ve sızdırmazlık izolasyonu yapılmış kapaklarda kullanılır.\n• Kovan boyuna uygun adaptörler standart olarak uygulanır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '064 > Çeyrek Dönüşlü Kelebek Kilit': {
+    code: '064',
+    name: 'Çeyrek Dönüşlü Kelebek Kilit',
+    description: '• Özellikle ses, ısı ve sızdırmazlık izolasyonu yapılmış kapaklarda kullanılır.\n• Kovan boyuna uygun adaptörler standart olarak uygulanır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '064 > Çeyrek Dönüşlü Kademeli Kilit': {
+    code: '064',
+    name: 'Çeyrek Dönüşlü Kademeli Kilit',
+    description: '• Özellikle ses, ısı ve sızdırmazlık izolasyonu yapılmış kapaklarda kullanılır.\n• 270 ° lik rotasyonu ve kademeli dil sayesinde çok sıkı bir kilitleme sağlar.\n• Kovan boyuna uygun adaptörler standart olarak uygulanır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '266 > Mini Çeyrek Dönüşlü Yaylı Kilit': {
+    code: '266',
+    name: 'Mini Çeyrek Dönüşlü Yaylı Kilit',
+    description: '• 45º lik geçiş ölçüsüne uygun kovan özelliği vardır.\n• Özel yay uygulaması sayesinde 1 mm lik yaylanma sağlar.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '166 > Mini Çeyrek Dönüşlü Kelebek': {
+    code: '166',
+    name: 'Mini Çeyrek Dönüşlü Kelebek',
+    description: '• Özel kelebek tutamak ve anahtar görevi yapar.\n• Özel yay uygulaması sayesinde 1 mm lik yaylanma sağlar.\n• IP 65 özelliği mevcut değildir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '066 > Mini Çeyrek Dönüşlü Yaylı Kilit': {
+    code: '066',
+    name: 'Mini Çeyrek Dönüşlü Yaylı Kilit',
+    description: '• Özel yay uygulaması sayesinde 1 mm\' lik sıkıştırma sağlar.\n• Standart uygulamada rondela mevcut değildir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '662 > Asma Kilit Hamili Çeyrek Dönüşlü Kili v1': {
+    code: '662',
+    name: 'Asma Kilit Hamili Çeyrek Dönüşlü Kilit v1',
+    description: '• Asma kilit uygulanabilir.\n• Kilitleme mesafesi 14 mm dir. DİL seçiminde dikkat ediniz.\n• Standart tınraksız diller kullanılır.\n• Asma kilit kanca çapı max. 8 mm olmalıdır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '662 > Asma Kilit Hamili Çeyrek Dönüşlü Kil v2': {
+    code: '662',
+    name: 'Asma Kilit Hamili Çeyrek Dönüşlü Kilit v2',
+    description: '• Asma kilit uygulanabilir.\n• Ayarlanabilir kilitleme mesafesi\n• 3 farklı tip dil uygulanır.\n• Asma kilit kanca çapı max. 8 mm olmalıdır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '211 > Asma Kilit Hamili \'L\' Kollu Kilit': {
+    code: '211',
+    name: 'Asma Kilit Hamili \'L\' Kollu Kilit',
+    description: '• Asma kilitli tasarımından dolayı dış ortam panolarında kullanılabilir.\n• Hijyenik pano ve klima santrallerinde uygulanabilir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '960 > Çeyrek Dönüşlü Kilit - Modüler Tutamak': {
+    code: '960',
+    name: 'Çeyrek Dönüşlü Kilit - Modüler Tutamak',
+    description: '• Asma kilitli tasarımından dolayı dış ortam panolarında kullanılabilir.\n• Hijyenik pano ve klima santrallerinde uygulanabilir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '361 > Emniyetli Çeyrek Dönüşlü Kilit': {
+    code: '361',
+    name: 'Emniyetli Çeyrek Dönüşlü Kilit',
+    description: '• Açık konumda iken anahtar tutamak görevi yapar.\n• Anahtar özel olarak bu kilit için dizayn edilmiştir ve kilitle beraber sipariş verilmelidir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '461 > Emniyetli Çeyrek Dönüşlü Kilit': {
+    code: '461',
+    name: 'Emniyetli Çeyrek Dönüşlü Kilit',
+    description: '• Açık konumda iken anahtar tutamak görevi yapar.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '760 > Çeyrek Dönüşlü Yaylı Kilit': {
+    code: '760',
+    name: 'Çeyrek Dönüşlü Yaylı Kilit',
+    description: '• Özel tasarlanmış yay sayesinde 1.5 mm lik yaylanma sağlayarak kapaklardaki boşluğu alır.\n• Kovandaki stop uygulaması sayesinde titreşim halinde dilin kendilğinden düşmesi engellenir.',
+    materials: {
+      'KOVAN': 'PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+      'CONTA': 'Poliüretan',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '360 > Çeyrek Dönüşlü Yaylı Kilit (Topraklamalı)': {
+    code: '360',
+    name: 'Çeyrek Dönüşlü Yaylı Kilit (Topraklamalı)',
+    description: '• Topraklama amaçlı özel sac kullanılır.\n• Kovan içinde kullanılan yay sayesinde 1.5 mm\'lik bir sıkıştırma sağlar.\n• Stoper tırnağı sayesinde sadece 90° dönebilir.\n• IP 65\' i standart olarak sağlar.\n• IP 66 opsiyoneldir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik veya plastik',
+      'CONTA': 'Kauçuk',
+      'TOPRAKLAMA SACI': 'Paslanmaz çelik',
+    },
+    surface: 'Krom veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '561 > Tutamaklı Kilit': {
+    code: '561',
+    name: 'Tutamaklı Kilit',
+    description: '• Kovan özel dizaynı sayesinde tutamak özelliğine sahiptir.\n• Özel renkler için Mesan ile iletişime geçiniz.',
+    materials: {
+      'KOVAN': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'GÖBEK': 'Zamak veya PA6 GFR 30',
+      'SOMUN': 'Zamak veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '261 > Tutamaklı Kilit': {
+    code: '261',
+    name: 'Tutamaklı Kilit',
+    description: '• Kovandaki klipsler sayesinde kolay montaj sağlar.\n• Montaj için somun gerekmez.\n• Geçiş ölçüsü ( 20x 27 mm ) özeldir.',
+    materials: {
+      'KOVAN': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'GÖBEK': 'Zamak veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '161 > Tutamaklı Kilit': {
+    code: '161',
+    name: 'Tutamaklı Kilit',
+    description: '• Kovan özel dizaynı sayesinde tutamak özelliğine sahiptir.\n• Özel renkler için Mesan ile iletişime geçiniz..',
+    materials: {
+      'KOVAN': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'GÖBEK': 'Zamak veya PA6 GFR 30',
+      'SOMUN': 'Zamak veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '160 > Dili Yaylı Kilit': {
+    code: '160',
+    name: 'Dili Yaylı Kilit',
+    description: '• Dildeki özel yay sayesinde kapak açık iken iterek kilitleme sağlar.\n• Kilitleme mesafesi 22.5 mm olarak sabittir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v5': {
+    code: '055',
+    name: 'Asma Kilit Hamili Çeyrek Dönüşlü Kilit v5',
+    description: '• Segman sayesinde kolay montaj sağlar.\n• Montaj için somun gerekmez.\n• 0.8 mm minimum - 1.2 mm maximum sac kalınlığında kullanılır.\n• Asma kilit uygulanabilir.\n• Max. 6 mm kanca çaplı asma kilit kullanılmalıdır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Nikel kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '050 > Bilyalı Kilit': {
+    code: '050',
+    name: 'Bilyalı Kilit',
+    description: '• Kovanda uygulanan bilye, kilitleme hissiyatını arttırıp, dilin düşmesini engeller.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '350 > Çeyrek Dönüşlü Kilit': {
+    code: '350',
+    name: 'Çeyrek Dönüşlü Kilit',
+    description: '• Titreşimli uygulamalar için önerilir.\n• Kilit anatarı içeri bastırmak sureti ile açılır.\n• Bu kilitte sadece 267 grup kodlu anahtar kullanılır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'SOMUN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v1': {
+    code: '055',
+    name: 'Asma Kilit Hamili Çeyrek Dönüşlü Kilit v1',
+    description: '• Asma kilit uygulanabilir.\n• Max. 6 mm kanca çaplı asma kilit kullanılmalıdır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Nikel kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v2': {
+    code: '055',
+    name: 'Asma Kilit Hamili Çeyrek Dönüşlü Kilit v2',
+    description: '• Asma kilit uygulanabilir.\n• Max. 6 mm kanca çaplı asma kilit kullanılmalıdır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Nikel kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v3': {
+    code: '055',
+    name: 'Asma Kilit Hamili Çeyrek Dönüşlü Kilit v3',
+    description: '• Asma kilit uygulanabilir.\n• Max. 6 mm kanca çaplı asma kilit kullanılmalıdır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Nikel kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v4': {
+    code: '055',
+    name: 'Asma Kilit Hamili Çeyrek Dönüşlü Kilit v4',
+    description: '',
+    materials: {
+      'GÖVDE': 'PA6 GFR 30',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+      'CONTA': 'Poliüretan',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '103 > Çeyrek Dönüşlü Kilit': {
+    code: '103',
+    name: 'Çeyrek Dönüşlü Kilit',
+    description: '',
+    materials: {
+      'GÖVDE': 'PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+      'CONTA': 'Poliüretan',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '666 > Çeyrek Dönüşlü Kilit': {
+    code: '666',
+    name: 'Çeyrek Dönüşlü Kilit',
+    description: '',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Paslanmaz çelik',
+      'DİL': 'Paslanmaz çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '203 > Çeyrek Dönüşlü Kilit v1': {
+    code: '203',
+    name: 'Çeyrek Dönüşlü Kilit v1',
+    description: '',
+    materials: {
+      'GÖVDE': 'PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+      'CONTA': 'Poliüretan',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '203 > Çeyrek Dönüşlü Kelebek Kilit v2': {
+    code: '203',
+    name: 'Çeyrek Dönüşlü Kelebek Kilit v2',
+    description: '',
+    materials: {
+      'GÖVDE': 'PA6 GFR 30',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+      'CONTA': 'Poliüretan',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -4052,6 +4619,163 @@ function ProductDetail() {
       }
     }
     
+    // Çeyrek Dönüşlü Kilitler için özel PDF mapping
+    if (code === 'AA' && fullName?.includes('Kovan, Somun, Rondela, Yay, Civata, Oring')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/aa-kovan-somun-rondela-yay-civata-oring.pdf'
+    }
+    
+    if (code === 'DD' && fullName?.includes('Göbekler')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/dd-gobekler.pdf'
+    }
+    
+    if (code === '060 AX' && fullName?.includes('Çeyrek Dönüşlü Kilit Aksesuarları')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/060-ax-ceyrek-donuslu-kilit-aksesuarlari.pdf'
+    }
+    
+    if (code === '060' && fullName?.includes('Çeyrek Dönüşlü Yaylı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/060-ceyrek-donuslu-yayli-kilit.pdf'
+    }
+    
+    if (code === '062' && fullName?.includes('Çeyrek Dönüşlü Kelebek Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/062-ceyrek-donuslu-kelebek-kilit.pdf'
+    }
+    
+    if (code === '362' && fullName?.includes('Çeyrek Dönüşlü Kelebek Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/362-ceyrek-donuslu-kelebek-kilit.pdf'
+    }
+    
+    if (code === '562' && fullName?.includes('Asma Klit Hamili Pano Kilidi')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/562-asma-klit-hamili-pano-kilidi.pdf'
+    }
+    
+    if (code === '262' && fullName?.includes('Asma Kilit Hamili Pano Kilidi')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/262-asma-kilit-hamili-pano-kilidi.pdf'
+    }
+    
+    if (code === '260' && fullName?.includes('Asma Kilit Hamili Çeyrek Dönüşlü Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/260-asma-kilit-hamili-ceyrek-donuslu-kilit.pdf'
+    }
+    
+    if (code === '162' && fullName?.includes('Pako Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/162-pako-kilit.pdf'
+    }
+    
+    if (code === '064') {
+      if (fullName?.includes('Çeyrek Dönüşlü Yaylı Kilit')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/064-ceyrek-donuslu-yayli-kilit v1.pdf'
+      }
+      if (fullName?.includes('Çeyrek Dönüşlü Kelebek Kilit')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/064-ceyrek-donuslu-kelebek-kilit v2.pdf'
+      }
+      if (fullName?.includes('Çeyrek Dönüşlü Kademeli Kilit')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/064-ceyrek-donuslu-kademeli-kilit v3.pdf'
+      }
+    }
+    
+    if (code === '266' && fullName?.includes('Mini Çeyrek Dönüşlü Yaylı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/266-mini-ceyrek-donuslu-yayli-kilit.pdf'
+    }
+    
+    if (code === '166' && fullName?.includes('Mini Çeyrek Dönüşlü Kelebek')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/166-mini-ceyrek-donuslu-kelebek-kilit.pdf'
+    }
+    
+    if (code === '066' && fullName?.includes('Mini Çeyrek Dönüşlü Yaylı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/066-mini-ceyrek-donuslu-yayli-kilit.pdf'
+    }
+    
+    if (code === '662') {
+      if (fullName?.includes('v1') || fullName?.includes('Kili v1')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/662-asma-kilit-hamili-ceyrek-donuslu-kilit v1.pdf'
+      }
+      if (fullName?.includes('v2') || fullName?.includes('Kil v2')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/662-asma-kilit-hamili-ceyrek-donuslu-kilit v2.pdf'
+      }
+    }
+    
+    if (code === '211' && fullName?.includes('Asma Kilit Hamili \'L\' Kollu Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/211-asma-kilit-hamili-l-kollu-kilit.pdf'
+    }
+    
+    if (code === '960' && fullName?.includes('Çeyrek Dönüşlü Kilit - Modüler Tutamak')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/960-ceyrek-donuslu-kilit-moduler-tutamak.pdf'
+    }
+    
+    if (code === '361' && fullName?.includes('Emniyetli Çeyrek Dönüşlü Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/361-emniyetli-ceyrek-donuslu-kilit.pdf'
+    }
+    
+    if (code === '461' && fullName?.includes('Emniyetli Çeyrek Dönüşlü Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/461-emniyetli-ceyrek-donuslu-kilit.pdf'
+    }
+    
+    if (code === '760' && fullName?.includes('Çeyrek Dönüşlü Yaylı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/760-ceyrek-donuslu-yayli-kilit.pdf'
+    }
+    
+    if (code === '360' && fullName?.includes('Çeyrek Dönüşlü Yaylı Kilit (Topraklamalı)')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/360-ceyrek-donuslu-yayli-kilit-topraklamali.pdf'
+    }
+    
+    if (code === '561' && fullName?.includes('Tutamaklı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/561-tutamakli-kilit.pdf'
+    }
+    
+    if (code === '261' && fullName?.includes('Tutamaklı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/261-tutamakli-kilit.pdf'
+    }
+    
+    if (code === '161' && fullName?.includes('Tutamaklı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/161-tutamakli-kilit.pdf'
+    }
+    
+    if (code === '160' && fullName?.includes('Dili Yaylı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/160-dili-yayli-kilit.pdf'
+    }
+    
+    if (code === '055') {
+      if (fullName?.includes('v5')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055-asma-kilit-hamili-ceyrek-donuslu-kilit v5.pdf'
+      }
+      if (fullName?.includes('v1')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055-asma-kilit-hamili-ceyrek-donuslu-kilit v1.pdf'
+      }
+      if (fullName?.includes('v2')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055-asma-kilit-hamili-ceyrek-donuslu-kilit v2.pdf'
+      }
+      if (fullName?.includes('v3')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055-asma-kilit-hamili-ceyrek-donuslu-kilit v3.pdf'
+      }
+      if (fullName?.includes('v4')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055-asma-kilit-hamili-ceyrek-donuslu-kilit v4.pdf'
+      }
+    }
+    
+    if (code === '050' && fullName?.includes('Bilyalı Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/050-bilyali-kilit.pdf'
+    }
+    
+    if (code === '350' && fullName?.includes('Çeyrek Dönüşlü Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/350-ceyrek-donuslu-kilit.pdf'
+    }
+    
+    if (code === '103' && fullName?.includes('Çeyrek Dönüşlü Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/103-ceyrek-donuslu-kilit.pdf'
+    }
+    
+    if (code === '666' && fullName?.includes('Çeyrek Dönüşlü Kilit')) {
+      return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/666-ceyrek-donuslu-kilit.pdf'
+    }
+    
+    if (code === '203') {
+      if (fullName?.includes('Çeyrek Dönüşlü Kilit v1') || (fullName?.includes('Çeyrek Dönüşlü Kilit') && !fullName?.includes('Kelebek'))) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/203-ceyrek-donuslu-kilit.pdf'
+      }
+      if (fullName?.includes('Çeyrek Dönüşlü Kelebek Kilit v2') || fullName?.includes('Çeyrek Dönüşlü Kelebek Kilit')) {
+        return '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/203-ceyrek-donuslu-kelebek-kilit.pdf'
+      }
+    }
+    
     // Kod bazlı PDF mapping
     const pdfMap = {
       '001': '/001-kollu-kilit.pdf',
@@ -4382,7 +5106,31 @@ function ProductDetail() {
                               </>
                             ) : productDetail.versions[0]?.urunKodu ? (
                               <>
-                                {productDetail.code === 'CY1' && productDetail.versions[0]?.baglantiCivatasi ? (
+                                {productDetail.code === 'AA' && productDetail.versions[0]?.urunAdi ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Resim</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                  </>
+                                ) : productDetail.code === 'DD' && productDetail.versions[0]?.gobek ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Göbek</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Resim</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Göbek No (DD)</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                  </>
+                                ) : productDetail.code === '060 AX' && productDetail.versions[0]?.urunAdi ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Resmi</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Açıklama</th>
+                                  </>
+                                ) : productDetail.code === 'CY1' && productDetail.versions[0]?.baglantiCivatasi ? (
                                   <>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Bağlantı Civatası</th>
@@ -4585,6 +5333,51 @@ function ProductDetail() {
                                   {hasColumnData('D') && (
                                     <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.D || ''}</td>
                                   )}
+                                </>
+                              ) : productDetail.code === 'AA' && version.urunAdi ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">
+                                    <img 
+                                      src={`/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/${version.urunKodu || 'AA_kovan_civata'}.jpg`} 
+                                      alt={version.urunAdi}
+                                      className="h-16 w-auto object-contain"
+                                      onError={(e) => { e.target.style.display = 'none' }}
+                                    />
+                                  </td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                </>
+                              ) : productDetail.code === 'DD' && version.gobek ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.gobek}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">
+                                    <img 
+                                      src={`/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/gobekler1.jpg`} 
+                                      alt={version.gobek}
+                                      className="h-16 w-auto object-contain"
+                                      onError={(e) => { e.target.style.display = 'none' }}
+                                    />
+                                  </td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.gobekNo}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                </>
+                              ) : productDetail.code === '060 AX' && version.urunAdi ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">
+                                    <img 
+                                      src={`/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/${version.urunKodu || '060-ax'}.jpg`} 
+                                      alt={version.urunAdi}
+                                      className="h-16 w-auto object-contain"
+                                      onError={(e) => { e.target.style.display = 'none' }}
+                                    />
+                                  </td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama}</td>
                                 </>
                               ) : productDetail.code === 'CY1' && version.baglantiCivatasi ? (
                                 <>
