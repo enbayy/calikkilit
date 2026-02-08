@@ -156,6 +156,7 @@ const lockSections = [
   {
     title: 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
     items: [
+      'Çeyrek Dönüşlü Kilitler',
       'Sıkıştırmalı Kilitler',
       'Kolay Montaj Ç.D. Kilitler',
     ],
@@ -1050,6 +1051,9 @@ function Products() {
                 const isPaslanmazIspanyoletCubuk = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları'
                 const isPaslanmazIspanyoletLama = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Paslanmaz İspanyolet Lama ve Aksesuarları'
                 const isAnahtarlar = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Anahtarlar'
+                // ÇEYREK DÖNÜŞLÜ KİLİTLER için özel kontrol
+                const isSikistirmaliKilitlerCeyrek = activeSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' && item === 'Sıkıştırmalı Kilitler'
+                const isKolayMontajCeyrek = activeSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' && item === 'Kolay Montaj Ç.D. Kilitler'
                 const sectionSlugMap = {
                   'Diller': 'diller',
                   'İspanyolet Çubuk ve Aksesuarları': 'ispanyolet-cubuk-ve-aksesuarlari',
@@ -1057,14 +1061,16 @@ function Products() {
                   'Paslanmaz İspanyolet Çubuk ve Aksesuarları': 'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari',
                   'Paslanmaz İspanyolet Lama ve Aksesuarları': 'paslanmaz-ispanyolet-lama-ve-aksesuarlari',
                   'Anahtarlar': 'anahtarlar',
+                  'Sıkıştırmalı Kilitler': isSikistirmaliKilitlerCeyrek ? 'ceyrek-donuslu-kilitler/sikistirmali-kilitler' : 'sikistirmali-kilitler',
+                  'Kolay Montaj Ç.D. Kilitler': 'kolay-montaj-cd-kilitler',
                 }
-                const sectionSlug = (isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama || isAnahtarlar) ? sectionSlugMap[item] : null
+                const sectionSlug = (isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama || isAnahtarlar || isSikistirmaliKilitlerCeyrek || isKolayMontajCeyrek) ? sectionSlugMap[item] : null
                 
                 return (
                   <Link
                     key={item}
                     to={sectionSlug ? `/urunler/${sectionSlug}` : `/urun-detay/${productSlug}`}
-                    state={sectionSlug ? {} : { productName: item, productImage: img, productLogo: getProductLogo(item) }}
+                    state={sectionSlug ? (isSikistirmaliKilitlerCeyrek || isKolayMontajCeyrek ? { fromSection: 'ÇEYREK DÖNÜŞLÜ KİLİTLER' } : {}) : { productName: item, productImage: img, productLogo: getProductLogo(item) }}
                     className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-slate-300 hover:shadow-xl"
                   >
                     <div className="mb-6 flex items-center justify-center">

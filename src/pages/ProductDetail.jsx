@@ -2754,6 +2754,157 @@ const productDetails = {
     ],
     relatedProducts: [],
   },
+  '040 > Sıkıştırmalı Kilit v1': {
+    code: '040',
+    name: 'Sıkıştırmalı Kilit v1',
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 6 mm sıkıştırma özelliği vardır.\n• Ses yalıtımı sağlar.\n• Farklı göbek seçenekleri mevcuttur.\n• Standart tırnaksız diller uygulanır.\n• Demiryolu uygulamarı için DIN EN 61373 Kategori 1-B standardına göre darbe ve titreşime karşı test edilmiştir.\n• Çalışma sıcaklık aralığı: -50 /+80 C\n• M22 somun 60 Nm ile sıkılmalı\n• M10 somun 10 Nm ile sıkılmalı\n• Titreşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmaktadır.\n• Max taşıma kapasitesi: 562 N',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '040 > Sıkıştırmalı Kilit v2': {
+    code: '040',
+    name: 'Sıkıştırmalı Kilit v2',
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 6 mm sıkıştırma özelliği vardır.\n• Uzun mafsalı sayesinde geniş bir kilitleme aralığı mevcuttur.\n• Ses yalıtımı sağlar.\n• Farklı göbek seçenekleri mevcuttur.\n• 3 farklı tip dil uygulanır.\n• Demiryolu uygulamarı için DIN EN 61373 Kategori 1-B standardına göre darbe ve titreşime karşı test edilmiştir.\n• Çalışma sıcaklık aralığı: -50 /+80 C\n• M22 somun 60 Nm ile sıkılmalı\n• M10 somun 10 Nm ile sıkılmalı\n• Titreşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmaktadır.\n• Max taşıma kapasitesi: 562 N',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '640 > Sıkıştırmalı Kilit v1': {
+    code: '640',
+    name: 'Sıkıştırmalı Kilit v1',
+    description: '• Titreşime maruz kalan sızdırmazlık gereken kabinlerde kullanılır.\n• IP66 Sızdırmazlık Seviyesi\n• 4 mm sıkıştırma özelliği sağlar\n• Ses yalıtımı sağlar\n• Farklı göbek seçenekleri mevcuttur.\n• Standart tırnaksız diller uygulanır.\n• Çalışma sıcaklık aralığı -50/+80°C\n• M22 Somun 15 Nm ile sıkılmalı\n• Titresşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmakatadır.\n• Maksimum taşıma kapasitesi 1000 N',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    surface: 'Krom kaplama veya Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '640 > Sıkıştırmalı Kilit v2': {
+    code: '640',
+    name: 'Sıkıştırmalı Kilit v2',
+    description: '• Titreşime maruz kalan sızdırmazlık gereken kabinlerde kullanılır.\n• IP66 Sızdırmazlık Seviyesi\n• 4 mm sıkıştırma özelliği sağlar\n• Ses yalıtımı sağlar\n• Farklı göbek seçenekleri mevcuttur.\n• 3 farklı tip dil uygulanır.\n• Çalışma sıcaklık aralığı -50/+80°C\n• M22 Somun 15 Nm ile sıkılmalı\n• Titresşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmakatadır.\n• Maksimum taşıma kapasitesi 1000 N\n• Demiryolu uygulamaları için DIN EN 61373 Kategori 1-B standardına göre darbe ve titreşime karşı test edilmiştir.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Kauçuk',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '140 > Mini Sıkıştırmalı Kilit': {
+    code: '140',
+    name: 'Mini Sıkıştırmalı Kilit',
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 4 mm sıkıştırma özelliği vardır.\n• Farklı göbek seçenekleri mevcuttur.\n• 9 farklı tip dil uygulanır.',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '045 > Sıkıştırmalı Kilit': {
+    code: '045',
+    name: 'Sıkıştırmalı Kilit',
+    description: '• Küçük panoların kolay ve hızlı kilitlenip ve açılması mümkündür.\n• Sıkıştırarak kilitleme özelliği mevcuttur.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'GÖBEK': 'Çelik',
+      'YAY': 'Paslanmaz çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '560 > Çeyrek Dönüşlü Segmanlı Kilit': {
+    code: '560',
+    name: 'Çeyrek Dönüşlü Segmanlı Kilit',
+    description: '• Segman sayesinde kolay montaj sağlar.\n• Montaj için somun gerekmez.\n• Özel tasarlanmış yay sayesinde 1.5 mm lik yaylanma sağlayarak kapaklardaki boşluğu alır.\n• Özel renkler için Mesan ile iletişime geçiniz.',
+    materials: {
+      'KOVAN': 'PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '660 > Çeyrek Dönüşlü Klipsli Kilit': {
+    code: '660',
+    name: 'Çeyrek Dönüşlü Klipsli Kilit',
+    description: '• Klipsleri sayesinde kolay montaj sağlar.\n• Montaj için somun gerekmez.\n• Özel tasarlanmış yay sayesinde 1.5 mm lik yaylanma sağlayarak kapaklardaki boşluğu alır.\n• 0.8 mm minimum - 1.5 mm maximum sac kalınlığında kullanılır.\n• Özel renkler için Mesan ile iletişime geçiniz.',
+    materials: {
+      'KOVAN': 'PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik veya plastik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '661 > Çeyrek Dönüşlü Kilit Kolay Montaj': {
+    code: '661',
+    name: 'Çeyrek Dönüşlü Kilit Kolay Montaj',
+    description: '• Kolay montaj - aletsiz\n• Standart geçiş ölçüsü\n• Maksimum 2.0 mm kalınlığındaki panolara montaj olur.',
+    materials: {
+      'KOVAN': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'GÖBEK': 'PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '761 > Çeyrek Dönüşlü Kilit Kolay Montaj': {
+    code: '761',
+    name: 'Çeyrek Dönüşlü Kilit Kolay Montaj',
+    description: '• Plastik segman ile alet kullanmadan hızlı montaj yapılır.\n• Farklı pano kapı kalınlıkarına uygulanabilir.\n• Plastik ve zamak tüm göbek seçenekleri mevcuttur.',
+    materials: {
+      'KOVAN': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'GÖBEK': 'Plastik veya zamak',
+      'DİL': 'Plastik veya çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '366 > Mini Çeyrek Dönüşlü Klipsli Kilit': {
+    code: '366',
+    name: 'Mini Çeyrek Dönüşlü Klipsli Kilit',
+    description: '• Klipsleri sayesinde kolay montaj sağlar.\n• Özel yay uygulaması sayesinde 1 mm\' lik sıkıştırma sağlar.',
+    materials: {
+      'KOVAN': 'PA6 GFR 30',
+      'GÖBEK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '566 > Mini Dönüşlü Klipsli Kilit': {
+    code: '566',
+    name: 'Mini Dönüşlü Klipsli Kilit',
+    description: '• Klipsleri sayeysinde kolay montaj sağlar.\n• Özel yay uygulaması sayesinde 1 mm\' lik sıkıştırma sağlar.',
+    materials: {
+      'KOVAN': 'PA6 GFR 30',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -2998,6 +3149,52 @@ function ProductDetail() {
         return '/sikistirmalikilit/270sikistirmalikilit2.jpg'
       }
       return '/sikistirmalikilit/270sikistirmalikilit.jpeg'
+    }
+    
+    // ÇEYREK DÖNÜŞLÜ KİLİTLER'deki Sıkıştırmalı Kilitler için özel resim mapping
+    if ((code === '040' || code === '640' || code === '140' || code === '045') && productName?.includes('Sıkıştırmalı Kilit')) {
+      // location.state'ten veya pathname'den kontrol et
+      const isFromCeyrekDonuslu = location?.state?.fromSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' ||
+                                   location?.pathname?.includes('ceyrek-donuslu-kilitler/sikistirmali-kilitler')
+      
+      if (isFromCeyrekDonuslu) {
+        if (code === '040') {
+          return productName?.includes('v1') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/040_v1.jpg' :
+                 productName?.includes('v2') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/040_v2.jpg' :
+                 '/ceyrekdonuslukilitler/sikistirmalikilitler/040_v1.jpg'
+        } else if (code === '640') {
+          return productName?.includes('v1') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/640_v1.jpg' :
+                 productName?.includes('v2') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/640_v2.jpg' :
+                 '/ceyrekdonuslukilitler/sikistirmalikilitler/640_v1.jpg'
+        } else if (code === '140') {
+          return '/ceyrekdonuslukilitler/sikistirmalikilitler/140.jpg'
+        } else if (code === '045') {
+          return '/ceyrekdonuslukilitler/sikistirmalikilitler/045.jpg'
+        }
+      }
+    }
+    
+    // ÇEYREK DÖNÜŞLÜ KİLİTLER'deki Kolay Montaj Ç.D. Kilitler için özel resim mapping
+    if ((code === '560' || code === '660' || code === '661' || code === '761' || code === '366' || code === '566') && 
+        (productName?.includes('Çeyrek Dönüşlü') || productName?.includes('Dönüşlü'))) {
+      // location.state'ten veya pathname'den kontrol et
+      const isFromCeyrekDonuslu = location?.state?.fromSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' ||
+                                   location?.pathname?.includes('ceyrek-donuslu-kilitler') ||
+                                   location?.pathname?.includes('kolay-montaj-cd-kilitler')
+      
+      if (isFromCeyrekDonuslu) {
+        const kolayMontajCeyrekImageMap = {
+          '560': '/ceyrekdonuslukilitler/kolaymontaj/560-1ccd.jpg',
+          '660': '/ceyrekdonuslukilitler/kolaymontaj/6601cc.jpg',
+          '661': '/ceyrekdonuslukilitler/kolaymontaj/661dcc.jpg',
+          '761': '/ceyrekdonuslukilitler/kolaymontaj/761_gobek.jpg',
+          '366': '/ceyrekdonuslukilitler/kolaymontaj/366d.jpg',
+          '566': '/ceyrekdonuslukilitler/kolaymontaj/566d.jpg',
+        }
+        if (kolayMontajCeyrekImageMap[code]) {
+          return kolayMontajCeyrekImageMap[code]
+        }
+      }
     }
     
     // 071 > Sürgü Kilit için özel resim mapping
@@ -3417,6 +3614,52 @@ function ProductDetail() {
         return '/sikistirmalikilit/270-sikistirmali-kilit 2.pdf'
       }
       return '/sikistirmalikilit/270-sikistirmali-kilit.pdf'
+    }
+    
+    // ÇEYREK DÖNÜŞLÜ KİLİTLER'deki Sıkıştırmalı Kilitler için özel PDF mapping
+    if ((code === '040' || code === '640' || code === '140' || code === '045') && fullName?.includes('Sıkıştırmalı Kilit')) {
+      // location.state'ten veya pathname'den kontrol et
+      const isFromCeyrekDonuslu = location?.state?.fromSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' ||
+                                   location?.pathname?.includes('ceyrek-donuslu-kilitler/sikistirmali-kilitler')
+      
+      if (isFromCeyrekDonuslu) {
+        if (code === '040') {
+          return fullName?.includes('v1') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/040-sikistirmali-kilit1.pdf' :
+                 fullName?.includes('v2') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/040-sikistirmali-kilit2.pdf' :
+                 '/ceyrekdonuslukilitler/sikistirmalikilitler/040-sikistirmali-kilit1.pdf'
+        } else if (code === '640') {
+          return fullName?.includes('v1') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/640-sikistirmali-kilit1.pdf' :
+                 fullName?.includes('v2') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/640-sikistirmali-kilit2.pdf' :
+                 '/ceyrekdonuslukilitler/sikistirmalikilitler/640-sikistirmali-kilit1.pdf'
+        } else if (code === '140') {
+          return '/ceyrekdonuslukilitler/sikistirmalikilitler/140-mini-sikistirmali-kilit.pdf'
+        } else if (code === '045') {
+          return '/ceyrekdonuslukilitler/sikistirmalikilitler/045-sikistirmali-kilit.pdf'
+        }
+      }
+    }
+    
+    // ÇEYREK DÖNÜŞLÜ KİLİTLER'deki Kolay Montaj Ç.D. Kilitler için özel PDF mapping
+    if ((code === '560' || code === '660' || code === '661' || code === '761' || code === '366' || code === '566') && 
+        (fullName?.includes('Çeyrek Dönüşlü') || fullName?.includes('Dönüşlü'))) {
+      // location.state'ten veya pathname'den kontrol et
+      const isFromCeyrekDonuslu = location?.state?.fromSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' ||
+                                   location?.pathname?.includes('ceyrek-donuslu-kilitler') ||
+                                   location?.pathname?.includes('kolay-montaj-cd-kilitler')
+      
+      if (isFromCeyrekDonuslu) {
+        const kolayMontajCeyrekPdfMap = {
+          '560': '/ceyrekdonuslukilitler/kolaymontaj/560-ceyrek-donuslu-segmanli-kilit.pdf',
+          '660': '/ceyrekdonuslukilitler/kolaymontaj/660-ceyrek-donuslu-klipsli-kilit.pdf',
+          '661': '/ceyrekdonuslukilitler/kolaymontaj/661-ceyrek-donuslu-kilit-kolay-montaj.pdf',
+          '761': '/ceyrekdonuslukilitler/kolaymontaj/761-ceyrek-donuslu-kilit-kolay-montaj.pdf',
+          '366': '/ceyrekdonuslukilitler/kolaymontaj/366-mini-ceyrek-donuslu-klipsli-kilit.pdf',
+          '566': '/ceyrekdonuslukilitler/kolaymontaj/566-mini-donuslu-klipsli-kilit.pdf',
+        }
+        if (kolayMontajCeyrekPdfMap[code]) {
+          return kolayMontajCeyrekPdfMap[code]
+        }
+      }
     }
     
     // T Kollu Kabin Kilitleri için özel PDF mapping

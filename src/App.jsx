@@ -355,7 +355,7 @@ function App() {
               element={<Products />}
             />
             <Route
-              path="/urunler/:sectionSlug"
+              path="/urunler/:sectionSlug/*"
               element={<SectionProducts />}
             />
             <Route

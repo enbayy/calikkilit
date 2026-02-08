@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { Link, useParams, useNavigate, useLocation } from 'react-router-dom'
 
 // Tüm section'ları import et
 const lockSections = [
@@ -143,6 +143,7 @@ const lockSections = [
   {
     title: 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
     items: [
+      'Çeyrek Dönüşlü Kilitler',
       'Sıkıştırmalı Kilitler',
       'Kolay Montaj Ç.D. Kilitler',
     ],
@@ -539,6 +540,10 @@ const catalogGroups = [
 function SectionProducts() {
   const { sectionSlug } = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
+
+  // location.pathname'den tam path'i al (ceyrek-donuslu-kilitler/sikistirmali-kilitler gibi)
+  const fullSectionSlug = location.pathname.replace('/urunler/', '')
 
   // Slug'dan section title'ı bul
   const sectionTitle = useMemo(() => {
@@ -551,6 +556,8 @@ function SectionProducts() {
       'kilima-santral-urunleri': 'KİLİMA SANTRAL ÜRÜNLERİ',
       'cesitli-urunler': 'ÇEŞİTLİ ÜRÜNLER',
       'sikistirmali-kilitler': 'Sıkıştırmalı Kilitler',
+      'ceyrek-donuslu-kilitler/sikistirmali-kilitler': 'Sıkıştırmalı Kilitler',
+      'ceyrek-donuslu-kilitler': 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
       'surgu-kilitler': 'Sürgü Kilitler',
       'diger-urunler': 'Diğer Ürünler',
       'diller-anahtarlar-cubuk-ve-lamalar': 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR',
@@ -561,6 +568,7 @@ function SectionProducts() {
       'paslanmaz-ispanyolet-lama-ve-aksesuarlari': 'Paslanmaz İspanyolet Lama ve Aksesuarları',
       'anahtarlar': 'Anahtarlar',
       'ceyrek-donuslu-kilitler': 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
+      'kolay-montaj-cd-kilitler': 'Kolay Montaj Ç.D. Kilitler',
       'silindirli-kilitler': 'SİLİNDİRLİ KİLİTLER',
       'mobilya-ve-celik-esya-kilitleri': 'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ',
       'kenar-menteseler': 'KENAR MENTEŞELER',
@@ -576,8 +584,8 @@ function SectionProducts() {
       'elektronik-dolap-kilitleri': 'ELEKTRONİK DOLAP KİLİTLERİ',
       'diger-elektronik-kilitler': 'DİĞER ELEKTRONİK KİLİTLER',
     }
-    return slugToTitle[sectionSlug] || null
-  }, [sectionSlug])
+    return slugToTitle[fullSectionSlug] || slugToTitle[sectionSlug] || null
+  }, [fullSectionSlug, sectionSlug])
 
   // Section'ın ürünlerini bul
   const currentItems = useMemo(() => {
@@ -605,6 +613,24 @@ function SectionProducts() {
     }
     // Sıkıştırmalı Kilitler için özel ürün listesi
     if (sectionTitle === 'Sıkıştırmalı Kilitler') {
+      // ÇEYREK DÖNÜŞLÜ KİLİTLER section'ından geliyorsa farklı liste
+      // location.state'te fromSection kontrolü veya sectionSlug kontrolü yap
+      const isFromCeyrekDonuslu = location?.state?.fromSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' ||
+                                   fullSectionSlug === 'ceyrek-donuslu-kilitler/sikistirmali-kilitler'
+      
+      if (isFromCeyrekDonuslu) {
+        // ÇEYREK DÖNÜŞLÜ KİLİTLER'den gelen Sıkıştırmalı Kilitler için özel liste
+        return [
+          '040 > Sıkıştırmalı Kilit v1',
+          '040 > Sıkıştırmalı Kilit v2',
+          '640 > Sıkıştırmalı Kilit v1',
+          '640 > Sıkıştırmalı Kilit v2',
+          '140 > Mini Sıkıştırmalı Kilit',
+          '045 > Sıkıştırmalı Kilit',
+        ]
+      }
+      
+      // ÇEŞİTLİ ÜRÜNLER section'ından geliyorsa normal liste
       return [
         '077 > Sıkıştırmalı Kilit',
         '177 > Sıkıştırmalı Kilit',
@@ -615,6 +641,18 @@ function SectionProducts() {
         '170 > Kaldır-Çevir',
         '270 > Sıkıştırmalı Kilit',
         '270 > Sıkıştırmalı Kilit 2',
+      ]
+    }
+    
+    // Kolay Montaj Ç.D. Kilitler için özel ürün listesi
+    if (sectionTitle === 'Kolay Montaj Ç.D. Kilitler') {
+      return [
+        '560 > Çeyrek Dönüşlü Segmanlı Kilit',
+        '660 > Çeyrek Dönüşlü Klipsli Kilit',
+        '661 > Çeyrek Dönüşlü Kilit Kolay Montaj',
+        '761 > Çeyrek Dönüşlü Kilit Kolay Montaj',
+        '366 > Mini Çeyrek Dönüşlü Klipsli Kilit',
+        '566 > Mini Dönüşlü Klipsli Kilit',
       ]
     }
     // Sürgü Kilitler için özel ürün listesi
@@ -748,7 +786,7 @@ function SectionProducts() {
       }
     }
     return []
-  }, [sectionTitle])
+  }, [sectionTitle, location])
 
   // Kategori resim mapping
   const categoryImageMap = {
@@ -1353,24 +1391,63 @@ function SectionProducts() {
               // Sıkıştırmalı Kilitler section'ı için özel resim mapping
               const code = item.match(/^(\d+)\s*>/)?.[1]
               if (code) {
-                // 270 > Sıkıştırmalı Kilit 2 için özel kontrol
-                if (code === '270' && item.includes('Sıkıştırmalı Kilit 2')) {
-                  img = '/sikistirmalikilit/270sikistirmalikilit2.jpg'
-                } else {
-                  const sikistirmaliKilitImageMap = {
-                    '077': '/sikistirmalikilit/077sikistirmalikilit.jpg',
-                    '177': '/sikistirmalikilit/177sikistirmalikilit.jpg',
-                    '377': '/sikistirmalikilit/377sikistirmalikilit.jpg',
-                    '477': '/sikistirmalikilit/477sikistirmalikilit.jpg',
-                    '270': '/sikistirmalikilit/270sikistirmalikilit.jpeg',
-                    '072': '/sikistirmalikilit/072sikistirmalikilit.jpg',
-                    '070': '/sikistirmalikilit/070sikistirmalikilit.jpg',
-                    '170': '/sikistirmalikilit/170sikistirmalikilit.jpg',
+                // ÇEYREK DÖNÜŞLÜ KİLİTLER'den gelen Sıkıştırmalı Kilitler için özel kontrol
+                const isFromCeyrekDonuslu = location?.state?.fromSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' ||
+                                             fullSectionSlug === 'ceyrek-donuslu-kilitler/sikistirmali-kilitler'
+                
+                if (isFromCeyrekDonuslu) {
+                  // v1 ve v2 versiyonları için özel kontrol - dosya isimlerine göre
+                  if (code === '040') {
+                    img = item.includes('v1') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/040_v1.jpg' :
+                          item.includes('v2') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/040_v2.jpg' :
+                          '/ceyrekdonuslukilitler/sikistirmalikilitler/040_v1.jpg'
+                  } else if (code === '640') {
+                    img = item.includes('v1') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/640_v1.jpg' :
+                          item.includes('v2') ? '/ceyrekdonuslukilitler/sikistirmalikilitler/640_v2.jpg' :
+                          '/ceyrekdonuslukilitler/sikistirmalikilitler/640_v1.jpg'
+                  } else {
+                    const ceyrekSikistirmaliKilitImageMap = {
+                      '140': '/ceyrekdonuslukilitler/sikistirmalikilitler/140.jpg',
+                      '045': '/ceyrekdonuslukilitler/sikistirmalikilitler/045.jpg',
+                    }
+                    img = ceyrekSikistirmaliKilitImageMap[code] || '/ceyrekdonuslukilitler/gr_sikistirmali_ceyrek1.jpg'
                   }
-                  img = sikistirmaliKilitImageMap[code] || '/cesitliurunler/cu-sikistirmali.jpg'
+                } else {
+                  // 270 > Sıkıştırmalı Kilit 2 için özel kontrol
+                  if (code === '270' && item.includes('Sıkıştırmalı Kilit 2')) {
+                    img = '/sikistirmalikilit/270sikistirmalikilit2.jpg'
+                  } else {
+                    const sikistirmaliKilitImageMap = {
+                      '077': '/sikistirmalikilit/077sikistirmalikilit.jpg',
+                      '177': '/sikistirmalikilit/177sikistirmalikilit.jpg',
+                      '377': '/sikistirmalikilit/377sikistirmalikilit.jpg',
+                      '477': '/sikistirmalikilit/477sikistirmalikilit.jpg',
+                      '270': '/sikistirmalikilit/270sikistirmalikilit.jpeg',
+                      '072': '/sikistirmalikilit/072sikistirmalikilit.jpg',
+                      '070': '/sikistirmalikilit/070sikistirmalikilit.jpg',
+                      '170': '/sikistirmalikilit/170sikistirmalikilit.jpg',
+                    }
+                    img = sikistirmaliKilitImageMap[code] || '/cesitliurunler/cu-sikistirmali.jpg'
+                  }
                 }
               } else {
                 img = '/cesitliurunler/cu-sikistirmali.jpg'
+              }
+            } else if (sectionTitle === 'Kolay Montaj Ç.D. Kilitler') {
+              // Kolay Montaj Ç.D. Kilitler section'ı için özel resim mapping
+              const code = item.match(/^(\d+)\s*>/)?.[1]
+              if (code) {
+                const kolayMontajCeyrekImageMap = {
+                  '560': '/ceyrekdonuslukilitler/kolaymontaj/560-1ccd.jpg',
+                  '660': '/ceyrekdonuslukilitler/kolaymontaj/6601cc.jpg',
+                  '661': '/ceyrekdonuslukilitler/kolaymontaj/661dcc.jpg',
+                  '761': '/ceyrekdonuslukilitler/kolaymontaj/761_gobek.jpg',
+                  '366': '/ceyrekdonuslukilitler/kolaymontaj/366d.jpg',
+                  '566': '/ceyrekdonuslukilitler/kolaymontaj/566d.jpg',
+                }
+                img = kolayMontajCeyrekImageMap[code] || '/ceyrekdonuslukilitler/gr_kolay_montaj.jpg'
+              } else {
+                img = '/ceyrekdonuslukilitler/gr_kolay_montaj.jpg'
               }
             } else if (sectionTitle === 'Sürgü Kilitler') {
               // Sürgü Kilitler section'ı için özel resim mapping
@@ -1501,10 +1578,14 @@ function SectionProducts() {
             const isPaslanmazIspanyoletCubuk = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları'
             const isPaslanmazIspanyoletLama = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Paslanmaz İspanyolet Lama ve Aksesuarları'
             const isAnahtarlar = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Anahtarlar'
+            // ÇEYREK DÖNÜŞLÜ KİLİTLER için özel kontrol
+            const isCeyrekDonusluKilitler = sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' && item === 'Çeyrek Dönüşlü Kilitler'
+            const isSikistirmaliKilitlerCeyrek = sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' && item === 'Sıkıştırmalı Kilitler'
+            const isKolayMontajCeyrek = sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' && item === 'Kolay Montaj Ç.D. Kilitler'
             const sectionSlugMap = {
               'Kabin Kilitleri': 'kabin-kilitleri',
               'T Kollu Kabin Kilitleri': 't-kollu-kabin-kilitleri',
-              'Sıkıştırmalı Kilitler': 'sikistirmali-kilitler',
+              'Sıkıştırmalı Kilitler': isSikistirmaliKilitlerCeyrek ? 'ceyrek-donuslu-kilitler/sikistirmali-kilitler' : 'sikistirmali-kilitler',
               'Sürgü Kilitler': 'surgu-kilitler',
               'Diğer Ürünler': 'diger-urunler',
               'Diller': 'diller',
@@ -1513,8 +1594,10 @@ function SectionProducts() {
               'Paslanmaz İspanyolet Çubuk ve Aksesuarları': 'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari',
               'Paslanmaz İspanyolet Lama ve Aksesuarları': 'paslanmaz-ispanyolet-lama-ve-aksesuarlari',
               'Anahtarlar': 'anahtarlar',
+              'Çeyrek Dönüşlü Kilitler': 'ceyrek-donuslu-kilitler',
+              'Kolay Montaj Ç.D. Kilitler': 'kolay-montaj-cd-kilitler',
             }
-            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama || isAnahtarlar) ? sectionSlugMap[item] : null
+            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama || isAnahtarlar || isCeyrekDonusluKilitler || isSikistirmaliKilitlerCeyrek || isKolayMontajCeyrek) ? sectionSlugMap[item] : null
             
             // Alt section'lar için resim belirleme
             const getSubSectionImage = (sectionName) => {
@@ -1531,20 +1614,37 @@ function SectionProducts() {
                 'Paslanmaz İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletcubuk.png',
                 'Paslanmaz İspanyolet Lama ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletlama.png',
                 'Anahtarlar': '/dilleranahtarlar/anahtarlar.jpg',
+                // ÇEYREK DÖNÜŞLÜ KİLİTLER için özel resimler
+                'Çeyrek Dönüşlü Kilitler': '/ceyrekdonuslukilitler/ceyrek.jpg',
+                'Kolay Montaj Ç.D. Kilitler': '/ceyrekdonuslukilitler/gr_kolay_montaj.jpg',
+              }
+              // ÇEYREK DÖNÜŞLÜ KİLİTLER section'ındaki Sıkıştırmalı Kilitler için özel resim
+              if (sectionName === 'Sıkıştırmalı Kilitler' && sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') {
+                return '/ceyrekdonuslukilitler/gr_sikistirmali_ceyrek1.jpg'
               }
               return subSectionImageMap[sectionName] || (sectionName === 'Sıkıştırmalı Kilitler' ? '/cesitliurunler/cu-sikistirmali.jpg' : sectionName === 'Sürgü Kilitler' ? '/cesitliurunler/cusurgulu.jpg' : sectionName === 'Diğer Ürünler' ? '/cesitliurunler/cucesitli.jpg' : '/trafovekabinkilitleri.png')
             }
+            
+            // ÇEYREK DÖNÜŞLÜ KİLİTLER'den geldiğini kontrol et
+            const isFromCeyrekDonuslu = sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' ||
+                                         (sectionTitle === 'Sıkıştırmalı Kilitler' && (location?.state?.fromSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' || fullSectionSlug === 'ceyrek-donuslu-kilitler/sikistirmali-kilitler')) ||
+                                         sectionTitle === 'Kolay Montaj Ç.D. Kilitler'
             
             return (
               <Link
                 key={item}
                 to={sectionSlug ? `/urunler/${sectionSlug}` : `/urun-detay/${productSlug}`}
-                state={sectionSlug ? {} : { productName: item, productImage: img, productLogo: getProductLogo(item) }}
+                state={sectionSlug ? {} : { 
+                  productName: item, 
+                  productImage: img, 
+                  productLogo: getProductLogo(item),
+                  fromSection: isFromCeyrekDonuslu ? 'ÇEYREK DÖNÜŞLÜ KİLİTLER' : undefined
+                }}
                 className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-[#16a34a]/50 hover:shadow-xl"
               >
                 {/* Ürün Görseli */}
                 <div className="relative flex h-80 items-center justify-center overflow-hidden bg-white p-6">
-                  {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) ? (
+                  {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isCeyrekDonusluKilitler || isSikistirmaliKilitlerCeyrek || isKolayMontajCeyrek) ? (
                     <img 
                       src={getSubSectionImage(item)} 
                       alt={item} 
@@ -1633,7 +1733,7 @@ function SectionProducts() {
                       </h3>
                     </div>
                     {/* ÇEŞİTLİ ÜRÜNLER, TRAFO VE KABİN KİLİTLERİ, DİLLER ve ÇEYREK DÖNÜŞLÜ KİLİTLER için Ürün Grup Çeşitleri yazısı */}
-                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && !isDiller && !isIspanyoletCubuk && !isIspanyoletLama && !isPaslanmazIspanyoletCubuk && !isPaslanmazIspanyoletLama && !isAnahtarlar && (
+                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && !isDiller && !isIspanyoletCubuk && !isIspanyoletLama && !isPaslanmazIspanyoletCubuk && !isPaslanmazIspanyoletLama && !isAnahtarlar && !isCeyrekDonusluKilitler && !isSikistirmaliKilitlerCeyrek && !isKolayMontajCeyrek && (
                       <p className="mb-3 text-xs text-slate-500">Ürün Grup Çeşitleri</p>
                     )}
                   </div>
