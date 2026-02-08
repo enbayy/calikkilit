@@ -152,7 +152,6 @@ const lockSections = [
     title: 'SİLİNDİRLİ KİLİTLER',
     items: [
       '163 > Silindirli Kilit Yaylı Dilli',
-      'Silindirli Kilit',
       '063 > Silindirli Kilit',
       '761 > Silindirli Kilit Kolay Montaj',
       '261 > Silindirli Tutamaklı Kilit',
@@ -165,9 +164,9 @@ const lockSections = [
       '240 > Sıkıştırmalı',
       '240 > Sıkıştırmalı T Kollu Kilit',
       '340 > Sıkıştırmalı Kelebek Kilit',
-      '340 > Sıkıştırmalı Kelebek Kilit',
-      '050 > Silindirli Kilit',
-      '050 > Silindirli Kilit',
+      '340 > Sıkıştırmalı Kelebek Kilit v2',
+      '050 > Silindirli Kilit v1',
+      '050 > Silindirli Kilit v2',
       '050 A3 > Kilit Tutamağı',
       '050 A4 > Toz Kapağı',
       '050 A1 > Cam Bağlantı Sacı',
@@ -687,6 +686,40 @@ function SectionProducts() {
         '666 > Çeyrek Dönüşlü Kilit',
         '203 > Çeyrek Dönüşlü Kilit v1',
         '203 > Çeyrek Dönüşlü Kelebek Kilit v2',
+      ]
+    }
+    // SİLİNDİRLİ KİLİTLER için özel ürün listesi
+    if (sectionTitle === 'SİLİNDİRLİ KİLİTLER') {
+      return [
+        '163 > Silindirli Kilit Yaylı Dilli',
+        '063 > Silindirli Kilit',
+        '761 > Silindirli Kilit Kolay Montaj',
+        '261 > Silindirli Tutamaklı Kilit',
+        '065 > Silindirli Kelebek Kilit',
+        '165 > Mini Silindirli Kelebek Kilit',
+        '110 > Silindirli "T" Kollu Kilit',
+        '111 > Silindirli "L" Kollu Kilit',
+        '064 > Silindirli "T" Kollu Kilit',
+        '064 > Silindirli "L" Kollu Kilit',
+        '240 > Sıkıştırmalı',
+        '240 > Sıkıştırmalı T Kollu Kilit',
+        '340 > Sıkıştırmalı Kelebek Kilit',
+        '340 > Sıkıştırmalı Kelebek Kilit v2',
+        '050 > Silindirli Kilit v1',
+        '050 > Silindirli Kilit v2',
+        '050 A3 > Kilit Tutamağı',
+        '050 A4 > Toz Kapağı',
+        '050 A1 > Cam Bağlantı Sacı',
+        '030 A1 > Kilit Karşılık Sacı',
+        '055 A1 > Ahşap Bağlantı Sacı',
+        '550 > Silindirli Kilit Kolay Montaj',
+        '450 > Yaylı Silindirli Kilit',
+        '150 > Silindirli Kilit',
+        '250 > Silindirli Kilit',
+        '057 > Mini Silindirli Kilit',
+        '157 > Mini Silindirli Kilit',
+        '257 > Mini Silindirli Kilit',
+        '056 > Silindirli Kilit',
       ]
     }
     // Kolay Montaj Ç.D. Kilitler için özel ürün listesi
@@ -1602,6 +1635,40 @@ function SectionProducts() {
                 '368 > Metal Anahtarlar (Uzun)': '/dilleranahtarlar/anahtarlar/368.jpg',
               }
               img = anahtarlarImageMap[item] || '/dilleranahtarlar/anahtarlar.jpg'
+            } else if (sectionTitle === 'SİLİNDİRLİ KİLİTLER') {
+              // SİLİNDİRLİ KİLİTLER section'ı için özel resim mapping
+              const silindirliKilitlerImageMap = {
+                '163 > Silindirli Kilit Yaylı Dilli': '/silindirlikilitler/163_krom.jpg',
+                '063 > Silindirli Kilit': '/silindirlikilitler/063.jpg',
+                '761 > Silindirli Kilit Kolay Montaj': '/silindirlikilitler/761_fiseli.jpg',
+                '261 > Silindirli Tutamaklı Kilit': '/silindirlikilitler/261_fiseli.jpg',
+                '065 > Silindirli Kelebek Kilit': '/silindirlikilitler/065_krom.jpg',
+                '165 > Mini Silindirli Kelebek Kilit': '/silindirlikilitler/165_krom.jpg',
+                '110 > Silindirli "T" Kollu Kilit': '/silindirlikilitler/110_krom.jpg',
+                '111 > Silindirli "L" Kollu Kilit': '/silindirlikilitler/111_krom.jpg',
+                '064 > Silindirli "T" Kollu Kilit': '/silindirlikilitler/064_T_Kollu.jpg',
+                '064 > Silindirli "L" Kollu Kilit': '/silindirlikilitler/064_L_kollu.jpg',
+                '240 > Sıkıştırmalı': '/silindirlikilitler/240.jpg',
+                '240 > Sıkıştırmalı T Kollu Kilit': '/silindirlikilitler/240_T_Kollu.jpg',
+                '340 > Sıkıştırmalı Kelebek Kilit': '/silindirlikilitler/340_v1.jpg',
+                '340 > Sıkıştırmalı Kelebek Kilit v2': '/silindirlikilitler/340_v2.jpg',
+                '050 > Silindirli Kilit v1': '/silindirlikilitler/050_v1.jpg',
+                '050 > Silindirli Kilit v2': '/silindirlikilitler/050_v2.jpg',
+                '050 A3 > Kilit Tutamağı': '/silindirlikilitler/050_a3.jpg',
+                '050 A4 > Toz Kapağı': '/silindirlikilitler/050_a4_toz-kapak.jpg',
+                '050 A1 > Cam Bağlantı Sacı': '/silindirlikilitler/050_a1.jpg',
+                '030 A1 > Kilit Karşılık Sacı': '/silindirlikilitler/030-a1-2.jpg',
+                '055 A1 > Ahşap Bağlantı Sacı': '/silindirlikilitler/silindirlikilitler.png',
+                '550 > Silindirli Kilit Kolay Montaj': '/silindirlikilitler/550.jpg',
+                '450 > Yaylı Silindirli Kilit': '/silindirlikilitler/450.jpg',
+                '150 > Silindirli Kilit': '/silindirlikilitler/150_fis.jpg',
+                '250 > Silindirli Kilit': '/silindirlikilitler/250.jpg',
+                '057 > Mini Silindirli Kilit': '/silindirlikilitler/057.jpg',
+                '157 > Mini Silindirli Kilit': '/silindirlikilitler/157.jpg',
+                '257 > Mini Silindirli Kilit': '/silindirlikilitler/257.jpg',
+                '056 > Silindirli Kilit': '/silindirlikilitler/056_18.jpg',
+              }
+              img = silindirliKilitlerImageMap[item] || '/silindirlikilitler.png'
             } else if (sectionTitle === 'Çeyrek Dönüşlü Kilitler') {
               // Çeyrek Dönüşlü Kilitler section'ı için özel resim mapping
               const ceyrekDonusluKilitlerImageMap = {
