@@ -5088,6 +5088,124 @@ function ProductDetail() {
       }
     }
     
+    // SİLİNDİRLİ KİLİTLER için özel PDF mapping
+    if (code === '163' && fullName?.includes('Silindirli Kilit Yaylı Dilli')) {
+      return '/silindirlikilitler/163-silindirli-kilit-yayli-dilli.pdf'
+    }
+    
+    if (code === '063' && fullName?.includes('Silindirli Kilit')) {
+      return '/silindirlikilitler/063-silindirli-kilit.pdf'
+    }
+    
+    if (code === '761' && fullName?.includes('Silindirli Kilit Kolay Montaj')) {
+      return '/silindirlikilitler/761-silindirli-kilit-kolay-montaj.pdf'
+    }
+    
+    if (code === '261' && fullName?.includes('Silindirli Tutamaklı Kilit')) {
+      return '/silindirlikilitler/261-silindirli-tutamakli-kilit.pdf'
+    }
+    
+    if (code === '065' && fullName?.includes('Silindirli Kelebek Kilit')) {
+      return '/silindirlikilitler/065-silindirli-kelebek-kilit.pdf'
+    }
+    
+    if (code === '165' && fullName?.includes('Mini Silindirli Kelebek Kilit')) {
+      return '/silindirlikilitler/165-mini-silindirli-kelebek-kilit.pdf'
+    }
+    
+    if (code === '110' && fullName?.includes('Silindirli "T" Kollu Kilit')) {
+      return '/silindirlikilitler/110-silindirli-t-kollu-kilit.pdf'
+    }
+    
+    if (code === '111' && fullName?.includes('Silindirli "L" Kollu Kilit')) {
+      return '/silindirlikilitler/111-silindirli-l-kollu-kilit.pdf'
+    }
+    
+    if (code === '064') {
+      if (fullName?.includes('Silindirli "T" Kollu Kilit')) {
+        return '/silindirlikilitler/064-silindirli-t-kollu-kilit.pdf'
+      }
+      if (fullName?.includes('Silindirli "L" Kollu Kilit')) {
+        return '/silindirlikilitler/064-silindirli-l-kollu-kilit.pdf'
+      }
+    }
+    
+    if (code === '240') {
+      if (fullName?.includes('Sıkıştırmalı T Kollu Kilit')) {
+        return '/silindirlikilitler/240-sikistirmali-t-kollu-kilit.pdf'
+      }
+      if (fullName?.includes('Sıkıştırmalı') && !fullName?.includes('T Kollu')) {
+        return '/silindirlikilitler/240-sikistirmali.pdf'
+      }
+    }
+    
+    if (code === '340') {
+      if (fullName?.includes('v2') || fullName?.includes('Sıkıştırmalı Kelebek Kilit v2')) {
+        return '/silindirlikilitler/340-sikistirmali-kelebek-kilit2.pdf'
+      }
+      if (fullName?.includes('v1') || fullName?.includes('Sıkıştırmalı Kelebek Kilit v1') || fullName?.includes('Sıkıştırmalı Kelebek Kilit')) {
+        return '/silindirlikilitler/340-sikistirmali-kelebek-kilit1.pdf'
+      }
+    }
+    
+    if (code === '050') {
+      if (fullName?.includes('Silindirli Kilit v1') || (fullName?.includes('Silindirli Kilit') && fullName?.includes('v1'))) {
+        return '/silindirlikilitler/050-silindirli-kilit1.pdf'
+      }
+      if (fullName?.includes('Silindirli Kilit v2') || (fullName?.includes('Silindirli Kilit') && fullName?.includes('v2'))) {
+        return '/silindirlikilitler/050-silindirli-kilit2.pdf'
+      }
+      if (fullName?.includes('A3') || fullName?.includes('Kilit Tutamağı')) {
+        return '/silindirlikilitler/050-a3-kilit-tutamagi.pdf'
+      }
+      if (fullName?.includes('A4') || fullName?.includes('Toz Kapağı')) {
+        return '/silindirlikilitler/050-a4-toz-kapagi.pdf'
+      }
+      if (fullName?.includes('A1') || fullName?.includes('Cam Bağlantı Sacı')) {
+        return '/silindirlikilitler/050-a1-cam-baglanti-saci.pdf'
+      }
+    }
+    
+    if (code === '030 A1' && fullName?.includes('Kilit Karşılık Sacı')) {
+      return '/silindirlikilitler/030-a1-kilit-karsilik-saci.pdf'
+    }
+    
+    if (code === '055 A1' && fullName?.includes('Ahşap Bağlantı Sacı')) {
+      return '/silindirlikilitler/055-a1-ahsap-baglanti-saci.pdf'
+    }
+    
+    if (code === '550' && fullName?.includes('Silindirli Kilit Kolay Montaj')) {
+      return '/silindirlikilitler/550-silindirli-kilit-kolay-montaj.pdf'
+    }
+    
+    if (code === '450' && fullName?.includes('Yaylı Silindirli Kilit')) {
+      return '/silindirlikilitler/450-yayli-silindirli-kilit.pdf'
+    }
+    
+    if (code === '150' && fullName?.includes('Silindirli Kilit')) {
+      return '/silindirlikilitler/150-silindirli-kilit.pdf'
+    }
+    
+    if (code === '250' && fullName?.includes('Silindirli Kilit')) {
+      return '/silindirlikilitler/250-silindirli-kilit.pdf'
+    }
+    
+    if (code === '057' && fullName?.includes('Mini Silindirli Kilit')) {
+      return '/silindirlikilitler/057-mini-silindirli-kilit.pdf'
+    }
+    
+    if (code === '157' && fullName?.includes('Mini Silindirli Kilit')) {
+      return '/silindirlikilitler/157-mini-silindirli-kilit.pdf'
+    }
+    
+    if (code === '257' && fullName?.includes('Mini Silindirli Kilit')) {
+      return '/silindirlikilitler/257-mini-silindirli-kilit.pdf'
+    }
+    
+    if (code === '056' && fullName?.includes('Silindirli Kilit')) {
+      return '/silindirlikilitler/056-silindirli-kilit.pdf'
+    }
+    
     // Kod bazlı PDF mapping
     const pdfMap = {
       '001': '/001-kollu-kilit.pdf',
