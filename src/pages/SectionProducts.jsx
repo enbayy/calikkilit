@@ -557,6 +557,7 @@ function SectionProducts() {
       'diller': 'Diller',
       'ispanyolet-cubuk-ve-aksesuarlari': 'İspanyolet Çubuk ve Aksesuarları',
       'ispanyolet-lama-ve-aksesuarlari': 'İspanyolet Lama ve Aksesuarları',
+      'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari': 'Paslanmaz İspanyolet Çubuk ve Aksesuarları',
       'ceyrek-donuslu-kilitler': 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
       'silindirli-kilitler': 'SİLİNDİRLİ KİLİTLER',
       'mobilya-ve-celik-esya-kilitleri': 'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ',
@@ -679,6 +680,18 @@ function SectionProducts() {
         'CY2 > Çubuk Yatağı',
       ]
     }
+    // Paslanmaz İspanyolet Çubuk ve Aksesuarları için özel ürün listesi
+    if (sectionTitle === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları') {
+      return [
+        'IC > Paslanmaz Çelik İspanyolet Çubuk 1',
+        'IC > Paslanmaz Çelik İspanyolet Çubuk 2',
+        'IC > Paslanmaz Çelik İspanyolet Çubuk 3',
+        'IC > Paslanmaz Çelik İspanyolet Çubuk 4',
+        'CT1 > Çubuk Tutucu',
+        'CY1 > Çubuk Yatağı',
+        'CY2 > Çubuk Yatağı',
+      ]
+    }
     // İspanyolet Lama ve Aksesuarları için özel ürün listesi
     if (sectionTitle === 'İspanyolet Lama ve Aksesuarları') {
       return [
@@ -721,6 +734,7 @@ function SectionProducts() {
     'Diğer Ürünler': '/cesitliurunler/cucesitli.jpg',
     'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR': '/dilleranahtarlarcubuklarve.png',
     'İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/ispanyoletcubuk-ve-aksesuarlari.jpg',
+    'Paslanmaz İspanyolet Çubuk ve Aksesuarları': '/dilleranahtarlar/paslanmazispanyoletcubuk.png',
     'ÇEYREK DÖNÜŞLÜ KİLİTLER': '/ceyrekdonuslukilitler.png',
     'SİLİNDİRLİ KİLİTLER': '/silindirlikilitler.png',
     'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ': '/mobilyavecelikesya.png',
@@ -956,7 +970,11 @@ function SectionProducts() {
         'IC > İspanyolet Çubuklar 4': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar4.jpeg',
         'IC > İspanyolet Çubuklar 5': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar4.jpeg', // 5 numaralı dosya yok, 4'ü kullanıyoruz
         'IC > İspanyolet Çubuklar 6': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar6.jpg',
-        'CT1 > Çubuk Tutucu': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ct1cubuktutucu.jpg',
+        'IC > Paslanmaz Çelik İspanyolet Çubuk 1': '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-1.png',
+        'IC > Paslanmaz Çelik İspanyolet Çubuk 2': '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-2.png',
+        'IC > Paslanmaz Çelik İspanyolet Çubuk 3': '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-3.png',
+        'IC > Paslanmaz Çelik İspanyolet Çubuk 4': '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-4.png',
+        'CT1 > Çubuk Tutucu': '/dilleranahtarlar/paslanmazispanyoletcubuk/ct1.jpg',
         'CT2 > Çubuk Tutucu': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ct2cubuktutucu.jpg',
         'CY1 > Çubuk Yatağı': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy1cubukyatagi.jpg',
         'CY2 > Çubuk Yatağı': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy2cubukyatagi.jpg',
@@ -1354,6 +1372,18 @@ function SectionProducts() {
                 'CY2 > Çubuk Yatağı': '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy2cubukyatagi.jpg',
               }
               img = ispanyoletCubukImageMap[item] || '/dilleranahtarlar/ispanyoletcubuk-ve-aksesuarlari.jpg'
+            } else if (sectionTitle === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları') {
+              // Paslanmaz İspanyolet Çubuk ve Aksesuarları section'ı için özel resim mapping
+              const paslanmazIspanyoletCubukImageMap = {
+                'IC > Paslanmaz Çelik İspanyolet Çubuk 1': '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-1.png',
+                'IC > Paslanmaz Çelik İspanyolet Çubuk 2': '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-2.png',
+                'IC > Paslanmaz Çelik İspanyolet Çubuk 3': '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-3.png',
+                'IC > Paslanmaz Çelik İspanyolet Çubuk 4': '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-4.png',
+                'CT1 > Çubuk Tutucu': '/dilleranahtarlar/paslanmazispanyoletcubuk/ct1.jpg',
+                'CY1 > Çubuk Yatağı': '/dilleranahtarlar/paslanmazispanyoletcubuk/cy1.jpg',
+                'CY2 > Çubuk Yatağı': '/dilleranahtarlar/paslanmazispanyoletcubuk/cy2.jpg',
+              }
+              img = paslanmazIspanyoletCubukImageMap[item] || '/dilleranahtarlar/paslanmazispanyoletcubuk.png'
             } else if (sectionTitle === 'İspanyolet Lama ve Aksesuarları') {
               // İspanyolet Lama ve Aksesuarları section'ı için özel resim mapping
               const ispanyoletLamaImageMap = {
@@ -1387,10 +1417,11 @@ function SectionProducts() {
             const isSikistirmaliKilitler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Sıkıştırmalı Kilitler'
             const isSurguKilitler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Sürgü Kilitler'
             const isDigerUrunler = sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' && item === 'Diğer Ürünler'
-            // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel kontrol - "Diller", "İspanyolet Çubuk ve Aksesuarları" ve "İspanyolet Lama ve Aksesuarları" section sayfasına yönlendir
+            // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel kontrol - "Diller", "İspanyolet Çubuk ve Aksesuarları", "İspanyolet Lama ve Aksesuarları" ve "Paslanmaz İspanyolet Çubuk ve Aksesuarları" section sayfasına yönlendir
             const isDiller = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Diller'
             const isIspanyoletCubuk = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'İspanyolet Çubuk ve Aksesuarları'
             const isIspanyoletLama = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'İspanyolet Lama ve Aksesuarları'
+            const isPaslanmazIspanyoletCubuk = sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları'
             const sectionSlugMap = {
               'Kabin Kilitleri': 'kabin-kilitleri',
               'T Kollu Kabin Kilitleri': 't-kollu-kabin-kilitleri',
@@ -1400,8 +1431,9 @@ function SectionProducts() {
               'Diller': 'diller',
               'İspanyolet Çubuk ve Aksesuarları': 'ispanyolet-cubuk-ve-aksesuarlari',
               'İspanyolet Lama ve Aksesuarları': 'ispanyolet-lama-ve-aksesuarlari',
+              'Paslanmaz İspanyolet Çubuk ve Aksesuarları': 'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari',
             }
-            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) ? sectionSlugMap[item] : null
+            const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) ? sectionSlugMap[item] : null
             
             // Alt section'lar için resim belirleme
             const getSubSectionImage = (sectionName) => {
@@ -1456,23 +1488,23 @@ function SectionProducts() {
                           {productCode}
                         </span>
                       )}
-                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) && item.startsWith('CC >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) && productName.startsWith('CC >')) ? (
+                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && item.startsWith('CC >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && productName.startsWith('CC >')) ? (
                         <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold min-w-[2rem]">
                           CC
                         </span>
                       ) : null}
-                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) && item.startsWith('320.02.180 >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) && productName.startsWith('320.02.180 >')) ? (
+                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && item.startsWith('320.02.180 >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && productName.startsWith('320.02.180 >')) ? (
                         <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold">
                           320.02.180
                         </span>
                       ) : null}
-                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) && (item.startsWith('IC >') || item.startsWith('CT') || item.startsWith('CY') || item.startsWith('IL >') || item.startsWith('ILP >') || item.startsWith('LKY') || item.startsWith('LY') || item.startsWith('RCC >'))) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) && (productName.startsWith('IC >') || productName.startsWith('CT') || productName.startsWith('CY') || productName.startsWith('IL >') || productName.startsWith('ILP >') || productName.startsWith('LKY') || productName.startsWith('LY') || productName.startsWith('RCC >'))) ? (
+                      {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && (item.startsWith('IC >') || item.startsWith('CT') || item.startsWith('CY') || item.startsWith('IL >') || item.startsWith('ILP >') || item.startsWith('LKY') || item.startsWith('LY') || item.startsWith('RCC >'))) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) && (productName.startsWith('IC >') || productName.startsWith('CT') || productName.startsWith('CY') || productName.startsWith('IL >') || productName.startsWith('ILP >') || productName.startsWith('LKY') || productName.startsWith('LY') || productName.startsWith('RCC >'))) ? (
                         <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold">
-                          {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) ? (item.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '') : (productName.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '')}
+                          {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) ? (item.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '') : (productName.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '')}
                         </span>
                       ) : null}
                       <h3 className="line-clamp-2 flex-1 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#16a34a]">
-                        {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama) ? (
+                        {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) ? (
                           item.startsWith('CC >') ? (
                             item.replace('CC >', '').trim()
                           ) : item.startsWith('320.02.180 >') ? (
@@ -1520,7 +1552,7 @@ function SectionProducts() {
                       </h3>
                     </div>
                     {/* ÇEŞİTLİ ÜRÜNLER, TRAFO VE KABİN KİLİTLERİ, DİLLER ve ÇEYREK DÖNÜŞLÜ KİLİTLER için Ürün Grup Çeşitleri yazısı */}
-                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && !isDiller && !isIspanyoletCubuk && !isIspanyoletLama && (
+                    {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && !isDiller && !isIspanyoletCubuk && !isIspanyoletLama && !isPaslanmazIspanyoletCubuk && (
                       <p className="mb-3 text-xs text-slate-500">Ürün Grup Çeşitleri</p>
                     )}
                   </div>

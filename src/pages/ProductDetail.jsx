@@ -2533,6 +2533,90 @@ const productDetails = {
     ],
     relatedProducts: [],
   },
+  'IC > Paslanmaz Çelik İspanyolet Çubuk 1': {
+    code: 'IC',
+    name: 'Paslanmaz Çelik İspanyolet Çubuk 1',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler.\n• İspanyolet dilli kilitler.'
+    },
+    accessories: {
+      'Aksesuarlar': '• Çubuk yatağı (CY)'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 4-0-1-400' },
+      { Lmm: '500', urunKodu: 'IC 4-0-1-500' },
+      { Lmm: '600', urunKodu: 'IC 4-0-1-600' },
+      { Lmm: '700', urunKodu: 'IC 4-0-1-700' },
+      { Lmm: '800', urunKodu: 'IC 4-0-1-800' },
+      { Lmm: '900', urunKodu: 'IC 4-0-1-900' },
+      { Lmm: '1000', urunKodu: 'IC 4-0-1-1000' },
+    ],
+    relatedProducts: [],
+  },
+  'IC > Paslanmaz Çelik İspanyolet Çubuk 2': {
+    code: 'IC',
+    name: 'Paslanmaz Çelik İspanyolet Çubuk 2',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler\n• İspanyolet dilli kilitler.'
+    },
+    accessories: {
+      'Aksesuarlar': '• Çubuk yatağı (CY)\n• Çubuk tutucu (CT)'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 4-0-2-400' },
+      { Lmm: '500', urunKodu: 'IC 4-0-2-500' },
+      { Lmm: '600', urunKodu: 'IC 4-0-2-600' },
+      { Lmm: '700', urunKodu: 'IC 4-0-2-700' },
+      { Lmm: '800', urunKodu: 'IC 4-0-2-800' },
+      { Lmm: '900', urunKodu: 'IC 4-0-2-900' },
+      { Lmm: '1000', urunKodu: 'IC 4-0-2-1000' },
+    ],
+    relatedProducts: [],
+  },
+  'IC > Paslanmaz Çelik İspanyolet Çubuk 3': {
+    code: 'IC',
+    name: 'Paslanmaz Çelik İspanyolet Çubuk 3',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet dilli kilitler.'
+    },
+    accessories: {
+      'Aksesuarlar': '• Çubuk yatağı (CY)'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 4-0-3-400' },
+      { Lmm: '500', urunKodu: 'IC 4-0-3-500' },
+      { Lmm: '600', urunKodu: 'IC 4-0-3-600' },
+      { Lmm: '700', urunKodu: 'IC 4-0-3-700' },
+      { Lmm: '800', urunKodu: 'IC 4-0-3-800' },
+      { Lmm: '900', urunKodu: 'IC 4-0-3-900' },
+      { Lmm: '1000', urunKodu: 'IC 4-0-3-1000' },
+    ],
+    relatedProducts: [],
+  },
+  'IC > Paslanmaz Çelik İspanyolet Çubuk 4': {
+    code: 'IC',
+    name: 'Paslanmaz Çelik İspanyolet Çubuk 4',
+    description: '',
+    applicationArea: {
+      'Uygulama Alanı': '• İspanyolet mekanizmalı kilitler.'
+    },
+    accessories: {
+      'Aksesuarlar': '• Çubuk yatağı (CY)'
+    },
+    versions: [
+      { Lmm: '400', urunKodu: 'IC 4-0-4-400' },
+      { Lmm: '500', urunKodu: 'IC 4-0-4-500' },
+      { Lmm: '600', urunKodu: 'IC 4-0-4-600' },
+      { Lmm: '700', urunKodu: 'IC 4-0-4-700' },
+      { Lmm: '800', urunKodu: 'IC 4-0-4-800' },
+      { Lmm: '900', urunKodu: 'IC 4-0-4-900' },
+      { Lmm: '1000', urunKodu: 'IC 4-0-4-1000' },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -2878,6 +2962,24 @@ function ProductDetail() {
     
     // İspanyolet Çubuk ve Aksesuarları için özel resim mapping
     if (code === 'IC' || code === 'CT1' || code === 'CT2' || code === 'CY1' || code === 'CY2') {
+      // Paslanmaz İspanyolet Çubuk kontrolü
+      if (productName?.includes('Paslanmaz Çelik İspanyolet Çubuk')) {
+        const paslanmazIspanyoletCubukImageMap = {
+          'IC': productName?.includes('Paslanmaz Çelik İspanyolet Çubuk 1') ? '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-1.png' :
+                productName?.includes('Paslanmaz Çelik İspanyolet Çubuk 2') ? '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-2.png' :
+                productName?.includes('Paslanmaz Çelik İspanyolet Çubuk 3') ? '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-3.png' :
+                productName?.includes('Paslanmaz Çelik İspanyolet Çubuk 4') ? '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-4.png' :
+                '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-1.png',
+          'CT1': '/dilleranahtarlar/paslanmazispanyoletcubuk/ct1.jpg',
+          'CY1': '/dilleranahtarlar/paslanmazispanyoletcubuk/cy1.jpg',
+          'CY2': '/dilleranahtarlar/paslanmazispanyoletcubuk/cy2.jpg',
+        }
+        
+        if (paslanmazIspanyoletCubukImageMap[code]) {
+          return paslanmazIspanyoletCubukImageMap[code]
+        }
+      }
+      
       const ispanyoletCubukImageMap = {
         'IC': productName?.includes('İspanyolet Çubuklar 1') ? '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar1.jpg' :
               productName?.includes('İspanyolet Çubuklar 2') ? '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ispanyoletcubuklar2.jpg' :
@@ -3302,16 +3404,30 @@ function ProductDetail() {
     
     // İspanyolet Çubuk ve Aksesuarları için özel PDF mapping
     if (code === 'IC' || code === 'CT1' || code === 'CT2' || code === 'CY1' || code === 'CY2') {
-      if (fullName?.includes('İspanyolet Çubuklar 1')) {
+      // Paslanmaz İspanyolet Çubuk PDF'leri
+      if (fullName?.includes('Paslanmaz Çelik İspanyolet Çubuk 1')) {
+        return '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-paslanmaz-celik-ispanyolet-cubuk1.pdf'
+      }
+      if (fullName?.includes('Paslanmaz Çelik İspanyolet Çubuk 2')) {
+        return '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-paslanmaz-celik-ispanyolet-cubuk2.pdf'
+      }
+      if (fullName?.includes('Paslanmaz Çelik İspanyolet Çubuk 3')) {
+        return '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-paslanmaz-celik-ispanyolet-cubuk3.pdf'
+      }
+      if (fullName?.includes('Paslanmaz Çelik İspanyolet Çubuk 4')) {
+        return '/dilleranahtarlar/paslanmazispanyoletcubuk/ic-paslanmaz-celik-ispanyolet-cubuk4.pdf'
+      }
+      // Normal İspanyolet Çubuk PDF'leri
+      if (fullName?.includes('İspanyolet Çubuklar 1') && !fullName?.includes('Paslanmaz')) {
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar1.pdf'
       }
-      if (fullName?.includes('İspanyolet Çubuklar 2')) {
+      if (fullName?.includes('İspanyolet Çubuklar 2') && !fullName?.includes('Paslanmaz')) {
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar2.pdf'
       }
-      if (fullName?.includes('İspanyolet Çubuk 3')) {
+      if (fullName?.includes('İspanyolet Çubuk 3') && !fullName?.includes('Paslanmaz')) {
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuk3.pdf'
       }
-      if (fullName?.includes('İspanyolet Çubuklar 4')) {
+      if (fullName?.includes('İspanyolet Çubuklar 4') && !fullName?.includes('Paslanmaz')) {
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar4.pdf'
       }
       if (fullName?.includes('İspanyolet Çubuklar 5')) {
@@ -3320,16 +3436,36 @@ function ProductDetail() {
       if (fullName?.includes('İspanyolet Çubuklar 6')) {
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ic-ispanyolet-cubuklar6.pdf'
       }
+      // CT1, CY1, CY2 için PDF kontrolü
+      // Paslanmaz section'da da kullanıldıkları için paslanmaz PDF'lerini kullan
       if (code === 'CT1' && fullName?.includes('Çubuk Tutucu')) {
+        // Paslanmaz section'dan geliyorsa paslanmaz PDF'i kullan, aksi halde normal PDF
+        const isFromPaslanmazSection = location?.state?.fromSection === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları' ||
+                                      location?.pathname?.includes('paslanmaz-ispanyolet-cubuk')
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletcubuk/ct1-cubuk-tutucu.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ct1-cubuk-tutucu.pdf'
       }
       if (code === 'CT2' && fullName?.includes('Çubuk Tutucu')) {
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/ct2-cubuk-tutucu.pdf'
       }
       if (code === 'CY1' && fullName?.includes('Çubuk Yatağı')) {
+        // Paslanmaz section'dan geliyorsa paslanmaz PDF'i kullan, aksi halde normal PDF
+        const isFromPaslanmazSection = location?.state?.fromSection === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları' ||
+                                      location?.pathname?.includes('paslanmaz-ispanyolet-cubuk')
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletcubuk/cy1-cubuk-yatagi.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy1-cubuk-yatagi.pdf'
       }
       if (code === 'CY2' && fullName?.includes('Çubuk Yatağı')) {
+        // Paslanmaz section'dan geliyorsa paslanmaz PDF'i kullan, aksi halde normal PDF
+        const isFromPaslanmazSection = location?.state?.fromSection === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları' ||
+                                      location?.pathname?.includes('paslanmaz-ispanyolet-cubuk')
+        if (isFromPaslanmazSection) {
+          return '/dilleranahtarlar/paslanmazispanyoletcubuk/cy2-cubuk-yatagi.pdf'
+        }
         return '/dilleranahtarlar/İspanyoletCubukveAksesuarlari/cy2-cubuk-yatagi.pdf'
       }
     }
@@ -3577,6 +3713,23 @@ function ProductDetail() {
                     </div>
                     <div className="space-y-4">
                       {Object.entries(productDetail.applicationArea).map(([key, value]) => (
+                        <div key={key} className="text-base leading-relaxed text-slate-700 whitespace-pre-line">
+                          {value}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Aksesuarlar */}
+                {productDetail?.accessories && Object.keys(productDetail.accessories).length > 0 && (
+                  <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex items-center gap-2 mb-6">
+                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <h3 className="text-xl font-bold text-slate-900">AKSESUARLAR</h3>
+                    </div>
+                    <div className="space-y-4">
+                      {Object.entries(productDetail.accessories).map(([key, value]) => (
                         <div key={key} className="text-base leading-relaxed text-slate-700 whitespace-pre-line">
                           {value}
                         </div>

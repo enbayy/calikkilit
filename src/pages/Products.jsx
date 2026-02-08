@@ -1043,16 +1043,18 @@ function Products() {
                 const img = getPumpImage(item)
                 const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
                 
-                // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel kontrol - "Diller", "İspanyolet Çubuk ve Aksesuarları" ve "İspanyolet Lama ve Aksesuarları" section sayfasına yönlendir
+                // DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR için özel kontrol - "Diller", "İspanyolet Çubuk ve Aksesuarları", "İspanyolet Lama ve Aksesuarları" ve "Paslanmaz İspanyolet Çubuk ve Aksesuarları" section sayfasına yönlendir
                 const isDiller = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Diller'
                 const isIspanyoletCubuk = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'İspanyolet Çubuk ve Aksesuarları'
                 const isIspanyoletLama = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'İspanyolet Lama ve Aksesuarları'
+                const isPaslanmazIspanyoletCubuk = activeSection === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' && item === 'Paslanmaz İspanyolet Çubuk ve Aksesuarları'
                 const sectionSlugMap = {
                   'Diller': 'diller',
                   'İspanyolet Çubuk ve Aksesuarları': 'ispanyolet-cubuk-ve-aksesuarlari',
                   'İspanyolet Lama ve Aksesuarları': 'ispanyolet-lama-ve-aksesuarlari',
+                  'Paslanmaz İspanyolet Çubuk ve Aksesuarları': 'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari',
                 }
-                const sectionSlug = (isDiller || isIspanyoletCubuk || isIspanyoletLama) ? sectionSlugMap[item] : null
+                const sectionSlug = (isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk) ? sectionSlugMap[item] : null
                 
                 return (
                   <Link
