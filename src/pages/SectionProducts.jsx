@@ -557,6 +557,7 @@ function SectionProducts() {
       'cesitli-urunler': 'ÇEŞİTLİ ÜRÜNLER',
       'sikistirmali-kilitler': 'Sıkıştırmalı Kilitler',
       'ceyrek-donuslu-kilitler/sikistirmali-kilitler': 'Sıkıştırmalı Kilitler',
+      'ceyrek-donuslu-kilitler/ceyrek-donuslu-kilitler': 'Çeyrek Dönüşlü Kilitler',
       'ceyrek-donuslu-kilitler': 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
       'surgu-kilitler': 'Sürgü Kilitler',
       'diger-urunler': 'Diğer Ürünler',
@@ -644,6 +645,50 @@ function SectionProducts() {
       ]
     }
     
+    // Çeyrek Dönüşlü Kilitler için özel ürün listesi
+    if (sectionTitle === 'Çeyrek Dönüşlü Kilitler') {
+      return [
+        'AA > Kovan, Somun, Rondela, Yay, Civata, Oring',
+        'DD > Göbekler',
+        '060 AX > Çeyrek Dönüşlü Kilit Aksesuarları',
+        '060 > Çeyrek Dönüşlü Yaylı Kilit',
+        '062 > Çeyrek Dönüşlü Kelebek Kilit',
+        '362 > Çeyrek Dönüşlü Kelebek Kilit',
+        '562 > Asma Klit Hamili Pano Kilidi',
+        '262 > Asma Kilit Hamili Pano Kilidi',
+        '260 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit',
+        '162 > Pako Kilit',
+        '064 > Çeyrek Dönüşlü Yaylı Kilit',
+        '064 > Çeyrek Dönüşlü Kelebek Kilit',
+        '064 > Çeyrek Dönüşlü Kademeli Kilit',
+        '266 > Mini Çeyrek Dönüşlü Yaylı Kilit',
+        '166 > Mini Çeyrek Dönüşlü Kelebek',
+        '066 > Mini Çeyrek Dönüşlü Yaylı Kilit',
+        '662 > Asma Kilit Hamili Çeyrek Dönüşlü Kili v1',
+        '662 > Asma Kilit Hamili Çeyrek Dönüşlü Kil v2',
+        '211 > Asma Kilit Hamili \'L\' Kollu Kilit',
+        '960 > Çeyrek Dönüşlü Kilit - Modüler Tutamak',
+        '361 > Emniyetli Çeyrek Dönüşlü Kilit',
+        '461 > Emniyetli Çeyrek Dönüşlü Kilit',
+        '760 > Çeyrek Dönüşlü Yaylı Kilit',
+        '360 > Çeyrek Dönüşlü Yaylı Kilit (Topraklamalı)',
+        '561 > Tutamaklı Kilit',
+        '261 > Tutamaklı Kilit',
+        '161 > Tutamaklı Kilit',
+        '160 > Dili Yaylı Kilit',
+        '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v5',
+        '050 > Bilyalı Kilit',
+        '350 > Çeyrek Dönüşlü Kilit',
+        '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v1',
+        '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v2',
+        '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v3',
+        '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v4',
+        '103 > Çeyrek Dönüşlü Kilit',
+        '666 > Çeyrek Dönüşlü Kilit',
+        '203 > Çeyrek Dönüşlü Kilit v1',
+        '203 > Çeyrek Dönüşlü Kelebek Kilit v2',
+      ]
+    }
     // Kolay Montaj Ç.D. Kilitler için özel ürün listesi
     if (sectionTitle === 'Kolay Montaj Ç.D. Kilitler') {
       return [
@@ -1557,11 +1602,55 @@ function SectionProducts() {
                 '368 > Metal Anahtarlar (Uzun)': '/dilleranahtarlar/anahtarlar/368.jpg',
               }
               img = anahtarlarImageMap[item] || '/dilleranahtarlar/anahtarlar.jpg'
+            } else if (sectionTitle === 'Çeyrek Dönüşlü Kilitler') {
+              // Çeyrek Dönüşlü Kilitler section'ı için özel resim mapping
+              const ceyrekDonusluKilitlerImageMap = {
+                'AA > Kovan, Somun, Rondela, Yay, Civata, Oring': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/AA_kovan_civata.jpg',
+                'DD > Göbekler': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/gobekler1.jpg',
+                '060 AX > Çeyrek Dönüşlü Kilit Aksesuarları': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/060-ax.jpg',
+                '060 > Çeyrek Dönüşlü Yaylı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/060_siyah-boyad.jpg',
+                '062 > Çeyrek Dönüşlü Kelebek Kilit': '/ceyrekdonuslukilitler/ceyrek.jpg',
+                '362 > Çeyrek Dönüşlü Kelebek Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/362_siyah-boya111.jpg',
+                '562 > Asma Klit Hamili Pano Kilidi': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/562_krom.jpg',
+                '262 > Asma Kilit Hamili Pano Kilidi': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/262_krom.jpg',
+                '260 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/260_krom.jpg',
+                '162 > Pako Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/162.jpg',
+                '064 > Çeyrek Dönüşlü Yaylı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/064_ceyrek_donuslu_yayli.jpg',
+                '064 > Çeyrek Dönüşlü Kelebek Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/064_kelebek.jpg',
+                '064 > Çeyrek Dönüşlü Kademeli Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/064_kademeli.jpg',
+                '266 > Mini Çeyrek Dönüşlü Yaylı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/266-aaad.jpg',
+                '166 > Mini Çeyrek Dönüşlü Kelebek': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/166_kromd.jpg',
+                '066 > Mini Çeyrek Dönüşlü Yaylı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/066_plastikd.jpg',
+                '662 > Asma Kilit Hamili Çeyrek Dönüşlü Kili v1': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/662_v1.jpg',
+                '662 > Asma Kilit Hamili Çeyrek Dönüşlü Kil v2': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/662_v2.jpg',
+                '211 > Asma Kilit Hamili \'L\' Kollu Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/211_krom.jpg',
+                '960 > Çeyrek Dönüşlü Kilit - Modüler Tutamak': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/960_pat2.jpg',
+                '361 > Emniyetli Çeyrek Dönüşlü Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/361_krom.jpg',
+                '461 > Emniyetli Çeyrek Dönüşlü Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/461_krom.jpg',
+                '760 > Çeyrek Dönüşlü Yaylı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/760-yeniii.jpg',
+                '360 > Çeyrek Dönüşlü Yaylı Kilit (Topraklamalı)': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/360-dd.jpg',
+                '561 > Tutamaklı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/561.jpg',
+                '261 > Tutamaklı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/261.jpg',
+                '161 > Tutamaklı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/161.jpg',
+                '160 > Dili Yaylı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/160_krom.jpg',
+                '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v5': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055_v5.jpg',
+                '050 > Bilyalı Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/050_bil.jpg',
+                '350 > Çeyrek Dönüşlü Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/350.jpg',
+                '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v1': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055_v1.jpg',
+                '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v2': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055_v2.jpg',
+                '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v3': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055_v3.jpg',
+                '055 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit v4': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/055_v4.jpg',
+                '103 > Çeyrek Dönüşlü Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/103.jpg',
+                '666 > Çeyrek Dönüşlü Kilit': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/666_siyah-boyad.jpg',
+                '203 > Çeyrek Dönüşlü Kilit v1': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/203_v1.jpg',
+                '203 > Çeyrek Dönüşlü Kelebek Kilit v2': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/203_v2.jpg',
+              }
+              img = ceyrekDonusluKilitlerImageMap[item] || '/ceyrekdonuslukilitler/ceyrek.jpg'
             }
             const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
             // Ürün adından sayıyı çıkar (örn: "001 > Kollu Kilit" -> code: "001", name: "Kollu Kilit")
-            // IC, CT, CY, IL, ILP, LKY1, LKY2, LKY3, LY1, LY2, LY3, LY40, RCC kodları için özel kontrol
-            const match = item.match(/^((?:\d+(?:\s*[A-Z]\d+)?)|(?:IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC))\s*>\s*(.+)$/)
+            // IC, CT, CY, IL, ILP, LKY1, LKY2, LKY3, LY1, LY2, LY3, LY40, RCC, AA, DD, 060 AX gibi kodlar için özel kontrol
+            const match = item.match(/^((?:\d+(?:\s*[A-Z]+\d+)?)|(?:\d+\s+[A-Z]+)|(?:IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC|AA|DD))\s*>\s*(.+)$/)
             const productCode = match ? match[1] : null
             const productName = match ? match[2] : item
             
@@ -1594,7 +1683,7 @@ function SectionProducts() {
               'Paslanmaz İspanyolet Çubuk ve Aksesuarları': 'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari',
               'Paslanmaz İspanyolet Lama ve Aksesuarları': 'paslanmaz-ispanyolet-lama-ve-aksesuarlari',
               'Anahtarlar': 'anahtarlar',
-              'Çeyrek Dönüşlü Kilitler': 'ceyrek-donuslu-kilitler',
+              'Çeyrek Dönüşlü Kilitler': 'ceyrek-donuslu-kilitler/ceyrek-donuslu-kilitler',
               'Kolay Montaj Ç.D. Kilitler': 'kolay-montaj-cd-kilitler',
             }
             const sectionSlug = (isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama || isAnahtarlar || isCeyrekDonusluKilitler || isSikistirmaliKilitlerCeyrek || isKolayMontajCeyrek) ? sectionSlugMap[item] : null
