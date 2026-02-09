@@ -159,8 +159,8 @@ function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-[#f0fdf4] text-slate-900">
-        <header className="relative z-40 backdrop-blur bg-[#166534]/95 shadow-sm shadow-slate-200/70">
-          <div className="border-b border-[#14532d]">
+        <header className="relative z-40 backdrop-blur bg-[#1a1a1a]/95 shadow-sm shadow-slate-200/70">
+          <div className="border-b border-[#2d2d2d]">
             <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-1.5 py-1.5 text-xs text-white">
               <div className="flex items-center gap-4">
                 <span className="hidden sm:inline-flex items-center gap-1">
@@ -377,7 +377,7 @@ function App() {
           </Routes>
         </main>
 
-        <footer className="mt-16 bg-[#166534] text-slate-200">
+        <footer className="mt-16 bg-[#1a1a1a] text-slate-200">
           <div className="mx-auto max-w-7xl px-1.5 py-12 lg:px-2">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {/* Şirket Bilgileri */}

@@ -6621,6 +6621,779 @@ const getProductLogo = (itemName) => {
   return logoMap[itemName] || logos[itemName.length % logos.length]
 }
 
+// Paslanmaz Çelik Menteşeler sayfasından gelindiğinde gösterilecek detaylar (menteseler klasöründeki PDF'ler getPdfPath'te atanır)
+const paslanmazCelikMenteseDetails = {
+  '295 > Gizli Menteşe': {
+    description: '• 20 mm - 24 mm bükümlü panolarda kullanılabilen 4 ayrı versiyonu vardır.\n• Orta parçası civata ile montaj olur , kenar parça kaynak yapılır.\n• Sağ ve Sol kapağa uygulanabilir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '395 > Gizli Menteşe': {
+    description: '• 20 mm - 24 mm bükümlü panolarda kullanılabilen 4 ayrı versiyonu vardır.\n• Orta ve kenar parçalar civata veya kaynak ile montaj edilebilir.\n• Sağ ve Sol kapağa uygulanabilir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '695 > Gizli Menteşe': {
+    description: '• 18 mm bükümlü panolarda uygulanır.\n• Orta parça civata ile kenar parça kaynak ile montaj olur .\n• Sağ ve sol kapağa uygulanabilir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '795 > Gizli Menteşe': {
+    description: '• 20 mm bükümlü kapakların profil çerçeveye montajında kullanılır.\n• Orta Parça civata ile montaj edilir, kenar parça kaynak veya kendinden civatalı kapağa somun ile montaj edilir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '289 > Gizli Menteşe': {
+    description: '• İç bükümlü kapaklarda kullanılır. Yaylı pim sayesinde kapak çıkartılabilir.\n• Her iki versiyonda da kaynak ve civata ile montaj yapılabilir.\n• Sağ ve Sol kapağa uygulanabilir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '1995 > Gizli Menteşe': {
+    description: '• Çıkarılabilir pim, kapıyı çıkarmanıza izin verir.\n• 24 mm bükümlü kapaklarda kullanılır.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '995 > Gizli Menteşe': {
+    description: '• Çıkarılabilir pim, kapıyı kolayca çıkarmanıza izin verir.\n• 24.5 mm bükümlü kapaklarda kullanılır.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '095 > Gizli Menteşe': {
+    description: '• Min 22.5 mm bükümlü kapaklarda uygulanır.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '097 > Köşe Menteşe': {
+    description: '• Köşe bağlantılı kapaklarda uygulanır.\n• 1 - 2 mm kalınlığındaki saclara uygulanır.\n• 3 ayrı pim uygulaması mevcuttur.',
+    materials: { 'DÖNEN VE SABİT PARÇA': 'Paslanmaz Çelik (AISI 316)', 'PİM': 'Paslanmaz Çelik' },
+  },
+  '4299 > Yaprak Menteşe (Kaldır-Çıkar)': {
+    description: '• Genel olarak düz kapak-panellerde kullanılır.\n• Sağ veya sol uygulama yapılabilir',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '3599 > Kaldır - Çıkar Menteşe': {
+    description: '• İçeriden montaj sayesinde dışarıdan müdahale imkansız .\n• Kabin kapağının menteşeleri sökmeden çıkarılabilmesi amaçlı kullanılır.\n• Sağ veya sol uygulama yapılabilir.\n• Düz kapaklı kabinlerde kullanılır.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 316)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '1293 > Kaldır - Çıkar Menteşe': {
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• Kapağın açık durumda çıkmasını sağlar.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '1393 > Kaldır Çıkar Menteşe': {
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• Kapağın açık durumda çıkmasını sağlar.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '1299 > Mini Yaprak Menteşe': {
+    description: '• Genel olarak düz kapak panellerde kullanılır.\n• 270 derece açılır.',
+    materials: {},
+  },
+  '600 > Düz Menteşe': {
+    description: '• Düz kapak ve gövdelere uygulanır.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 316)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '3299 > Yaprak Menteşe': {
+    description: '• Kaldır - çıkar menteşe\n• Sağ veya sol uygulama yapılabilir.\n• Düz kapaklı kabinlerde kullanılır.',
+    materials: { 'MALZEME': 'Paslanmaz çelik (AISI 316)' },
+  },
+  '3099 > Kaldır - Çıkar Menteşe': {
+    description: '• Kaldır - Çıkar menteşe\n• Sağ veya sol uygulama yapılabilir.\n• Düz kapaklı kabinlerde kullanılır.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 316)' },
+  },
+  '3399 > Yaprak Menteşe': {
+    description: '• Kaldır - çıkar menteşe\n• Sağ veya sol uygulama yapılabilir.\n• Düz kapaklı kabinlerde kullanılır.',
+    materials: { 'MALZEME': 'Paslanmaz çelik (AISI 316)' },
+  },
+  '299 > Yaprak Menteşe': {
+    description: '• Genel olarak düz kapak-panellerde kullanılır.\n• Menteşe dönme açısı 270 derecedir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 316)' },
+  },
+  '099 > Yaprak Menteşe v1': {
+    description: '• Genel olarak düz kapak - panellerde kullanılan bir yaprak menteşe türüdür.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 316)' },
+  },
+  '399 > Yaprak Menteşe v1': {
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• 60 mm x 60 mm - 60 mm x 90 mm ve 60 x 120 mm delikli versiyonu vardır.\n• Menteşe dönme açısı 270 derecedir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 316)' },
+  },
+  '099 > Yaprak Menteşe v2': {
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• Civatalı versiyonlarda M6 civata kullanılmıştır .\n• Civata boyu 12 mm',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 316)' },
+  },
+  '399 > Yaprak Menteşe v2': {
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• 60 mm x 60 mm - 60 mm x 90 mm ve 60 x 120 mm civatalı versiyon\n• Civatalı versiyonlarda M8 civata kullanılmıştır . Civata boyu 14 mm\n• Menteşe dönme açısı 270 derecedir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 316)' },
+  },
+  '4599 > Yaprak Menteşe': {
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• Her iki parça da vida ve somun ile montaj olur.\n• 180° açılabilir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '599 > Yaprak Menteşe': {
+    description: '• Genel olarak düz kapak - panellerde ve izolasyonlu kapaklarda kullanılır.\n• Dış ortam koşullarına uygundur.\n• 180 derece açılabilir.\n• Menteşe dönme açısı 180 derecedir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '799 > Yaprak Menteşe': {
+    description: '• Genel olarak düz kapaklı panellerde ve izolasyonlu ağır kapaklarda kullanılır.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '1599 > Yaprak Menteşe': {
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır\n• Dış ortam şartlarına uygundur.\n• 180 derece açılabilir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '899 > Yaprak Menteşe (Kaldır-Çıkar)': {
+    description: '• Ağır hizmet tipi kaldır - çıkar menteşe.\n• Sağ ve sol kapak için versiyonlar mevcuttur.\n• Açılma açısı 180 derecedir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '999 > Yaprak Menteşe': {
+    description: '• Genel olarak düz kapaklı panellerde kullanılır.\n• Dışı ortam kabinleri için uygundur.\n• 270 derece açılabilir.\n• Gövde paslanmaz çelik olup üzerinde siyah toz boya uygulanabilir.',
+    materials: { 'GÖVDE': 'Paslanmaz çelik (AISI 304)', 'PİM': 'Paslanmaz çelik (AISI 303)' },
+  },
+  '2999 > Yaprak Menteşe': {
+    description: '• Genel olarak düz kapaklı panellerde kullanılır.\n• Dış ortam kabinleri için uygundur.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '2890 > Gizli Menteşe': {
+    description: '• Dış ortama uygun bir menteşedir.\n• Özel şekli ve 3 mm kalınlığı ile ağır hizmet tipi bir menteşedir.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 304)', 'PİM': 'Paslanmaz Çelik (AISI 303)' },
+  },
+  '090 > Kenar Menteşe (10mm)': {
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• 10 mm lik demonte parçalardan oluşur.\n• Farklı ölçüler için Mesan ile iletişime geçiniz.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 303 / 304)' },
+  },
+  '092 > Kenar Menteşe (12mm)': {
+    description: '• Kenar montajlı kapaklarda uygulanır .\n• 12 mm\'lik parçalardan oluşur. Pullar pirinçtir ve parçalar montajlıdır.\n• Farklı ölçüler için Mesan ile iletişime geçiniz.\n• 90 derece ve 180 derece rotasyonlu versiyonları mevcuttur.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 303 / 304)' },
+  },
+  '192 > Kenar Menteşe (12mm)': {
+    description: '• Kenar montajlı kapaklarda uygulanır .\n• 12 mm\'lik parçalardan oluşur. Pullar pirinçtir ve parçalar sıkı geçmelidir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 303 / 304)' },
+  },
+  '193 > Kenar Menteşe (16mm)': {
+    description: '• Kenar montajlı kapaklarda uygulanır .\n• 16 mm\'lik parçalardan oluşur. Pullar pirinçtir. ve parçalar sıkı geçmelidir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 303 / 304)' },
+  },
+}
+
+// Paslanmaz Çelik Kilitler sayfasından gelindiğinde gösterilecek detaylar (kilitler klasöründeki PDF'ler getPdfPath'te atanır)
+const paslanmazCelikKilitDetails = {
+  '401 > Kollu Kilit': {
+    applicationArea: { 'UYGULAMA ALANLARI': 'Elektrik panoları, dış ortam kabinler' },
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 316)', 'KOL': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik', 'CONTA': 'Poliüretan' },
+  },
+  '501 > Kollu Kilit': {
+    applicationArea: { 'UYGULAMA ALANLARI': 'Elektrik panoları, dış ortam kabinler' },
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 316)', 'KOL': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik', 'CONTA': 'Poliüretan' },
+  },
+  '502 > İspanyolet Sistemli Kollu Kilit': {
+    description: '• Güvenlik seviyesi yüksek bir kilittir.\n• 14.5 mm lik dış çıkıntı ile estetik bir görünüm sağlar.\n• Yüksek güvenlik için özel barel uygulaması yapılır.',
+    applicationArea: { 'UYGULAMA ALANLARI': 'Elektrik panoları, dış ortam kabinler' },
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 316)', 'KOL': 'Paslanmaz Çelik (AISI 316)', 'MEKANİZMA': 'PA6 GFR 30', 'DİL': 'Paslanmaz Çelik', 'CONTA': 'Poliüretan' },
+  },
+  '402 > İspanyolet Sistemli Kollu Kilit': {
+    applicationArea: { 'UYGULAMA ALANLARI': 'Elektrik panoları, dış ortam kabinler' },
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 316)', 'KOL': 'Paslanmaz Çelik (AISI 316)', 'MEKANİZMA': 'PA6 GFR 30', 'DİL': 'Paslanmaz Çelik', 'CONTA': 'Poliüretan' },
+  },
+  '103 > İspanyolet Sistemli Kollu Kilit': {
+    materials: { 'GÖVDE': 'Paslanmaz Çelik', 'KOL': 'Paslanmaz Çelik', 'MEKANİZMA': 'Zamak DIN-EN 1774-ZnAl4Cu1', 'DİL': 'Paslanmaz Çelik', 'CONTA': 'Poliüretan' },
+  },
+  '016 > Kabin Kilidi': {
+    description: '• Kapıyı iterek kilitleme özelliği vardır.\n• Kilitleme için dil bağlantı aparatı gereklidir.\n• Kilitli konumda iken içeriden dil itilerek kilit açılabilir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '416 > Kabin Kilidi': {
+    description: '• Kapıyı iterek kilitleme özelliği vardır.\n• Kilitleme için dil bağlantı aparatı gerekmez.\n• Kilitli konumda iken içeriden dil itilerek kilit açılabilir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '266 > Mini Çeyrek Dönüşlü Yaylı Kilit': {
+    description: '• 45 derecelik geniş ölçüsüne uygun kovan özelliği vardır.\n• Özel yay uygulaması sayesinde 1mm lik yaylanma sağlar.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 3.....)' },
+  },
+  '066 > Mini Çeyrek Dönüşlü Yaylı Kilit': {
+    description: '• Özel yay uygulaması sayesinde 1 mm\' lik sıkıştırma sağlar.\n• Standart uygulamada rondela mevcut değildir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 3.....)', 'YÜZEY': 'Çinko Kaplama' },
+  },
+  '064 > Çeyrek Dönüşlü Yaylı Kilit': {
+    description: '• Özel tasarlanmış yay sayesinde 1.5 mm lik yaylanma sağlayarak kapaklardaki boşluğu alır.\n• IP 66 ( Nema 4) opsiyoneldir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 3.....)' },
+  },
+  '060 > Çeyrek Dönüşlü Yaylı Kilit': {
+    description: '• Özel tasarlanmış yay sayesinde 1.5 mm lik yaylanma sağlayarak kapaklardaki boşluğu alır.\n• IP 66 ( Nema 4) opsiyoneldir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 3.....)' },
+  },
+  '160 > Dilli Yaylı Kilit': {
+    description: '• Dildeki özel yay sayesinde kapak açık iken iterek kilitleme sağlar.\n• Kilitleme mesafesi 22.5 mm olarak sabittir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 3.....)' },
+  },
+  '260 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit': {
+    description: '• Çift kilit kullanıldığında çubuk yardımı ile asma kilit uygulanabilir.',
+    materials: { 'MALZEME': 'Paslanmaz Çelik (AISI 3.....)' },
+  },
+  '140 > Mini Sıkıştırmalı Kilit': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 4 mm sıkıştırma özelliği vardır..\n• Farklı göbek seçenekleri mevcuttur.\n• 9 farklı tip dil uygulanır.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'GÖBEK': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'SOMUN': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '2040 > Göstergeli Sıkıştırmalı Kilit v1': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 5mm sıkıştırma özelliği vardır.\n• Farklı göbek seçenekleri mevcuttur\n• Standart tırnaksız diller uygulanır.\n• Çalışma sıcaklık aralığı: -50 /+80 C\n• M22 somun 60Nm ile sıkılmalı\n• M10 somun 10Nm ile sıkılmalı\n• Max Taşıma kapasitesi 562N\n\nTested\n• Demiryolu uygulamaları için DIN EN 61373 Kategori 1-B standardına göre darbe ve titreşime karşı test edilmiştir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 304)', 'GÖBEK': 'Paslanmaz Çelik (AISI 304)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'SOMUN': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '2040 > Göstergeli Sıkıştırmalı Kilit v2': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 5mm sıkıştırma özelliği vardır.\n• Farklı göbek seçenekleri mevcuttur\n• Standart tırnaksız diller uygulanır.\n• Çalışma sıcaklık aralığı: -50 /+80 C\n• M22 somun 60Nm ile sıkılmalı\n• M10 somun 10Nm ile sıkılmalı\n• Max Taşıma kapasitesi 562N\n\nTested\n• Demiryolu uygulamaları için DIN EN 61373 Kategori 1-B standardına göre darbe ve titreşime karşı test edilmiştir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 304)', 'GÖBEK': 'Paslanmaz Çelik (AISI 304)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'SOMUN': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '2060 > Göstergeli Çeyrek Dönüşlü Kilit': {
+    description: '• Özel tasarlanmış kovan ve iç kovan sayesinde açık-kapalı bilgisini sağlar.\n• Farklı göbek ve dil seçenekleri mevcuttur.\n• Standart geçiş ölçüsü',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 304)', 'GÖBEK': 'Paslanmaz Çelik (AISI 304)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'SOMUN': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '1060 > Çeyrek Dönüşlü Yaylı Kilit': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• Kilidi açmak için anahtarla bastırmak ve çevirmek gereklidir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'GÖBEK': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'SOMUN': 'Paslanmaz Çelik (AISI 30)' },
+  },
+  '040 > Sıkıştırmalı Kilit v1': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 6 mm sıkıştırma özelliği vardır.\n• Ses yalıtımı sağlar.\n• Farklı göbek seçenekleri mevcuttur.\n• Standart tırnaksız diller uygulanır.\n• Demiryolu uygulamarı için DIN EN 61373 Kategori 1-B Standartına göre darbe ve titreşime karşı test edilmiştir.\n• Çalışma sıcaklık aralığı: -50 /+80 C M22 somun 20 Nm ile sıkılmalı M10 somun 10 Nm ile sıkılmalı\n• Titreşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmaktadır.\n• Max taşıma kapasitesi: 562 N',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'GÖBEK': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'SOMUN': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '040 > Sıkıştırmalı Kilit v2': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 6 mm sıkıştırma özelliği vardır.\n• Uzun mafsalı sayesinde geniş bir kilitleme aralığı mevcuttur.\n• Ses yalıtımı sağlar.\n• Farklı göbek seçenekleri mevcuttur.\n• 3 farklı tip dil uygulanır.\n• Demiryolu uygulamarı için DIN EN 61373 Kategori 1-B Standartına göre darbe ve titreşime karşı test edilmiştir.\n• Çalışma sıcaklık aralığı: -50 /+80 C M22 somun 60 Nm ile sıkılmalı M10 somun 10 Nm ile sıkılmalı\n• Titreşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmaktadır.\n• Max taşıma kapasitesi: 562 N',
+    materials: { 'KOVAN': 'Paslanmaz çelik (AISI 316)', 'GÖBEK': 'Paslanmaz çelik (AISI 316)', 'DİL': 'Paslanmaz çelik (AISI 304)', 'SOMUN': 'Paslanmaz çelik (AISI 304)' },
+  },
+  '540 > Sıkıştırmalı Kilit v1': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 4 mm sıkıştırma özelliği vardır.\n• Ses yalıtımı sağlar.\n• Farklı göbek seçenekleri mevcuttur.\n• Standart tırnaksız diller uygulanır.\n• Demiryolu uygulamarı için DIN EN 61373 Kategori 1-B standardına göre darbe ve titreşime karşı test edilmiştir.\n• Çalışma sıcaklık aralığı: -50 /+80 C M22 somun 60 Nm ile sıkılmalı M10 somun 10 Nm ile sıkılmalı\n• Titreşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmaktadır.\n• Max taşıma kapasitesi: 562 N',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'GÖBEK': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'SOMUN': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '540 > Sıkıştırmalı Kilit v2': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 4 mm sıkıştırma özelliği vardır.\n• Uzun mafsalı sayesinde geniş bir kilitleme aralığı mevcuttur.\n• Ses yalıtımı sağlar.\n• Farklı göbek seçenekleri mevcuttur.\n• 3 farklı tip dil uygulanır.\n• Demiryolu uygulamarı için DIN EN 61373 Kategori 1-B standardına göre darbe ve titreşime karşı test edilmiştir.\n• Çalışma sıcaklık aralığı: -50 /+80 C M22 somun 60 Nm ile sıkılmalı M10 somun 10 Nm ile sıkılmalı\n• Titreşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmaktadır.\n• Max taşıma kapasitesi: 562 N',
+    materials: { 'KOVAN': 'Paslanmaz çelik (AISI 316)', 'GÖBEK': 'Paslanmaz çelik (AISI 316)', 'DİL': 'Paslanmaz çelik (AISI 304)', 'SOMUN': 'Paslanmaz çelik (AISI 304)' },
+  },
+  '440 > Hijyenik Sıkıştırmalı Kilit v1': {
+    description: '• Üzerinde kir ve bakteri biriktirmez.\n• Kolay temizlenir.\n• Özellikle hijyen uygulamaları için tasarlanmıştır.\n• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 6 mm sıkıştırma özelliği vardır.\n• Ses yalıtımı sağlar.\n• Farklı göbek seçenekleri mevcuttur.\n• DIN EN 61373 Kategori 1-B Standartına göre darbe ve titreşime karşı test edilmiştir.\n• GS-NV 6:2015/12 Standartına göre Hijyen gereksinimlerine uygun test edilmiştir.\n• Çalışma sıcaklık aralığı: -50 /+80 C M22 somun 60 Nm ile sıkılmalı M10 somun 10 Nm ile sıkılmalı\n• Titreşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmaktadır.\n• Max taşıma kapasitesi: 562 N',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI316)', 'GÖBEK': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'SOMUN': 'Paslanmaz Çelik (AISI 304)', 'ORING': 'Silikon' },
+  },
+  '440 > Hijyenik Sıkıştırmalı Kilit v2': {
+    description: '• Titreşime maruz kalan ve sızdırmazlık gereken kabinlerde kullanılır.\n• 4 mm sıkıştırma özelliği vardır.\n• Uzun mafsalı sayesinde geniş bir kilitleme aralığı mevcuttur.\n• Ses yalıtımı sağlar.\n• Farklı göbek seçenekleri mevcuttur.\n• 3 farklı tip dil uygulanır.\n• Demiryolu uygulamarı için DIN EN 61373 Kategori 1-B standardına göre darbe ve titreşime karşı test edilmiştir.\n• Çalışma sıcaklık aralığı: -50 /+80 C M22 somun 60 Nm ile sıkılmalı M10 somun 10 Nm ile sıkılmalı\n• Titreşim ve darbeye karşı ekstra sıkılık elde etmek için somunun dişlerine özel yapıştırıcı uygulanmaktadır.\n• Max taşıma kapasitesi: 562 N',
+    materials: { 'KOVAN': 'Paslanmaz çelik (AISI 316)', 'GÖBEK': 'Paslanmaz çelik (AISI 316)', 'DİL': 'Paslanmaz çelik (AISI 304)', 'SOMUN': 'Paslanmaz çelik (AISI 304)' },
+  },
+  '211 > Asma Kilit Hamili \'L\' Kollu Kilit': {
+    description: '• Paslanmaz malzemesi ve asma kilitli tasarımından dolayı dış ortam şartlarında kullanılabilir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'KOL': 'Paslanmaz Çelik(AISI 316)', 'DİL': 'Paslanmaz Çelik(AISI 304)', 'SOMUN': 'Paslanmaz Çelik(AISI 304)' },
+  },
+  '045 > Sıkıştırmalı Yaylı Kilit': {
+    description: '• Küçük panoların kolay ve hızlı kilitlenip ve açılması mümkündür.\n• Sıkıştırarak kilitleme özelliği mevcuttur.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik', 'GÖBEK': 'Paslanmaz Çelik', 'YAY': 'Paslanmaz Çelik' },
+  },
+  '460 > Hijyenik Kilit': {
+    description: '• Üzerinde kir ve bakteri biriktirmez\n• Kolay temizlenir.\n• Özellikle hijyen uygulamaları için tasarlanmıştır.\n• GS-NV 6:2015/12 Standartına göre Hijyen gereksinimlerine uygun test edilmiştir.\n• Sağ-sol uygulama mevcuttur.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'GÖBEK': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'ORİNG': 'Silikon' },
+  },
+  '562 > Asma Kilit Hamili Kelebek Kilit': {
+    description: '• İki farklı asma kilit uygulanabilir.\nÇap 10 de min. 7.5 mm max. 9 mm kanca çapı\nÇap 7.5 de min. 5 mm max. 6 mm kanca çapı',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'TUTAMAK': 'Paslanmaz Çelik(AISI 316)', 'DİL': 'Paslanmaz Çelik(AISI 304)', 'SOMUN': 'Paslanmaz Çelik(AISI 304)' },
+  },
+  '110 > Çeyrek Dönüşlü Kilit - \'T\' Kollu': {
+    description: '• Çeyrek dönüş uygulaması sağlar.\n• Komple paslanmaz malzemededir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'KOL': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'CONTA': 'Kauçuk' },
+  },
+  '111 > "L" Kollu Kilit': {
+    description: '• Çeyrek dönüş uygulaması sağlar.\n• Komple paslanmaz malzemededir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'KOL': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'CONTA': 'Kauçuk' },
+  },
+  '065 > Kelebek Kilit': {
+    description: '• Çeyrek dönüş uygulaması sağlar.\n• Komple paslanmaz malzemededir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'KELEBEK': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'CONTA': 'Kauçuk' },
+  },
+  '265 > Asma Kilit Hamili Kelebek Kilit': {
+    description: '• Asma kilit uygulanabilir. Asma kilit kanca çapı max. 6 mm olmalıdır.\n• Tüm malzemeler paslanmaz çeliktir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'KNOB': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'CONTA': 'Kauçuk' },
+  },
+  '063 > Silindirli Kilit': {
+    description: '• Çeyrek dönüş uygulaması sağlar.\n• Komple paslanmaz malzemededir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'CONTA': 'Kauçuk' },
+  },
+  '411 > Asma Kilit Hamili \'L\' Kollu Kilit': {
+    description: '• Asma kilit uygulanabilir. Asma kilit kanca çapı max. 10 mm olmalıdır.\n• Tüm malzemeler paslanmaz çeliktir.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'KOL': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)', 'CONTA': 'Kauçuk' },
+  },
+  '860 > Çeyrek Dönüşlü Kilit': {
+    description: '• Demiryolu uygulamalarında ilave kilitleme amaçlı kullanılır.',
+    materials: { 'KOVAN': 'Paslanmaz Çelik (AISI 316)', 'GÖBEK': 'Paslanmaz Çelik (AISI 316)', 'DİL': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '042 > Civatalı Kilit': {
+    description: '• Demiryolu uygulamalarında kullanılır.',
+    materials: { 'GÖVDE': 'Paslanmaz Çelik (AISI 316)', 'GÖBEK': 'Paslanmaz Çelik (AISI 316)', 'NUT': 'Paslanmaz Çelik (AISI 304)' },
+  },
+  '276 > Kancalı Mandal': {
+    applicationArea: { 'UYGULAMA ALANLARI': 'Demiryolu uygulamaları' },
+    materials: { 'MALZEME': 'Paslanmaz Çelik' },
+  },
+}
+
+// Sızdırmazlık Profilleri ve Kenar Koruma – detay sayfaları (Ürün Varyasyonları tabloları)
+const sizdirmazlikProfilleriDetails = {
+  '340.09.001 > Geçme Conta': {
+    code: '340.09.001',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.001', malzeme: 'EPDM', renk: 'Siyah', R1: '40', R2: '50', R3: '80', R4: '40', DT: '2 - 1 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.002 > Geçme Conta': {
+    code: '340.09.002',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.002', ul94V0: 'Yok', malzeme: 'EPDM', renk: 'Siyah', R1: '50', R2: '60', R3: '180', R4: '40', DT: '3 - 1.5 mm', ambalaj: '100' },
+      { urunKodu: '340.09.002.003', ul94V0: 'Var', malzeme: 'EPDM', renk: 'Siyah', R1: '50', R2: '60', R3: '180', R4: '40', DT: '3 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.003 > Geçme Conta': {
+    code: '340.09.003',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.003', malzeme: 'EPDM', renk: 'Siyah', R1: '40', R2: '50', R3: '90', R4: '50', DT: '2 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.004 > Geçme Conta': {
+    code: '340.09.004',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.004', malzeme: 'EPDM', renk: 'Siyah', R1: '40', R2: '50', R3: '-', R4: '-', DT: '2 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.006 > Geçme Conta': {
+    code: '340.09.006',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.006', ul94V0: 'Yok', malzeme: 'EPDM', renk: 'Siyah', R1: '50', R2: '60', R3: '180', R4: '80', DT: '3 - 1.5 mm', ambalaj: '100' },
+      { urunKodu: '340.09.006.001', ul94V0: 'Var', malzeme: 'EPDM', renk: 'Siyah', R1: '50', R2: '60', R3: '180', R4: '80', DT: '3 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.007 > Geçme Conta': {
+    code: '340.09.007',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.007', malzeme: 'EPDM', renk: 'Siyah', R1: '60', R2: '70', R3: '150', R4: '80', DT: '2 - 1 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.014 > Geçme Conta': {
+    code: '340.09.014',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.014', malzeme: 'EPDM', renk: 'Siyah', R1: '70', R2: '60', R3: '230', R4: '200', DT: '2.5 - 1 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.971 > Hijyenik Conta': {
+    code: '340.09.971',
+    name: 'Hijyenik Conta',
+    versions: [
+      { urunKodu: '340.09.971', malzeme: 'Silikon', renk: 'Mavi', R1: '30', R2: '30', R3: '90', R4: '70', DT: '2 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.701 > Geçme Conta': {
+    code: '340.09.701',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.701', malzeme: 'PVC / EPDM', renk: 'Siyah', R1: '20', R2: '25', R3: '55', R4: '30', DT: '2.5 - 1 mm', ambalaj: '2x50' },
+    ],
+  },
+  '340.09.019 > Geçme Conta': {
+    code: '340.09.019',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.019', malzeme: 'EPDM', renk: 'Siyah', R1: '60', R2: '70', R3: '220', R4: '200', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.021 > Geçme Conta': {
+    code: '340.09.021',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.021', malzeme: 'EPDM', renk: 'Siyah', R1: '80', R2: '80', R3: '250', R4: '230', DT: '3 - 1.5 mm', ambalaj: '40' },
+    ],
+  },
+  '340.09.029 > Geçme Conta': {
+    code: '340.09.029',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.029', malzeme: 'EPDM', renk: 'Siyah', R1: '50', R2: '50', R3: '130', R4: '160', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.017 > Geçme Conta': {
+    code: '340.09.017',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.017', malzeme: 'EPDM', renk: 'Siyah', R1: '60', R2: '80', R3: '230', R4: '210', DT: '2.5 - 1 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.705 > Geçme Conta': {
+    code: '340.09.705',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.705', malzeme: 'PVC / EPDM', renk: 'Siyah', R1: '50', R2: '60', R3: '130', R4: '70', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.712 > Geçme Conta': {
+    code: '340.09.712',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.712', malzeme: 'PVC/EPDM', renk: 'Siyah / Kırmızı', R1: '50', R2: '60', R3: '130', R4: '70', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.707 > Geçme Conta': {
+    code: '340.09.707',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.707', malzeme: 'PVC / EPDM', renk: 'Siyah / Kırmızı', R1: '40', R2: '70', R3: '130', R4: '110', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.716 > Geçme Conta': {
+    code: '340.09.716',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.716', malzeme: 'PVC / EPDM', renk: 'Siyah / Kırmızı', R1: '40', R2: '60', R3: '130', R4: '110', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.719 > Geçme Conta': {
+    code: '340.09.719',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.719', malzeme: 'PVC / EPDM', renk: 'Siyah / Kırmızı', R1: '50', R2: '70', R3: '150', R4: '130', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.729 > Geçme Conta': {
+    code: '340.09.729',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.729', malzeme: 'PVC / EPDM', renk: 'Siyah / Beyaz', R1: '90', R2: '90', R3: '150', R4: '150', DT: '4 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.942 > Geçme Conta': {
+    code: '340.09.942',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.942', malzeme: '-', renk: '-', R1: '30', R2: '30', R3: '100', R4: '70', DT: '2 - 1 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.735 > Geçme Conta': {
+    code: '340.09.735',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.735', malzeme: '-', renk: '-', R1: '70', R2: '70', R3: '-', R4: '60', DT: '4 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.010 > Geçme Conta': {
+    code: '340.09.010',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.010', malzeme: 'EPDM', renk: 'Siyah', R1: '70', R2: '80', R3: '100', R4: '170', DT: '3 - 2 mm', ambalaj: '10' },
+    ],
+  },
+  '340.09.678 > Geçme Conta': {
+    code: '340.09.678',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.678', malzeme: 'EPDM', renk: 'Siyah', R1: '70', R2: '70', R3: '50', R4: '-', DT: '-', ambalaj: '100' },
+    ],
+  },
+  '340.09.679 > Geçme Conta': {
+    code: '340.09.679',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.679', malzeme: 'EPDM', renk: 'Siyah', R1: '70', R2: '70', R3: '40', R4: '-', DT: '-', ambalaj: '100' },
+    ],
+  },
+  '340.09.101 > Geçme Conta': {
+    code: '340.09.101',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.101', malzeme: 'EPDM', renk: 'Siyah', R1: '130', R2: '70', R3: '30', R4: '-', DT: '2.5 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.102 > Geçme Conta': {
+    code: '340.09.102',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.102', ul94V0: 'Yok', malzeme: 'EPDM', renk: 'Siyah', R1: '90', R2: '60', R3: '25', R4: '-', DT: '1.5 - 1 mm', ambalaj: '100' },
+      { urunKodu: '340.09.102.001', ul94V0: 'Var', malzeme: 'EPDM', renk: 'Siyah', R1: '90', R2: '60', R3: '25', R4: '-', DT: '1.5 - 1 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.103 > Geçme Conta': {
+    code: '340.09.103',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.103', ul94V0: 'Yok', malzeme: 'EPDM', renk: 'Siyah', R1: '70', R2: '60', R3: '25', R4: '-', DT: '2 - 1 mm', ambalaj: '100' },
+      { urunKodu: '340.09.103.002', ul94V0: 'Var', malzeme: 'EPDM', renk: 'Siyah', R1: '70', R2: '60', R3: '25', R4: '-', DT: '2 - 1 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.104 > Geçme Conta': {
+    code: '340.09.104',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.104', malzeme: 'EPDM', renk: 'Siyah', R1: '110', R2: '60', R3: '40', R4: '40', DT: '3 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.105 > Geçme Conta': {
+    code: '340.09.105',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.105', malzeme: 'EPDM', renk: 'Siyah', R1: '100', R2: '60', R3: '40', R4: '-', DT: '3.5 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.107 > Geçme Conta': {
+    code: '340.09.107',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.107', malzeme: 'EPDM', renk: 'Siyah', R1: '100', R2: '60', R3: '40', R4: '-', DT: '3.5 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.124 > Geçme Conta': {
+    code: '340.09.124',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.124', malzeme: 'EPDM', renk: 'Siyah', R1: '160', R2: '110', R3: '50', R4: '-', DT: '3.5 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.802 > Geçme Conta': {
+    code: '340.09.802',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.802', malzeme: 'PVC / EPDM', renk: 'Siyah / Sarı', R1: '90', R2: '80', R3: '30', R4: '-', DT: '3 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.804 > Geçme Conta': {
+    code: '340.09.804',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.804', malzeme: 'PVC / EPDM', renk: 'Siyah / Sarı', R1: '90', R2: '80', R3: '30', R4: '-', DT: '2.5 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.805 > Geçme Conta': {
+    code: '340.09.805',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.805', malzeme: 'PVC / EPDM', renk: 'Siyah', R1: '90', R2: '70', R3: '30', R4: '-', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.806 > Geçme Conta': {
+    code: '340.09.806',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.806', malzeme: 'PVC / EPDM', renk: 'Siyah', R1: '90', R2: '70', R3: '30', R4: '-', DT: '3.5 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.810 > Geçme Conta': {
+    code: '340.09.810',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.810', malzeme: 'PVC / EPDM', renk: 'Siyah', R1: '160', R2: '60', R3: '60', R4: '-', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.100 > Geçme Conta': {
+    code: '340.09.100',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.100', malzeme: 'PVC / EPDM', renk: 'Siyah', R1: '60', R2: '40', R3: '30', R4: '-', DT: '2 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.202 > Geçme Conta': {
+    code: '340.09.202',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.202', malzeme: 'EPDM', renk: 'Siyah', R1: '60', R2: '60', R3: '-', R4: '-', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.203 > Geçme Conta': {
+    code: '340.09.203',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.203', malzeme: 'EPDM', renk: 'Siyah', R1: '120', R2: '90', R3: '-', R4: '-', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.205 > Geçme Conta': {
+    code: '340.09.205',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.205', malzeme: 'EPDM', renk: 'Siyah', R1: '60', R2: '110', R3: '140', R4: '220', DT: '4 - 2.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.206 > Geçme Conta': {
+    code: '340.09.206',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.206', malzeme: 'EPDM', renk: 'Siyah', R1: '-', R2: '-', R3: '30', R4: '-', DT: '3 - 2 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.210 > Geçme Conta': {
+    code: '340.09.210',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.210', malzeme: 'EPDM', renk: 'Siyah', R1: '-', R2: '-', R3: '60', R4: '-', DT: '3 - 2 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.902 > Geçme Conta': {
+    code: '340.09.902',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.902', malzeme: 'PVC / EPDM', renk: 'Siyah', R1: '50', R2: '50', R3: '160', R4: '160', DT: '3 - 2 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.904 > Geçme Conta': {
+    code: '340.09.904',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.904', malzeme: 'PVC / EPDM', renk: 'Siyah', R1: '50', R2: '50', R3: '160', R4: '160', DT: '3 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.502 > Geçme Conta': {
+    code: '340.09.502',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.502', malzeme: 'PVC', renk: 'Siyah', R1: '20', R2: '20', R3: '15', R4: '-', DT: '2 - 1 mm', ambalaj: '200' },
+    ],
+  },
+  '340.09.504 > Geçme Conta': {
+    code: '340.09.504',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.504', malzeme: 'PVC', renk: 'Siyah', R1: '20', R2: '20', R3: '15', R4: '-', DT: '2 - 1 mm', ambalaj: '200' },
+    ],
+  },
+  '340.09.516 > Geçme Conta': {
+    code: '340.09.516',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.516', malzeme: 'PVC', renk: 'Siyah', R1: '30', R2: '40', R3: '30', R4: '-', DT: '4 - 2 mm', ambalaj: '150' },
+    ],
+  },
+  '340.09.517 > Geçme Conta': {
+    code: '340.09.517',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.517', malzeme: 'PVC', renk: 'Siyah / Kırmızı', R1: '30', R2: '40', R3: '30', R4: '-', DT: '3 - 1.5 mm', ambalaj: '150' },
+    ],
+  },
+  '340.09.522 > Geçme Conta': {
+    code: '340.09.522',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.522', malzeme: 'PVC', renk: 'Siyah', R1: '30', R2: '40', R3: '30', R4: '-', DT: '2.5 - 1 mm', ambalaj: '150' },
+    ],
+  },
+  '340.09.523 > Geçme Conta': {
+    code: '340.09.523',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.523', malzeme: 'PVC', renk: 'Siyah / Kırmızı', R1: '50', R2: '50', R3: '30', R4: '-', DT: '3 - 1.5 mm', ambalaj: '150' },
+    ],
+  },
+  '340.09.527 > Geçme Conta': {
+    code: '340.09.527',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.527', malzeme: 'PVC', renk: 'Siyah / Sarı', R1: '50', R2: '60', R3: '30', R4: '-', DT: '2.5 - 1.5 mm', ambalaj: '150' },
+    ],
+  },
+  '340.09.530 > Geçme Conta': {
+    code: '340.09.530',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.530', malzeme: 'PVC', renk: 'Siyah / Kırmızı', R1: '30', R2: '40', R3: '30', R4: '-', DT: '4 - 2 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.538 > Geçme Conta': {
+    code: '340.09.538',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.538', malzeme: 'EPDM', renk: 'Siyah / Sarı', R1: '50', R2: '60', R3: '40', R4: '-', DT: '4 - 2 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.529 > Geçme Conta': {
+    code: '340.09.529',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.529', malzeme: '-', renk: '-', R1: '50', R2: '50', R3: '30', R4: '-', DT: '3 - 2 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.540 > Geçme Conta': {
+    code: '340.09.540',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.540', malzeme: 'EPDM', renk: 'Siyah / Sarı', R1: '50', R2: '60', R3: '40', R4: '-', DT: '4 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.419 > Geçme Conta': {
+    code: '340.09.419',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.419', malzeme: 'EPDM', renk: 'Siyah', R1: '70', R2: '80', R3: '', R4: '', DT: '3,5', ambalaj: '50' },
+    ],
+  },
+  '340.09.380 > Geçme Conta': {
+    code: '340.09.380',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.380', malzeme: 'EPDM', renk: 'Siyah', R1: '40', R2: '40', R3: '', R4: '', DT: '4 - 1 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.381 > Geçme Conta': {
+    code: '340.09.381',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.381', malzeme: 'EPDM', renk: 'Siyah', R1: '40', R2: '40', R3: '', R4: '', DT: '3.5 - 1.5 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.385 > Geçme Conta': {
+    code: '340.09.385',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.385', malzeme: 'EPDM', renk: 'Siyah', R1: '45', R2: '45', R3: '', R4: '', DT: '4.5 - 2 mm', ambalaj: '50' },
+    ],
+  },
+  '340.09.382 > Geçme Conta': {
+    code: '340.09.382',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.382', malzeme: 'EPDM', renk: 'Siyah', R1: '30', R2: '30', R3: '', R4: '', DT: '2.5 - 1.5 mm', ambalaj: '100' },
+    ],
+  },
+  '340.09.383 > Geçme Conta': {
+    code: '340.09.383',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.383', malzeme: 'EPDM', renk: 'Siyah', ambalaj: '200' },
+    ],
+  },
+  '340.09.611 > Geçme Conta': {
+    code: '340.09.611',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.611', malzeme: 'EPDM', renk: 'Siyah', ambalaj: '100' },
+    ],
+  },
+  '340.09.384 > Geçme Conta': {
+    code: '340.09.384',
+    name: 'Geçme Conta',
+    versions: [
+      { urunKodu: '340.09.384', malzeme: 'EPDM', renk: 'Siyah', ambalaj: '200' },
+    ],
+  },
+  '34001010 > U Tipi Fitiller': {
+    code: '34001010',
+    name: 'U Tipi Fitiller',
+    versions: [
+      { urunKodu: '34001010', malzeme: 'PVC', renk: 'Siyah', ambalaj: '100' },
+    ],
+  },
+  '34001011 > U Tipi Fitiller': {
+    code: '34001011',
+    name: 'U Tipi Fitiller',
+    versions: [
+      { urunKodu: '34001011', malzeme: 'PVC', renk: 'Siyah', ambalaj: '100' },
+    ],
+  },
+  '34001012 > U Tipi Fitiller': {
+    code: '34001012',
+    name: 'U Tipi Fitiller',
+    versions: [
+      { urunKodu: '34001012', malzeme: 'PVC', renk: 'Siyah', ambalaj: '100' },
+    ],
+  },
+  '34001015 > U Tipi Fitiller': {
+    code: '34001015',
+    name: 'U Tipi Fitiller',
+    versions: [
+      { urunKodu: '34001015', malzeme: 'PVC', renk: 'Siyah', ambalaj: '100' },
+    ],
+  },
+}
+
 function ProductDetail() {
   const location = useLocation()
   const navigate = useNavigate()
@@ -6674,7 +7447,15 @@ function ProductDetail() {
   }
 
   const productInfo = extractProductInfo(productName)
-  const productDetail = productDetails[productName]
+  const fromSection = location?.state?.fromSection
+  const baseDetail = productDetails[productName]
+  const productDetail = (fromSection === 'PASLANMAZ ÇELİK MENTEŞELER' && paslanmazCelikMenteseDetails[productName])
+    ? { ...(baseDetail || {}), code: productInfo?.code, name: productInfo?.name || productName, ...paslanmazCelikMenteseDetails[productName] }
+    : (fromSection === 'PASLANMAZ ÇELİK KİLİTLER' && paslanmazCelikKilitDetails[productName])
+      ? { ...(baseDetail || {}), code: productInfo?.code, name: productInfo?.name || productName, ...paslanmazCelikKilitDetails[productName] }
+      : ((fromSection === 'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA' || sizdirmazlikProfilleriDetails[productName]) && sizdirmazlikProfilleriDetails[productName])
+        ? { ...(baseDetail || {}), code: productInfo?.code || productName?.split(' > ')[0], name: productInfo?.name || productName?.split(' > ')[1] || productName, ...sizdirmazlikProfilleriDetails[productName] }
+        : baseDetail
   
   // Kollu kilit ürünleri için otomatik detay sayfası
   const isLockProduct = productInfo && (productInfo.name.includes('Kollu Kilit') || productInfo.name.includes('Dikey Hareketli') || productInfo.name.includes('İspanyolet') || productInfo.name.includes('Dikey Mekanizmalı') || productInfo.name.includes('İç Kilitleme') || productInfo.name.includes('ispanyolet') || productInfo.name.includes('Kabin Kilidi') || productInfo.name.includes('T Kollu') || productInfo.name.includes('"T" Kollu') || productInfo.name.includes('\'T\' Kollu') || productInfo.name.includes('Trafo Kilidi') || productInfo.name.includes('Klima Santral Kilidi') || productInfo.name.includes('Klima Kabin Kilidi') || productInfo.name.includes('Fonsiyonel Kilit Menteşe') || productInfo.name.includes('Profil Bağlantı Parçası') || productInfo.name.includes('Sıkıştırmalı Kilit') || productInfo.name.includes('Çubuk') || productInfo.name.includes('Köşe Menteşe') || productInfo.name.includes('Kenar Menteşe') || productInfo.name.includes('Gizli Menteşe') || productInfo.name.includes('Klima Santral Menteşesi') || productInfo.code === 'IC' || productInfo.code === 'CT1' || productInfo.code === 'CT2' || productInfo.code === 'CY1' || productInfo.code === 'CY2')
@@ -7277,6 +8058,116 @@ function ProductDetail() {
     const name = productDetail?.name || productInfo?.name || productName
     // Hem productName hem de name'i kontrol etmek için birleştir
     const fullName = productName || name
+    const fromSection = location?.state?.fromSection
+    
+    // Paslanmaz Çelik Aksesuarlar için pcuaksesuarlar klasöründeki PDF'ler
+    if (fromSection === 'PASLANMAZ ÇELİK AKSESUARLAR') {
+      const pcuaksesuarlarPdfMap = {
+        '340.00.132': '/pcuaksesuarlar/34000132-gerdirme-mandali.pdf',
+        '079': '/pcuaksesuarlar/079-kapak-tutucu-makasi.pdf',
+        '179': '/pcuaksesuarlar/179-kapak-tutucu-makasi.pdf',
+        '279': '/pcuaksesuarlar/279-kapak-tutucu-makasi.pdf',
+      }
+      if (pcuaksesuarlarPdfMap[code]) {
+        return pcuaksesuarlarPdfMap[code]
+      }
+    }
+    
+    // Paslanmaz Çelik Kilitler için kilitler klasöründeki PDF'ler
+    if (fromSection === 'PASLANMAZ ÇELİK KİLİTLER') {
+      if (code === '2040' && fullName?.includes('Göstergeli Sıkıştırmalı Kilit')) {
+        return fullName?.includes('v1') ? '/kilitler/2040-gostergeli-sikistirmali-kilit.pdf' : '/kilitler/2040-gostergeli-sikistirmali-kilit (1).pdf'
+      }
+      if (code === '040' && fullName?.includes('Sıkıştırmalı Kilit')) {
+        return fullName?.includes('v1') ? '/kilitler/040-sikistirmali-kilit_v1.pdf' : '/kilitler/040-sikistirmali-kilit_v2.pdf'
+      }
+      if (code === '540' && fullName?.includes('Sıkıştırmalı Kilit')) {
+        return fullName?.includes('v1') ? '/kilitler/540-sikistirmali-kilit_v1.pdf' : '/kilitler/540-sikistirmali-kilit_v2.pdf'
+      }
+      if (code === '440' && fullName?.includes('Hijyenik Sıkıştırmalı Kilit')) {
+        return fullName?.includes('v1') ? '/kilitler/440-hijyenik-sikistirmali-kilit_v1.pdf' : '/kilitler/440-hijyenik-sikistirmali-kilit_v2.pdf'
+      }
+      const kilitlerPdfMap = {
+        '401': '/kilitler/401-kollu-kilit.pdf',
+        '501': '/kilitler/501-kollu-kilit.pdf',
+        '502': '/kilitler/502-ispanyolet-sistemli-kollu-kilit.pdf',
+        '402': '/kilitler/402-ispanyolet-sistemli-kollu-kilit.pdf',
+        '103': '/kilitler/103-ispanyolet-sistemli-kollu-kilit.pdf',
+        '016': '/kilitler/016-kabin-kilidi.pdf',
+        '416': '/kilitler/416-kabin-kilidi.pdf',
+        '266': '/kilitler/266-mini-ceyrek-donuslu-yayli-kilit.pdf',
+        '066': '/kilitler/066-mini-ceyrek-donuslu-yayli-kilit.pdf',
+        '064': '/kilitler/064-ceyrek-donuslu-yayli-kilit.pdf',
+        '060': '/kilitler/060-ceyrek-donuslu-yayli-kilit.pdf',
+        '160': '/kilitler/160-dilli-yayli-kilit.pdf',
+        '260': '/kilitler/260-asma-kilit-hamili-ceyrek-donuslu-kilit.pdf',
+        '140': '/kilitler/140-mini-sikistirmali-kilit.pdf',
+        '2060': '/kilitler/2060-gostergeli-ceyrek-donuslu-kilit.pdf',
+        '1060': '/kilitler/1060-ceyrek-donuslu-yayli-kilit.pdf',
+        '460': '/kilitler/460-hijyenik-kilit.pdf',
+        '045': '/kilitler/045-sikistirmali-yayli-kilit.pdf',
+        '211': '/kilitler/211-asma-kilit-hamili-l-kollu-kilit.pdf',
+        '562': '/kilitler/562-asma-kilit-hamili-kelebek-kilit.pdf',
+        '110': '/kilitler/110-ceyrek-donuslu-kilit-t-kollu.pdf',
+        '111': '/kilitler/111-l-kollu-kilit.pdf',
+        '065': '/kilitler/065-kelebek-kilit.pdf',
+        '265': '/kilitler/265-asma-kilit-hamili-kelebek-kilit.pdf',
+        '063': '/kilitler/063-silindirli-kilit.pdf',
+        '411': '/kilitler/411-asma-kilit-hamili-l-kollu-kilit.pdf',
+        '860': '/kilitler/860-ceyrek-donuslu-kilit.pdf',
+        '042': '/kilitler/042-civatali-kilit.pdf',
+        '276': '/kilitler/276-kancali-mandal.pdf',
+      }
+      if (kilitlerPdfMap[code]) {
+        return kilitlerPdfMap[code]
+      }
+    }
+    
+    // Paslanmaz Çelik Menteşeler için menteseler klasöründeki PDF'ler
+    if (fromSection === 'PASLANMAZ ÇELİK MENTEŞELER') {
+      const menteselerPdfMap = {
+        '295': '/menteseler/295-gizli-mentese.pdf',
+        '395': '/menteseler/395-gizli-mentese.pdf',
+        '695': '/menteseler/695-gizli-mentese.pdf',
+        '795': '/menteseler/795-gizli-mentese.pdf',
+        '289': '/menteseler/289-gizli-mentese.pdf',
+        '1995': '/menteseler/1995-gizli-mentese.pdf',
+        '995': '/menteseler/995-gizli-mentese.pdf',
+        '095': '/menteseler/095-gizli-mentese.pdf',
+        '097': '/menteseler/097-kose-mentese.pdf',
+        '4299': '/menteseler/4299-yaprak-mentese-kaldir-cikar.pdf',
+        '3599': '/menteseler/3599-kaldir-cikar-mentese.pdf',
+        '1293': '/menteseler/1293-kaldir-cikar-mentese.pdf',
+        '1393': '/menteseler/1393-kaldir-cikar-mentese.pdf',
+        '1299': '/menteseler/1299-mini-yaprak-mentese.pdf',
+        '600': '/menteseler/600-duz-mentese.pdf',
+        '3299': '/menteseler/3299-yaprak-mentese.pdf',
+        '3099': '/menteseler/3099-kaldir-cikar-mentese.pdf',
+        '3399': '/menteseler/3399-yaprak-mentese.pdf',
+        '299': '/menteseler/299-yaprak-mentese.pdf',
+        '4599': '/menteseler/4599-yaprak-mentese.pdf',
+        '599': '/menteseler/599-yaprak-mentese.pdf',
+        '799': '/menteseler/799-yaprak-mentese.pdf',
+        '1599': '/menteseler/1599-yaprak-mentese.pdf',
+        '899': '/menteseler/899-yaprak-mentese-kaldir-cikar.pdf',
+        '999': '/menteseler/999-yaprak-mentese.pdf',
+        '2999': '/menteseler/2999-yaprak-mentese.pdf',
+        '2890': '/menteseler/2890-gizli-mentese.pdf',
+        '090': '/menteseler/090-kenar-mentese-10mm.pdf',
+        '092': '/menteseler/092-kenar-mentese-12mm.pdf',
+        '192': '/menteseler/192-kenar-mentese-12mm.pdf',
+        '193': '/menteseler/193-kenar-mentese-16mm.pdf',
+      }
+      if (productName?.includes('v1') && (code === '099' || code === '399')) {
+        return code === '099' ? '/menteseler/099-yaprak-mentesev1.pdf' : '/menteseler/399-yaprak-mentesev1.pdf'
+      }
+      if (productName?.includes('v2') && (code === '099' || code === '399')) {
+        return code === '099' ? '/menteseler/099-yaprak-mentesev2.pdf' : '/menteseler/399-yaprak-mentesev2.pdf'
+      }
+      if (menteselerPdfMap[code]) {
+        return menteselerPdfMap[code]
+      }
+    }
     
     // Aksesuarlar için özel PDF mapping
     const aksesuarlarPdfMap = {
@@ -8863,7 +9754,7 @@ function ProductDetail() {
             {/* Ana İçerik Grid */}
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
               {/* Sol Kolon - Ürün Görseli */}
-              <div className="flex items-start justify-center lg:sticky lg:top-8 lg:h-fit">
+              <div className="flex flex-col items-start justify-center gap-6 lg:sticky lg:top-8 lg:h-fit">
                 <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                   <div className="aspect-square flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl overflow-hidden">
                     <img 
@@ -8873,6 +9764,27 @@ function ProductDetail() {
                     />
                   </div>
                 </div>
+                {/* Sızdırmazlık profilleri kartları (Geçme Conta, Hijyenik Conta, U Tipi Fitiller): detay sayfasında resim1 */}
+                {(location?.state?.fromSection === 'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA' || (() => {
+                  const n = String(productDetail?.name || productInfo?.name || productName || '')
+                  if (n.includes('340.09.') && (n.includes('Geçme Conta') || n.includes('Hijyenik Conta'))) return true
+                  if (n.includes('U Tipi Fitiller') && /3400101[0-5]/.test(n)) return true
+                  return false
+                })()) && (
+                  <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                    <div className="flex items-center gap-2 mb-4">
+                      <div className="h-1 w-8 rounded-full bg-[#166534]" />
+                      <h3 className="text-lg font-bold text-slate-900">Sızdırmazlık Profili</h3>
+                    </div>
+                    <div className="flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden min-h-[120px]">
+                      <img
+                        src="/sizdirmazlikprofilleri/resim1.png"
+                        alt="Sızdırmazlık profili"
+                        className="max-w-full w-full h-auto object-contain"
+                      />
+                    </div>
+                  </div>
+                )}
               </div>
 
               {/* Sağ Kolon - Ürün Bilgileri */}
@@ -9162,12 +10074,33 @@ function ProductDetail() {
                                       <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
                                     )}
                                   </>
-                                ) : (productDetail.code === '340.09.966' || productDetail.code === '340.09.968' || productDetail.code === '340.09.969' || productDetail.code === '340.09.970') ? (
+                                ) : (hasColumnData('R1') && hasColumnData('ambalaj')) ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    {hasColumnData('ul94V0') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">UL 94-V0</th>
+                                    )}
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Renk</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">R1</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">R2</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">R3</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">R4</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">DT</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ambalaj</th>
+                                    {hasColumnData('cad3d') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">3D CAD</th>
+                                    )}
+                                  </>
+                                ) : (productDetail.code === '340.09.966' || productDetail.code === '340.09.968' || productDetail.code === '340.09.969' || productDetail.code === '340.09.970' || productDetail.code === '340.09.383' || productDetail.code === '340.09.611' || productDetail.code === '340.09.384' || productDetail.code === '34001010' || productDetail.code === '34001011' || productDetail.code === '34001012' || productDetail.code === '34001015') ? (
                                   <>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Renk</th>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ambalaj</th>
+                                    {hasColumnData('cad3d') && (
+                                      <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">3D CAD</th>
+                                    )}
                                   </>
                                 ) : productDetail.versions[0]?.malzeme ? (
                                   <>
@@ -9363,6 +10296,24 @@ function ProductDetail() {
                                     <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.D || ''}</td>
                                   )}
                                 </>
+                              ) : (hasColumnData('R1') && hasColumnData('ambalaj') && version.urunKodu) ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                  {hasColumnData('ul94V0') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.ul94V0 || ''}</td>
+                                  )}
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme || ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.renk || ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.R1 ?? ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.R2 ?? ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.R3 ?? ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.R4 ?? ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.DT ?? ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.ambalaj ?? ''}</td>
+                                  {hasColumnData('cad3d') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.cad3d ?? ''}</td>
+                                  )}
+                                </>
                               ) : productDetail.code === 'AA' && version.urunAdi ? (
                                 <>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi}</td>
@@ -9423,12 +10374,15 @@ function ProductDetail() {
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H2}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H3}</td>
                                 </>
-                              ) : (productDetail.code === '340.09.966' || productDetail.code === '340.09.968' || productDetail.code === '340.09.969' || productDetail.code === '340.09.970') && version.urunKodu ? (
+                              ) : (productDetail.code === '340.09.966' || productDetail.code === '340.09.968' || productDetail.code === '340.09.969' || productDetail.code === '340.09.970' || productDetail.code === '340.09.383' || productDetail.code === '340.09.611' || productDetail.code === '340.09.384' || productDetail.code === '34001010' || productDetail.code === '34001011' || productDetail.code === '34001012' || productDetail.code === '34001015') && version.urunKodu ? (
                                 <>
                                   <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme || ''}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.renk || ''}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.ambalaj || ''}</td>
+                                  {hasColumnData('cad3d') && (
+                                    <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.cad3d || ''}</td>
+                                  )}
                                 </>
                               ) : version.urunKodu && version.gobekCesidi ? (
                                 <>

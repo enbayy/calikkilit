@@ -2417,6 +2417,11 @@ function SectionProducts() {
             const isFromCeyrekDonuslu = sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' ||
                                          (sectionTitle === 'Sıkıştırmalı Kilitler' && (location?.state?.fromSection === 'ÇEYREK DÖNÜŞLÜ KİLİTLER' || fullSectionSlug === 'ceyrek-donuslu-kilitler/sikistirmali-kilitler')) ||
                                          sectionTitle === 'Kolay Montaj Ç.D. Kilitler'
+            const isFromPaslanmazCelikAksesuarlar = sectionTitle === 'PASLANMAZ ÇELİK AKSESUARLAR'
+            const isFromPaslanmazCelikMenteseler = sectionTitle === 'PASLANMAZ ÇELİK MENTEŞELER'
+            const isFromPaslanmazCelikKilitler = sectionTitle === 'PASLANMAZ ÇELİK KİLİTLER'
+            const isFromSizdirmazlikProfilleri = sectionTitle === 'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA'
+            const fromSectionValue = isFromCeyrekDonuslu ? 'ÇEYREK DÖNÜŞLÜ KİLİTLER' : isFromPaslanmazCelikAksesuarlar ? 'PASLANMAZ ÇELİK AKSESUARLAR' : isFromPaslanmazCelikMenteseler ? 'PASLANMAZ ÇELİK MENTEŞELER' : isFromPaslanmazCelikKilitler ? 'PASLANMAZ ÇELİK KİLİTLER' : isFromSizdirmazlikProfilleri ? 'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA' : undefined
             
             return (
               <Link
@@ -2426,7 +2431,7 @@ function SectionProducts() {
                   productName: item, 
                   productImage: img, 
                   productLogo: getProductLogo(item),
-                  fromSection: isFromCeyrekDonuslu ? 'ÇEYREK DÖNÜŞLÜ KİLİTLER' : undefined
+                  fromSection: fromSectionValue
                 }}
                 className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-[#166534]/50 hover:shadow-xl"
               >
