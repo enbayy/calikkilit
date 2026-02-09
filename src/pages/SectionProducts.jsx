@@ -722,6 +722,42 @@ function SectionProducts() {
         '056 > Silindirli Kilit',
       ]
     }
+    // MOBİLYA VE ÇELİK EŞYA KİLİTLERİ için özel ürün listesi
+    if (sectionTitle === 'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ') {
+      return [
+        '010 > Silindirli "T" Kollu Kilit',
+        '011 > Silindirli "L" Kollu Kilit',
+        '021 > Cam Kapak Kilidi',
+        '020 > Sürgülü Cam Kilidi',
+        '132 > Çekmece Kilidi',
+        '032 > Çekmece Kilidi',
+        '033 > Çekmece Kilidi',
+        '030 > Çekmece Kilidi',
+        '159 > Sürgülü Kapak Kilidi',
+        '059 > Sürgülü Kapak Kilidi',
+        '4150 > Şifreli Kilit',
+        '035 > Dosya Dolabı Kilidi',
+        '058 > Çelik Eşya Kilidi',
+        '158 > Çelik Eşya Kilidi',
+        '013 > Yangın Dolabı Kilidi',
+        '113 > Yangın Dolabı Kilidi',
+      ]
+    }
+    // ELEKTRONİK KOLLU KİLİTLER için özel ürün listesi
+    if (sectionTitle === 'ELEKTRONİK KOLLU KİLİTLER') {
+      return [
+        '3114 > Elektronik Kollu Kilit - Standalone',
+        '3101 > Elektronik Kollu Kilit',
+        '3102 > Elektronik Kollu Kilit',
+        '3103 > Elektronik Kollu Kilit',
+        '3104 > Elektronik Kollu Kilit',
+        '3111 > Elektronik Kollu Kilit',
+        '3112 > Elektronik Kollu Kilit',
+        '3105 > Elektronik Kollu Kilit',
+        '3106 > Elektronik Kollu Kilit',
+        '3113 > Elektronik Kollu Kilit - Standalone',
+      ]
+    }
     // Kolay Montaj Ç.D. Kilitler için özel ürün listesi
     if (sectionTitle === 'Kolay Montaj Ç.D. Kilitler') {
       return [
@@ -1713,6 +1749,42 @@ function SectionProducts() {
                 '203 > Çeyrek Dönüşlü Kelebek Kilit v2': '/ceyrekdonuslukilitler/ceyrekdonuslukilitlerdetay/203_v2.jpg',
               }
               img = ceyrekDonusluKilitlerImageMap[item] || '/ceyrekdonuslukilitler/ceyrek.jpg'
+            } else if (sectionTitle === 'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ') {
+              // MOBİLYA VE ÇELİK EŞYA KİLİTLERİ section'ı için özel resim mapping
+              const mobilyaVeCelikEsyaKilitleriImageMap = {
+                '010 > Silindirli "T" Kollu Kilit': '/mobilyacecelikesya/010.jpg',
+                '011 > Silindirli "L" Kollu Kilit': '/mobilyacecelikesya/011.jpg',
+                '021 > Cam Kapak Kilidi': '/mobilyacecelikesya/021.jpg',
+                '020 > Sürgülü Cam Kilidi': '/mobilyacecelikesya/020.jpg',
+                '132 > Çekmece Kilidi': '/mobilyacecelikesya/132.jpg',
+                '032 > Çekmece Kilidi': '/mobilyacecelikesya/032.jpg',
+                '033 > Çekmece Kilidi': '/mobilyacecelikesya/033.jpg',
+                '030 > Çekmece Kilidi': '/mobilyacecelikesya/030.jpg',
+                '159 > Sürgülü Kapak Kilidi': '/mobilyacecelikesya/159.jpg',
+                '059 > Sürgülü Kapak Kilidi': '/mobilyacecelikesya/059.jpg',
+                '4150 > Şifreli Kilit': '/mobilyacecelikesya/4150.jpg',
+                '035 > Dosya Dolabı Kilidi': '/mobilyacecelikesya/035_yeni.jpg',
+                '058 > Çelik Eşya Kilidi': '/mobilyacecelikesya/058.jpg',
+                '158 > Çelik Eşya Kilidi': '/mobilyacecelikesya/158.jpg',
+                '013 > Yangın Dolabı Kilidi': '/mobilyacecelikesya/013_v2.jpg',
+                '113 > Yangın Dolabı Kilidi': '/mobilyacecelikesya/113_v2.jpg',
+              }
+              img = mobilyaVeCelikEsyaKilitleriImageMap[item] || '/mobilyavecelikesya.png'
+            } else if (sectionTitle === 'ELEKTRONİK KOLLU KİLİTLER') {
+              // ELEKTRONİK KOLLU KİLİTLER section'ı için özel resim mapping
+              const elektronikKolluKilitlerImageMap = {
+                '3114 > Elektronik Kollu Kilit - Standalone': '/elektronikkollukilitler/3114.jpg',
+                '3101 > Elektronik Kollu Kilit': '/elektronikkollukilitler/3101.jpg',
+                '3102 > Elektronik Kollu Kilit': '/elektronikkollukilitler/3102.jpg',
+                '3103 > Elektronik Kollu Kilit': '/elektronikkollukilitler/3103.jpg',
+                '3104 > Elektronik Kollu Kilit': '/elektronikkollukilitler/3104.jpg',
+                '3111 > Elektronik Kollu Kilit': '/elektronikkollukilitler/3111.jpg',
+                '3112 > Elektronik Kollu Kilit': '/elektronikkollukilitler/3112.jpg',
+                '3105 > Elektronik Kollu Kilit': '/elektronikkollukilitler/3105.jpg',
+                '3106 > Elektronik Kollu Kilit': '/elektronikkollukilitler/3106.jpg',
+                '3113 > Elektronik Kollu Kilit - Standalone': '/elektronikkollukilitler/3113.jpg',
+              }
+              img = elektronikKolluKilitlerImageMap[item] || '/elektronikkollukilitler.png'
             }
             const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
             // Ürün adından sayıyı çıkar (örn: "001 > Kollu Kilit" -> code: "001", name: "Kollu Kilit")

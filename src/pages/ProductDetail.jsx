@@ -3784,6 +3784,327 @@ const productDetails = {
     versions: [],
     relatedProducts: [],
   },
+  '010 > Silindirli "T" Kollu Kilit': {
+    code: '010',
+    name: 'Silindirli "T" Kollu Kilit',
+    description: '',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '011 > Silindirli "L" Kollu Kilit': {
+    code: '011',
+    name: 'Silindirli "L" Kollu Kilit',
+    description: '',
+    materials: {
+      'KOVAN': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '021 > Cam Kapak Kilidi': {
+    code: '021',
+    name: 'Cam Kapak Kilidi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '020 > Sürgülü Cam Kilidi': {
+    code: '020',
+    name: 'Sürgülü Cam Kilidi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'SÜRGÜ': 'Paslanmaz Çelik (AISI 304)',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '132 > Çekmece Kilidi': {
+    code: '132',
+    name: 'Çekmece Kilidi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '032 > Çekmece Kilidi': {
+    code: '032',
+    name: 'Çekmece Kilidi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '033 > Çekmece Kilidi': {
+    code: '033',
+    name: 'Çekmece Kilidi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 10431 Pa6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '030 > Çekmece Kilidi': {
+    code: '030',
+    name: 'Çekmece Kilidi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '159 > Sürgülü Kapak Kilidi': {
+    code: '159',
+    name: 'Sürgülü Kapak Kilidi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Paslanmaz Çelik',
+      'GÖBEK': 'Paslanmaz Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '059 > Sürgülü Kapak Kilidi': {
+    code: '059',
+    name: 'Sürgülü Kapak Kilidi',
+    description: '• Yatay soğutucuların sürgülü kapak kilitlerinde kullanılır.\n• Kilitleme anahtarın 90° çevrilmesi ve butona basmak suretiyle yapılır. Tersi yönde hareket ile kilit açılır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'SİLİNDİR': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '4150 > Şifreli Kilit': {
+    code: '4150',
+    name: 'Şifreli Kilit',
+    description: '',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    surface: 'Krom kaplama',
+    versions: [
+      {
+        urunKodu: '4150',
+        urunAdi: 'Şifreli Kilit',
+        malzeme: 'Çelik',
+        yuzey: 'Krom Kaplama',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '035 > Dosya Dolabı Kilidi': {
+    code: '035',
+    name: 'Dosya Dolabı Kilidi',
+    description: '• Çelik dosya dolaplarında kullanılır.\n• Bağlantı sacı sayesinde çubukların hızlı montajı mümkündür.\n• Klipsli gövde kolay montaj imkanı verir.\n• İki veya üç noktadan kilitleme yapmak mümkündür.',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 Pa6 GFR 30',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '058 > Çelik Eşya Kilidi': {
+    code: '058',
+    name: 'Çelik Eşya Kilidi',
+    description: '• Takım dolaplarında merkezi kilit sisteminde kullanılır.\n• Segman yardımıyla hızlı montaj yapılır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'SİLİNDİR': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '158 > Çelik Eşya Kilidi': {
+    code: '158',
+    name: 'Çelik Eşya Kilidi',
+    description: '• Takım dolaplarında merkezi kilit sisteminde kullanılır.\n• Segman yardımıyla hızlı montaj yapılır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'SİLİNDİR': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '013 > Yangın Dolabı Kilidi': {
+    code: '013',
+    name: 'Yangın Dolabı Kilidi',
+    description: '• Özellikle yangın dolaplarında veya küçük ebatlı panolarda kullanılır.\n• Komple metal olduğu için yangında zarar görmeyip açma kapama işlemini gerçekleştirir.\n• Pano kapağı üzerinde minimum çıkıntı olacak şekilde dizayn edilmiştir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'TUTAMAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'BAĞLANTI SACI': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '113 > Yangın Dolabı Kilidi': {
+    code: '113',
+    name: 'Yangın Dolabı Kilidi',
+    description: '• Özellikle yangın dolaplarında veya küçük ebatlı panolarda kullanılır.\n• Komple metal olduğu için yangında zarar görmeyip açma kapama işlemini gerçekleştirir.\n• Pano kapağı üzerinde minimum çıkıntı olacak şekilde dizayn edilmiştir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'TUTAMAK': 'Çelik',
+      'DİL': 'Çelik',
+      'BAĞLANTI SACI': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3114 > Elektronik Kollu Kilit - Standalone': {
+    code: '3114',
+    name: 'Elektronik Kollu Kilit - Standalone',
+    description: '• LED göstergeler\n• Entegre RFID okuyucu\n• Enerji kesintisi durumunda mekanik olarak açılabilme imkanı.\n• Dahili kapı ve kilit sensörü\n• Kilit ve okuyucu üzerinde LED göstergeler\n• Standalone olarak çalışır.\n• Kendisinden başka bir kilit daha kontrol edebilir. (3101,3102,3103 ve 3104)\n• 12 VDC çalışma voltajı',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'KOL': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3101 > Elektronik Kollu Kilit': {
+    code: '3101',
+    name: 'Elektronik Kollu Kilit',
+    description: '• Komple metal\n• Estetik tasarım\n• Enerji kesintisi durumunda mekanik olarak açılabilme imkanı.\n• 12 V DC çalışma voltajı\n• Dahili kapı ve kilit sensörü\n• İzleme ve erişim kontrol sistemlerine bağlanma imkanı',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Poliüretan',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3102 > Elektronik Kollu Kilit': {
+    code: '3102',
+    name: 'Elektronik Kollu Kilit',
+    description: '• Komple metal\n• Estetik tasarım\n• Enerji kesintisi durumunda mekanik olarak açılabilme imkanı.\n• 12 V DC çalışma voltajı\n• Dahili kapı ve kilit sensörü\n• İzleme ve erişim kontrol sistemlerine bağlanma imkanı',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'KOL': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+      'CONTA': 'Poliüretan',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3103 > Elektronik Kollu Kilit': {
+    code: '3103',
+    name: 'Elektronik Kollu Kilit',
+    description: '• LED göstergeler\n• Estetik tasarım\n• Enerji kesintisi durumunda mekanik olarak açılabilme imkanı.\n• 12 V DC çalışma voltajı\n• Dahili kapı ve kilit sensörü\n• İzleme ve erişim kontrol sistemlerine bağlanma imkanı',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'KOL': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3104 > Elektronik Kollu Kilit': {
+    code: '3104',
+    name: 'Elektronik Kollu Kilit',
+    description: '',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'KOL': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3111 > Elektronik Kollu Kilit': {
+    code: '3111',
+    name: 'Elektronik Kollu Kilit',
+    description: '• LED göstergeler\n• Entegre RFID okuyucu\n• Enerji kesintisi durumunda mekanik olarak açılabilme imkanı.\n• Dahili kapı ve kilit sensörü\n• Kilit ve okuyucu üzerinde LED göstergeler\n• RS485 protokolünü destekler, diğer protokoller için Mesan ile iletişime geçiniz\n• Kendisinden başka bir kilit daha kontrol edebilir. (3101,3102,3103 ve 3104)\n• 12 VDC çalışma voltajı',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'KOL': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3112 > Elektronik Kollu Kilit': {
+    code: '3112',
+    name: 'Elektronik Kollu Kilit',
+    description: '',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'KOL': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'MEKANİZMA': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3105 > Elektronik Kollu Kilit': {
+    code: '3105',
+    name: 'Elektronik Kollu Kilit',
+    description: '• Erişim kontrol sistemleri ile uyumludur.\n• Yüksek emniyetli iç ve dış ortam Elektromekanik uygulama panolarında uygulanır.\n• Çift cidarlı dış ortam kabinleri içinde uygundur.\n• Özel geometrisi ile dış saldırılara dayanıklıdır.\n• Yüksek korozyon dayanımına sahiptir.\n• DIN V ENV 1630:1999-04 / WK2 testine uygundur.\n• Mafsalda kullanılan çift oring sayesinde yüksek sızdırmazlık sağlar.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'CONTA': 'Poliüretan',
+      'KAPAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3106 > Elektronik Kollu Kilit': {
+    code: '3106',
+    name: 'Elektronik Kollu Kilit',
+    description: '• Erişim kontrol sistemleri ile uyumludur.\n• Yüksek emniyetli iç ve dış ortam Elektromekanik uygulama panolarında uygulanır.\n• Çift cidarlı dış ortam kabinleri içinde uygundur.\n• Özel geometrisi ile dış saldırılara dayanıklıdır.\n• Yüksek korozyon dayanımına sahiptir.\n• DIN V ENV 1630:1999-04 / WK2 testine uygundur.\n• Mafsalda kullanılan çift oring sayesinde yüksek sızdırmazlık sağlar.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'MEKANİZMA': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'CONTA': 'Poliüretan',
+      'KAPAK': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3113 > Elektronik Kollu Kilit - Standalone': {
+    code: '3113',
+    name: 'Elektronik Kollu Kilit - Standalone',
+    description: '• LED göstergeler\n• Entegre RFID okuyucu\n• Enerji kesintisi durumunda mekanik olarak açılabilme imkanı.\n• Dahili kapı ve kilit sensörü\n• Kilit ve okuyucu üzerinde LED göstergeler\n• Standalone olarak çalışır.\n• Kendisinden başka bir kilit daha kontrol edebilir. (3101,3102,3103 ve 3104)\n• 12 VDC çalışma voltajı',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'KOL': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'DİL': 'Çelik',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -5206,6 +5527,112 @@ function ProductDetail() {
       return '/silindirlikilitler/056-silindirli-kilit.pdf'
     }
     
+    // MOBİLYA VE ÇELİK EŞYA KİLİTLERİ için özel PDF mapping
+    if (code === '010' && fullName?.includes('Silindirli "T" Kollu Kilit')) {
+      return '/mobilyacecelikesya/010-silindirli-t-kollu-kilit.pdf'
+    }
+    
+    if (code === '011' && fullName?.includes('Silindirli "L" Kollu Kilit')) {
+      return '/mobilyacecelikesya/011-silindirli-l-kollu-kilit.pdf'
+    }
+    
+    if (code === '021' && fullName?.includes('Cam Kapak Kilidi')) {
+      return '/mobilyacecelikesya/021-cam-kapak-kilidi.pdf'
+    }
+    
+    if (code === '020' && fullName?.includes('Sürgülü Cam Kilidi')) {
+      return '/mobilyacecelikesya/020-surgulu-cam-kilidi.pdf'
+    }
+    
+    if (code === '132' && fullName?.includes('Çekmece Kilidi')) {
+      return '/mobilyacecelikesya/132-cekmece-kilidi.pdf'
+    }
+    
+    if (code === '032' && fullName?.includes('Çekmece Kilidi')) {
+      return '/mobilyacecelikesya/032-cekmece-kilidi.pdf'
+    }
+    
+    if (code === '033' && fullName?.includes('Çekmece Kilidi')) {
+      return '/mobilyacecelikesya/033-cekmece-kilidi.pdf'
+    }
+    
+    if (code === '030' && fullName?.includes('Çekmece Kilidi')) {
+      return '/mobilyacecelikesya/030-cekmece-kilidi.pdf'
+    }
+    
+    if (code === '159' && fullName?.includes('Sürgülü Kapak Kilidi')) {
+      return '/mobilyacecelikesya/159-surgulu-kapak-kilidi.pdf'
+    }
+    
+    if (code === '059' && fullName?.includes('Sürgülü Kapak Kilidi')) {
+      return '/mobilyacecelikesya/059-surgulu-kapak-kilidi.pdf'
+    }
+    
+    if (code === '4150' && fullName?.includes('Şifreli Kilit')) {
+      return '/mobilyacecelikesya/4150-sifreli-kilit.pdf'
+    }
+    
+    if (code === '035' && fullName?.includes('Dosya Dolabı Kilidi')) {
+      return '/mobilyacecelikesya/035-dosya-dolabi-kilidi.pdf'
+    }
+    
+    if (code === '058' && fullName?.includes('Çelik Eşya Kilidi')) {
+      return '/mobilyacecelikesya/058-celik-esya-kilidi.pdf'
+    }
+    
+    if (code === '158' && fullName?.includes('Çelik Eşya Kilidi')) {
+      return '/mobilyacecelikesya/158-celik-esya-kilidi.pdf'
+    }
+    
+    if (code === '013' && fullName?.includes('Yangın Dolabı Kilidi')) {
+      return '/mobilyacecelikesya/013-yangin-dolabi-kilidi.pdf'
+    }
+    
+    if (code === '113' && fullName?.includes('Yangın Dolabı Kilidi')) {
+      return '/mobilyacecelikesya/113-yangin-dolabi-kilidi.pdf'
+    }
+    
+    // ELEKTRONİK KOLLU KİLİTLER için özel PDF mapping
+    if (code === '3114' && fullName?.includes('Elektronik Kollu Kilit - Standalone')) {
+      return '/elektronikkollukilitler/3114-elektronik-kollu-kilit-standalone.pdf'
+    }
+    
+    if (code === '3101' && fullName?.includes('Elektronik Kollu Kilit')) {
+      return '/elektronikkollukilitler/3101-elektronik-kollu-kilit.pdf'
+    }
+    
+    if (code === '3102' && fullName?.includes('Elektronik Kollu Kilit')) {
+      return '/elektronikkollukilitler/3102-elektronik-kollu-kilit.pdf'
+    }
+    
+    if (code === '3103' && fullName?.includes('Elektronik Kollu Kilit')) {
+      return '/elektronikkollukilitler/3103-elektronik-kollu-kilit.pdf'
+    }
+    
+    if (code === '3104' && fullName?.includes('Elektronik Kollu Kilit')) {
+      return '/elektronikkollukilitler/3104-elektronik-kollu-kilit.pdf'
+    }
+    
+    if (code === '3111' && fullName?.includes('Elektronik Kollu Kilit')) {
+      return '/elektronikkollukilitler/3111-elektronik-kollu-kilit.pdf'
+    }
+    
+    if (code === '3112' && fullName?.includes('Elektronik Kollu Kilit')) {
+      return '/elektronikkollukilitler/3112-elektronik-kollu-kilit.pdf'
+    }
+    
+    if (code === '3105' && fullName?.includes('Elektronik Kollu Kilit')) {
+      return '/elektronikkollukilitler/3105-elektronik-kollu-kilit.pdf'
+    }
+    
+    if (code === '3106' && fullName?.includes('Elektronik Kollu Kilit')) {
+      return '/elektronikkollukilitler/3106-elektronik-kollu-kilit.pdf'
+    }
+    
+    if (code === '3113' && fullName?.includes('Elektronik Kollu Kilit - Standalone')) {
+      return '/elektronikkollukilitler/3113-elektronik-kollu-kilit-standalone (1).pdf'
+    }
+    
     // Kod bazlı PDF mapping
     const pdfMap = {
       '001': '/001-kollu-kilit.pdf',
@@ -5544,6 +5971,13 @@ function ProductDetail() {
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
                                   </>
+                                ) : productDetail.code === '4150' && productDetail.versions[0]?.urunAdi ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Adı</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
+                                  </>
                                 ) : productDetail.code === 'DD' && productDetail.versions[0]?.gobek ? (
                                   <>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Göbek</th>
@@ -5778,6 +6212,13 @@ function ProductDetail() {
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                </>
+                              ) : productDetail.code === '4150' && version.urunAdi ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.urunAdi}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.yuzey}</td>
                                 </>
                               ) : productDetail.code === 'DD' && version.gobek ? (
                                 <>
