@@ -4105,6 +4105,116 @@ const productDetails = {
     versions: [],
     relatedProducts: [],
   },
+  '3402 > ACU Erişim Kontrol Ünitesi': {
+    code: '3402',
+    name: 'ACU Erişim Kontrol Ünitesi',
+    description: 'Erişim Kontrol Ünitesi (ACU);\n\nElektronik kilitleri kontrol etmek ve kapı durumunu izlemek için kullanılabilecek ve akıllı bir cihazdır.\n• Kabine fiziksel erişimin kontrolünü sağlar.\n• Güvenlik koşullarını IP üzerinden izler ve yönetir.\n• Kullanıcı veritabanına sahiptir.\n• Yönetim yazılımı üzerinden izleme ve yapılandırma.\n• Kapı konumunu tespit edebilmek için iki adet sensör girişi vardır.\n• 16 adet erişim arayüzü (3414 veya 3415) bağlanabilir.\n\nYÖNETİM YAZILIMI\n\n• Ağ ayarlarını (IP adresi, alt ağ maskesi, varsayılan ağ geçidi, DNS vb.) ve kullanıcı yönetim ayarlarının yapılandırma.\n• Kullanıcı ekleme ve kaldırma.\n• Olay kayıtlarını görüntüleme ve silme.\n\nUYGULAMALAR\n\nVeri merkezleri, co-location merkezleri, Web hosting tesisleri, Telekom kabinleri veya izlenmesi gereken herhangi bir insansız bölge için uygundur.',
+    materials: {
+      'MALZEME': 'Plastik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3402',
+        'Ürün Adı': 'ACU Erişim Kontrol Ünitesi',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3403 > ACU Plus Erişim Kontrol Ünitesi': {
+    code: '3403',
+    name: 'ACU Plus Erişim Kontrol Ünitesi',
+    description: 'Erişim Kontrol Ünitesi (ACU Plus); Sıcaklık, nem, duman, su baskını gibi çevresel değişimleri izleme için kullanılabilecek ve akıllı bir cihazdır. Elektronik kilitleri kontrol eder ve kapı durumunu izler.\n• Kabine fiziksel erişimin kontrolünü sağlar.\n• Çevresel koşulları ve güvenlik koşullarını IP üzerinden izler ve yönetir.\n• Takip edilen herhangi bir çevresel koşul kullanıcı tarafından belirlenen sınırların dışına çıktığında, uyarılar e-mail kullanılarak kullanıcılara iletilir.\n• Kullanıcı veritabanına sahiptir.\n• Yönetim yazılımı üzerinden izleme ve yapılandırma.\n• Kapı konumunu tespit edebilmek için iki adet sensör girişi vardır.\n• İki adet erişim arayüzü (3414 veya 3415) bağlanabilir.\n\nUYGULAMALAR\n\nVeri merkezleri, co-location merkezleri, Web hosting tesisleri, Telekom kabinleri veya izlenmesi gereken herhangi bir insansız bölge için uygundur.',
+    materials: {
+      'MALZEME': 'Plastik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3403',
+        'Ürün Adı': 'ACU Plus Erişim Kontrol Ünitesi',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3416 > S-AIK Standalone Erişim Arayüzü Tuş Takımı': {
+    code: '3416',
+    name: 'S-AIK Standalone Erişim Arayüzü Tuş Takımı',
+    description: '• İki seviyeli şifreleme (Master ve Kullanıcı)\n• İki adet kilit çıkışı ile kabine fiziksel erişim kontrolü\n• Kollu kilitlerin de dahil olduğu geniş bir kilit yelpazesi ile çalışabilir.\n• 12 Volt DC besleme voltajı\n• Malzeme: ABS Kapak ve Zamak Gövde\n• Kilitler ayrı ayrı kontrol edilebilir.\n• Erişim arayüzleri, üzerinde bulunan görsel uyarı LED\'leri ve buzzer ile giriş denemesinin kabul edilip edilmediği hakkında kullanıcıya görsel ve işitsel olarak bilgi verilir.',
+    materials: {
+      'KAPAK': 'ABS',
+      'GÖVDE': 'Zamak',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3416',
+        'Ürün Adı': 'S-AIK Standalone Erişim Arayüzü Tuş Takımı',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3417 > S-AIP Standalone Erişim Arayüzü Kart Okuyucu': {
+    code: '3417',
+    name: 'S-AIP Standalone Erişim Arayüzü Kart Okuyucu',
+    description: '• İki seviyeli kart (RFID tag) yönetim sistemi (Master ve Kullanıcı) Standard ISO-14443A RFID\n• İki adet kilit çıkışı ile kabine fiziksel erişim kontrolü\n• Kollu kilitlerin de dahil olduğu geniş bir kilit yelpazesi ile çalışabilir.\n• 12 Volt DC besleme voltajı\n• Malzeme: ABS Kapak ve Zamak Gövde\n• Kilitler ayrı ayrı kontrol edilebilir.\n• Erişim arayüzleri, üzerinde bulunan görsel uyarı LED\'leri ve buzzer ile giriş denemesinin kabul edilip edilmediği hakkında kullanıcıya görsel ve işitsel olarak bilgi verilir.',
+    materials: {
+      'KAPAK': 'ABS',
+      'GÖVDE': 'Zamak',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3417',
+        'Ürün Adı': 'S-AIP Standalone Erişim Arayüzü Kart Okuyucu',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3414 > AIK Erişim Arayüzü Tuş Takımı': {
+    code: '3414',
+    name: 'AIK Erişim Arayüzü Tuş Takımı',
+    description: 'Erişim arayüzleri, kullanıcı arabirim cihazları olup, şifre girilerek yada bir RFID kartı okutularak erişime izin verir. Erişim arayüzleri, üzerinde bulunan görsel uyarı LED\'leri ve buzzer ile giriş denemesinin kabul edilip edilmediği hakkında kullanıcıya görsel ve işitsel olarak bilgi verilir.',
+    materials: {
+      'MALZEME': 'Plastik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3414',
+        'Ürün Adı': 'AIK Erişim Arayüzü Tuş Takımı',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3415 > AIP Erişim Arayüzü Kart Okuyucu': {
+    code: '3415',
+    name: 'AIP Erişim Arayüzü Kart Okuyucu',
+    description: 'Bu arayüzler erişim kontrol üniteleri ile birlikte kullanılır ve iki kilidi kontrol edebilir. ( ACU Plus - 3403 ve ACU - 3402 )\n\nRFID kart: 13.56Mhz MIFARE - Standart ISO14443A\n\nAyrıca sipariş edilir.\n\nBaskılı: 34002639\nBaskısız: 34002640',
+    materials: {
+      'MALZEME': 'Plastik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3415',
+        'Ürün Adı': 'AIP Erişim Arayüzü Kart Okuyucu',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -4628,6 +4738,22 @@ function ProductDetail() {
       
       if (ispanyoletImageMap[code]) {
         return ispanyoletImageMap[code]
+      }
+    }
+    
+    // İZLEME VE ERİŞİM KONTROL SİSTEMİ için özel resim mapping
+    if (code === '3402' || code === '3403' || code === '3414' || code === '3415' || code === '3416' || code === '3417') {
+      const izlemeVeErisimKontrolImageMap = {
+        '3402': '/izlemeveerisimkontrol/3402.jpg',
+        '3403': '/izlemeveerisimkontrol/3403.jpg',
+        '3414': '/izlemeveerisimkontrol/3414.jpg',
+        '3415': '/izlemeveerisimkontrol/3415.jpg',
+        '3416': '/izlemeveerisimkontrol/3416.jpg',
+        '3417': '/izlemeveerisimkontrol/3417.jpg',
+      }
+      
+      if (izlemeVeErisimKontrolImageMap[code]) {
+        return izlemeVeErisimKontrolImageMap[code]
       }
     }
     
@@ -5631,6 +5757,31 @@ function ProductDetail() {
     
     if (code === '3113' && fullName?.includes('Elektronik Kollu Kilit - Standalone')) {
       return '/elektronikkollukilitler/3113-elektronik-kollu-kilit-standalone (1).pdf'
+    }
+    
+    // İZLEME VE ERİŞİM KONTROL SİSTEMİ için özel PDF mapping
+    if (code === '3402' && fullName?.includes('ACU Erişim Kontrol Ünitesi')) {
+      return '/izlemeveerisimkontrol/3402-acu-erisim-kontrol-unitesi.pdf'
+    }
+    
+    if (code === '3403' && fullName?.includes('ACU Plus Erişim Kontrol Ünitesi')) {
+      return '/izlemeveerisimkontrol/3403-acu-plus-erisim-kontrol-unitesi.pdf'
+    }
+    
+    if (code === '3416' && fullName?.includes('S-AIK Standalone Erişim Arayüzü Tuş Takımı')) {
+      return '/izlemeveerisimkontrol/3416-s-aik-standalone-erisim-arayuzu-tus-takimi.pdf'
+    }
+    
+    if (code === '3417' && fullName?.includes('S-AIP Standalone Erişim Arayüzü Kart Okuyucu')) {
+      return '/izlemeveerisimkontrol/3417-s-aip-standalone-erisim-arayuzu-kart-okuyucu.pdf'
+    }
+    
+    if (code === '3414' && fullName?.includes('AIK Erişim Arayüzü Tuş Takımı')) {
+      return '/izlemeveerisimkontrol/3414-aik-erisim-arayuzu-tus-takimi.pdf'
+    }
+    
+    if (code === '3415' && fullName?.includes('AIP Erişim Arayüzü Kart Okuyucu')) {
+      return '/izlemeveerisimkontrol/3415-aip-erisim-arayuzu-kart-okuyucu.pdf'
     }
     
     // Kod bazlı PDF mapping

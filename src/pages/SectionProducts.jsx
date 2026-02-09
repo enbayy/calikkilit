@@ -758,6 +758,17 @@ function SectionProducts() {
         '3113 > Elektronik Kollu Kilit - Standalone',
       ]
     }
+    // İZLEME VE ERİŞİM KONTROL SİSTEMİ için özel ürün listesi
+    if (sectionTitle === 'İZLEME VE ERİŞİM KONTROL SİSTEMİ') {
+      return [
+        '3402 > ACU Erişim Kontrol Ünitesi',
+        '3403 > ACU Plus Erişim Kontrol Ünitesi',
+        '3416 > S-AIK Standalone Erişim Arayüzü Tuş Takımı',
+        '3417 > S-AIP Standalone Erişim Arayüzü Kart Okuyucu',
+        '3414 > AIK Erişim Arayüzü Tuş Takımı',
+        '3415 > AIP Erişim Arayüzü Kart Okuyucu',
+      ]
+    }
     // Kolay Montaj Ç.D. Kilitler için özel ürün listesi
     if (sectionTitle === 'Kolay Montaj Ç.D. Kilitler') {
       return [
@@ -1785,6 +1796,17 @@ function SectionProducts() {
                 '3113 > Elektronik Kollu Kilit - Standalone': '/elektronikkollukilitler/3113.jpg',
               }
               img = elektronikKolluKilitlerImageMap[item] || '/elektronikkollukilitler.png'
+            } else if (sectionTitle === 'İZLEME VE ERİŞİM KONTROL SİSTEMİ') {
+              // İZLEME VE ERİŞİM KONTROL SİSTEMİ section'ı için özel resim mapping
+              const izlemeVeErisimKontrolImageMap = {
+                '3402 > ACU Erişim Kontrol Ünitesi': '/izlemeveerisimkontrol/3402.jpg',
+                '3403 > ACU Plus Erişim Kontrol Ünitesi': '/izlemeveerisimkontrol/3403.jpg',
+                '3416 > S-AIK Standalone Erişim Arayüzü Tuş Takımı': '/izlemeveerisimkontrol/3416.jpg',
+                '3417 > S-AIP Standalone Erişim Arayüzü Kart Okuyucu': '/izlemeveerisimkontrol/3417.jpg',
+                '3414 > AIK Erişim Arayüzü Tuş Takımı': '/izlemeveerisimkontrol/3414.jpg',
+                '3415 > AIP Erişim Arayüzü Kart Okuyucu': '/izlemeveerisimkontrol/3415.jpg',
+              }
+              img = izlemeVeErisimKontrolImageMap[item] || '/izlemeveerisimkontrol.png'
             }
             const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
             // Ürün adından sayıyı çıkar (örn: "001 > Kollu Kilit" -> code: "001", name: "Kollu Kilit")
