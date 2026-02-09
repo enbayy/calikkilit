@@ -9783,27 +9783,6 @@ function ProductDetail() {
                     />
                   </div>
                 </div>
-                {/* Sızdırmazlık profilleri kartları (Geçme Conta, Hijyenik Conta, U Tipi Fitiller): detay sayfasında resim1 */}
-                {(location?.state?.fromSection === 'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA' || (() => {
-                  const n = String(productDetail?.name || productInfo?.name || productName || '')
-                  if (n.includes('340.09.') && (n.includes('Geçme Conta') || n.includes('Hijyenik Conta'))) return true
-                  if (n.includes('U Tipi Fitiller') && /3400101[0-5]/.test(n)) return true
-                  return false
-                })()) && (
-                  <div className="w-full max-w-md rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                    <div className="flex items-center gap-2 mb-4">
-                      <div className="h-1 w-8 rounded-full bg-[#166534]" />
-                      <h3 className="text-lg font-bold text-slate-900">Sızdırmazlık Profili</h3>
-                    </div>
-                    <div className="flex items-center justify-center bg-slate-50 rounded-xl overflow-hidden min-h-[120px]">
-                      <img
-                        src="/sizdirmazlikprofilleri/resim1.png"
-                        alt="Sızdırmazlık profili"
-                        className="max-w-full w-full h-auto object-contain"
-                      />
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Sağ Kolon - Ürün Bilgileri */}
@@ -10583,6 +10562,28 @@ function ProductDetail() {
                 </div>
               </div>
             </div>
+
+            {/* Sızdırmazlık Profili - en altta, tam genişlik (sadece Sızdırmazlık Profilleri sayfası ürünlerinde) */}
+            {(location?.state?.fromSection === 'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA' || (() => {
+              const n = String(productDetail?.name || productInfo?.name || productName || '')
+              if (n.includes('340.09.') && (n.includes('Geçme Conta') || n.includes('Hijyenik Conta'))) return true
+              if (n.includes('U Tipi Fitiller') && /3400101[0-5]/.test(n)) return true
+              return false
+            })()) && (
+              <div className="mt-10 w-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <div className="flex items-center gap-2 mb-6">
+                  <div className="h-1 w-8 rounded-full bg-[#166534]" />
+                  <h3 className="text-xl font-bold text-slate-900">Sızdırmazlık Profili</h3>
+                </div>
+                <div className="flex justify-center items-center bg-slate-50 rounded-xl overflow-hidden w-full px-2 sm:px-4 md:px-6 py-4 min-h-[180px] sm:min-h-[220px] md:min-h-[280px]">
+                  <img
+                    src="/sizdirmazlikprofilleri/resim1.png"
+                    alt="Sızdırmazlık profili"
+                    className="w-full max-w-full sm:max-w-3xl md:max-w-5xl lg:max-w-6xl xl:max-w-7xl h-auto object-contain"
+                  />
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <>
