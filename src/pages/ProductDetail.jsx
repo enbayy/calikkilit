@@ -6404,6 +6404,190 @@ const productDetails = {
     ],
     relatedProducts: [],
   },
+  '1300 > Yapışkanlı Conta': {
+    code: '1300',
+    name: 'Yapışkanlı Conta',
+    description: '',
+    materials: {},
+    surface: '',
+    versions: [
+      { urunKodu: '1300.3.10', AMM: '3', BMM: '10', ruloUzunlugu: '50' },
+      { urunKodu: '1300.3.15', AMM: '3', BMM: '15', ruloUzunlugu: '50' },
+      { urunKodu: '1300.3.20', AMM: '3', BMM: '20', ruloUzunlugu: '50' },
+      { urunKodu: '1300.4.10', AMM: '4', BMM: '10', ruloUzunlugu: '50' },
+      { urunKodu: '1300.4.15', AMM: '4', BMM: '15', ruloUzunlugu: '50' },
+      { urunKodu: '1300.4.20', AMM: '4', BMM: '20', ruloUzunlugu: '50' },
+      { urunKodu: '1300.5.10', AMM: '5', BMM: '10', ruloUzunlugu: '50' },
+      { urunKodu: '1300.5.15', AMM: '5', BMM: '15', ruloUzunlugu: '50' },
+      { urunKodu: '1300.5.20', AMM: '5', BMM: '20', ruloUzunlugu: '50' },
+      { urunKodu: '1300.6.10', AMM: '6', BMM: '10', ruloUzunlugu: '25' },
+      { urunKodu: '1300.6.15', AMM: '6', BMM: '15', ruloUzunlugu: '25' },
+      { urunKodu: '1300.6.20', AMM: '6', BMM: '20', ruloUzunlugu: '25' },
+      { urunKodu: '1300.7.10', AMM: '7', BMM: '10', ruloUzunlugu: '25' },
+      { urunKodu: '1300.7.15', AMM: '7', BMM: '15', ruloUzunlugu: '25' },
+      { urunKodu: '1300.7.25', AMM: '7', BMM: '25', ruloUzunlugu: '25' },
+      { urunKodu: '1300.8.10', AMM: '8', BMM: '10', ruloUzunlugu: '25' },
+      { urunKodu: '1300.8.15', AMM: '8', BMM: '15', ruloUzunlugu: '25' },
+      { urunKodu: '1300.8.20', AMM: '8', BMM: '20', ruloUzunlugu: '25' },
+      { urunKodu: '1300.9.15', AMM: '9', BMM: '15', ruloUzunlugu: '25' },
+      { urunKodu: '1300.9.20', AMM: '9', BMM: '20', ruloUzunlugu: '25' },
+      { urunKodu: '1300.10.15', AMM: '10', BMM: '15', ruloUzunlugu: '25' },
+      { urunKodu: '1300.10.20', AMM: '10', BMM: '20', ruloUzunlugu: '25' },
+    ],
+    relatedProducts: [],
+  },
+  '1100 > Yapışkanlı Dökme Conta': {
+    code: '1100',
+    name: 'Yapışkanlı Dökme Conta',
+    description: '',
+    materials: {},
+    surface: '',
+    versions: [
+      { urunKodu: '1100.2.10', AMM: '2', BMM: '10', ruloUzunlugu: '10' },
+      { urunKodu: '1100.2.15', AMM: '2', BMM: '15', ruloUzunlugu: '10' },
+      { urunKodu: '1100.2.20', AMM: '2', BMM: '20', ruloUzunlugu: '10' },
+      { urunKodu: '1100.2.25', AMM: '2', BMM: '25', ruloUzunlugu: '10' },
+      { urunKodu: '1100.2.30', AMM: '2', BMM: '30', ruloUzunlugu: '10' },
+      { urunKodu: '1100.3.10', AMM: '3', BMM: '10', ruloUzunlugu: '10' },
+      { urunKodu: '1100.3.15', AMM: '3', BMM: '15', ruloUzunlugu: '10' },
+      { urunKodu: '1100.3.18', AMM: '3', BMM: '18', ruloUzunlugu: '10' },
+      { urunKodu: '1100.3.20', AMM: '3', BMM: '20', ruloUzunlugu: '10' },
+      { urunKodu: '1100.3.25', AMM: '3', BMM: '25', ruloUzunlugu: '10' },
+      { urunKodu: '1100.3.30', AMM: '3', BMM: '30', ruloUzunlugu: '10' },
+      { urunKodu: '1100.3.40', AMM: '3', BMM: '40', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.10', AMM: '5', BMM: '10', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.13', AMM: '5', BMM: '13', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.15', AMM: '5', BMM: '15', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.18', AMM: '5', BMM: '18', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.20', AMM: '5', BMM: '20', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.25', AMM: '5', BMM: '25', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.30', AMM: '5', BMM: '30', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.35', AMM: '5', BMM: '35', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.40', AMM: '5', BMM: '40', ruloUzunlugu: '10' },
+      { urunKodu: '1100.5.50', AMM: '5', BMM: '50', ruloUzunlugu: '10' },
+      { urunKodu: '1100.8.8', AMM: '8', BMM: '8', ruloUzunlugu: '10' },
+      { urunKodu: '1100.8.10', AMM: '8', BMM: '10', ruloUzunlugu: '10' },
+      { urunKodu: '1100.8.12', AMM: '8', BMM: '12', ruloUzunlugu: '10' },
+      { urunKodu: '1100.8.15', AMM: '8', BMM: '15', ruloUzunlugu: '5' },
+      { urunKodu: '1100.8.20', AMM: '8', BMM: '20', ruloUzunlugu: '5' },
+      { urunKodu: '1100.8.25', AMM: '8', BMM: '25', ruloUzunlugu: '5' },
+      { urunKodu: '1100.8.30', AMM: '8', BMM: '30', ruloUzunlugu: '5' },
+      { urunKodu: '1100.8.40', AMM: '8', BMM: '40', ruloUzunlugu: '5' },
+      { urunKodu: '1100.10.10', AMM: '10', BMM: '10', ruloUzunlugu: '5' },
+      { urunKodu: '1100.10.12', AMM: '10', BMM: '12', ruloUzunlugu: '5' },
+      { urunKodu: '1100.10.15', AMM: '10', BMM: '15', ruloUzunlugu: '5' },
+      { urunKodu: '1100.10.20', AMM: '10', BMM: '20', ruloUzunlugu: '5' },
+      { urunKodu: '1100.10.25', AMM: '10', BMM: '25', ruloUzunlugu: '5' },
+      { urunKodu: '1100.10.30', AMM: '10', BMM: '30', ruloUzunlugu: '5' },
+      { urunKodu: '1100.10.35', AMM: '10', BMM: '35', ruloUzunlugu: '5' },
+      { urunKodu: '1100.10.40', AMM: '10', BMM: '40', ruloUzunlugu: '5' },
+    ],
+    relatedProducts: [],
+  },
+  '1200 > Yapışkanlı Conta': {
+    code: '1200',
+    name: 'Yapışkanlı Conta',
+    description: '',
+    materials: {},
+    surface: '',
+    versions: [
+      { urunKodu: '1200.2.10', AMM: '2', BMM: '10', ruloUzunlugu: '10' },
+      { urunKodu: '1200.2.15', AMM: '2', BMM: '15', ruloUzunlugu: '10' },
+      { urunKodu: '1200.2.20', AMM: '2', BMM: '20', ruloUzunlugu: '10' },
+      { urunKodu: '1200.2.25', AMM: '2', BMM: '25', ruloUzunlugu: '10' },
+      { urunKodu: '1200.2.30', AMM: '2', BMM: '30', ruloUzunlugu: '10' },
+      { urunKodu: '1200.3.10', AMM: '3', BMM: '10', ruloUzunlugu: '10' },
+      { urunKodu: '1200.3.15', AMM: '3', BMM: '15', ruloUzunlugu: '10' },
+      { urunKodu: '1200.3.18', AMM: '3', BMM: '18', ruloUzunlugu: '10' },
+      { urunKodu: '1200.3.20', AMM: '3', BMM: '20', ruloUzunlugu: '10' },
+      { urunKodu: '1200.3.25', AMM: '3', BMM: '25', ruloUzunlugu: '10' },
+      { urunKodu: '1200.3.30', AMM: '3', BMM: '30', ruloUzunlugu: '10' },
+      { urunKodu: '1200.3.40', AMM: '3', BMM: '40', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.10', AMM: '5', BMM: '10', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.13', AMM: '5', BMM: '13', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.15', AMM: '5', BMM: '15', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.18', AMM: '5', BMM: '18', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.20', AMM: '5', BMM: '20', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.25', AMM: '5', BMM: '25', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.30', AMM: '5', BMM: '30', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.35', AMM: '5', BMM: '35', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.40', AMM: '5', BMM: '40', ruloUzunlugu: '10' },
+      { urunKodu: '1200.5.50', AMM: '5', BMM: '50', ruloUzunlugu: '10' },
+      { urunKodu: '1200.8.8', AMM: '8', BMM: '8', ruloUzunlugu: '10' },
+      { urunKodu: '1200.8.10', AMM: '8', BMM: '10', ruloUzunlugu: '10' },
+      { urunKodu: '1200.8.12', AMM: '8', BMM: '12', ruloUzunlugu: '10' },
+      { urunKodu: '1200.8.15', AMM: '8', BMM: '15', ruloUzunlugu: '5' },
+      { urunKodu: '1200.8.20', AMM: '8', BMM: '20', ruloUzunlugu: '5' },
+      { urunKodu: '1200.8.25', AMM: '8', BMM: '25', ruloUzunlugu: '5' },
+      { urunKodu: '1200.8.30', AMM: '8', BMM: '30', ruloUzunlugu: '5' },
+      { urunKodu: '1200.8.40', AMM: '8', BMM: '40', ruloUzunlugu: '5' },
+      { urunKodu: '1200.10.10', AMM: '10', BMM: '10', ruloUzunlugu: '5' },
+      { urunKodu: '1200.10.12', AMM: '10', BMM: '12', ruloUzunlugu: '5' },
+      { urunKodu: '1200.10.15', AMM: '10', BMM: '15', ruloUzunlugu: '5' },
+      { urunKodu: '1200.10.20', AMM: '10', BMM: '20', ruloUzunlugu: '5' },
+      { urunKodu: '1200.10.25', AMM: '10', BMM: '25', ruloUzunlugu: '5' },
+      { urunKodu: '1200.10.30', AMM: '10', BMM: '30', ruloUzunlugu: '5' },
+      { urunKodu: '1200.10.35', AMM: '10', BMM: '35', ruloUzunlugu: '5' },
+      { urunKodu: '1200.10.40', AMM: '10', BMM: '40', ruloUzunlugu: '5' },
+    ],
+    relatedProducts: [],
+  },
+  '340.09.966 > Yapışkanlı Conta': {
+    code: '340.09.966',
+    name: 'Yapışkanlı Conta',
+    description: '',
+    materials: {
+      'Malzeme': 'EPDM',
+      'Renk': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.09.966', malzeme: 'EPDM', renk: 'Siyah', R1: '-', R2: '-', R3: '-', R4: '-', DT: '-', ambalaj: '200' },
+    ],
+    relatedProducts: [],
+  },
+  '340.09.968 > Yapışkanlı Conta': {
+    code: '340.09.968',
+    name: 'Yapışkanlı Conta',
+    description: '',
+    materials: {
+      'Malzeme': 'EPDM',
+      'Renk': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.09.968', malzeme: 'EPDM', renk: 'Siyah', R1: '-', R2: '-', R3: '-', R4: '-', DT: '-', ambalaj: '100' },
+    ],
+    relatedProducts: [],
+  },
+  '340.09.969 > Yapışkanlı Conta': {
+    code: '340.09.969',
+    name: 'Yapışkanlı Conta',
+    description: '',
+    materials: {
+      'Malzeme': 'EPDM',
+      'Renk': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.09.969', malzeme: 'EPDM', renk: 'Siyah', R1: '-', R2: '-', R3: '-', R4: '-', DT: '-', ambalaj: '100' },
+    ],
+    relatedProducts: [],
+  },
+  '340.09.970 > Yapışkanlı Conta': {
+    code: '340.09.970',
+    name: 'Yapışkanlı Conta',
+    description: '',
+    materials: {
+      'Malzeme': 'EPDM',
+      'Renk': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.09.970', malzeme: 'EPDM', renk: 'Siyah', R1: '-', R2: '-', R3: '-', R4: '-', DT: '-', ambalaj: '100' },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -7126,6 +7310,21 @@ function ProductDetail() {
     
     if (aksesuarlarPdfMap[code]) {
       return aksesuarlarPdfMap[code]
+    }
+    
+    // Yapışkanlı Contalar için özel PDF mapping
+    const yapiskanliContalarPdfMap = {
+      '1300': '/yapiskanlicontalar/1300-yapiskanli-conta.pdf',
+      '1100': '/yapiskanlicontalar/1100-yapiskanli-dokme-conta.pdf',
+      '1200': '/yapiskanlicontalar/1200-yapiskanli-conta.pdf',
+      '340.09.966': '/yapiskanlicontalar/34009966-yapiskanli-conta.pdf',
+      '340.09.968': '/yapiskanlicontalar/34009968-yapiskanli-conta.pdf',
+      '340.09.969': '/yapiskanlicontalar/34009969-yapiskanli-conta.pdf',
+      '340.09.970': '/yapiskanlicontalar/34009970-yapiskanli-conta.pdf',
+    }
+    
+    if (yapiskanliContalarPdfMap[code]) {
+      return yapiskanliContalarPdfMap[code]
     }
     
     // Özel durumlar
@@ -8963,6 +9162,13 @@ function ProductDetail() {
                                       <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Yüzey</th>
                                     )}
                                   </>
+                                ) : (productDetail.code === '340.09.966' || productDetail.code === '340.09.968' || productDetail.code === '340.09.969' || productDetail.code === '340.09.970') ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Malzeme</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Renk</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ambalaj</th>
+                                  </>
                                 ) : productDetail.versions[0]?.malzeme ? (
                                   <>
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
@@ -8990,6 +9196,13 @@ function ProductDetail() {
                                       <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Kapı Kalınlığı (DT)</th>
                                     )}
                                     <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                  </>
+                                ) : productDetail.versions[0]?.AMM && productDetail.versions[0]?.BMM && productDetail.versions[0]?.ruloUzunlugu ? (
+                                  <>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">A mm</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">B mm</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">Ürün Kodu</th>
+                                    <th className="border border-slate-200 px-4 py-3 text-center text-sm font-semibold text-slate-900">RULO UZUNLUĞU (M)</th>
                                   </>
                                 ) : productDetail.versions[0]?.Hmm && productDetail.versions[0]?.Lmm ? (
                                   <>
@@ -9210,6 +9423,13 @@ function ProductDetail() {
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H2}</td>
                                   <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.H3}</td>
                                 </>
+                              ) : (productDetail.code === '340.09.966' || productDetail.code === '340.09.968' || productDetail.code === '340.09.969' || productDetail.code === '340.09.970') && version.urunKodu ? (
+                                <>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.malzeme || ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.renk || ''}</td>
+                                  <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.ambalaj || ''}</td>
+                                </>
                               ) : version.urunKodu && version.gobekCesidi ? (
                                 <>
                                   <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
@@ -9248,6 +9468,13 @@ function ProductDetail() {
                                         <td className="border border-slate-200 px-4 py-3 text-sm text-slate-700">{version.aciklama || ''}</td>
                                       )}
                                       <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                    </>
+                                  ) : version.AMM && version.BMM && version.ruloUzunlugu ? (
+                                    <>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.AMM}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.BMM}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm font-medium text-slate-900">{version.urunKodu}</td>
+                                      <td className="border border-slate-200 px-4 py-3 text-sm text-center text-slate-700">{version.ruloUzunlugu}</td>
                                     </>
                                   ) : version.Hmm && version.Lmm ? (
                                     <>

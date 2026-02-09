@@ -1360,6 +1360,21 @@ function SectionProducts() {
       return aksesuarlarImageMap[itemName]
     }
     
+    // Yapışkanlı Contalar için özel resim mapping
+    const yapiskanliContalarImageMap = {
+      '1300 > Yapışkanlı Conta': '/yapiskanlicontalar/1300.jpg',
+      '1100 > Yapışkanlı Dökme Conta': '/yapiskanlicontalar/1100.jpeg',
+      '1200 > Yapışkanlı Conta': '/yapiskanlicontalar/1200.jpeg',
+      '340.09.966 > Yapışkanlı Conta': '/yapiskanlicontalar/34009966-1-1.jpg',
+      '340.09.968 > Yapışkanlı Conta': '/yapiskanlicontalar/34009968-1-1.jpg',
+      '340.09.969 > Yapışkanlı Conta': '/yapiskanlicontalar/34009969-1-1.jpg',
+      '340.09.970 > Yapışkanlı Conta': '/yapiskanlicontalar/34009970-1-1.jpg',
+    }
+    
+    if (yapiskanliContalarImageMap[itemName]) {
+      return yapiskanliContalarImageMap[itemName]
+    }
+    
     // Ürün bazlı özel mapping
     const imageMap = {
       'ALÜMİNYUM GÖVDELİ DİŞLİ POMPALAR': '/aligodi.png',
