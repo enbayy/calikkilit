@@ -449,6 +449,7 @@ const catalogGroups = [
   { title: 'MENTEŞELER', sections: hingeSections },
   { title: 'CONTALAR', sections: sealSections },
   { title: 'AKSESUARLAR VE KULPLAR', sections: accessorySections },
+  { title: 'PASLANMAZ ÇELİK ÜRÜNLER', sections: stainlessSteelSections },
   { title: 'ELEKTRONİK', sections: electronicSections },
 ]
 
@@ -517,6 +518,21 @@ function Products() {
   }
 
   const handleSectionClick = (sectionTitle) => {
+    // Paslanmaz çelik ürünler için özel kontrol
+    const stainlessSteelGroup = catalogGroups.find((g) => g.title === 'PASLANMAZ ÇELİK ÜRÜNLER')
+    if (stainlessSteelGroup && stainlessSteelGroup.sections.some((s) => s.title === sectionTitle)) {
+      const stainlessSlugMap = {
+        'KİLİTLER': 'paslanmaz-celik-urunler/kilitler',
+        'MENTEŞELER': 'paslanmaz-celik-urunler/menteseler',
+        'AKSESUARLAR': 'paslanmaz-celik-urunler/aksesuarlar',
+      }
+      const slug = stainlessSlugMap[sectionTitle]
+      if (slug) {
+        navigate(`/urunler/${slug}`)
+        return
+      }
+    }
+    
     // Belirli alt başlıklar için ayrı sayfaya yönlendir
     const slugMap = {
       'KOLLU KİLİTLER': 'kollu-kilitler',

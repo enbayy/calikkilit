@@ -584,6 +584,9 @@ function SectionProducts() {
       'izleme-ve-erisim-kontrol-sistemi': 'İZLEME VE ERİŞİM KONTROL SİSTEMİ',
       'elektronik-dolap-kilitleri': 'ELEKTRONİK DOLAP KİLİTLERİ',
       'diger-elektronik-kilitler': 'DİĞER ELEKTRONİK KİLİTLER',
+      'paslanmaz-celik-urunler/kilitler': 'PASLANMAZ ÇELİK KİLİTLER',
+      'paslanmaz-celik-urunler/menteseler': 'PASLANMAZ ÇELİK MENTEŞELER',
+      'paslanmaz-celik-urunler/aksesuarlar': 'PASLANMAZ ÇELİK AKSESUARLAR',
     }
     return slugToTitle[fullSectionSlug] || slugToTitle[sectionSlug] || null
   }, [fullSectionSlug, sectionSlug])
@@ -882,6 +885,97 @@ function SectionProducts() {
         '466 > Mini Butonlu Kilit',
       ]
     }
+    // Paslanmaz Çelik Kilitler için özel ürün listesi
+    if (sectionTitle === 'PASLANMAZ ÇELİK KİLİTLER') {
+      return [
+        '401 > Kollu Kilit',
+        '501 > Kollu Kilit',
+        '502 > İspanyolet Sistemli Kollu Kilit',
+        '402 > İspanyolet Sistemli Kollu Kilit',
+        '103 > İspanyolet Sistemli Kollu Kilit',
+        '016 > Kabin Kilidi',
+        '416 > Kabin Kilidi',
+        '266 > Mini Çeyrek Dönüşlü Yaylı Kilit',
+        '066 > Mini Çeyrek Dönüşlü Yaylı Kilit',
+        '064 > Çeyrek Dönüşlü Yaylı Kilit',
+        '060 > Çeyrek Dönüşlü Yaylı Kilit',
+        '160 > Dilli Yaylı Kilit',
+        '260 > Asma Kilit Hamili Çeyrek Dönüşlü Kilit',
+        '140 > Mini Sıkıştırmalı Kilit',
+        '2040 > Göstergeli Sıkıştırmalı Kilit v1',
+        '2040 > Göstergeli Sıkıştırmalı Kilit v2',
+        '2060 > Göstergeli Çeyrek Dönüşlü Kilit',
+        '1060 > Çeyrek Dönüşlü Yaylı Kilit',
+        '040 > Sıkıştırmalı Kilit v1',
+        '040 > Sıkıştırmalı Kilit v2',
+        '540 > Sıkıştırmalı Kilit v1',
+        '540 > Sıkıştırmalı Kilit v2',
+        '440 > Hijyenik Sıkıştırmalı Kilit v1',
+        '440 > Hijyenik Sıkıştırmalı Kilit v2',
+        '460 > Hijyenik Kilit',
+        '045 > Sıkıştırmalı Yaylı Kilit',
+        '211 > Asma Kilit Hamili \'L\' Kollu Kilit',
+        '562 > Asma Kilit Hamili Kelebek Kilit',
+        '110 > Çeyrek Dönüşlü Kilit - \'T\' Kollu',
+        '111 > "L" Kollu Kilit',
+        '065 > Kelebek Kilit',
+        '265 > Asma Kilit Hamili Kelebek Kilit',
+        '063 > Silindirli Kilit',
+        '411 > Asma Kilit Hamili \'L\' Kollu Kilit',
+        '860 > Çeyrek Dönüşlü Kilit',
+        '042 > Civatalı Kilit',
+        '276 > Kancalı Mandal',
+      ]
+    }
+    // Paslanmaz Çelik Menteşeler için özel ürün listesi
+    if (sectionTitle === 'PASLANMAZ ÇELİK MENTEŞELER') {
+      return [
+        '295 > Gizli Menteşe',
+        '395 > Gizli Menteşe',
+        '695 > Gizli Menteşe',
+        '795 > Gizli Menteşe',
+        '289 > Gizli Menteşe',
+        '1995 > Gizli Menteşe',
+        '995 > Gizli Menteşe',
+        '095 > Gizli Menteşe',
+        '097 > Köşe Menteşe',
+        '4299 > Yaprak Menteşe (Kaldır-Çıkar)',
+        '3599 > Kaldır - Çıkar Menteşe',
+        '1293 > Kaldır - Çıkar Menteşe',
+        '1393 > Kaldır Çıkar Menteşe',
+        '1299 > Mini Yaprak Menteşe',
+        '600 > Düz Menteşe',
+        '3299 > Yaprak Menteşe',
+        '3099 > Kaldır - Çıkar Menteşe',
+        '3399 > Yaprak Menteşe',
+        '299 > Yaprak Menteşe',
+        '099 > Yaprak Menteşe v1',
+        '399 > Yaprak Menteşe v1',
+        '099 > Yaprak Menteşe v2',
+        '399 > Yaprak Menteşe v2',
+        '4599 > Yaprak Menteşe',
+        '599 > Yaprak Menteşe',
+        '799 > Yaprak Menteşe',
+        '1599 > Yaprak Menteşe',
+        '899 > Yaprak Menteşe (Kaldır-Çıkar)',
+        '999 > Yaprak Menteşe',
+        '2999 > Yaprak Menteşe',
+        '2890 > Gizli Menteşe',
+        '090 > Kenar Menteşe (10mm)',
+        '092 > Kenar Menteşe (12mm)',
+        '192 > Kenar Menteşe (12mm)',
+        '193 > Kenar Menteşe (16mm)',
+      ]
+    }
+    // Paslanmaz Çelik Aksesuarlar için özel ürün listesi
+    if (sectionTitle === 'PASLANMAZ ÇELİK AKSESUARLAR') {
+      return [
+        '340.00.132 > Gerdirme Mandalı',
+        '079 > Kapak Tutucu Makası',
+        '179 > Kapak Tutucu Makası',
+        '279 > Kapak Tutucu Makası',
+      ]
+    }
     // Diller için özel ürün listesi
     if (sectionTitle === 'Diller') {
       return [
@@ -994,6 +1088,9 @@ function SectionProducts() {
   const categoryImageMap = {
     'KOLLU KİLİTLER': '/kollukilit.png',
     'İSPANYOLET SİSTEMLİ KİLİTLER': '/ispanyoletsistemlikilitler.png',
+    'PASLANMAZ ÇELİK KİLİTLER': '/paslanmaz-celik-kilitler.png',
+    'PASLANMAZ ÇELİK MENTEŞELER': '/paslanmaz-celik-menteseler.png',
+    'PASLANMAZ ÇELİK AKSESUARLAR': '/paslanmaz-celik-aksesuarlar.png',
     'TRAFO VE KABİN KİLİTLERİ': '/trafovekabinkilitleri.png',
     'Kabin Kilitleri': '/trafovekabinkilitleri.png',
     'KİLİMA SANTRAL ÜRÜNLERİ': '/klimasantralurunleri.png',
@@ -1846,6 +1943,133 @@ function SectionProducts() {
                 img = digerUrunImageMap[code] || '/cesitliurunler/cucesitli.jpg'
               } else {
                 img = '/cesitliurunler/cucesitli.jpg'
+              }
+            } else if (sectionTitle === 'PASLANMAZ ÇELİK KİLİTLER') {
+              // Paslanmaz Çelik Kilitler section'ı için özel resim mapping - kilitler klasöründeki resimler
+              const code = item.match(/^(\d+)\s*>/)?.[1]
+              if (code) {
+                // v1 ve v2 versiyonları için özel kontrol
+                if (code === '2040' && item.includes('Göstergeli Sıkıştırmalı Kilit')) {
+                  img = item.includes('v1') ? '/kilitler/2040_v1.jpg' :
+                        item.includes('v2') ? '/kilitler/2040_v2.jpg' :
+                        '/kilitler/2040_v1.jpg'
+                } else if (code === '040' && item.includes('Sıkıştırmalı Kilit')) {
+                  img = item.includes('v1') ? '/kilitler/040_v1.jpg' :
+                        item.includes('v2') ? '/kilitler/040_v2.jpg' :
+                        '/kilitler/040_v1.jpg'
+                } else if (code === '540' && item.includes('Sıkıştırmalı Kilit')) {
+                  img = item.includes('v1') ? '/kilitler/540_v1.jpg' :
+                        item.includes('v2') ? '/kilitler/540_v2.jpg' :
+                        '/kilitler/540_v1.jpg'
+                } else if (code === '440' && item.includes('Hijyenik Sıkıştırmalı Kilit')) {
+                  img = item.includes('v1') ? '/kilitler/440-v1.jpg' :
+                        item.includes('v2') ? '/kilitler/440-v2.jpg' :
+                        '/kilitler/440-v1.jpg'
+                } else {
+                  const paslanmazCelikKilitImageMap = {
+                    '401': '/kilitler/401.jpg',
+                    '501': '/kilitler/501.jpg',
+                    '502': '/kilitler/502.jpg',
+                    '402': '/kilitler/402_b.jpg',
+                    '103': '/kilitler/103pas1204.jpg',
+                    '016': '/kilitler/016_pas_orta_boy.jpg',
+                    '416': '/kilitler/016_pas_orta_boy.jpg', // 416 için resim yok, 016'yı kullan
+                    '266': '/kilitler/266.jpg',
+                    '066': '/kilitler/066.jpg',
+                    '064': '/kilitler/064.jpg',
+                    '060': '/kilitler/060.jpg',
+                    '160': '/kilitler/160.jpg',
+                    '260': '/kilitler/260_paslanmaz.jpg',
+                    '140': '/kilitler/140_paslanmaz_393.jpg',
+                    '2060': '/kilitler/2060.jpg',
+                    '1060': '/kilitler/1060.jpg',
+                    '460': '/kilitler/460.jpg',
+                    '045': '/kilitler/045.jpg',
+                    '211': '/kilitler/211.jpg',
+                    '562': '/kilitler/562.jpg',
+                    '110': '/kilitler/110_pas_fiseli.jpg',
+                    '111': '/kilitler/111_paslanmaz-fiseli.jpg',
+                    '065': '/kilitler/065_paslanmaz-fiseli.jpg',
+                    '265': '/kilitler/265.jpg',
+                    '063': '/kilitler/063_paslanmaz.jpg',
+                    '411': '/kilitler/411_paslanmaz.jpg',
+                    '860': '/kilitler/860.jpg',
+                    '042': '/kilitler/042.jpg',
+                    '276': '/kilitler/276_rf.jpg',
+                  }
+                  img = paslanmazCelikKilitImageMap[code] || getPumpImage(item)
+                }
+              } else {
+                img = getPumpImage(item)
+              }
+            } else if (sectionTitle === 'PASLANMAZ ÇELİK MENTEŞELER') {
+              // Paslanmaz Çelik Menteşeler section'ı için özel resim mapping
+              const code = item.match(/^(\d+)\s*>/)?.[1]
+              if (code) {
+                // 099 ve 399 için v1 ve v2 versiyonları için özel kontrol
+                if (code === '099' && item.includes('Yaprak Menteşe')) {
+                  img = item.includes('v1') ? '/duzmenteseler/099v1sb.jpg' :
+                        item.includes('v2') ? '/duzmenteseler/099v1sb.jpg' : // v2 için resim yok, v1'i kullan
+                        '/duzmenteseler/099v1sb.jpg'
+                } else if (code === '399' && item.includes('Yaprak Menteşe')) {
+                  img = item.includes('v1') ? '/duzmenteseler/399_v2_siyah-soya.jpeg' : // v1 için resim yok, v2'yi kullan
+                        item.includes('v2') ? '/duzmenteseler/399_v2_siyah-soya.jpeg' :
+                        '/duzmenteseler/399_v2_siyah-soya.jpeg'
+                } else {
+                  const paslanmazCelikMenteseImageMap = {
+                    // Gizli Menteşeler - gizlimenteseler klasöründen
+                    '295': '/gizlimenteseler/295_v3.jpg',
+                    '395': '/gizlimenteseler/395_1.jpg',
+                    '695': '/gizlimenteseler/695_v1.jpg',
+                    '795': '/gizlimenteseler/795.jpg',
+                    '289': '/gizlimenteseler/289_v2.jpg',
+                    '1995': '/gizlimenteseler/1995_v4.jpg',
+                    '995': '/gizlimenteseler/995_v1.jpg',
+                    '095': '/gizlimenteseler/095_1.jpg',
+                    '2890': '/gizlimenteseler/289_v2.jpg', // 2890 için 289 resmi kullan
+                    // Köşe Menteşeler - kosementeseler klasöründen
+                    '097': '/kosementeseler/097_siyah-boya.jpg',
+                    // Düz Menteşeler - duzmenteseler klasöründen
+                    '4299': '/duzmenteseler/4299.jpg',
+                    '3599': '/duzmenteseler/699_v1_krom.jpg', // 3599 için 699 resmi kullan
+                    '1293': '/duzmenteseler/699_v1_krom.jpg', // 1293 için 699 resmi kullan
+                    '1393': '/duzmenteseler/1399_v2.jpeg', // 1393 için 1399 resmi kullan
+                    '1299': '/duzmenteseler/1299dd-1-1.jpg',
+                    '600': '/kosementeseler/600_kose.jpg', // 600 için köşe menteşe resmi kullan (duzmenteseler'de yok)
+                    '3299': '/duzmenteseler/299_siyah-boya-1611.jpeg', // 3299 için 299 resmi kullan
+                    '3099': '/duzmenteseler/699_v1_krom.jpg', // 3099 için 699 resmi kullan
+                    '3399': '/duzmenteseler/399_v2_siyah-soya.jpeg', // 3399 için 399 resmi kullan
+                    '299': '/duzmenteseler/299_siyah-boya-1611.jpeg',
+                    '4599': '/duzmenteseler/4599-v2-copyd.jpg',
+                    '599': '/duzmenteseler/599_siyah-boya.jpeg',
+                    '799': '/duzmenteseler/799_v2_siyah.jpeg',
+                    '1599': '/duzmenteseler/1599_v6_krom495.jpg',
+                    '899': '/duzmenteseler/899_siyah-boya.jpeg',
+                    '999': '/duzmenteseler/900_siyah-boya.jpeg', // 999 için 900 resmi kullan
+                    '2999': '/duzmenteseler/299_siyah-boya-1611.jpeg', // 2999 için 299 resmi kullan
+                    // Kenar Menteşeler - kenarmenteseler klasöründen
+                    '090': '/kenarmenteseler/090_nikel.jpg',
+                    '092': '/kenarmenteseler/092_krom.jpg',
+                    '192': '/kenarmenteseler/192_krom.jpg',
+                    '193': '/kenarmenteseler/193_krom.jpg',
+                  }
+                  img = paslanmazCelikMenteseImageMap[code] || getPumpImage(item)
+                }
+              } else {
+                img = getPumpImage(item)
+              }
+            } else if (sectionTitle === 'PASLANMAZ ÇELİK AKSESUARLAR') {
+              // Paslanmaz Çelik Aksesuarlar section'ı için özel resim mapping - pcuaksesuarlar klasöründen
+              if (item.includes('340.00.132')) {
+                img = '/pcuaksesuarlar/3400032.jpg' // 340.00.132 -> 3400032.jpg
+              } else if (item.includes('079 > Kapak Tutucu Makası')) {
+                img = '/pcuaksesuarlar/079.jpg'
+              } else if (item.includes('179 > Kapak Tutucu Makası')) {
+                img = '/pcuaksesuarlar/179.jpg'
+              } else if (item.includes('279 > Kapak Tutucu Makası')) {
+                img = '/pcuaksesuarlar/279.jpg'
+              } else {
+                img = getPumpImage(item)
               }
             } else if (sectionTitle === 'İspanyolet Çubuk ve Aksesuarları') {
               // İspanyolet Çubuk ve Aksesuarları section'ı için özel resim mapping
