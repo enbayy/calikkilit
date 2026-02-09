@@ -414,7 +414,8 @@ const accessorySections = [
       '484 > Metal Kulp',
       '884 > Alüminyum Kulp',
       '284 > Metal Kulp',
-      '384 > Metal Kulp',
+      '384 > Metal Kulp v1',
+      '384 > Metal Kulp v2',
       '584 > Katlanabilir Metal Kulp',
       '684 > Metal Kulp',
       '784 > Metal Kulp',
@@ -1325,6 +1326,40 @@ function SectionProducts() {
       return '/cesitliurunler/cucesitli.jpg'
     }
     
+    // Aksesuarlar için özel resim mapping
+    const aksesuarlarImageMap = {
+      '2300 > Havalandırma Panjuru': '/aksesuarlar/2300.jpg',
+      '2150 > Proje Cebi (A4)': '/aksesuarlar/2150_y3dr.jpg',
+      '2152 > Proje Cebi (A5)': '/aksesuarlar/2152_y3dr.jpg',
+      '2220 > Gözetleme Camı': '/aksesuarlar/2220.jpg',
+      '2216 > Sayaç Çerçevesi': '/aksesuarlar/2216_y3dr.jpg',
+      '2215 > Sayaç Çerçevesi': '/aksesuarlar/2215_y3dr.jpg',
+      '2451 > Aybolt': '/aksesuarlar/2451.jpg',
+      '2461 > Aybolt': '/aksesuarlar/2461.jpg',
+      '2400 > Kafesli Somun': '/aksesuarlar/2400.jpg',
+      '2700 > Gerdirme Mandalı': '/aksesuarlar/2700.jpg',
+      '2760 > Pim Kilitlemeli Tutamak': '/aksesuarlar/2760.jpg',
+      '2750 > Yaylı Yük Mandalı': '/aksesuarlar/2750.jpg',
+      '2751 > Yaylı Yük Mandalı (Perçinli)': '/aksesuarlar/2751.jpg',
+      '320.02.164 > Kablo Kanalı': '/aksesuarlar/32002164.jpg',
+      '025 > Cam Menteşesi': '/aksesuarlar/025cam-menteuesi.jpg',
+      '079 > Kapak Tutucu Makası': '/aksesuarlar/079.jpg',
+      '279 > Kapak Tutucu Makası': '/aksesuarlar/279.jpg',
+      '179 > Kapak Tutucu Makası': '/aksesuarlar/179.jpg',
+      '340.10.026 > Akustik Sünger': '/aksesuarlar/34010006akustik.jpg',
+      '340.00.370 > Diyafram Tipi Gromet': '/aksesuarlar/34000370_y3dr.jpg',
+      '340.00.380 > Diyafram Tipi Gromet': '/aksesuarlar/34000380_y3dr.jpg',
+      '340.08.010 > Kauçuk Stoper': '/aksesuarlar/34008010_y3dr.jpg',
+      '340.00.400 > Kauçuk Tıpa': '/aksesuarlar/34000400_y3dr.jpg',
+      '340.08.001 > Kapak Tutucu': '/aksesuarlar/34008001_y3dr.jpg',
+      '340.20.005.2000 > Kapı Altı Fırçası': '/aksesuarlar/34020005_y3dr.jpg',
+      '340.20.025.2000 > Kapı Altı Fırçası': '/aksesuarlar/34020025_y3dr.jpg',
+    }
+    
+    if (aksesuarlarImageMap[itemName]) {
+      return aksesuarlarImageMap[itemName]
+    }
+    
     // Ürün bazlı özel mapping
     const imageMap = {
       'ALÜMİNYUM GÖVDELİ DİŞLİ POMPALAR': '/aligodi.png',
@@ -1449,6 +1484,42 @@ function SectionProducts() {
       '300 > Klima Santral Menteşesi': '/duzmenteseler/300.jpg',
       '1500 > Klima Santral Menteşesi': '/duzmenteseler/1500.jpg',
       '0000 > Karoser Menteşe': '/duzmenteseler/0000karoser-1.jpg',
+      // Kulplar
+      '084 > Milenyum Kulp': '/kulplar/084_krom.jpg',
+      '085 > Çekme Kulpu': '/kulplar/085_krom.jpg',
+      '083 > Alüminyum Tutamak': '/kulplar/083.jpg',
+      '183 > Alüminyum Tutamak': '/kulplar/183_aluminyum-mat.jpg',
+      '184 > Metal Kulp': '/kulplar/184_aluminyum.jpg',
+      '484 > Metal Kulp': '/kulplar/484_aluminyum.jpg',
+      '884 > Alüminyum Kulp': '/kulplar/884_aluminyum.jpg',
+      '284 > Metal Kulp': '/kulplar/284_krom.jpg',
+      '384 > Metal Kulp v1': '/kulplar/384_v1,.jpg',
+      '384 > Metal Kulp v2': '/kulplar/384_,v2.jpg',
+      '584 > Katlanabilir Metal Kulp': '/kulplar/584_krom.jpg',
+      '684 > Metal Kulp': '/kulplar/684_krom.jpg',
+      '784 > Metal Kulp': '/kulplar/784_krom.jpg',
+      '185 > Parmak Kulp': '/kulplar/185-1-1-copy.jpg',
+      '086 > Makina Kapak Kulpu': '/kulplar/086_v1.jpg',
+      '186 > Makina Kapak Kulpu': '/kulplar/186_v1.jpg',
+      '386 > Kapak Kulpu': '/kulplar/386.jpg',
+      '081 > Kapak Kulpu': '/kulplar/081.jpg',
+      '087 > Makina Kapak Kulpu': '/kulplar/087.jpg',
+      '287 > Makina Kapak Kulpu': '/kulplar/287.jpg',
+      '187 > Makina Kapak Kulpu': '/kulplar/187.jpg',
+      '487 > Makina Kapak Kulpu': '/kulplar/487.jpg',
+      '286 > Kapak Kulpu': '/kulplar/286.jpg',
+      '387 > Makina Kapak Kulpu': '/kulplar/387.jpg',
+      '082 > Gömme Yaylı Kulp': '/kulplar/082.jpg',
+      '374 > Geçme Kapak Tutamağı': '/kulplar/374.jpg',
+      '274 > Geçme Kapak Tutamağı': '/kulplar/274_v1.jpg',
+      '074 > Geçme Kapak Tutamağı': '/kulplar/074.jpg',
+      '174 > Geçme Kapak Tutamağı': '/kulplar/174.jpg',
+      '674 > Geçme Kapak Tutamağı': '/kulplar/674.jpg',
+      '774 > Geçme Kapak Tutamağı': '/kulplar/774.jpg',
+      '874 > Geçme Kapak Tutamağı': '/kulplar/874.jpg',
+      '574 > Gömme Tutamak': '/kulplar/574.jpg',
+      '474 > Gömme Tutamak': '/kulplar/474.jpg',
+      '974 > Gömme Tutamak': '/kulplar/974.jpg',
     })
     
     return imageMap[itemName] || `https://via.placeholder.com/320x200.png?text=${encodeURIComponent(itemName)}`

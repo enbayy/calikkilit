@@ -842,6 +842,40 @@ function Products() {
       }
     }
     
+    // Aksesuarlar için özel resim mapping
+    const aksesuarlarImageMap = {
+      '2300 > Havalandırma Panjuru': '/aksesuarlar/2300.jpg',
+      '2150 > Proje Cebi (A4)': '/aksesuarlar/2150_y3dr.jpg',
+      '2152 > Proje Cebi (A5)': '/aksesuarlar/2152_y3dr.jpg',
+      '2220 > Gözetleme Camı': '/aksesuarlar/2220.jpg',
+      '2216 > Sayaç Çerçevesi': '/aksesuarlar/2216_y3dr.jpg',
+      '2215 > Sayaç Çerçevesi': '/aksesuarlar/2215_y3dr.jpg',
+      '2451 > Aybolt': '/aksesuarlar/2451.jpg',
+      '2461 > Aybolt': '/aksesuarlar/2461.jpg',
+      '2400 > Kafesli Somun': '/aksesuarlar/2400.jpg',
+      '2700 > Gerdirme Mandalı': '/aksesuarlar/2700.jpg',
+      '2760 > Pim Kilitlemeli Tutamak': '/aksesuarlar/2760.jpg',
+      '2750 > Yaylı Yük Mandalı': '/aksesuarlar/2750.jpg',
+      '2751 > Yaylı Yük Mandalı (Perçinli)': '/aksesuarlar/2751.jpg',
+      '320.02.164 > Kablo Kanalı': '/aksesuarlar/32002164.jpg',
+      '025 > Cam Menteşesi': '/aksesuarlar/025cam-menteuesi.jpg',
+      '079 > Kapak Tutucu Makası': '/aksesuarlar/079.jpg',
+      '279 > Kapak Tutucu Makası': '/aksesuarlar/279.jpg',
+      '179 > Kapak Tutucu Makası': '/aksesuarlar/179.jpg',
+      '340.10.026 > Akustik Sünger': '/aksesuarlar/34010006akustik.jpg',
+      '340.00.370 > Diyafram Tipi Gromet': '/aksesuarlar/34000370_y3dr.jpg',
+      '340.00.380 > Diyafram Tipi Gromet': '/aksesuarlar/34000380_y3dr.jpg',
+      '340.08.010 > Kauçuk Stoper': '/aksesuarlar/34008010_y3dr.jpg',
+      '340.00.400 > Kauçuk Tıpa': '/aksesuarlar/34000400_y3dr.jpg',
+      '340.08.001 > Kapak Tutucu': '/aksesuarlar/34008001_y3dr.jpg',
+      '340.20.005.2000 > Kapı Altı Fırçası': '/aksesuarlar/34020005_y3dr.jpg',
+      '340.20.025.2000 > Kapı Altı Fırçası': '/aksesuarlar/34020025_y3dr.jpg',
+    }
+    
+    if (aksesuarlarImageMap[itemName]) {
+      return aksesuarlarImageMap[itemName]
+    }
+    
     // Ürün bazlı özel mapping
     const imageMap = {
       'ALÜMİNYUM GÖVDELİ DİŞLİ POMPALAR': '/aligodi.png',

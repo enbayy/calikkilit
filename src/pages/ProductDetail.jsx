@@ -5545,6 +5545,865 @@ const productDetails = {
     ],
     relatedProducts: [],
   },
+  '084 > Milenyum Kulp': {
+    code: '084',
+    name: 'Milenyum Kulp',
+    description: '• Ahşap çekmece kapaklarında kullanılan estetik bir kulptur.',
+    materials: {
+      'MALZEME': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '085 > Çekme Kulpu': {
+    code: '085',
+    name: 'Çekme Kulpu',
+    description: '• Ahşap, çelik çekmece ve rack kabinlerde kullanılan estetik bir kulptur.',
+    materials: {
+      'MALZEME': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '083 > Alüminyum Tutamak': {
+    code: '083',
+    name: 'Alüminyum Tutamak',
+    description: '',
+    materials: {
+      'MALZEME': 'Alüminyum',
+    },
+    surface: 'Krom Kaplama\nMat Eloksal\nSiyah Boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '183 > Alüminyum Tutamak': {
+    code: '183',
+    name: 'Alüminyum Tutamak',
+    description: '',
+    materials: {
+      'MALZEME': 'Alüminyum',
+    },
+    surface: 'Krom kaplama, mat eloksal veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '184 > Metal Kulp': {
+    code: '184',
+    name: 'Metal Kulp',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik, Alüminyum, Paslanmaz çelik',
+    },
+    surface: 'Krom kaplama, mat eloksal veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '484 > Metal Kulp': {
+    code: '484',
+    name: 'Metal Kulp',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik\nAlüminyum\nPaslanmaz çelik',
+    },
+    surface: 'Krom kaplama, Mat eloksal veya Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '884 > Alüminyum Kulp': {
+    code: '884',
+    name: 'Alüminyum Kulp',
+    description: '',
+    materials: {
+      'MALZEME': 'Alüminyum',
+    },
+    surface: 'Mat eloksal veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '284 > Metal Kulp': {
+    code: '284',
+    name: 'Metal Kulp',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik\nPaslanmaz çelik',
+    },
+    surface: 'Krom kaplama\nEl polisajı',
+    versions: [
+      { 'Ürün Kodu': '284', 'Ürün Adı': 'Metal Kulp', 'Malzeme': 'Çelik', 'Yüzey': 'Krom Kaplama', 'Yükseklik': '70', 'Uzunluk': '250' },
+      { 'Ürün Kodu': '284', 'Ürün Adı': 'Metal Kulp', 'Malzeme': 'Çelik', 'Yüzey': 'Krom Kaplama', 'Yükseklik': '70', 'Uzunluk': '300' },
+      { 'Ürün Kodu': '284', 'Ürün Adı': 'Metal Kulp', 'Malzeme': 'Çelik', 'Yüzey': 'Krom Kaplama', 'Yükseklik': '70', 'Uzunluk': '400' },
+      { 'Ürün Kodu': '284', 'Ürün Adı': 'Metal Kulp', 'Malzeme': 'Çelik', 'Yüzey': 'Krom Kaplama', 'Yükseklik': '70', 'Uzunluk': '500' },
+      { 'Ürün Kodu': '284', 'Ürün Adı': 'Metal Kulp', 'Malzeme': 'Çelik', 'Yüzey': 'Krom Kaplama', 'Yükseklik': '40', 'Uzunluk': '80' },
+      { 'Ürün Kodu': '284', 'Ürün Adı': 'Metal Kulp', 'Malzeme': 'Çelik', 'Yüzey': 'Krom Kaplama', 'Yükseklik': '40', 'Uzunluk': '100' },
+      { 'Ürün Kodu': '284', 'Ürün Adı': 'Metal Kulp', 'Malzeme': 'Paslanmaz Çelik', 'Yüzey': 'El Polisajı', 'Yükseklik': '35', 'Uzunluk': '80' },
+      { 'Ürün Kodu': '284', 'Ürün Adı': 'Metal Kulp', 'Malzeme': 'Paslanmaz Çelik', 'Yüzey': 'El Polisajı', 'Yükseklik': '35', 'Uzunluk': '100' },
+    ],
+    relatedProducts: [],
+  },
+  '384 > Metal Kulp v1': {
+    code: '384',
+    name: 'Metal Kulp v1',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik, Paslanmaz çelik',
+    },
+    surface: 'Krom kaplama, el polisajı',
+    versions: [],
+    relatedProducts: [],
+  },
+  '384 > Metal Kulp v2': {
+    code: '384',
+    name: 'Metal Kulp v2',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik\nPaslanmaz çelik',
+    },
+    surface: 'Krom kaplama\nEl polisajı',
+    versions: [],
+    relatedProducts: [],
+  },
+  '584 > Katlanabilir Metal Kulp': {
+    code: '584',
+    name: 'Katlanabilir Metal Kulp',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik\nPaslanmaz çelik',
+    },
+    surface: 'Krom kaplama\nEl polisajı',
+    versions: [],
+    relatedProducts: [],
+  },
+  '684 > Metal Kulp': {
+    code: '684',
+    name: 'Metal Kulp',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik, Paslanmaz çelik',
+    },
+    surface: 'Krom kaplama, el polisajı',
+    versions: [],
+    relatedProducts: [],
+  },
+  '784 > Metal Kulp': {
+    code: '784',
+    name: 'Metal Kulp',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik, Paslanmaz çelik',
+    },
+    surface: 'Krom kaplama, el polisajı',
+    versions: [],
+    relatedProducts: [],
+  },
+  '185 > Parmak Kulp': {
+    code: '185',
+    name: 'Parmak Kulp',
+    description: '',
+    materials: {
+      'MALZEME': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '086 > Makina Kapak Kulpu': {
+    code: '086',
+    name: 'Makina Kapak Kulpu',
+    description: '• İki ayrı bağlantı civatası vardır.',
+    materials: {
+      'MALZEME': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '186 > Makina Kapak Kulpu': {
+    code: '186',
+    name: 'Makina Kapak Kulpu',
+    description: '• İki ayrı bağlantı civatası vardır.',
+    materials: {
+      'MALZEME': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '386 > Kapak Kulpu': {
+    code: '386',
+    name: 'Kapak Kulpu',
+    description: '• Civata ile bağlantı\n• Somun ve pul yanında verilecektir',
+    materials: {
+      'MALZEME': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+    },
+    surface: 'RAL 9005',
+    versions: [],
+    relatedProducts: [],
+  },
+  '081 > Kapak Kulpu': {
+    code: '081',
+    name: 'Kapak Kulpu',
+    description: '• İki adet bağlantı vidası vardır.\n• X ekseni yönünde ayarlama özelliği\n• Ergonomik tutamak tasarımı',
+    materials: {
+      'MALZEME': 'Polipropilen',
+    },
+    surface: 'RAL9005',
+    versions: [],
+    relatedProducts: [],
+  },
+  '087 > Makina Kapak Kulpu': {
+    code: '087',
+    name: 'Makina Kapak Kulpu',
+    description: '• Alüminyum kol mat eloksal kaplıdır\n• Özel boylar ve renkler için Mesan ile İletişime geçiniz.',
+    materials: {
+      'KENAR PARÇA': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+      'KOL': 'Alüminyum',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '087200', 'Uzunluk (L1)': '148', 'Uzunluk (L)': '200' },
+      { 'Ürün Kodu': '087300', 'Uzunluk (L1)': '248', 'Uzunluk (L)': '300' },
+      { 'Ürün Kodu': '087400', 'Uzunluk (L1)': '348', 'Uzunluk (L)': '400' },
+      { 'Ürün Kodu': '087500', 'Uzunluk (L1)': '448', 'Uzunluk (L)': '500' },
+    ],
+    relatedProducts: [],
+  },
+  '287 > Makina Kapak Kulpu': {
+    code: '287',
+    name: 'Makina Kapak Kulpu',
+    description: '• Ergonomik tutamak tasarımı\n• Alüminyum kol mat eloksal kaplıdır\n• Özel boylar ve renkler için Mesan ile İletişime geçiniz.',
+    materials: {
+      'KENAR PARÇA': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+      'KOL': 'Alüminyum',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '287200', 'Uzunluk (L1)': '154', 'Uzunluk (L)': '200' },
+      { 'Ürün Kodu': '287300', 'Uzunluk (L1)': '254', 'Uzunluk (L)': '300' },
+      { 'Ürün Kodu': '287400', 'Uzunluk (L1)': '354', 'Uzunluk (L)': '400' },
+      { 'Ürün Kodu': '287500', 'Uzunluk (L1)': '454', 'Uzunluk (L)': '500' },
+    ],
+    relatedProducts: [],
+  },
+  '187 > Makina Kapak Kulpu': {
+    code: '187',
+    name: 'Makina Kapak Kulpu',
+    description: '• Kol plastik kaplı çeliktir.\n• Özel boylar için Mesan\' la iletişime geçiniz.\n• 1000 mm den uzun kollarda orta parça kullanılır.',
+    materials: {
+      'KENAR PARÇA': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+      'KOL': 'Plastik kaplama çelik',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '187300', 'Uzunluk (L1)': '269', 'Uzunluk (L)': '300' },
+      { 'Ürün Kodu': '187400', 'Uzunluk (L1)': '369', 'Uzunluk (L)': '400' },
+      { 'Ürün Kodu': '187500', 'Uzunluk (L1)': '469', 'Uzunluk (L)': '500' },
+      { 'Ürün Kodu': '187600', 'Uzunluk (L1)': '569', 'Uzunluk (L)': '600' },
+      { 'Ürün Kodu': '187700', 'Uzunluk (L1)': '669', 'Uzunluk (L)': '700' },
+      { 'Ürün Kodu': '187800', 'Uzunluk (L1)': '769', 'Uzunluk (L)': '800' },
+      { 'Ürün Kodu': '187900', 'Uzunluk (L1)': '869', 'Uzunluk (L)': '900' },
+    ],
+    relatedProducts: [],
+  },
+  '487 > Makina Kapak Kulpu': {
+    code: '487',
+    name: 'Makina Kapak Kulpu',
+    description: '• Kol paslanmaz çeliktir.\n• Özel boylar için Mesan\' la iletişime geçiniz.\n• 1000 mm den uzun kollarda orta parça kullanılır.',
+    materials: {
+      'KENAR PARÇA': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+      'KOL': 'Paslanmaz çelik',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '487300', 'Uzunluk (L1)': '269', 'Uzunluk (L)': '300' },
+      { 'Ürün Kodu': '487400', 'Uzunluk (L1)': '369', 'Uzunluk (L)': '400' },
+      { 'Ürün Kodu': '487500', 'Uzunluk (L1)': '469', 'Uzunluk (L)': '500' },
+      { 'Ürün Kodu': '487600', 'Uzunluk (L1)': '569', 'Uzunluk (L)': '600' },
+      { 'Ürün Kodu': '487700', 'Uzunluk (L1)': '669', 'Uzunluk (L)': '700' },
+      { 'Ürün Kodu': '487800', 'Uzunluk (L1)': '769', 'Uzunluk (L)': '800' },
+      { 'Ürün Kodu': '487900', 'Uzunluk (L1)': '869', 'Uzunluk (L)': '900' },
+    ],
+    relatedProducts: [],
+  },
+  '286 > Kapak Kulpu': {
+    code: '286',
+    name: 'Kapak Kulpu',
+    description: '• Ergonomik tutamak tasarımı\n• İki noktadan gizli bağlantı',
+    materials: {
+      'MALZEME': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '286', 'Ürün Adı': 'Kapak Kulpu', 'Malzeme': 'Plastik', 'Yüzey': 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  '387 > Makina Kapak Kulpu': {
+    code: '387',
+    name: 'Makina Kapak Kulpu',
+    description: '• Kol plastik kaplı çeliktir.\n• Özel boylar için Mesan\' la iletişime geçiniz.\n• 1000 mm den uzun kollarda orta parça kullanılır.',
+    materials: {
+      'KENAR PARÇA': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+      'KOL': 'Plastik kaplı çelik',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '387300', 'Uzunluk (L1)': '298', 'Uzunluk (L)': '300' },
+      { 'Ürün Kodu': '387400', 'Uzunluk (L1)': '398', 'Uzunluk (L)': '400' },
+      { 'Ürün Kodu': '387500', 'Uzunluk (L1)': '498', 'Uzunluk (L)': '500' },
+      { 'Ürün Kodu': '387600', 'Uzunluk (L1)': '598', 'Uzunluk (L)': '600' },
+      { 'Ürün Kodu': '387700', 'Uzunluk (L1)': '698', 'Uzunluk (L)': '700' },
+      { 'Ürün Kodu': '387800', 'Uzunluk (L1)': '798', 'Uzunluk (L)': '800' },
+      { 'Ürün Kodu': '3871000', 'Uzunluk (L1)': '998', 'Uzunluk (L)': '1000' },
+    ],
+    relatedProducts: [],
+  },
+  '082 > Gömme Yaylı Kulp': {
+    code: '082',
+    name: 'Gömme Yaylı Kulp',
+    description: '',
+    materials: {
+      'GÖVDE': 'Alüminyum',
+      'TUTAMAK': 'Alüminyum',
+    },
+    surface: 'Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '374 > Geçme Kapak Tutamağı': {
+    code: '374',
+    name: 'Geçme Kapak Tutamağı',
+    description: '• Klipsleri sayesinde kolay montaj edilebilir.\n• Logo ve farklı renk uygulamaları için lütfen satış ekibimiz ile irtibata geçiniz.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '274 > Geçme Kapak Tutamağı': {
+    code: '274',
+    name: 'Geçme Kapak Tutamağı',
+    description: '• Klipsler sayesinde hızlı montaj.\n• Kapak dış yüzeyinde çıkıntı yapmayan ince tasarım.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '074 > Geçme Kapak Tutamağı': {
+    code: '074',
+    name: 'Geçme Kapak Tutamağı',
+    description: '• Klipsleri sayesinde kolay montaj edilebilir.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '074', 'Ürün Adı': 'Geçme Kapak Tutamağı', 'Kapı Kalınlığı': '0,8 - 1,4 mm' },
+    ],
+    relatedProducts: [],
+  },
+  '174 > Geçme Kapak Tutamağı': {
+    code: '174',
+    name: 'Geçme Kapak Tutamağı',
+    description: '• Klipsleri sayesinde kolay montaj edilebilir.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '174', 'Ürün Adı': 'Geçme Kapak Tutamağı', 'Kapı Kalınlığı': '1,5 - 2,2 mm' },
+    ],
+    relatedProducts: [],
+  },
+  '674 > Geçme Kapak Tutamağı': {
+    code: '674',
+    name: 'Geçme Kapak Tutamağı',
+    description: '• Klipsler sayesinde hızlı montaj\n• Kapak dış yüzeyinde çıkıntı yapmayan ince tasarım',
+    materials: {
+      'MATERIAL': 'ABS',
+    },
+    surface: 'RAL9005, RAL7035\nDT: 1,5-2 mm',
+    versions: [],
+    relatedProducts: [],
+  },
+  '774 > Geçme Kapak Tutamağı': {
+    code: '774',
+    name: 'Geçme Kapak Tutamağı',
+    description: '• Klipsler sayesinde hızlı montaj\n• Kapak dış yüzeyinde çıkıntı yapmayan ince tasarım',
+    materials: {
+      'MATERIAL': 'ABS',
+    },
+    surface: 'RAL9005, RAL7035\nDT: 1,5-2 mm',
+    versions: [],
+    relatedProducts: [],
+  },
+  '874 > Geçme Kapak Tutamağı': {
+    code: '874',
+    name: 'Geçme Kapak Tutamağı',
+    description: '• Klipsler sayesinde hızlı montaj\n• Kapak dış yüzeyinde çıkıntı yapmayan ince tasarım',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: 'RAL 9005',
+    versions: [],
+    relatedProducts: [],
+  },
+  '574 > Gömme Tutamak': {
+    code: '574',
+    name: 'Gömme Tutamak',
+    description: '• Civata ile bağlantı\n• Kapak dış yüzeyinde çıkıntı yapmayan ince tasarım.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '474 > Gömme Tutamak': {
+    code: '474',
+    name: 'Gömme Tutamak',
+    description: '• Civata ile bağlantı\n• Kapak dış yüzeyinde çıkıntı yapmayan ince tasarım.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '974 > Gömme Tutamak': {
+    code: '974',
+    name: 'Gömme Tutamak',
+    description: '• Civata ile bağlantı\n• Kapak dış yüzeyinde çıkıntı yapmayan ince tasarım.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: 'RAL 9005',
+    versions: [],
+    relatedProducts: [],
+  },
+  '2300 > Havalandırma Panjuru': {
+    code: '2300',
+    name: 'Havalandırma Panjuru',
+    description: '• Ergonomik ve modern tasarım\n• Gövde de yer alan klips uygulamsı ile hızlı montaj kolaylığı\n• Kolay açılabilen kapak yapısı\n• 1.2 mm - 2.4 mm aralığındaki sac kalınlıklarına uygundur\n• İsteğe göre dökme conta uygulanabilir\n• Farklı renkler için satış ekibimiz ile irtibata geçiniz',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '2300.2.01.00', renkSecenegi: 'RAL 7035', filtreTipi: 'Filtresiz' },
+      { urunKodu: '2300.2.01.01', renkSecenegi: 'RAL 7035', filtreTipi: 'Eko Filtre' },
+      { urunKodu: '2300.2.01.02', renkSecenegi: 'RAL 7035', filtreTipi: 'G2 Kalite Filtre' },
+      { urunKodu: '2300.2.01.03', renkSecenegi: 'RAL 7035', filtreTipi: 'G3 Kalite Sünger' },
+      { urunKodu: '2300.2.02.00', renkSecenegi: 'RAL 7032', filtreTipi: 'Filtresiz' },
+      { urunKodu: '2300.2.02.01', renkSecenegi: 'RAL 7032', filtreTipi: 'Eko Filtre' },
+      { urunKodu: '2300.2.02.02', renkSecenegi: 'RAL 7032', filtreTipi: 'G2 Kalite Filtre' },
+      { urunKodu: '2300.2.02.03', renkSecenegi: 'RAL 7032', filtreTipi: 'G3 Kalite Sünger' },
+      { urunKodu: '2300.2.03.00', renkSecenegi: 'RAL 9005', filtreTipi: 'Filtresiz' },
+      { urunKodu: '2300.2.03.01', renkSecenegi: 'RAL 9005', filtreTipi: 'Eko Filtre' },
+      { urunKodu: '2300.2.03.02', renkSecenegi: 'RAL 9005', filtreTipi: 'G2 Kalite Filtre' },
+      { urunKodu: '2300.2.03.03', renkSecenegi: 'RAL 9005', filtreTipi: 'G3 Kalite Sünger' },
+    ],
+    relatedProducts: [],
+  },
+  '2150 > Proje Cebi (A4)': {
+    code: '2150',
+    name: 'Proje Cebi (A4)',
+    description: '• A4 ölçüsüne uygundur. Özel renkler ve logo için Mesan ile iletişime geçiniz.\n• Kendinden yapışkanlıdır.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: 'RAL 7035',
+    versions: [
+      { urunKodu: '2150', urunAdi: 'Proje Cebi', olculer: 'A4', malzeme: 'ABS', yuzey: 'RAL 7035' },
+      { urunKodu: '2152', urunAdi: 'Proje Cebi', olculer: 'A5', malzeme: 'ABS', yuzey: 'RAL 7035' },
+    ],
+    relatedProducts: [],
+  },
+  '2152 > Proje Cebi (A5)': {
+    code: '2152',
+    name: 'Proje Cebi (A5)',
+    description: '• A5 ölçüsüne uygundur. Özel renkler ve logo için Mesan ile iletişime geçiniz.\n• Kendinden yapışkanlıdır.',
+    materials: {
+      'MALZEME': 'ABS',
+    },
+    surface: 'RAL 7035',
+    versions: [
+      { urunKodu: '2150', urunAdi: 'Proje Cebi', olculer: 'A4', malzeme: 'ABS', yuzey: 'RAL 7035' },
+      { urunKodu: '2152', urunAdi: 'Proje Cebi', olculer: 'A5', malzeme: 'ABS', yuzey: 'RAL 7035' },
+    ],
+    relatedProducts: [],
+  },
+  '2220 > Gözetleme Camı': {
+    code: '2220',
+    name: 'Gözetleme Camı',
+    description: '• İklimlendirme kabinlerinde kabin içi gözetleme amacı ile kullanılır.\n• 30-60 mm arası izolasyonlu kapaklar için uygundur\n• 7 civata ile montajlanır.',
+    materials: {
+      'PENCERE': 'Polycarbon',
+      'CONTA': 'Termo kauçuk',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '2216 > Sayaç Çerçevesi': {
+    code: '2216',
+    name: 'Sayaç Çerçevesi',
+    description: '• Pano içindeki sayaçların dışarıdan okunmasını sağlar.',
+    materials: {},
+    surface: '',
+    versions: [
+      { urunKodu: '2215', urunAdi: 'Sayaç Çerçevesi', olculer: '117 x 117 mm', malzeme: '-', yuzey: '-' },
+      { urunKodu: '2216', urunAdi: 'Sayaç Çerçevesi', olculer: '150 x 190 mm', malzeme: '-', yuzey: '-' },
+    ],
+    relatedProducts: [],
+  },
+  '2215 > Sayaç Çerçevesi': {
+    code: '2215',
+    name: 'Sayaç Çerçevesi',
+    description: '• Pano içindeki sayaçların dışarıdan okunmasını sağlar.',
+    materials: {},
+    surface: '',
+    versions: [
+      { urunKodu: '2215', urunAdi: 'Sayaç Çerçevesi', olculer: '117 x 117 mm', malzeme: '-', yuzey: '-' },
+      { urunKodu: '2216', urunAdi: 'Sayaç Çerçevesi', olculer: '150 x 190 mm', malzeme: '-', yuzey: '-' },
+    ],
+    relatedProducts: [],
+  },
+  '2451 > Aybolt': {
+    code: '2451',
+    name: 'Aybolt',
+    description: '• Her türlü makine ve panoların taşınmasını için kullanılır.',
+    materials: {},
+    surface: '',
+    versions: [
+      { urunKodu: '2451', D1: 'M8', guvenliCalismaYuku: '140', D4MM: '20', D2MM: '20', HMM: '49.0', LMM: '13.0', birimAgirligi: '0.06', D3MM: '36' },
+      { urunKodu: '2452', D1: 'M10', guvenliCalismaYuku: '230', D4MM: '25', D2MM: '25', HMM: '63.0', LMM: '17.0', birimAgirligi: '0.10', D3MM: '45' },
+      { urunKodu: '2453', D1: 'M12', guvenliCalismaYuku: '340', D4MM: '30', D2MM: '30', HMM: '73.5', LMM: '20.5', birimAgirligi: '0.18', D3MM: '54' },
+      { urunKodu: '2454', D1: 'M14', guvenliCalismaYuku: '490', D4MM: '35', D2MM: '35', HMM: '87.0', LMM: '27.0', birimAgirligi: '0.28', D3MM: '63' },
+      { urunKodu: '2455', D1: 'M16', guvenliCalismaYuku: '700', D4MM: '35', D2MM: '35', HMM: '89.0', LMM: '27.0', birimAgirligi: '0.28', D3MM: '63' },
+    ],
+    relatedProducts: [],
+  },
+  '2461 > Aybolt': {
+    code: '2461',
+    name: 'Aybolt',
+    description: '• Her türlü makine ve panoların taşınmasını için kullanılır.',
+    materials: {},
+    surface: '',
+    versions: [
+      { urunKodu: '2461', D1: 'M8', guvenliCalismaYuku: '140', D4MM: '20', D2MM: '20', HMM: '36', LMM: '8', birimAgirligi: '0.06', D3MM: '36' },
+      { urunKodu: '2462', D1: 'M10', guvenliCalismaYuku: '230', D4MM: '25', D2MM: '25', HMM: '45', LMM: '10', birimAgirligi: '0.09', D3MM: '45' },
+      { urunKodu: '2463', D1: 'M12', guvenliCalismaYuku: '340', D4MM: '30', D2MM: '30', HMM: '53', LMM: '12', birimAgirligi: '0.16', D3MM: '54' },
+    ],
+    relatedProducts: [],
+  },
+  '2400 > Kafesli Somun': {
+    code: '2400',
+    name: 'Kafesli Somun',
+    description: '• Sacların birbirine bağlanmasını sağlar.\n• Geçiş ölçülerine dikkat edilmelidir.',
+    materials: {},
+    surface: '',
+    versions: [
+      { urunKodu: '2400', civata: 'M5', somun: '11x11x4.5', P: '1.7 ~ 2.5', G: '36', F: '20', C: '49.0' },
+      { urunKodu: '2401', civata: 'M6', somun: '11x11x4.5', P: '25', G: '45', F: '25', C: '63.0' },
+      { urunKodu: '2402', civata: 'M8', somun: '14x14x5.5', P: '3.3 ~ 4.1', G: '54', F: '30', C: '73.5' },
+    ],
+    relatedProducts: [],
+  },
+  '2700 > Gerdirme Mandalı': {
+    code: '2700',
+    name: 'Gerdirme Mandalı',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik',
+      'YÜZEY': 'Çinko kaplama',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '2701', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: '2702', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: '340.00.131', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: '340.00.133', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+      { urunKodu: '340.00.135', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '2760 > Pim Kilitlemeli Tutamak': {
+    code: '2760',
+    name: 'Pim Kilitlemeli Tutamak',
+    description: '• İnce saclı kapaklar için uygundur.',
+    materials: {
+      'TUTAMAK': 'Polyamide DIN EN ISO 1043-1 PA6 GFR 30',
+      'GÖVDE': 'Çelik',
+      'SOMUN': 'Çelik',
+      'PİM': 'Paslanmaz Çelik',
+      'Yüzey': 'Çinko kaplama',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '2760', D1: '10', strok: '10' },
+      { urunKodu: '2761', D1: '8', strok: '8' },
+      { urunKodu: '2762', D1: '6', strok: '6' },
+    ],
+    relatedProducts: [],
+  },
+  '2750 > Yaylı Yük Mandalı': {
+    code: '2750',
+    name: 'Yaylı Yük Mandalı',
+    description: '• Ağır metal kapaklar için uygundur.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Çelik',
+      'YÜZEY': 'Çinko kaplama',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '2750', urunAdi: 'Yaylı Yük Mandalı', olculer: '42 x 154 mm', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '2751 > Yaylı Yük Mandalı (Perçinli)': {
+    code: '2751',
+    name: 'Yaylı Yük Mandalı (Perçinli)',
+    description: '• Perçin sayesinde mandal açık konumda kalabilir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Çelik',
+      'Yüzey': 'Çinko kaplama',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '2751', urunAdi: 'Yaylı Yük Mandalı (Perçinli)', olculer: '42 x 154 mm', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '320.02.164 > Kablo Kanalı': {
+    code: '320.02.164',
+    name: 'Kablo Kanalı',
+    description: '• 45˚ dönüş ile kare deliklere hızlı montajı yapılır.\n• M6 civata montaj için seçeneklidir.\n• Yatay ve dikey olarak kullanılır',
+    materials: {
+      'MALZEME': 'PA 6 Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '320.02.164', DT: '1.3 - 1.5 mm arası', malzeme: 'Plastik', yuzey: 'Siyah' },
+      { urunKodu: '320.02.165', DT: '1.6 - 2.0 mm arası', malzeme: 'Plastik', yuzey: 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  '025 > Cam Menteşesi': {
+    code: '025',
+    name: 'Cam Menteşesi',
+    description: '• 6 mm kalınlığa kadar cam kapaklar için uygundur.\n• Montaj için plastik yatak kullanılır.\n• Çelik (m6x6) vida ile montajlanır.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'CİVATA': 'Çelik',
+      'YATAK': 'Delrin',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '079 > Kapak Tutucu Makası': {
+    code: '079',
+    name: 'Kapak Tutucu Makası',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik',
+      'YÜZEY': 'Çinko kaplama',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '07963135001', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '135', yonUygulamasi: 'Sağ Kapak' },
+      { urunKodu: '07963135002', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '135', yonUygulamasi: 'Sol Kapak' },
+      { urunKodu: '07963202001', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '202', yonUygulamasi: 'Sağ Kapak' },
+      { urunKodu: '07963202002', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '202', yonUygulamasi: 'Sol Kapak' },
+      { urunKodu: '07963292001', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '292', yonUygulamasi: 'Sağ Kapak' },
+      { urunKodu: '07963292002', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '292', yonUygulamasi: 'Sol Kapak' },
+    ],
+    relatedProducts: [],
+  },
+  '279 > Kapak Tutucu Makası': {
+    code: '279',
+    name: 'Kapak Tutucu Makası',
+    description: '• Ağır kapak uygulamaları için uygundur.\n• 4 mm malzemeden üretilmiştir.',
+    materials: {
+      'MALZEME': 'Çelik',
+      'YÜZEY': 'Çinko kaplama',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '27963135001', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '135', yonUygulamasi: 'Sağ Kapak' },
+      { urunKodu: '27963135002', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '135', yonUygulamasi: 'Sol Kapak' },
+      { urunKodu: '27963202001', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '202', yonUygulamasi: 'Sağ Kapak' },
+      { urunKodu: '27963202002', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '202', yonUygulamasi: 'Sol Kapak' },
+      { urunKodu: '27963292001', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '292', yonUygulamasi: 'Sağ Kapak' },
+      { urunKodu: '27963292002', malzeme: 'Çelik', yuzey: 'Çinko Kaplama', uzunluk: '292', yonUygulamasi: 'Sol Kapak' },
+    ],
+    relatedProducts: [],
+  },
+  '179 > Kapak Tutucu Makası': {
+    code: '179',
+    name: 'Kapak Tutucu Makası',
+    description: '• Paslanmaz çelik versiyonu sf: 517\n• Elektrik kabinlerinde kapıyı açık konumda kilitlemek amacı ile kullanılır.\n• Sağ ve Sol kapağa uygulanabilir.',
+    materials: {
+      'MALZEME': 'Çelik',
+      'YÜZEY': 'Çinko kaplama',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '17963', malzeme: 'Çelik', yuzey: 'Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '340.10.026 > Akustik Sünger': {
+    code: '340.10.026',
+    name: 'Akustik Sünger',
+    description: '• Plakanın arkası bantlı veya bantsız olarak temini mümkündür.\n• Farklı boylarda rulo (1 m x 10 m) veya plaka olarak temin edilebilir.\n• Özellikle ses ve ısı yalıtımı sağlar.\n• Alev geciktirici özelliğe sahiptir.\n• -30 , + 130  C sıcaklıklar arasında kullanılabilir.\n• Resimde belirtilmeyen faklı ölçüler için Mesan ile iletişime geçiniz.',
+    materials: {
+      'MALZEME': 'Poliüretan köpük',
+      'RENK': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.10.046', DTMM: '30', urunTipi: 'Düz Tip (Yapışkanlı)' },
+      { urunKodu: '340.10.047', DTMM: '40', urunTipi: 'Düz Tip (Yapışkanlı)' },
+      { urunKodu: '340.10.048', DTMM: '50', urunTipi: 'Düz Tip (Yapışkanlı)' },
+      { urunKodu: '340.10.066', DTMM: '30', urunTipi: 'Düz Tip (Yapışkansız)' },
+      { urunKodu: '340.10.067', DTMM: '40', urunTipi: 'Düz Tip (Yapışkansız)' },
+      { urunKodu: '340.10.068', DTMM: '50', urunTipi: 'Düz Tip (Yapışkansız)' },
+      { urunKodu: '340.10.006', DTMM: '30', urunTipi: 'Viyol Desenli (Yapışkanlı)' },
+      { urunKodu: '340.10.007', DTMM: '40', urunTipi: 'Viyol Desenli (Yapışkanlı)' },
+      { urunKodu: '340.10.008', DTMM: '50', urunTipi: 'Viyol Desenli (Yapışkanlı)' },
+      { urunKodu: '340.10.026', DTMM: '30', urunTipi: 'Viyol Desenli (Yapışkansız)' },
+      { urunKodu: '340.10.027', DTMM: '40', urunTipi: 'Viyol Desenli (Yapışkansız)' },
+      { urunKodu: '340.10.028', DTMM: '50', urunTipi: 'Viyol Desenli (Yapışkansız)' },
+    ],
+    relatedProducts: [],
+  },
+  '340.00.370 > Diyafram Tipi Gromet': {
+    code: '340.00.370',
+    name: 'Diyafram Tipi Gromet',
+    description: '• Pano içinde sonradan kullanılacak delikleri kapatmak için kullanılır.\n• İçinden kablo geçirileceği zaman membran kısmı delinir.\n• Farklı çaplı kablo geçişleri için uygundur.\n• Dizaynı sayesinde kolay montaj edilir.',
+    materials: {
+      'MALZEME': 'NR Kauçuk, veya TP',
+      'RENK': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.00.370', D1MM: '29', D2MM: '36', D3MM: '43', TMM: '3.5', EMM: '11.5' },
+      { urunKodu: '340.00.371', D1MM: '39', D2MM: '48.5', D3MM: '52', TMM: '3.2', EMM: '12' },
+      { urunKodu: '340.00.372', D1MM: '48.5', D2MM: '57', D3MM: '63.5', TMM: '3.5', EMM: '14' },
+    ],
+    relatedProducts: [],
+  },
+  '340.00.380 > Diyafram Tipi Gromet': {
+    code: '340.00.380',
+    name: 'Diyafram Tipi Gromet',
+    description: '• Pano içinde sonradan kullanılacak delikleri kapatmak için kullanılır.\n• İçinden kablo geçirileceği zaman membran kısmı delinir.\n• Farklı çaplı kablo geçişleri için uygundur.\n• Dizaynı sayesinde kolay montaj edilir.',
+    materials: {
+      'MALZEME': 'NR Kauçuk, veya TP',
+      'RENK': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.00.380', D1MM: '16', D2MM: '20', D3MM: '27', TMM: '3.2', EMM: '9' },
+      { urunKodu: '340.00.381', D1MM: '20', D2MM: '25', D3MM: '30', TMM: '3.5', EMM: '9' },
+      { urunKodu: '340.00.382', D1MM: '24.5', D2MM: '29', D3MM: '34', TMM: '3.5', EMM: '11.5' },
+      { urunKodu: '340.00.383', D1MM: '40.5', D2MM: '46.5', D3MM: '52', TMM: '3.2', EMM: '11.5' },
+    ],
+    relatedProducts: [],
+  },
+  '340.08.010 > Kauçuk Stoper': {
+    code: '340.08.010',
+    name: 'Kauçuk Stoper',
+    description: '• Panolarda kapının gövdeye çarparak zarar vermesini önler.\n• Tek noktadan hızlı bağlanma mümkündür.',
+    materials: {
+      'MALZEME': 'NR Kauçuk, veya TP',
+      'RENK': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.08.010', D1MM: '20', D2MM: '18', D3MM: '10', D4MM: '4', TMM: '7', EMM: '12' },
+      { urunKodu: '340.08.011', D1MM: '19', D2MM: '19', D3MM: '10', D4MM: '4', TMM: '8', EMM: '22.5' },
+      { urunKodu: '340.08.012', D1MM: '25', D2MM: '25', D3MM: '14', D4MM: '4.3', TMM: '20', EMM: '30' },
+      { urunKodu: '340.08.013', D1MM: '39.5', D2MM: '38', D3MM: '13', D4MM: '6.2', TMM: '12', EMM: '32' },
+    ],
+    relatedProducts: [],
+  },
+  '340.00.400 > Kauçuk Tıpa': {
+    code: '340.00.400',
+    name: 'Kauçuk Tıpa',
+    description: '• Pano içinde sonradan kullanılacak delikleri kapatmak için kullanılır.\n• Farklı sac kalınlıklarında ve çaplarda kullanılabilir.\n• Dizaynı sayesinde kolay montaj edilir.',
+    materials: {
+      'MALZEME': 'NR Kauçuk, veya TP',
+      'RENK': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.00.400', D1MM: '2.5', D2MM: '4', D3MM: '14', TMM: '2.5', BMM: '13.5', CMM: '3.5', EMM: '8' },
+      { urunKodu: '340.00.401', D1MM: '4', D2MM: '7', D3MM: '17.5', TMM: '1.5', BMM: '8.5', CMM: '6', EMM: '5' },
+      { urunKodu: '340.00.402', D1MM: '4', D2MM: '7', D3MM: '18', TMM: '2', BMM: '8.5', CMM: '6', EMM: '6' },
+    ],
+    relatedProducts: [],
+  },
+  '340.08.001 > Kapak Tutucu': {
+    code: '340.08.001',
+    name: 'Kapak Tutucu',
+    description: '• Kapının gövdeye çarpmasını engeller\n• Kapı açık konumda iken tutucu ile stoplanması sağlanır.',
+    materials: {
+      'MALZEME': 'NBR Kauçuk',
+      'RENK': 'Siyah',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.08.001', urunAdi: 'Kapak Tutucu (Dişi)', malzeme: 'NBR Kauçuk', yuzey: 'Siyah' },
+      { urunKodu: '340.08.001', urunAdi: 'Kapak Tutucu (Erkek)', malzeme: 'NBR Kauçuk', yuzey: 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  '340.20.005.2000 > Kapı Altı Fırçası': {
+    code: '340.20.005.2000',
+    name: 'Kapı Altı Fırçası',
+    description: '• Civata bağlantılı tip\n• Pano içine dışı ortamlardan girebilecek toz vb. maddelere karşı koruma sağlar.\n• Farklı L boylar için Mesan ile iletişime geçiniz.',
+    materials: {
+      'GÖVDE': 'Aluminyum',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.20.005.2000', HMM: '40' },
+      { urunKodu: '340.20.006.2000', HMM: '50' },
+      { urunKodu: '340.20.007.2000', HMM: '60' },
+      { urunKodu: '340.20.008.2000', HMM: '70' },
+      { urunKodu: '340.20.009.2000', HMM: '80' },
+      { urunKodu: '340.20.010.2000', HMM: '90' },
+      { urunKodu: '340.20.011.2000', HMM: '100' },
+    ],
+    relatedProducts: [],
+  },
+  '340.20.025.2000 > Kapı Altı Fırçası': {
+    code: '340.20.025.2000',
+    name: 'Kapı Altı Fırçası',
+    description: '• Geçmeli bağlantılı tip\n• Pano içine dışı ortamlardan girebilecek toz vb. maddelere karşı koruma sağlar.\n• Farklı L boyları için Mesan ile iletişime geçiniz.',
+    materials: {
+      'GÖVDE': 'Plastik',
+    },
+    surface: '',
+    versions: [
+      { urunKodu: '340.20.025.2000', HMM: '40' },
+      { urunKodu: '340.20.026.2000', HMM: '50' },
+      { urunKodu: '340.20.027.2000', HMM: '60' },
+      { urunKodu: '340.20.028.2000', HMM: '70' },
+      { urunKodu: '340.20.029.2000', HMM: '80' },
+      { urunKodu: '340.20.030.2000', HMM: '90' },
+      { urunKodu: '340.20.031.2000', HMM: '100' },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -6234,6 +7093,40 @@ function ProductDetail() {
     const name = productDetail?.name || productInfo?.name || productName
     // Hem productName hem de name'i kontrol etmek için birleştir
     const fullName = productName || name
+    
+    // Aksesuarlar için özel PDF mapping
+    const aksesuarlarPdfMap = {
+      '2300': '/aksesuarlar/2300-havalandirma-panjuru.pdf',
+      '2150': '/aksesuarlar/2150-proje-cebi-a4.pdf',
+      '2152': '/aksesuarlar/2152-proje-cebi-a5.pdf',
+      '2220': '/aksesuarlar/2220-gozetleme-cami.pdf',
+      '2216': '/aksesuarlar/2216-sayac-cercevesi.pdf',
+      '2215': '/aksesuarlar/2215-sayac-cercevesi.pdf',
+      '2451': '/aksesuarlar/2451-aybolt.pdf',
+      '2461': '/aksesuarlar/2461-aybolt.pdf',
+      '2400': '/aksesuarlar/2400-kafesli-somun.pdf',
+      '2700': '/aksesuarlar/2700-gerdirme-mandali.pdf',
+      '2760': '/aksesuarlar/2760-pim-kilitlemeli-tutamak.pdf',
+      '2750': '/aksesuarlar/2750-yayli-yuk-mandali.pdf',
+      '2751': '/aksesuarlar/2751-yayli-yuk-mandali-percinli.pdf',
+      '320.02.164': '/aksesuarlar/32002164-kablo-kanali.pdf',
+      '025': '/aksesuarlar/025-cam-mentesesi.pdf',
+      '079': '/aksesuarlar/079-kapak-tutucu-makasi.pdf',
+      '279': '/aksesuarlar/279-kapak-tutucu-makasi.pdf',
+      '179': '/aksesuarlar/179-kapak-tutucu-makasi.pdf',
+      '340.10.026': '/aksesuarlar/34010026-akustik-sunger.pdf',
+      '340.00.370': '/aksesuarlar/34000370-diyafram-tipi-gromet.pdf',
+      '340.00.380': '/aksesuarlar/34000380-diyafram-tipi-gromet.pdf',
+      '340.08.010': '/aksesuarlar/34008010-kaucuk-stoper.pdf',
+      '340.00.400': '/aksesuarlar/34000400-kaucuk-tipa.pdf',
+      '340.08.001': '/aksesuarlar/34008001-kapak-tutucu.pdf',
+      '340.20.005.2000': '/aksesuarlar/340200052000-kapi-alti-fircasi.pdf',
+      '340.20.025.2000': '/aksesuarlar/340200252000-kapi-alti-fircasi.pdf',
+    }
+    
+    if (aksesuarlarPdfMap[code]) {
+      return aksesuarlarPdfMap[code]
+    }
     
     // Özel durumlar
     if (code === '001' && name?.includes('Küçük Versiyon')) {
@@ -7578,6 +8471,117 @@ function ProductDetail() {
       }
       if (code === '0000' && fullName?.includes('Karoser Menteşe')) {
         return '/duzmenteseler/0000-karoser-mentese.pdf'
+      }
+    }
+    
+    // Kulplar için özel PDF mapping
+    if (fullName?.includes('Kulp') || fullName?.includes('Tutamak')) {
+      if (code === '084' && fullName?.includes('Milenyum Kulp')) {
+        return '/kulplar/084-milenyum-kulp.pdf'
+      }
+      if (code === '085' && fullName?.includes('Çekme Kulpu')) {
+        return '/kulplar/085-cekme-kulpu.pdf'
+      }
+      if (code === '083' && fullName?.includes('Alüminyum Tutamak')) {
+        return '/kulplar/083-aluminyum-tutamak.pdf'
+      }
+      if (code === '183' && fullName?.includes('Alüminyum Tutamak')) {
+        return '/kulplar/183-aluminyum-tutamak.pdf'
+      }
+      if (code === '184' && fullName?.includes('Metal Kulp')) {
+        return '/kulplar/184-metal-kulp.pdf'
+      }
+      if (code === '484' && fullName?.includes('Metal Kulp')) {
+        return '/kulplar/484-metal-kulp.pdf'
+      }
+      if (code === '884' && fullName?.includes('Alüminyum Kulp')) {
+        return '/kulplar/884-aluminyum-kulp.pdf'
+      }
+      if (code === '284' && fullName?.includes('Metal Kulp')) {
+        return '/kulplar/284-metal-kulp.pdf'
+      }
+      if (code === '384') {
+        if (fullName?.includes('Metal Kulp v1')) {
+          return '/kulplar/384-metal-kulp v1.pdf'
+        }
+        if (fullName?.includes('Metal Kulp v2')) {
+          return '/kulplar/384-metal-kulp v2.pdf'
+        }
+      }
+      if (code === '584' && fullName?.includes('Katlanabilir Metal Kulp')) {
+        return '/kulplar/584-katlanabilir-metal-kulp.pdf'
+      }
+      if (code === '684' && fullName?.includes('Metal Kulp')) {
+        return '/kulplar/684-metal-kulp.pdf'
+      }
+      if (code === '784' && fullName?.includes('Metal Kulp')) {
+        return '/kulplar/784-metal-kulp.pdf'
+      }
+      if (code === '185' && fullName?.includes('Parmak Kulp')) {
+        return '/kulplar/185-parmak-kulp.pdf'
+      }
+      if (code === '086' && fullName?.includes('Makina Kapak Kulpu')) {
+        return '/kulplar/086-makina-kapak-kulpu.pdf'
+      }
+      if (code === '186' && fullName?.includes('Makina Kapak Kulpu')) {
+        return '/kulplar/186-makina-kapak-kulpu.pdf'
+      }
+      if (code === '386' && fullName?.includes('Kapak Kulpu')) {
+        return '/kulplar/386-kapak-kulpu.pdf'
+      }
+      if (code === '081' && fullName?.includes('Kapak Kulpu')) {
+        return '/kulplar/081-kapak-kulpu.pdf'
+      }
+      if (code === '087' && fullName?.includes('Makina Kapak Kulpu')) {
+        return '/kulplar/087-makina-kapak-kulpu.pdf'
+      }
+      if (code === '287' && fullName?.includes('Makina Kapak Kulpu')) {
+        return '/kulplar/287-makina-kapak-kulpu.pdf'
+      }
+      if (code === '187' && fullName?.includes('Makina Kapak Kulpu')) {
+        return '/kulplar/187-makina-kapak-kulpu.pdf'
+      }
+      if (code === '487' && fullName?.includes('Makina Kapak Kulpu')) {
+        return '/kulplar/487-makina-kapak-kulpu.pdf'
+      }
+      if (code === '286' && fullName?.includes('Kapak Kulpu')) {
+        return '/kulplar/286-kapak-kulpu.pdf'
+      }
+      if (code === '387' && fullName?.includes('Makina Kapak Kulpu')) {
+        return '/kulplar/387-makina-kapak-kulpu.pdf'
+      }
+      if (code === '082' && fullName?.includes('Gömme Yaylı Kulp')) {
+        return '/kulplar/082-gomme-yayli-kulp.pdf'
+      }
+      if (code === '374' && fullName?.includes('Geçme Kapak Tutamağı')) {
+        return '/kulplar/374-gecme-kapak-tutamagi.pdf'
+      }
+      if (code === '274' && fullName?.includes('Geçme Kapak Tutamağı')) {
+        return '/kulplar/274-gecme-kapak-tutamagi.pdf'
+      }
+      if (code === '074' && fullName?.includes('Geçme Kapak Tutamağı')) {
+        return '/kulplar/074-gecme-kapak-tutamagi.pdf'
+      }
+      if (code === '174' && fullName?.includes('Geçme Kapak Tutamağı')) {
+        return '/kulplar/174-gecme-kapak-tutamagi.pdf'
+      }
+      if (code === '674' && fullName?.includes('Geçme Kapak Tutamağı')) {
+        return '/kulplar/674-gecme-kapak-tutamagi.pdf'
+      }
+      if (code === '774' && fullName?.includes('Geçme Kapak Tutamağı')) {
+        return '/kulplar/774-gecme-kapak-tutamagi.pdf'
+      }
+      if (code === '874' && fullName?.includes('Geçme Kapak Tutamağı')) {
+        return '/kulplar/874-gecme-kapak-tutamagi.pdf'
+      }
+      if (code === '574' && fullName?.includes('Gömme Tutamak')) {
+        return '/kulplar/574-gomme-tutamak.pdf'
+      }
+      if (code === '474' && fullName?.includes('Gömme Tutamak')) {
+        return '/kulplar/474-gomme-tutamak.pdf'
+      }
+      if (code === '974' && fullName?.includes('Gömme Tutamak')) {
+        return '/kulplar/974-gomme-tutamak.pdf'
       }
     }
     
