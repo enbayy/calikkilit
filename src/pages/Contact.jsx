@@ -48,7 +48,7 @@ function Contact() {
   }
 
   return (
-    <div className="bg-[#f0fdf4] pb-16 text-slate-900">
+    <div className="bg-slate-50 pb-16 text-slate-900">
       <section className="mx-auto max-w-7xl space-y-10 px-1.5 pt-10 sm:px-2 lg:px-3">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {contactCards.map((card) => (
@@ -86,7 +86,7 @@ function Contact() {
               <div
                 className={`rounded-2xl border px-4 py-3 text-sm ${
                   status.type === 'success'
-                    ? 'border-[#86efac] bg-[#f0fdf4] text-[#166534]'
+                    ? 'border-emerald-200 bg-emerald-50 text-[#166534]'
                     : 'border-yellow-200 bg-yellow-50 text-yellow-800'
                 }`}
               >

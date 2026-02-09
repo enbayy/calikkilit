@@ -2,9 +2,9 @@ function InfoPage({ title, subtitle, sections = [], hideHeader = false }) {
   return (
     <div className="space-y-10 pb-16">
       {!hideHeader ? (
-        <section className="bg-slate-900 text-white">
+        <section className="bg-[#1a1a1a] text-white">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-1.5 py-12 sm:px-2 sm:py-14 lg:px-3">
-            <p className="text-xs uppercase tracking-[0.14em] text-[#86efac]">Konya Kilit</p>
+            <p className="text-xs uppercase tracking-[0.14em] text-white/70">Konya Kilit</p>
             <h1 className="text-3xl font-semibold sm:text-4xl">{title}</h1>
             {subtitle ? <p className="max-w-3xl text-slate-100/80">{subtitle}</p> : null}
           </div>

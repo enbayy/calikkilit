@@ -158,7 +158,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-[#f0fdf4] text-slate-900">
+      <div className="min-h-screen bg-slate-50 text-slate-900">
         <header className="relative z-40 backdrop-blur bg-[#1a1a1a]/95 shadow-sm shadow-slate-200/70">
           <div className="border-b border-[#2d2d2d]">
             <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-1.5 py-1.5 text-xs text-white">
@@ -554,8 +554,8 @@ function App() {
           </div>
 
           {/* Alt Kısım */}
-          <div className="border-t border-white/10 bg-[#14532d]">
-            <div className="mx-auto max-w-7xl px-1.5 py-6 text-center text-xs text-slate-400 lg:px-2">
+          <div className="border-t border-white/10">
+            <div className="mx-auto max-w-7xl px-1.5 py-6 text-center text-xs text-slate-200 lg:px-2">
               <p>© {new Date().getFullYear()} Konya Kilit. Tüm hakları saklıdır.</p>
             </div>
           </div>
