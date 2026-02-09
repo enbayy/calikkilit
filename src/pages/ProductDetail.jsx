@@ -1598,6 +1598,72 @@ const productDetails = {
       { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
     ],
   },
+  '3341 > Elektronik Kilit': {
+    code: '3341',
+    name: 'Elektronik Kilit',
+    description: '• Erişim kontrol sistemleri ile uyumlu Bas Kapat\n• İki farklı mekanik açılma opsiyonu\n• Otomatik kilitleme\n• Mikroişlemci kontrollü redüktörlü\n• DC motor\n• 12 Volt DC besleme voltajı\n• Dahili mikrosiviç',
+    materials: {
+      'GÖVDE': 'Plastik',
+      'DİL': 'Zamak',
+    },
+    surface: 'Siyah',
+    technicalSpecs: {
+      'Kablo Uzunluğu': '180 mm',
+      'Çalışma Voltajı': '12 Volt',
+      'Akım': 'Max. 500 mA',
+      'Stroke': '9 mm',
+    },
+    versions: [
+      {
+        'Ürün Kodu': '3341',
+        'Ürün Adı': 'Elektronik Kilit',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3311 > Selenoid Kilit': {
+    code: '3311',
+    name: 'Selenoid Kilit',
+    description: '• Erişim kontrol sistemleri ile uyumlu.\n• Özel karşılık parçası ile bas kapa özelliği\n• Kilit gövdesine monte edilebilen yüksek güvenlikli çeyrek dönüşlü kilit ile mekanik olarak açılabilme imkanı\n• Otomatik kilitlenme\n• Selenoid kutupsal değildir.\n• Selenoid direnci uygulanan voltaja göre değişiklik gösterir.\n• Selenoid sürekli enerji altında kaldığı zaman ısınır (yaklaşık 80 derece), yanıklara karşı önlem alınmalıdır.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'DİL': 'Çelik',
+      'KİLİT KARŞILIĞI': 'Delrin',
+    },
+    surface: 'Siyah',
+    technicalSpecs: {
+      'Çalışma Voltajı': '24 V DC',
+      'Akım Tüketimi': '550 mA',
+      'Güç Tüketimi': '13,2 W',
+      'Çalışma Sıcaklığı': '- 5 °C / + 40 °C',
+      'Kablo uzunluğu': '30 cm',
+      'Stroke': '10 mm',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '3301 > Elektronik Dolap Kilidi': {
+    code: '3301',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Mikroişlemci kontrollü çalışma voltajı 220 volt AC ( Özel trafosu ile)\n• Uzaktan Kumanda; Açma - Kapama\n• Sesli Uyarı\n• Enerji kesintisi durumu için manuel açma slotu\n• Yeni kumanda öğretme\n• Tek kumanda ile birden çok kilit kontrol edebilme\n• Bir kilidi birden çok kumanda ile kontrol edebilme\n• Strok: 8 mm',
+    materials: {
+      'GÖVDE': 'Plastik',
+      'KİLİT DİLİ': 'Çelik',
+      'DİL KARŞILIĞI': 'Delrin',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3301',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
   '3331 > Elektronik Kancalı Kilit': {
     code: '3331',
     name: 'Elektronik Kancalı Kilit',
@@ -1620,7 +1686,7 @@ const productDetails = {
   '3501 > Acil Durum Durdurma Butonu': {
     code: '3501',
     name: 'Acil Durum Durdurma Butonu',
-    description: '• Kolay montaj\n• Farklı kontak seçenekleri (max. 3 kontak)\n• Standart kablo .l.u.su 2.5 m spiral boru ölçüsü 2m dir. İsteğe bağlı değişebilr.',
+    description: '• Kolay montaj\n• Farklı kontak seçenekleri (max. 3 kontak)\n• Standart kablo ölçüsü 2.5 m spiral boru ölçüsü 2m dir. İsteğe bağlı değişebilir.',
     materials: {
       'ÇANAK': 'Polyamid DIN-EN ISO 1043-1 PA6 GFR 30',
       'KORUYUCU KAPAK': 'PVC',
@@ -1628,14 +1694,16 @@ const productDetails = {
       'SPİRAL BORU': 'PA6',
       'RAKOR': 'PA66',
     },
+    surface: 'Siyah',
     versions: [
-      { urunKodu: '3501', urunResmi: '', urunAdi: 'Acil Durdurma Butonu', malzeme: 'Plastik', yuzey: 'Siyah' },
+      {
+        'Ürün Kodu': '3501',
+        'Ürün Adı': 'Acil Durdurma Butonu',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
     ],
-    relatedProducts: [
-      { name: 'Diller için tıklayınız. (CC: Tırnaksız Diller)', link: '#' },
-      { name: 'Anahtarlar için tıklayınız.', link: '#' },
-      { name: 'İspanyolet çubuklar ve aksesuarlar için tıklayınız.', link: '#' },
-    ],
+    relatedProducts: [],
   },
   '466 > Mini Butonlu Kilit': {
     code: '466',
@@ -4215,6 +4283,189 @@ const productDetails = {
     ],
     relatedProducts: [],
   },
+  '3204 > Elektronik Dolap Kilidi': {
+    code: '3204',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Anahtar ve kart ihtiyacı olmadan şifre ile açılabilme\n• Ofis ortamına uygun zarif tasarım\n• Çoklu kullanıcı desteği\n• Mikro USB acil durum harici pil beslemesi\n• Düşük pil seviyesi göstergesi\n• İki farklı kullanım şekli;\n- Genel kullanım\n- Özel kullanım\n• Montaj kolaylığı\n• Kullanım kolaylığı\n• Yüksek güvenlik\n• Hırsız alarmı\n• Melodi evet / hayır ayarı\n• Şık görsel uyarı LED\'leri',
+    materials: {
+      'GÖVDE': 'Alüminyum',
+      'TUTAMAK': 'Alüminyum',
+      'DİL': 'Çelik',
+      'PANEL': 'Plastik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3204',
+        'Ürün Adı': 'Elekronik Dolap Kilidi',
+        'Malzeme': 'Alüminyum',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3205 > Elektronik Dolap Kilidi': {
+    code: '3205',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Anahtar ihtiyacı olmaksızın RFID kart ile açılabilme\n• Ofis ortamına uygun zarif tasarım\n• Çoklu kullanıcı desteği\n• Mikro USB acil durum harici pil beslemesi\n• Düşük pil seviyesi göstergesi\n• İki farklı kullanım şekli;\n- Genel kullanım\n- Özel kullanım\n• Montaj kolaylığı\n• Kullanım kolaylığı\n• Yüksek güvenlik\n• Hırsız alarmı\n• Melodi evet / hayır ayarı\n• Şık görsel uyarı LED\'leri',
+    materials: {
+      'GÖVDE': 'Alüminyum',
+      'TUTAMAK': 'Alüminyum',
+      'DİL': 'Çelik',
+      'PANEL': 'Plastik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3205',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Alüminyum',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3211 > Elektronik Dolap Kilidi': {
+    code: '3211',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Anahtar ve kart ihtiyacı olmadan şifre ile açılabilme\n• Ofis ortamına uygun zarif tasarım\n• Şifre unutulduğunda, uzaktan veya USB-Key ile şifre çözme imkanı\n• Mikro USB acil durum için harici pil beslemesi\n• Düşük pil seviyesi göstergesi\n• İki farklı kullanım şekli;\n- Genel kullanım\n- Özel kullanım\n• 4 kez yanlış şifre girildiğinde alarm aktif hale gelecektir ve kilit 60 saniye korumaya geçer.\n• Hırsızlığa karşı sahte PIN şifresi tanımlayabilme\n• Montaj kolaylığı\n• Kullanım kolaylığı\n• Yüksek güvenlik\n• Melodi evet / hayır ayarı\n• Şık görsel uyarı LED\'leri',
+    materials: {
+      'GÖVDE': 'Alüminyum',
+      'TUTAMAK': 'Alüminyum',
+      'DİL': 'Çelik',
+    },
+    surface: 'Çelik',
+    versions: [
+      {
+        'Ürün Kodu': '3211',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Alüminyum',
+        'Yüzey': 'Çelik',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3212 > Elektronik Dolap Kilidi': {
+    code: '3212',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Anahtar ve kart ihtiyacı olmadan şifre ile açılabilme\n• Ofis ortamına uygun zarif tasarım\n• Şifre unutulduğunda, uzaktan veya USB-Key ile şifre çözme imkanı\n• Mikro USB acil durum için harici pil beslemesi\n• Düşük pil seviyesi göstergesi\n• İki farklı kullanım şekli;\n- Genel kullanım\n- Özel kullanım\n• 4 kez yanlış şifre girildiğinde alarm aktif hale gelecektir ve kilit 60 saniye korumaya geçer.\n• Hırsızlığa karşı sahte PIN şifresi tanımlayabilme\n• Montaj kolaylığı\n• Kullanım kolaylığı\n• Yüksek güvenlik\n• Melodi evet / hayır ayarı\n• Şık görsel uyarı LED\'leri',
+    materials: {
+      'GÖVDE': 'Alüminyum',
+      'TUTAMAK': 'Alüminyum',
+      'DİL': 'Çelik',
+    },
+    surface: 'Çelik',
+    versions: [
+      {
+        'Ürün Kodu': '3212',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Alüminyum',
+        'Yüzey': 'Çelik',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3213 > Elektronik Dolap Kilidi': {
+    code: '3213',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Anahtar ve kart ihtiyacı olmadan şifre ile açılabilme\n• Ofis ortamına uygun zarif tasarım\n• Şifre unutulduğunda, uzaktan veya USB-Key ile şifre çözme imkanı\n• Mikro USB acil durum için harici pil beslemesi\n• Düşük pil seviyesi göstergesi\n• İki farklı kullanım şekli;\n- Genel kullanım\n- Özel kullanım\n• 4 kez yanlış şifre girildiğinde alarm aktif hale gelecektir ve kilit 60 saniye korumaya geçer.\n• Hırsızlığa karşı sahte PIN şifresi tanımlayabilme\n• Montaj kolaylığı\n• Kullanım kolaylığı\n• Yüksek güvenlik\n• Melodi evet / hayır ayarı\n• Şık görsel uyarı LED\'leri',
+    materials: {
+      'GÖVDE': 'Alüminyum',
+      'DİL': 'Çelik',
+    },
+    surface: 'Çelik',
+    versions: [
+      {
+        'Ürün Kodu': '3213',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Alüminyum',
+        'Yüzey': 'Çelik',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3214 > Elektronik Dolap Kilidi': {
+    code: '3214',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Anahtar ve kart ihtiyacı olmadan şifre ile açılabilme\n• Ofis ortamına uygun zarif tasarım\n• Şifre unutulduğunda, uzaktan veya USB-Key ile şifre çözme imkanı\n• Mikro USB acil durum için harici pil beslemesi\n• Düşük pil seviyesi göstergesi\n• İki farklı kullanım şekli;\n- Genel kullanım\n- Özel kullanım\n• 4 kez yanlış şifre girildiğinde alarm aktif hale gelecektir ve kilit 60 saniye korumaya geçer.\n• Hırsızlığa karşı sahte PIN şifresi tanımlayabilme\n• Montaj kolaylığı\n• Kullanım kolaylığı\n• Yüksek güvenlik\n• Melodi evet / hayır ayarı\n• Şık görsel uyarı LED\'leri',
+    materials: {
+      'GÖVDE': 'Plastik',
+      'DİL': 'Çelik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3214',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3202 > Elektronik Dolap Kilidi': {
+    code: '3202',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Anahtar ve kart ihtiyacı olmadan şifre ile açılabilme\n• Ofis ortamına uygun zarif tasarım\n• Çoklu kullanıcı desteği\n• Sürgülü kapak arkasına gizlenmiş mikro USB acil durum harici pil beslemesi\n• Düşük pil seviyesi göstergesi\n• İki farklı kullanım şekli;\n- Genel kullanım\n- Özel kullanım\n• Montaj kolaylığı\n• Kullanım kolaylığı\n• Yüksek güvenlik\n• Hırsız alarmı\n• Melodi evet / hayır ayarı\n• Şık görsel uyarı LED\'leri',
+    materials: {
+      'GÖVDE': 'Plastik',
+      'KİLİT PANELİ': 'Plastik',
+      'CONTA': 'Kauçuk',
+      'DİL': 'Çelik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3202',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3203 > Elektronik Dolap Kilidi': {
+    code: '3203',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Anahtar ihtiyacı olmaksızın RFID kart ile açılabilme\n• Ofis ortamına uygun zarif tasarım\n• Çoklu kullanıcı desteği\n• Sürgülü kapak arkasına gizlenmiş mikro USB acil durum harici pil beslemesi\n• Düşük pil seviyesi göstergesi\n• İki farklı kullanım şekli;\n- Genel kullanım\n- Özel kullanım\n• Montaj kolaylığı\n• Kullanım kolaylığı\n• Yüksek güvenlik\n• Hırsız alarmı\n• Melodi evet / hayır ayarı\n• Şık görsel uyarı LED\'leri',
+    materials: {
+      'GÖVDE': 'Plastik',
+      'KİLİT PANELİ': 'Plastik',
+      'CONTA': 'Kauçuk',
+      'DİL': 'Çelik',
+    },
+    surface: 'Siyah',
+    versions: [
+      {
+        'Ürün Kodu': '3203',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Siyah',
+      },
+    ],
+    relatedProducts: [],
+  },
+  '3201 > Elektronik Dolap Kilidi': {
+    code: '3201',
+    name: 'Elektronik Dolap Kilidi',
+    description: '• Kart veya anahtar ihtiyacı olmaksızın şifre ile açılabilme.\n• 2 farklı kullanım şekli;\n- Geçici şifre,\n- Sabit şifre\n• Master ve kullanıcı kodu ile açılabilme\n• Düşük pil göstergesi\n• Acil durum harici pil beslemesi',
+    materials: {
+      'TUŞ TAKIMI GÖVDE': 'Zamak',
+      'TUŞLAR': 'Plastik',
+      'KİLİT GÖVDESİ': 'Plastik',
+      'DİL': 'Zamak',
+    },
+    surface: 'Beyaz',
+    versions: [
+      {
+        'Ürün Kodu': '3201',
+        'Ürün Adı': 'Elektronik Dolap Kilidi',
+        'Malzeme': 'Plastik',
+        'Yüzey': 'Beyaz',
+      },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -4567,14 +4818,22 @@ function ProductDetail() {
       return '/cu-digerurunler/2810kancalikilitbuyuk.jpg'
     }
     
-    // 3331 > Elektronik Kancalı Kilit için özel resim mapping
-    if (code === '3331' && productName?.includes('Elektronik Kancalı Kilit')) {
-      return '/cu-digerurunler/3331elektronikkancalikilit.jpg'
-    }
-    
-    // 3501 > Acil Durum Durdurma Butonu için özel resim mapping
-    if (code === '3501' && productName?.includes('Acil Durum Durdurma Butonu')) {
-      return '/cu-digerurunler/3501acildurum.jpg'
+    // DİĞER ELEKTRONİK KİLİTLER için özel resim mapping
+    if (code === '3341' || code === '3311' || code === '3301' || code === '3331' || code === '3501') {
+      const digerElektronikKilitlerImageMap = {
+        '3341': '/digerelektronikkilitler/3341.jpg',
+        '3311': '/digerelektronikkilitler/3311.jpg',
+        '3301': '/digerelektronikkilitler/3301.jpg',
+        '3331': '/digerelektronikkilitler/3331.jpg',
+        '3501': '/digerelektronikkilitler/3501.jpg',
+      }
+      
+      if (digerElektronikKilitlerImageMap[code]) {
+        return digerElektronikKilitlerImageMap[code]
+      }
+      
+      // Fallback - dosya yoksa genel resim
+      return productImage || '/cesitliurunler/cucesitli.jpg'
     }
     
     // 466 > Mini Butonlu Kilit için özel resim mapping
@@ -4754,6 +5013,25 @@ function ProductDetail() {
       
       if (izlemeVeErisimKontrolImageMap[code]) {
         return izlemeVeErisimKontrolImageMap[code]
+      }
+    }
+    
+    // ELEKTRONİK DOLAP KİLİTLERİ için özel resim mapping
+    if (code === '3201' || code === '3202' || code === '3203' || code === '3204' || code === '3205' || code === '3211' || code === '3212' || code === '3213' || code === '3214') {
+      const elektronikDolapKilitleriImageMap = {
+        '3201': '/elektronikdolapkilitleri/3201.jpg',
+        '3202': '/elektronikdolapkilitleri/3202.jpg',
+        '3203': '/elektronikdolapkilitleri/3203.jpg',
+        '3204': '/elektronikdolapkilitleri/3204.jpg',
+        '3205': '/elektronikdolapkilitleri/3205.jpg',
+        '3211': '/elektronikdolapkilitleri/3211.jpg',
+        '3212': '/elektronikdolapkilitleri/3212.jpg',
+        '3213': '/elektronikdolapkilitleri/3213.jpg',
+        '3214': '/elektronikdolapkilitleri/3214.jpg',
+      }
+      
+      if (elektronikDolapKilitleriImageMap[code]) {
+        return elektronikDolapKilitleriImageMap[code]
       }
     }
     
@@ -5067,14 +5345,25 @@ function ProductDetail() {
       return '/cu-digerurunler/2810-kancali-kilit-buyuk.pdf'
     }
     
-    // 3331 > Elektronik Kancalı Kilit için özel PDF mapping
-    if (code === '3331' && fullName?.includes('Elektronik Kancalı Kilit')) {
-      return '/cu-digerurunler/3331-elektronik-kancali-kilit.pdf'
+    // DİĞER ELEKTRONİK KİLİTLER için özel PDF mapping
+    if (code === '3341' && fullName?.includes('Elektronik Kilit')) {
+      return '/digerelektronikkilitler/3341-elektronik-kilit.pdf'
     }
     
-    // 3501 > Acil Durum Durdurma Butonu için özel PDF mapping
+    if (code === '3311' && fullName?.includes('Selenoid Kilit')) {
+      return '/digerelektronikkilitler/3311-selenoid-kilit.pdf'
+    }
+    
+    if (code === '3301' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/digerelektronikkilitler/3301-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3331' && fullName?.includes('Elektronik Kancalı Kilit')) {
+      return '/digerelektronikkilitler/3331-elektronik-kancali-kilit.pdf'
+    }
+    
     if (code === '3501' && fullName?.includes('Acil Durum Durdurma Butonu')) {
-      return '/cu-digerurunler/3501-acil-durum-durdurma-butonu.pdf'
+      return '/digerelektronikkilitler/3501-acil-durum-durdurma-butonu.pdf'
     }
     
     // 466 > Mini Butonlu Kilit için özel PDF mapping
@@ -5782,6 +6071,43 @@ function ProductDetail() {
     
     if (code === '3415' && fullName?.includes('AIP Erişim Arayüzü Kart Okuyucu')) {
       return '/izlemeveerisimkontrol/3415-aip-erisim-arayuzu-kart-okuyucu.pdf'
+    }
+    
+    // ELEKTRONİK DOLAP KİLİTLERİ için özel PDF mapping
+    if (code === '3204' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3204-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3205' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3205-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3211' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3211-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3212' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3212-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3213' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3213-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3214' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3214-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3202' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3202-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3203' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3203-elektronik-dolap-kilidi.pdf'
+    }
+    
+    if (code === '3201' && fullName?.includes('Elektronik Dolap Kilidi')) {
+      return '/elektronikdolapkilitleri/3201-elektronik-dolap-kilidi.pdf'
     }
     
     // Kod bazlı PDF mapping

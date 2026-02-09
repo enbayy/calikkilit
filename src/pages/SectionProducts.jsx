@@ -769,6 +769,30 @@ function SectionProducts() {
         '3415 > AIP Erişim Arayüzü Kart Okuyucu',
       ]
     }
+    // ELEKTRONİK DOLAP KİLİTLERİ için özel ürün listesi
+    if (sectionTitle === 'ELEKTRONİK DOLAP KİLİTLERİ') {
+      return [
+        '3204 > Elektronik Dolap Kilidi',
+        '3205 > Elektronik Dolap Kilidi',
+        '3211 > Elektronik Dolap Kilidi',
+        '3212 > Elektronik Dolap Kilidi',
+        '3213 > Elektronik Dolap Kilidi',
+        '3214 > Elektronik Dolap Kilidi',
+        '3202 > Elektronik Dolap Kilidi',
+        '3203 > Elektronik Dolap Kilidi',
+        '3201 > Elektronik Dolap Kilidi',
+      ]
+    }
+    // DİĞER ELEKTRONİK KİLİTLER için özel ürün listesi
+    if (sectionTitle === 'DİĞER ELEKTRONİK KİLİTLER') {
+      return [
+        '3341 > Elektronik Kilit',
+        '3311 > Selenoid Kilit',
+        '3301 > Elektronik Dolap Kilidi',
+        '3331 > Elektronik Kancalı Kilit',
+        '3501 > Acil Durum Durdurma Butonu',
+      ]
+    }
     // Kolay Montaj Ç.D. Kilitler için özel ürün listesi
     if (sectionTitle === 'Kolay Montaj Ç.D. Kilitler') {
       return [
@@ -1807,6 +1831,30 @@ function SectionProducts() {
                 '3415 > AIP Erişim Arayüzü Kart Okuyucu': '/izlemeveerisimkontrol/3415.jpg',
               }
               img = izlemeVeErisimKontrolImageMap[item] || '/izlemeveerisimkontrol.png'
+            } else if (sectionTitle === 'ELEKTRONİK DOLAP KİLİTLERİ') {
+              // ELEKTRONİK DOLAP KİLİTLERİ section'ı için özel resim mapping
+              const elektronikDolapKilitleriImageMap = {
+                '3204 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3204.jpg',
+                '3205 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3205.jpg',
+                '3211 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3211.jpg',
+                '3212 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3212.jpg',
+                '3213 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3213.jpg',
+                '3214 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3214.jpg',
+                '3202 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3202.jpg',
+                '3203 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3203.jpg',
+                '3201 > Elektronik Dolap Kilidi': '/elektronikdolapkilitleri/3201.jpg',
+              }
+              img = elektronikDolapKilitleriImageMap[item] || '/elektronikdolapkilitleri.png'
+            } else if (sectionTitle === 'DİĞER ELEKTRONİK KİLİTLER') {
+              // DİĞER ELEKTRONİK KİLİTLER section'ı için özel resim mapping
+              const digerElektronikKilitlerImageMap = {
+                '3341 > Elektronik Kilit': '/digerelektronikkilitler/3341.jpg',
+                '3311 > Selenoid Kilit': '/digerelektronikkilitler/3311.jpg',
+                '3301 > Elektronik Dolap Kilidi': '/digerelektronikkilitler/3301.jpg',
+                '3331 > Elektronik Kancalı Kilit': '/digerelektronikkilitler/3331.jpg',
+                '3501 > Acil Durum Durdurma Butonu': '/digerelektronikkilitler/3501.jpg',
+              }
+              img = digerElektronikKilitlerImageMap[item] || getPumpImage(item) || '/cesitliurunler/cucesitli.jpg'
             }
             const productSlug = encodeURIComponent(item.toLowerCase().replace(/\s+/g, '-'))
             // Ürün adından sayıyı çıkar (örn: "001 > Kollu Kilit" -> code: "001", name: "Kollu Kilit")
