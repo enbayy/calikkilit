@@ -1577,7 +1577,7 @@ function SectionProducts() {
         <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
           <button
             onClick={() => navigate('/urunler')}
-            className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#16a34a]"
+            className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
           >
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -1598,7 +1598,7 @@ function SectionProducts() {
         {/* Geri Dön Butonu */}
         <button
           onClick={() => navigate('/urunler')}
-          className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#16a34a]"
+          className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
         >
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -1617,7 +1617,7 @@ function SectionProducts() {
               />
             )}
             <div>
-              <p className="text-xs uppercase tracking-[0.12em] text-[#16a34a]">Kategori</p>
+              <p className="text-xs uppercase tracking-[0.12em] text-[#166534]">Kategori</p>
               <h2 className="text-xl font-semibold">{sectionTitle}</h2>
             </div>
           </div>
@@ -2129,7 +2129,7 @@ function SectionProducts() {
                   productLogo: getProductLogo(item),
                   fromSection: isFromCeyrekDonuslu ? 'ÇEYREK DÖNÜŞLÜ KİLİTLER' : undefined
                 }}
-                className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-[#16a34a]/50 hover:shadow-xl"
+                className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-[#166534]/50 hover:shadow-xl"
               >
                 {/* Ürün Görseli */}
                 <div className="relative flex h-80 items-center justify-center overflow-hidden bg-white p-6">
@@ -2154,26 +2154,26 @@ function SectionProducts() {
                     {/* Ürün Kodu ve Adı */}
                     <div className="mb-2 flex flex-wrap items-center gap-2">
                       {productCode && (
-                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#166534]/10 text-[#166534] text-xs font-semibold">
                           {productCode}
                         </span>
                       )}
                       {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && item.startsWith('CC >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && productName.startsWith('CC >')) ? (
-                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold min-w-[2rem]">
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#166534]/10 text-[#166534] text-xs font-semibold min-w-[2rem]">
                           CC
                         </span>
                       ) : null}
                       {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && item.startsWith('320.02.180 >')) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && productName.startsWith('320.02.180 >')) ? (
-                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold">
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#166534]/10 text-[#166534] text-xs font-semibold">
                           320.02.180
                         </span>
                       ) : null}
                       {((isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && (item.startsWith('IC >') || item.startsWith('CT') || item.startsWith('CY') || item.startsWith('IL >') || item.startsWith('ILP >') || item.startsWith('LKY') || item.startsWith('LY') || item.startsWith('RCC >'))) || (!(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) && (productName.startsWith('IC >') || productName.startsWith('CT') || productName.startsWith('CY') || productName.startsWith('IL >') || productName.startsWith('ILP >') || productName.startsWith('LKY') || productName.startsWith('LY') || productName.startsWith('RCC >'))) ? (
-                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-xs font-semibold">
+                        <span className="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-[#166534]/10 text-[#166534] text-xs font-semibold">
                           {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) ? (item.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '') : (productName.match(/^(IC|CT\d+|CY\d+|IL|ILP|LKY\d+|LY\d+|LY40|RCC)\s*>/)?.[1] || '')}
                         </span>
                       ) : null}
-                      <h3 className="line-clamp-2 flex-1 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#16a34a]">
+                      <h3 className="line-clamp-2 flex-1 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#166534]">
                         {(isSubSection || isSikistirmaliKilitler || isSurguKilitler || isDigerUrunler || isDiller || isIspanyoletCubuk || isIspanyoletLama || isPaslanmazIspanyoletCubuk || isPaslanmazIspanyoletLama) ? (
                           item.startsWith('CC >') ? (
                             item.replace('CC >', '').trim()
@@ -2223,7 +2223,7 @@ function SectionProducts() {
                     </div>
                     {/* ÇEŞİTLİ ÜRÜNLER, TRAFO VE KABİN KİLİTLERİ, DİLLER ve ÇEYREK DÖNÜŞLÜ KİLİTLER için Ürün Grup Çeşitleri yazısı */}
                     {(sectionTitle === 'ÇEŞİTLİ ÜRÜNLER' || sectionTitle === 'TRAFO VE KABİN KİLİTLERİ' || sectionTitle === 'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR' || sectionTitle === 'ÇEYREK DÖNÜŞLÜ KİLİTLER') && !isSubSection && !isSikistirmaliKilitler && !isSurguKilitler && !isDigerUrunler && !isDiller && !isIspanyoletCubuk && !isIspanyoletLama && !isPaslanmazIspanyoletCubuk && !isPaslanmazIspanyoletLama && !isAnahtarlar && !isCeyrekDonusluKilitler && !isSikistirmaliKilitlerCeyrek && !isKolayMontajCeyrek && (
-                      <p className="mb-3 text-xs text-slate-500">Ürün Grup Çeşitleri</p>
+                      <p className="mb-3 text-xs text-slate-500">ÜRÜN GRUP ÇEŞİTLERİ</p>
                     )}
                   </div>
                 </div>

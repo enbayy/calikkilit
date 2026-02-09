@@ -158,10 +158,10 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-slate-50 text-slate-900">
-        <header className="relative z-40 backdrop-blur bg-white/95 shadow-sm shadow-slate-200/70">
-          <div className="border-b border-slate-100">
-            <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-1.5 py-1.5 text-xs text-slate-500">
+      <div className="min-h-screen bg-[#f0fdf4] text-slate-900">
+        <header className="relative z-40 backdrop-blur bg-[#166534]/95 shadow-sm shadow-slate-200/70">
+          <div className="border-b border-[#14532d]">
+            <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-1.5 py-1.5 text-xs text-white">
               <div className="flex items-center gap-4">
                 <span className="hidden sm:inline-flex items-center gap-1">
                   📞 0506 092 03 42
@@ -175,7 +175,7 @@ function App() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white text-slate-600 transition hover:bg-[#16a34a] hover:text-white"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white/20 text-white transition hover:bg-white/30 hover:text-white"
                   aria-label="Instagram"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -186,7 +186,7 @@ function App() {
                   href="https://wa.me/905060920342"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white text-slate-600 transition hover:bg-[#16a34a] hover:text-white"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white/20 text-white transition hover:bg-white/30 hover:text-white"
                   aria-label="WhatsApp"
                 >
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -200,23 +200,21 @@ function App() {
           <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-1.5 py-2">
             <div className="flex items-center">
               <NavLink to="/" className="flex items-center">
-                <div className="flex items-center justify-center rounded-lg bg-gradient-to-br from-black via-gray-900 to-gray-800 p-2.5 shadow-lg">
-                  <img
-                    src="/konyakilitlogo.png"
-                    alt="Konya Kilit logo"
-                    className="h-16 w-auto"
-                  />
-                </div>
+                <img
+                  src="/konyakilitlogo.png"
+                  alt="Konya Kilit logo"
+                  className="h-20 w-auto"
+                />
               </NavLink>
             </div>
 
-            <nav className="hidden items-center gap-12 text-base font-semibold text-slate-700 lg:flex">
+            <nav className="hidden items-center gap-12 text-base font-semibold text-white lg:flex">
               {navItems.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
                   className={({ isActive }) =>
-                    `group relative pb-1 transition hover:text-[#16a34a] ${isActive ? 'text-[#16a34a]' : ''}`
+                    `group relative pb-1 transition hover:text-white ${isActive ? 'text-white' : 'text-white'}`
                   }
                   end={item.path === '/'}
                 >
@@ -224,7 +222,7 @@ function App() {
                     <>
                       <span>{item.label}</span>
                       <span
-                        className={`absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-[#16a34a] transition ${
+                        className={`absolute -bottom-1 left-0 h-[2px] w-full rounded-full bg-white transition ${
                           isActive ? 'opacity-100' : 'opacity-0 group-hover:opacity-50'
                         }`}
                       />
@@ -241,12 +239,12 @@ function App() {
                   placeholder="Ürün ara..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-64 rounded-lg border border-slate-200 bg-white px-4 py-2 pr-10 text-sm text-slate-700 placeholder-slate-400 shadow-sm transition focus:border-[#16a34a] focus:outline-none focus:ring-2 focus:ring-[#16a34a]/20"
+                  className="w-64 rounded-lg border border-white/30 bg-white px-4 py-2 pr-10 text-sm text-slate-700 placeholder-slate-400 shadow-sm transition focus:border-white focus:outline-none focus:ring-2 focus:ring-white/20"
                 />
               </div>
               <button
                 onClick={() => setMobileOpen((prev) => !prev)}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 shadow-sm transition hover:border-[#16a34a]/40 hover:text-[#16a34a] lg:hidden"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/30 bg-white/10 text-white shadow-sm transition hover:border-white/50 hover:bg-white/20 lg:hidden"
                 aria-label="Menüyü aç/kapat"
               >
                 <span className="relative block h-4 w-5">
@@ -276,9 +274,7 @@ function App() {
             <div className="relative ml-auto h-full w-[90vw] max-w-sm overflow-y-auto border-l border-slate-200 bg-white shadow-2xl">
               <div className="flex items-center justify-between px-6 py-3">
                 <div className="flex items-center">
-                  <div className="flex items-center justify-center rounded-lg bg-gradient-to-br from-black via-gray-900 to-gray-800 p-2 shadow-lg">
-                    <img src="/konyakilitlogo.png" alt="Konya Kilit logo" className="h-12 w-auto" />
-                  </div>
+                  <img src="/konyakilitlogo.png" alt="Konya Kilit logo" className="h-16 w-auto" />
                 </div>
                 <button
                   onClick={() => setMobileOpen(false)}
@@ -297,7 +293,7 @@ function App() {
                     onClick={() => setMobileOpen(false)}
                     className={({ isActive }) =>
                       `flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition ${
-                        isActive ? 'bg-[#16a34a] text-white' : 'text-slate-800 hover:bg-slate-100'
+                        isActive ? 'bg-white text-[#166534]' : 'text-slate-800 hover:bg-slate-100'
                       }`
                     }
                     end={item.path === '/'}
@@ -429,7 +425,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Anasayfa
                     </NavLink>
@@ -437,7 +433,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/hakkimizda"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Hakkımızda
                     </NavLink>
@@ -445,7 +441,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/urunler"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Ürünler
                     </NavLink>
@@ -453,7 +449,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/iletisim"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       İletişim
                     </NavLink>
@@ -468,7 +464,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/urunler"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Kilitler
                     </NavLink>
@@ -476,7 +472,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/urunler"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Menteşeler
                     </NavLink>
@@ -484,7 +480,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/urunler"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Contalar
                     </NavLink>
@@ -492,7 +488,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/urunler"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Aksesuarlar ve Kulplar
                     </NavLink>
@@ -500,7 +496,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/urunler"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Elektronik Sistemler
                     </NavLink>
@@ -508,7 +504,7 @@ function App() {
                   <li>
                     <NavLink
                       to="/urunler"
-                      className="text-slate-300 transition hover:text-white hover:underline"
+                      className="text-white transition hover:text-white hover:underline"
                     >
                       Paslanmaz Çelik Ürünler
                     </NavLink>

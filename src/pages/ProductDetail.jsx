@@ -6649,7 +6649,7 @@ function ProductDetail() {
             <p className="text-base text-slate-600">Ürün bulunamadı.</p>
             <button
               onClick={() => navigate('/urunler')}
-              className="mt-4 rounded-lg bg-[#16a34a] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#15803d]"
+              className="mt-4 rounded-lg bg-[#166534] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#14532d]"
             >
               Ürünlere Dön
             </button>
@@ -8838,7 +8838,7 @@ function ProductDetail() {
         {/* Geri Dön Butonu */}
         <button
           onClick={() => navigate(-1)}
-          className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#16a34a]"
+          className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
         >
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -8852,7 +8852,7 @@ function ProductDetail() {
             <div className="mb-8">
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 {(productDetail?.code || productInfo?.code) && (
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#16a34a]/10 text-[#16a34a] text-sm font-semibold">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#166534]/10 text-[#166534] text-sm font-semibold">
                     {productDetail?.code || productInfo?.code}
                   </span>
                 )}
@@ -8881,7 +8881,7 @@ function ProductDetail() {
                 {productDetail?.productImage ? (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-6">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">Ürün Bilgisi</h3>
                     </div>
                     <div className="w-full overflow-x-auto">
@@ -8896,7 +8896,7 @@ function ProductDetail() {
                 ) : productDetail?.description && productDetail.description.trim() !== '' ? (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-4">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">Ürün Bilgisi</h3>
                     </div>
                     <div className="text-base leading-relaxed text-slate-700 whitespace-pre-line">
@@ -8906,7 +8906,7 @@ function ProductDetail() {
                 ) : isLockProduct && !productDetail ? (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-4">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">Ürün Bilgisi</h3>
                     </div>
                     <div className="text-base leading-relaxed text-slate-700 whitespace-pre-line">
@@ -8919,7 +8919,7 @@ function ProductDetail() {
                 {productDetail?.applicationArea && Object.keys(productDetail.applicationArea).length > 0 && (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-6">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">UYGULAMA ALANI</h3>
                     </div>
                     <div className="space-y-4">
@@ -8936,7 +8936,7 @@ function ProductDetail() {
                 {productDetail?.accessories && Object.keys(productDetail.accessories).length > 0 && (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-6">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">AKSESUARLAR</h3>
                     </div>
                     <div className="space-y-4">
@@ -8953,7 +8953,7 @@ function ProductDetail() {
                 {(productDetail?.materials || isLockProduct) && Object.keys(productDetail?.materials || {}).length > 0 && (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-6">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">MALZEME</h3>
                     </div>
                     <div className="space-y-4">
@@ -8971,7 +8971,7 @@ function ProductDetail() {
                 {productDetail?.surface && (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-6">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">YÜZEY</h3>
                     </div>
                     <div className="text-base text-slate-700">
@@ -8984,7 +8984,7 @@ function ProductDetail() {
                 {productDetail?.technicalSpecs && Object.keys(productDetail.technicalSpecs).length > 0 && (
                   <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                     <div className="flex items-center gap-2 mb-6">
-                      <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                      <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">TEKNİK ÖZELLİKLER</h3>
                     </div>
                     <div className="space-y-4">
@@ -9011,7 +9011,7 @@ function ProductDetail() {
                   return (
                     <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                       <div className="flex items-center gap-2 mb-6">
-                        <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                        <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                       <h3 className="text-xl font-bold text-slate-900">
                         {productDetail.code === '018' ? 'Trafo Kabin Kilidi (V1)' : productDetail.versions[0]?.stokKodu ? 'Stok Kodları ve Ölçüler' : productDetail.code === '320.02.180' ? '' : 'Ürün Varyasyonları'}
                       </h3>
@@ -9540,7 +9540,7 @@ function ProductDetail() {
                 {/* Katalog Sayfası */}
                 <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="h-1 w-8 rounded-full bg-[#16a34a]"></div>
+                    <div className="h-1 w-8 rounded-full bg-[#166534]"></div>
                     <h3 className="text-lg font-bold text-slate-900">Katalog Sayfası</h3>
                   </div>
                   <p className="text-sm text-slate-600 mb-3">{productDetail?.name || productInfo?.name || productName}</p>
@@ -9557,7 +9557,7 @@ function ProductDetail() {
                         {/* Büyültme İkonu */}
                         <button
                           onClick={() => setIsPdfFullscreen(true)}
-                          className="absolute top-2 right-2 inline-flex items-center justify-center h-10 w-10 rounded-lg bg-white/90 backdrop-blur-sm border border-slate-200 text-slate-700 shadow-md transition hover:bg-white hover:border-[#16a34a] hover:text-[#16a34a]"
+                          className="absolute top-2 right-2 inline-flex items-center justify-center h-10 w-10 rounded-lg bg-white/90 backdrop-blur-sm border border-slate-200 text-slate-700 shadow-md transition hover:bg-white hover:border-[#166534] hover:text-[#166534]"
                           title="Tam Ekran"
                         >
                           <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -9570,7 +9570,7 @@ function ProductDetail() {
                       <a
                         href={pdfPath}
                         download
-                        className="inline-flex items-center gap-2 rounded-lg bg-[#16a34a] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#15803d]"
+                        className="inline-flex items-center gap-2 rounded-lg bg-[#166534] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-[#14532d]"
                       >
                         <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -9588,7 +9588,7 @@ function ProductDetail() {
                             {/* Kapatma Butonu */}
                             <button
                               onClick={() => setIsPdfFullscreen(false)}
-                              className="absolute top-4 right-4 z-10 inline-flex items-center justify-center h-10 w-10 rounded-lg bg-white/90 backdrop-blur-sm border border-slate-200 text-slate-700 shadow-md transition hover:bg-white hover:border-[#16a34a] hover:text-[#16a34a]"
+                              className="absolute top-4 right-4 z-10 inline-flex items-center justify-center h-10 w-10 rounded-lg bg-white/90 backdrop-blur-sm border border-slate-200 text-slate-700 shadow-md transition hover:bg-white hover:border-[#166534] hover:text-[#166534]"
                               title="Kapat"
                             >
                               <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -9624,7 +9624,7 @@ function ProductDetail() {
                 {allBrandLogos.map((logo, index) => (
                   <div
                     key={index}
-                    className="flex h-28 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 p-3 transition hover:border-[#16a34a] hover:bg-white hover:shadow-md sm:h-32 sm:p-4 md:h-36 md:p-5 lg:h-40 lg:p-6"
+                    className="flex h-28 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 p-3 transition hover:border-[#166534] hover:bg-white hover:shadow-md sm:h-32 sm:p-4 md:h-36 md:p-5 lg:h-40 lg:p-6"
                   >
                     <img 
                       src={logo} 

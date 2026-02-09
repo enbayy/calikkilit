@@ -5,7 +5,7 @@ function CatalogSection() {
         <div className="absolute inset-0 bg-gradient-to-tr from-green-50/50 via-white to-white" />
         <div className="relative space-y-6 p-8 sm:p-10">
           <div className="flex items-center gap-3">
-            <span className="h-1 w-10 rounded-full bg-[#16a34a]" />
+            <span className="h-1 w-10 rounded-full bg-[#166534]" />
             <h2 className="text-2xl font-bold text-slate-900">Ürün Kataloğu</h2>
           </div>
           <p className="max-w-2xl text-base leading-relaxed text-slate-600">
@@ -13,16 +13,16 @@ function CatalogSection() {
             inceleyebilirsiniz.
           </p>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-[1.2fr_0.8fr] md:items-center">
-            <select className="h-12 rounded-lg border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-700 shadow-sm focus:border-[#16a34a] focus:outline-none focus:ring-2 focus:ring-[#16a34a]/20">
+            <select className="h-12 rounded-lg border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-700 shadow-sm focus:border-[#166534] focus:outline-none focus:ring-2 focus:ring-[#166534]/20">
               <option>Konya Kilit Ürün Kataloğu</option>
               <option>Kilit Sistemleri</option>
               <option>Menteşe ve Aksesuarlar</option>
             </select>
             <div className="flex gap-3">
-              <button className="flex-1 rounded-lg bg-[#16a34a] px-4 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#15803d]">
+              <button className="flex-1 rounded-lg bg-[#166534] px-4 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#14532d]">
                 görüntüle
               </button>
-              <button className="flex-1 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-sm transition hover:border-[#16a34a]/40 hover:text-[#16a34a]">
+              <button className="flex-1 rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-sm transition hover:border-[#166534]/40 hover:text-[#166534]">
                 indir
               </button>
             </div>

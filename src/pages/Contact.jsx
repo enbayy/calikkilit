@@ -48,7 +48,7 @@ function Contact() {
   }
 
   return (
-    <div className="bg-slate-50 pb-16 text-slate-900">
+    <div className="bg-[#f0fdf4] pb-16 text-slate-900">
       <section className="mx-auto max-w-7xl space-y-10 px-1.5 pt-10 sm:px-2 lg:px-3">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {contactCards.map((card) => (
@@ -77,7 +77,7 @@ function Contact() {
                   Talebinizi ilgili ekibe yönlendirelim. Zorunlu alanlar işaretlidir.
                 </p>
               </div>
-              <span className="rounded-full bg-[#16a34a]/15 px-3 py-1 text-xs font-semibold uppercase text-[#15803d]">
+              <span className="rounded-full bg-[#166534]/15 px-3 py-1 text-xs font-semibold uppercase text-[#14532d]">
                 7/24
               </span>
             </div>
@@ -86,7 +86,7 @@ function Contact() {
               <div
                 className={`rounded-2xl border px-4 py-3 text-sm ${
                   status.type === 'success'
-                    ? 'border-green-200 bg-green-50 text-green-800'
+                    ? 'border-[#86efac] bg-[#f0fdf4] text-[#166534]'
                     : 'border-yellow-200 bg-yellow-50 text-yellow-800'
                 }`}
               >
@@ -98,7 +98,7 @@ function Contact() {
               <label className="space-y-1 text-sm font-medium text-slate-700">
                 Ad Soyad*
                 <input
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/40"
+                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/40"
                   value={form.name}
                   onChange={(e) => updateField('name', e.target.value)}
                   placeholder="Ör. Elif Yılmaz"
@@ -107,7 +107,7 @@ function Contact() {
               <label className="space-y-1 text-sm font-medium text-slate-700">
                 E-posta*
                 <input
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/40"
+                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/40"
                   value={form.email}
                   onChange={(e) => updateField('email', e.target.value)}
                   type="email"
@@ -117,7 +117,7 @@ function Contact() {
               <label className="space-y-1 text-sm font-medium text-slate-700">
                 Telefon
                 <input
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/40"
+                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/40"
                   value={form.phone}
                   onChange={(e) => updateField('phone', e.target.value)}
                   placeholder="0506 092 03 42"
@@ -126,7 +126,7 @@ function Contact() {
               <label className="space-y-1 text-sm font-medium text-slate-700">
                 Firma
                 <input
-                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/40"
+                  className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/40"
                   value={form.company}
                   onChange={(e) => updateField('company', e.target.value)}
                   placeholder="Şirket adı"
@@ -160,7 +160,7 @@ function Contact() {
                 <p className="text-xs text-slate-500">* Zorunlu alanlar</p>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center rounded-full bg-[#16a34a] px-5 py-3 text-sm font-semibold uppercase text-white shadow-sm transition hover:bg-[#15803d]"
+                  className="inline-flex items-center justify-center rounded-full bg-[#166534] px-5 py-3 text-sm font-semibold uppercase text-white shadow-sm transition hover:bg-[#14532d]"
                 >
                   Gönder
                 </button>

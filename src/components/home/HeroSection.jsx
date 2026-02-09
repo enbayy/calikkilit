@@ -29,7 +29,7 @@ function HeroSection({ slides }) {
                 key={slide.title}
                 onClick={() => setActiveSlide(index)}
                 className={`h-2 rounded-full transition-all ${
-                  index === activeSlide ? 'bg-[#16a34a] w-16' : 'bg-white/50 hover:bg-white/70 w-12'
+                  index === activeSlide ? 'bg-[#166534] w-16' : 'bg-white/50 hover:bg-white/70 w-12'
                 }`}
                 aria-label={`${slide.title} slaytını göster`}
               />

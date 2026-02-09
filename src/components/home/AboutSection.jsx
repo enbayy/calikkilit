@@ -3,7 +3,7 @@ function AboutSection() {
     <section className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-1.5 py-12 sm:gap-10 sm:px-2 lg:grid-cols-[1.05fr_0.95fr] lg:px-3">
       <div className="space-y-6">
         <div className="flex items-center gap-3">
-          <span className="h-1 w-10 rounded-full bg-[#16a34a]" />
+          <span className="h-1 w-10 rounded-full bg-[#166534]" />
           <h2 className="text-2xl font-bold text-slate-900">ESSENTRA COMPONENTS KİMDİR?</h2>
         </div>
         <p className="text-base leading-relaxed text-slate-600">
@@ -14,7 +14,7 @@ function AboutSection() {
         </p>
         <a
           href="#"
-          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-[#16a34a] hover:text-[#15803d]"
+          className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-[#166534] hover:text-[#14532d]"
         >
           Daha Fazla Bilgi
           <span aria-hidden className="text-base">→</span>

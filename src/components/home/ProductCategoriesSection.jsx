@@ -65,14 +65,14 @@ function ProductCategoriesSection() {
   return (
     <section className="mx-auto w-full max-w-7xl px-1.5 py-12 sm:px-2 lg:px-3">
       <div className="mb-8 text-center">
-        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">Ürün Grup Çeşitleri</h2>
+        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">ÜRÜN GRUP ÇEŞİTLERİ</h2>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {categories.map((category, index) => (
           <div
             key={index}
             onClick={() => handleCategoryClick(category)}
-            className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#16a34a]/40 hover:shadow-xl"
+            className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#166534]/40 hover:shadow-xl"
           >
             <div className="relative h-48 w-full overflow-hidden bg-slate-100">
               <img
@@ -84,18 +84,18 @@ function ProductCategoriesSection() {
             </div>
             <div className="p-6">
               <div className="mb-4 flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#16a34a]/10 text-2xl transition-all duration-300 group-hover:bg-[#16a34a] group-hover:text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#166534]/10 text-2xl transition-all duration-300 group-hover:bg-[#166534] group-hover:text-white">
                   {category.icon}
                 </div>
               </div>
               <h3 className="mb-2 text-xl font-bold text-slate-900">{category.title}</h3>
               <p className="mb-4 text-sm leading-relaxed text-slate-600">{category.description}</p>
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-[#16a34a] transition-all duration-300 group-hover:gap-3">
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
                 Detayları Görüntüle
                 <span className="text-base">→</span>
               </div>
             </div>
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#16a34a]/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#166534]/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </div>
         ))}
       </div>

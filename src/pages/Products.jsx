@@ -962,7 +962,7 @@ function Products() {
   }
 
   return (
-    <div className="bg-slate-50 pb-16 text-slate-900">
+    <div className="bg-[#f0fdf4] pb-16 text-slate-900">
       <section className="mx-auto flex w-full max-w-[85%] flex-col gap-6 px-1.5 pt-8 sm:gap-8 sm:px-2 lg:flex-row lg:px-3">
         <aside className="w-full lg:w-96">
           <div className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:sticky lg:top-28">
@@ -975,7 +975,7 @@ function Products() {
                   <button
                     onClick={() => toggleGroup(group.title)}
                     className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm font-semibold transition ${
-                      isActiveGroup ? 'bg-[#16a34a]/10 text-[#16a34a]' : groupOpen ? 'bg-slate-50 text-slate-800' : 'text-slate-800 hover:bg-slate-100'
+                      isActiveGroup ? 'bg-[#166534]/10 text-[#166534]' : groupOpen ? 'bg-[#f0fdf4] text-slate-800' : 'text-slate-800 hover:bg-[#f0fdf4]'
                     }`}
                   >
                     <span>{group.title}</span>
@@ -991,7 +991,7 @@ function Products() {
                             <button
                               onClick={() => handleSectionClick(section.title)}
                               className={`flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left text-sm font-light transition ${
-                                isActive ? 'text-[#16a34a]' : 'text-slate-700 hover:text-[#16a34a]'
+                                isActive ? 'text-[#166534]' : 'text-slate-700 hover:text-[#166534]'
                               }`}
                             >
                               <div className="flex items-center gap-2">
@@ -1005,7 +1005,7 @@ function Products() {
                                 <span>{section.title}</span>
                               </div>
                               <span
-                                className={`text-xs transition ${isActive ? 'text-[#16a34a]' : 'text-slate-400'}`}
+                                className={`text-xs transition ${isActive ? 'text-[#166534]' : 'text-slate-400'}`}
                                 aria-hidden
                               >
                                 ›
@@ -1025,7 +1025,7 @@ function Products() {
         <div className="flex-1 space-y-5">
           <div className="flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <p className="text-xs uppercase tracking-[0.12em] text-[#16a34a]">
+              <p className="text-xs uppercase tracking-[0.12em] text-[#166534]">
                 {activeGroup ? 'Ana Kategori' : activeSection ? 'Alt Kategori' : 'Seçim'}
               </p>
               <h2 className="text-xl font-semibold">
@@ -1054,7 +1054,7 @@ function Products() {
                   <button
                     key={section.title}
                     onClick={() => handleSectionClick(section.title)}
-                    className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-slate-300 hover:shadow-xl"
+                    className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#166534]/40 hover:shadow-xl"
                   >
                     <div className="mb-6 flex items-center justify-center">
                       <div className="relative flex h-64 w-full items-center justify-center overflow-hidden rounded-xl">
@@ -1072,7 +1072,7 @@ function Products() {
                           {section.items.length} ürün çeşidi
                         </p>
                       )}
-                      <div className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#16a34a] transition-all duration-300 group-hover:gap-3">
+                      <div className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
                         Detayları Görüntüle
                         <span className="text-base">→</span>
                       </div>
@@ -1121,7 +1121,7 @@ function Products() {
                     key={item}
                     to={sectionSlug ? `/urunler/${sectionSlug}` : `/urun-detay/${productSlug}`}
                     state={sectionSlug ? (isCeyrekDonusluKilitler || isSikistirmaliKilitlerCeyrek || isKolayMontajCeyrek ? { fromSection: 'ÇEYREK DÖNÜŞLÜ KİLİTLER' } : {}) : { productName: item, productImage: img, productLogo: getProductLogo(item) }}
-                    className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-slate-300 hover:shadow-xl"
+                    className="group relative flex cursor-pointer flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#166534]/40 hover:shadow-xl"
                   >
                     <div className="mb-6 flex items-center justify-center">
                       <div className="relative flex h-64 w-full items-center justify-center overflow-hidden rounded-xl">
@@ -1135,9 +1135,9 @@ function Products() {
                     <div className="flex flex-1 flex-col">
                       <h3 className="mb-2 text-xl font-bold text-slate-900">{item}</h3>
                         {activeSection === 'ÇEŞİTLİ ÜRÜNLER' && (
-                        <p className="mb-4 text-sm leading-relaxed text-slate-600">Ürün Grup Çeşitleri</p>
+                        <p className="mb-4 text-sm leading-relaxed text-slate-600">ÜRÜN GRUP ÇEŞİTLERİ</p>
                         )}
-                      <div className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#16a34a] transition-all duration-300 group-hover:gap-3">
+                      <div className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
                         Detayları Görüntüle
                         <span className="text-base">→</span>
                       </div>

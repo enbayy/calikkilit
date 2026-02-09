@@ -37,7 +37,7 @@ function SectorsSection() {
       <div className="mx-auto w-full max-w-7xl px-1.5 sm:px-2 lg:px-3">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold text-slate-900 sm:text-4xl">
-            <span className="text-slate-700">Sizin</span> Uygulamalarınız, <span className="text-[#16a34a]">Bizim</span> Çözümlerimiz
+            <span className="text-slate-700">Sizin</span> Uygulamalarınız, <span className="text-[#166534]">Bizim</span> Çözümlerimiz
           </h2>
           <p className="mx-auto max-w-2xl text-base text-slate-600">
             Uzmanlığımız birçok farklı sektörü kapsıyor. İş hedeflerinize ulaşmanıza yardımcı olmak için buradayız.
@@ -47,10 +47,10 @@ function SectorsSection() {
           {sectors.map((sector, index) => (
             <div
               key={index}
-              className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#16a34a]/40 hover:shadow-md"
+              className="group rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#166534]/40 hover:shadow-md"
             >
               <div className="mb-4 flex items-center gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#16a34a]/10 text-2xl transition-all duration-300 group-hover:bg-[#16a34a] group-hover:text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[#166534]/10 text-2xl transition-all duration-300 group-hover:bg-[#166534] group-hover:text-white">
                   {sector.icon}
                 </div>
                 <h3 className="text-lg font-bold text-slate-900">{sector.title}</h3>

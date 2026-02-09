@@ -3,7 +3,7 @@ function NewsSection({ items }) {
     <section className="mx-auto max-w-7xl space-y-8 px-1.5 py-12 sm:px-2 lg:px-3">
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-2">
-          <span className="h-1 w-10 rounded-full bg-[#16a34a]" />
+          <span className="h-1 w-10 rounded-full bg-[#166534]" />
           <h2 className="text-2xl font-bold text-slate-900">MESAN HABERLER</h2>
         </div>
       </div>
@@ -18,11 +18,11 @@ function NewsSection({ items }) {
             </div>
             <div className="space-y-3 p-6">
               <h3 className="text-xl font-semibold text-slate-900">{news.title}</h3>
-              <p className="text-sm font-semibold text-[#16a34a]">{news.date}</p>
+              <p className="text-sm font-semibold text-[#166534]">{news.date}</p>
               <p className="text-base leading-relaxed text-slate-600">{news.description}</p>
               <a
                 href="#"
-                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-[#16a34a] hover:text-[#15803d]"
+                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-[#166534] hover:text-[#14532d]"
               >
                 devamını oku
                 <span aria-hidden className="text-base">→</span>
@@ -34,7 +34,7 @@ function NewsSection({ items }) {
       <div>
         <a
           href="#"
-          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-sm transition hover:border-[#16a34a]/40 hover:text-[#16a34a]"
+          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-3 text-sm font-semibold uppercase tracking-wide text-slate-700 shadow-sm transition hover:border-[#166534]/40 hover:text-[#166534]"
         >
           tüm haberler
           <span aria-hidden className="text-base">→</span>

@@ -12,9 +12,9 @@ function NewsletterSection() {
           <input
             type="email"
             placeholder="email@adresiniz.com"
-            className="h-12 flex-1 rounded-lg border border-white/30 bg-white/10 px-4 text-sm text-white placeholder-white/60 shadow-inner focus:border-[#16a34a] focus:outline-none focus:ring-2 focus:ring-[#16a34a]/50"
+            className="h-12 flex-1 rounded-lg border border-white/30 bg-white/10 px-4 text-sm text-white placeholder-white/60 shadow-inner focus:border-[#166534] focus:outline-none focus:ring-2 focus:ring-[#166534]/50"
           />
-          <button className="h-12 rounded-lg bg-[#16a34a] px-8 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#15803d]">
+          <button className="h-12 rounded-lg bg-[#166534] px-8 text-sm font-semibold uppercase tracking-wide text-white shadow-sm transition hover:bg-[#14532d]">
             kaydet
           </button>
         </div>
