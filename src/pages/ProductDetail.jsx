@@ -8123,6 +8123,25 @@ function ProductDetail() {
       }
     }
     
+    // Sızdırmazlık Profilleri ve Kenar Koruma: sizdirmazlikprofilleri klasöründeki PDF'ler (isimlere göre)
+    if (fromSection === 'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA' || sizdirmazlikProfilleriDetails[productName]) {
+      const codeNorm = (code || '').toString().replace(/\./g, '')
+      if (!codeNorm) return null
+      if (fullName?.includes('Hijyenik Conta') && codeNorm === '34009971') {
+        return '/sizdirmazlikprofilleri/34009971-hijyenik-conta.pdf'
+      }
+      if (fullName?.includes('U Tipi Fitiller')) {
+        const uTipiPdfMap = {
+          '34001010': '/sizdirmazlikprofilleri/34001010-u-tipi-fitiller.pdf',
+          '34001011': '/sizdirmazlikprofilleri/34001011-u-tipi-fitiller.pdf',
+          '34001012': '/sizdirmazlikprofilleri/34001012-u-tipi-fitiller.pdf',
+          '34001015': '/sizdirmazlikprofilleri/34001015-u-tipi-fitiller.pdf',
+        }
+        if (uTipiPdfMap[codeNorm]) return uTipiPdfMap[codeNorm]
+      }
+      return `/sizdirmazlikprofilleri/${codeNorm}-gecme-conta.pdf`
+    }
+    
     // Paslanmaz Çelik Menteşeler için menteseler klasöründeki PDF'ler
     if (fromSection === 'PASLANMAZ ÇELİK MENTEŞELER') {
       const menteselerPdfMap = {
