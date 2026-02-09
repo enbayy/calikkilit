@@ -4466,6 +4466,1085 @@ const productDetails = {
     ],
     relatedProducts: [],
   },
+  '090 > Kenar Menteşe (10mm)': {
+    code: '090',
+    name: 'Kenar Menteşe (10mm)',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• 10 mm lik demonte parçalardan oluşur.\n• Farklı ölçüler için iletişime geçiniz.',
+    materials: {},
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '091 > Kenar Menteşe (12mm)': {
+    code: '091',
+    name: 'Kenar Menteşe (12mm)',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• 12 mm lik demonte parçalardan oluşur.\n• Farklı ölçüler için iletişime geçiniz.',
+    materials: {},
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '092 > Kenar Menteşe (12mm)': {
+    code: '092',
+    name: 'Kenar Menteşe (12mm)',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• 12 mm lik parçalardan oluşur. Pullar pirinçtir. ve parçalar montajlıdır.\n• Farklı ölçüler için Mesan ile iletişime geçiniz.\n• 90° ve 180° rotasyonlu versiyonları mevcuttur.',
+    materials: {},
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '192 > Kenar Menteşe (12mm)': {
+    code: '192',
+    name: 'Kenar Menteşe (12mm)',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• 12 mm lik parçalardan oluşur. Pullar pirinçtir ve parçalar sıkı geçmelidir.',
+    materials: {},
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '093 > Kenar Menteşe (14mm)': {
+    code: '093',
+    name: 'Kenar Menteşe (14mm)',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• 14 mm lik parçalardan oluşur. Pullar pirinçtir ve parçalar montajlıdır.',
+    materials: {},
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '193 > Kenar Menteşe (16mm)': {
+    code: '193',
+    name: 'Kenar Menteşe (16mm)',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• 16 mm lik parçalardan oluşur. Pullar pirinçtir ve parçalar sıkı geçmelidir.',
+    materials: {},
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '793 > Kenar Menteşe': {
+    code: '793',
+    name: 'Kenar Menteşe',
+    description: '• Orta gerilim ve ağır kapılı panolarda kullanılır.\n• Menteşe parçaları yekpare çelik malzemeden üretilmiştir.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'Çinko kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '893 > Kenar Menteşe': {
+    code: '893',
+    name: 'Kenar Menteşe',
+    description: '• Orta gerilim ve ağır kapılı panolarda kullanılır.\n• Menteşe parçaları yekpare çelik malzemeden üretilmiştir.',
+    materials: {
+      'MALZEME': 'C45 Çelik',
+    },
+    surface: 'Çinko kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '191 > Kenar Menteşe (10mm)': {
+    code: '191',
+    name: 'Kenar Menteşe (10mm)',
+    description: '• 12 mm lik demir parçalardan oluşur.\n• Parçalar demontedir.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'Çinko kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1093 > Kenar Menteşe': {
+    code: '1093',
+    name: 'Kenar Menteşe',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• Pim Uzunluğu değiştirilebilir\n• Farklı boylar için lütfen satış ekibimiz ile irtibata geçiniz.',
+    materials: {
+      'GÖVDE': 'Pirinç',
+      'PİM': 'Çelik',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '993 > Kenar Menteşe': {
+    code: '993',
+    name: 'Kenar Menteşe',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• Pirinç 12 mm parçalardan oluşur.\n• Farklı boylar için lütfen satış ekibimiz ile irtibata geçiniz.',
+    materials: {
+      'MALZEME': 'Pirinç',
+    },
+    surface: 'Krom kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1193 > Kenar Menteşe': {
+    code: '1193',
+    name: 'Kenar Menteşe',
+    description: '',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Paslanmaz çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '393 > Kenar Menteşe': {
+    code: '393',
+    name: 'Kenar Menteşe',
+    description: '• Orta Gerilim panolarında uygulanır.\n• Pirinç profilden üretilmiştir.\n• Parçalar demontedir.\n• Civatalı tasarımı sayesinde mukavemetli bir bağlantı sağlanır.',
+    materials: {
+      'MALZEME': 'Pirinç: DIN 17672 CuZn39Pb3',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '293 > Kenar Menteşe': {
+    code: '293',
+    name: 'Kenar Menteşe',
+    description: '• Orta Gerilim panolarında uygulanır.\n• Pirinç profilden üretilmiştir.\n• Parçalar demontedir.\n• Civatalı tasarımı sayesinde mukavemetli bir bağlantı sağlanır.',
+    materials: {
+      'MALZEME': 'Pirinç: DIN 17672 CuZn39Pb3',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '493 > Kenar Menteşe': {
+    code: '493',
+    name: 'Kenar Menteşe',
+    description: '• Kapağın açık durumda çıkmasını sağlar.\n• Sağ / Sol kapak uygulaması yapılabilir. Kapak Max 180 ° açılır.',
+    materials: {
+      'MALZEME': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM V1': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM V2': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '593 > Kenar Menteşe': {
+    code: '593',
+    name: 'Kenar Menteşe',
+    description: '• Adaptör sayesinde iki farklı ölçüde montaj imkanı sağlar.\n• Tırtıllı pim paslanmaz çeliktir.',
+    materials: {
+      'MALZEME': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '693 > Kenar Menteşe': {
+    code: '693',
+    name: 'Kenar Menteşe',
+    description: '• Kenar montajlı kapaklarda uygulanır.\n• Tırtıllı pim paslanmaz çeliktir. Parçalar montajlıdır.',
+    materials: {
+      'MALZEME': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '094 > Gizli Menteşe': {
+    code: '094',
+    name: 'Gizli Menteşe',
+    description: '• 25 mm eğimli kapaklarda uygulanır. Kolay kaynak için kaynak parçası bakır kaplıdır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya Aluminyum',
+      'SABIT PARÇA': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama veya kaplamasız\nSabit Parça: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '194 > Gizli Menteşe': {
+    code: '194',
+    name: 'Gizli Menteşe',
+    description: '• 18-27mm bükümlü kapaklarda uygulanır.\n• Kolay kaynak için kaynak parçası bakır kaplıdır.\n• Farklı kaynak parçaları (orta parça ) mevcuttur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'ORTA PARÇA': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama veya kaplamasız\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '096 > Gizli Menteşe': {
+    code: '096',
+    name: 'Gizli Menteşe',
+    description: '• 24.5 mm bükümlü kapaklarda uygulanır.\n• Sac ve profilere montaj imkanı vardır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'ORTA PARÇA': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama veya kaplamasız\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '196 > Gizli Menteşe': {
+    code: '196',
+    name: 'Gizli Menteşe',
+    description: '• 21.5 ve 24.5 mm arasında bükümlü kapaklarda uygulanır. 2 ayrı ölçüsü vardır.\n• 096 menteşeye alternatif daha küçük bir menteşedir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'ORTA PARÇA': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama veya kaplamasız\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '294 > Gizli Menteşe': {
+    code: '294',
+    name: 'Gizli Menteşe',
+    description: '• Küçük pano kapaklarında kullanılır\n• 10 mm iç eğim sayesinde pano içi kullanım alanını arttırır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'ORTA PARÇA': 'Çelik',
+      'PİM': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama veya kaplamasız\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '296 > Gizli Menteşe': {
+    code: '296',
+    name: 'Gizli Menteşe',
+    description: '• Özel tasarım sayesinde pimler sökülmeden kapak gövdeden çıkartılabilir.\n• Kolay montaj özelliği sağlamaktadır.\n• 23.5 mm eğimli kapaklarda uygulanır.\n• Sac ve profillere montaj imkanı vardır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'ORTA PARÇA': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama veya kaplamasız\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '095 > Gizli Menteşe': {
+    code: '095',
+    name: 'Gizli Menteşe',
+    description: '• Min 22.5 mm bükümlü kapaklarda uygulanır. Kendinden civatalı versiyonu mevcuttur.\n• Farklı kaynak parçaları (orta parça ) mevcuttur.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '195 > Gizli Menteşe': {
+    code: '195',
+    name: 'Gizli Menteşe',
+    description: '• 23.5 - 25.5 mm arası bükümlü kapaklarda uygulanır.\n• Menteşe eğimi sayesinde saca ve profile montaj imkanı sağlar.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '295 > Gizli Menteşe': {
+    code: '295',
+    name: 'Gizli Menteşe',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '395 > Gizli Menteşe': {
+    code: '395',
+    name: 'Gizli Menteşe',
+    description: '',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'Çinko kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '695 > Gizli Menteşe': {
+    code: '695',
+    name: 'Gizli Menteşe',
+    description: '• 18.5 mm bükümlü panolarda kullanılır .\n• Orta parça civata ile montaj edilir, kenar parça kaynak veya kendinden civatalı kapağa somun ile montaj edilir.\n• Sağ ve Sol kapağa uygulanabilir.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'Çinko kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '795 > Gizli Menteşe': {
+    code: '795',
+    name: 'Gizli Menteşe',
+    description: '• 20 mm bükümlü kapakların profil çerçeveye montajında kullanılır.\n• Orta Parça civata ile montaj edilir, kenar parça kaynak veya kendinden civatalı kapağa somun ile montaj edilir.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'Çinko kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1795 > Gizli Menteşe': {
+    code: '1795',
+    name: 'Gizli Menteşe',
+    description: '• 20 mm eğimli kapakların profil çerçeveye montajında kullanılır.\n• Orta Parça civata ile montaj edilir, kenar parça kaynak veya kendinden civatalı kapağa somun ile montaj edilir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'ORTA PARÇA': 'Çelik',
+      'PİM': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '895 > Gizli Menteşe': {
+    code: '895',
+    name: 'Gizli Menteşe',
+    description: '• Bir tarafı kaynak edilebilir diğer tarafı bağlantılı.\n• Genelikle ağır tip uygulamalarda kullanılan büyük ebatlı bir menteşedir.\n• Orta parça iletkenlik açısından bakır kaplanmıştır.\n• Pim tırtıllı olup montaj esnasında çakılır.\n• M5 Havşa başlı civata ile bağlanır.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1095 > Gizli Menteşe': {
+    code: '1095',
+    name: 'Gizli Menteşe',
+    description: '• 23 mm eğimli panolarda uygulanır .\n• Orta parça civata ile kenar parça kaynak ile montaj olur .\n• Sağ ve sol kapağa uygulanabilir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'ORTA PARÇA': 'Çelik',
+      'PİM': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '995 > Gizli Menteşe v1': {
+    code: '995',
+    name: 'Gizli Menteşe v1',
+    description: '• Bir tarafı kaynak edilebilir diğer tarafı bağlantılı.\n• Nispeten ağır tip uygulamalarda kullanılan büyük ebatlı bir menteşedir.\n• Orta parça iletkenlik açısından bakır kaplanmıştır.\n• Sağ ve sol kapaklara uygulanabilir\n• 25 mm bükümlü kapaklarda kullanılır.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: Bakır kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '995 > Gizli Menteşe v2': {
+    code: '995',
+    name: 'Gizli Menteşe v2',
+    description: '• Kolay montaj ve demontaj\n• Genellikle ağır tip uygulamalarda kullanılan büyük ebatlı bir menteşedir.\n• Sağ ve sol kapaklara uygulanabilir\n• 25 mm bükümlü kapaklarda kullanılır.\n• Bir vida yardımıyla orta parça kenar parçadan ayrılır ve kapıyı çıkarmak mümkün olur.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'ORTA PARÇA': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: Çinko kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1995 > Gizli Menteşe': {
+    code: '1995',
+    name: 'Gizli Menteşe',
+    description: '• Çıkarılabilir pim, kapıyı çıkarmanıza izin verir.\n• 24 mm bükümlü kapaklarda kullanılır.\n• Orta parça iletkenlik açısından bakır kaplanmıştır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+      'ORTA PARÇA': 'Çelik',
+    },
+    surface: 'GÖVDE: Çinko kaplama\nORTA PARÇA: (MP1) Bakır kaplama (MP2) Çinko Kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '595 > Gizli Menteşe': {
+    code: '595',
+    name: 'Gizli Menteşe',
+    description: '• Küçük ebatlı panoların perde sacında kullanılır.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'Çinko Kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '189 > Yaylı Mil Menteşe': {
+    code: '189',
+    name: 'Yaylı Mil Menteşe',
+    description: '• iç bükümlü kapaklarda kullanılır . Menteşenin yaylı olması sayesinde kapağın çıkması sağlanır.\n• Kapaklarda alt ve üst bağlantıda kullanılacağı gibi tek üst menteşe alt montaj pimi ile uygulanır.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'GÖVDE: Bakır kaplama\nDiğer malzemeler : Çinko kaplama',
+    versions: [
+      { 'Ürün Kodu': '189-9', 'Ürün Adı': 'Yaylı Mil Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Çinko Kaplama' },
+      { 'Ürün Kodu': '189-10', 'Ürün Adı': 'Yaylı Mil Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Çinko Kaplama' },
+      { 'Ürün Kodu': '189-12', 'Ürün Adı': 'Yaylı Mil Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Çinko Kaplama' },
+      { 'Ürün Kodu': '189-15', 'Ürün Adı': 'Yaylı Mil Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Çinko Kaplama' },
+    ],
+    relatedProducts: [],
+  },
+  '389 > Gizli Menteşe': {
+    code: '389',
+    name: 'Gizli Menteşe',
+    description: '• İç bükümlü kapaklarda kullanılır . Menteşenin yaylı olması sayesinde kapağın çıkması sağlanır.\n• Gövdedeki klipsli yapı sayesinde kapağa hızlı montaj yapılabilir.\n• Sac kalınlığı 1 mm-1.3 mm arasındadır.\n• Kapaklarda alt ve üst bağlantıda kullanılacağı gibi tek üst menteşe alt montaj pimi ile uygulanır.',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO1043-',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '389', 'Ürün Adı': 'Yaylı Mil Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  '089 > Yaylı Mil Menteşe': {
+    code: '089',
+    name: 'Yaylı Mil Menteşe',
+    description: '• İç bükümlü kapaklarda kullanılır. Menteşenin yaylı olması sayesinde kapağın çıkması sağlanır.\n• Gövdedeki klipsli yapı sayesinde kapağa hızlı montaj yapılabilir.\n• Sac kalınlığı 0.5 mm-0.8 mm arasındadır.\n• Kapaklarda alt ve üst bağlantıda kullanılacağı gibi tek üst menteşe alt montaj pimi ile uygulanır.',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO1043-1 PA6 GFR 30',
+      'PİM': 'Çelik',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '089', 'Ürün Adı': 'Yaylı Mil Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  '289 > Gizli Menteşe': {
+    code: '289',
+    name: 'Gizli Menteşe',
+    description: '• İç bükümlü kapaklarda kullanılır. Yaylı pim sayesinde kapak çıkartılabilir.\n• Her iki versiyonda da kaynak ve civata ile montaj yapılabilir.\n• Sağ ve Sol kapağa uygulanabilir.',
+    materials: {
+      'MALZEME': 'Çelik',
+    },
+    surface: 'Çinko kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '394 > Gizli Menteşe': {
+    code: '394',
+    name: 'Gizli Menteşe',
+    description: '• Hafif pano ve uygulamalara uygun.\n• Sol ya da sağ taraftan uygulama mümkündür.\n• M6 vida ile montajlanır.\n• Menteşe dönüş açısı 90° dir.',
+    materials: {
+      'MALZEME': 'PA6 GFR30',
+      'Somun': 'Çelik',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '394', 'Ürün Adı': 'Gizli Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Siyah' },
+    ],
+    relatedProducts: [],
+  },
+  '1495 > Gizli Menteşe': {
+    code: '1495',
+    name: 'Gizli Menteşe',
+    description: '• Her iki parçası kaynak bağlantılı menteşe\n• Özel profilli elektrik pano gövdelerinde kullanılır.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Çelik',
+    },
+    surface: 'Çinko Kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '097 > Köşe Menteşe': {
+    code: '097',
+    name: 'Köşe Menteşe',
+    description: '• Köşe bağlantılı kapaklarda uygulanır.\n• 1 - 2 mm kalınlığındaki saclara uygulanır.\n• 3 ayrı pim uygulaması mevcuttur.',
+    materials: {
+      'DÖNEN VE SABİT PARÇA': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik ve poliasetal (Delrin)',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '197 > Köşe Menteşe': {
+    code: '197',
+    name: 'Köşe Menteşe',
+    description: '• Köşe bağlantılı kapaklarda uygulanır. Max 1.5 mm kalınlığındaki saclara uygulanır.\n• 3 ayrı pim uygulaması mevcuttur.',
+    materials: {
+      'GÖVDE': 'Polyamide PA6 GFR 30',
+      'PİM': 'Çelik ve poliasetal (Delrin)',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '297 > Köşe Menteşe': {
+    code: '297',
+    name: 'Köşe Menteşe',
+    description: '• Köşe bağlantılı kapaklarda uygulanır. Geçiş şekli sayesinde kapakta mukavemet sağlar.\n• 1 - 1.5 mm kalınlığındaki saclara uygulanır.\n• 3 ayrı pim uygulaması mevcuttur.',
+    materials: {
+      'DÖNEN VE SABİT PARÇA': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik ve poliasetal (Delrin)',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '397 > Köşe Menteşe': {
+    code: '397',
+    name: 'Köşe Menteşe',
+    description: '• Çelik orta parça sayesinde 097 ye göre daha dayanıklı menteşe\n• 1 - 1.5 mm paneller için uygundur.\n• 4 tip pim kullanılabilir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'ORTA PARÇA': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '298 > Köşe Menteşe': {
+    code: '298',
+    name: 'Köşe Menteşe',
+    description: '• Köşe bağlantılı kapaklarda uygulanır. Max. 2.0 mm kalınlığındaki saclara uygulanır.\n• Çelik pim önerilir.\n• M6 civata ile pano içinden montaj imkanı sağlar.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '098 > Köşe Menteşe': {
+    code: '098',
+    name: 'Köşe Menteşe',
+    description: '• Köşe bağlantılı kapaklarda uygulanır. Max 2.0 mm kalınlığındaki saclara uygulanır.\n• Çelik pim önerilir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '398 > Köşe Menteşe': {
+    code: '398',
+    name: 'Köşe Menteşe',
+    description: '• Sağ ve sol uygulaması mevcut.\n• 180° açılabilir\n• Kabinde özel kesme geometrisi mevcuttur.\n• Kenar ve orta parçanın birbirini aşındırmaması için arada paslanmaz çelik pullar kullanılmaktadır.\n• 25 mm eğimli kapılar için uygundur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '497 > Köşe Menteşe': {
+    code: '497',
+    name: 'Köşe Menteşe',
+    description: '• Köşe menteşe\n• Özel bağlantı sacı sayesinde topraklama mümkündür.',
+    materials: {
+      'KENAR PARÇA': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'ORTA PARÇA': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'MONTAJ SACI': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '498 > Köşe Menteşe': {
+    code: '498',
+    name: 'Köşe Menteşe',
+    description: '• Kapı 90° açıldığında pim alınırsa pano kapağı yerinden çıkarılabilir.\n• Kapının kapalı konumunda pim alınsa dahi kapı yerinden çıkmaz.\n• 25 mm bükümlü kapılar için uygundur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Plastik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '400 > Köşe Menteşe': {
+    code: '400',
+    name: 'Köşe Menteşe',
+    description: '• 16.5 mm bükümlü köşe montajlı kapaklarda uygulanır.\n• M5 civatalı versiyonu vardır. Gövde montajında plastik montaj aparatı kullanılır.\n• Plastik gövde sayesinde ekonomik bir versiyondur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1 veya PA6 GFR 30',
+      'ORTA PARÇA': 'Çelik',
+      'PİM': 'Çelik',
+    },
+    surface: 'Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '200 > Köşe Menteşe': {
+    code: '200',
+    name: 'Köşe Menteşe',
+    description: '• 21 mm bükümlü köşe kapaklarda kullanılır.\n• Civatalı ve civatasız versiyonu vardır.\n• Civatalı versiyonda M6 civata kullanılmıştır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'ORTA PARÇA': 'Çelik',
+      'PİM': 'Çelik',
+    },
+    surface: 'Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '100 > Köşe Menteşe': {
+    code: '100',
+    name: 'Köşe Menteşe',
+    description: '• 0 mm - 30 mm farklı bükümlü kapaklarda uygulama imkanı vardır\n• Pim ve plastik yataklar demonte olarak sevk edilir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+      'YATAK': 'Delrin',
+    },
+    surface: 'Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '600 > Klima Santral Menteşesi': {
+    code: '600',
+    name: 'Klima Santral Menteşesi',
+    description: '• Genel olarak bükümlü ve izolasyonlu kapaklarda kullanılır.\n• 0\' dan 15 mm e kadar farklı bükümlü kapaklarda uygulama imkanı vardır.\n• Komple montajlı sevk edilir.\n• 2 boyutta kapı ayarı mevcuttur.\n• Düşey yönde ± 2 mm, yatay yönde ± 1mm ayar yapabilir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+      'YATAK': 'Delrin',
+    },
+    surface: 'Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '600 > Köşe Menteşe': {
+    code: '600',
+    name: 'Köşe Menteşe',
+    description: '• 0\' dan 18 mm e kadar farklı bükümlü kapaklarda uygulama imkanı vardır.\n• Pim ve plastik yataklar demonte olarak sevk edilir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+      'YATAK': 'Delrin',
+    },
+    surface: 'Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '700 > Klima Santral Menteşesi': {
+    code: '700',
+    name: 'Klima Santral Menteşesi',
+    description: '• Genel olarak bükümlü ve izolasyonlu kapaklarda kullanılır.\n• 0\' dan 12 mm e kadar farklı bükümlü kapaklarda uygulama imkanı vardır.\n• Komple montajlı sevk edilir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+      'YATAK': 'Delrin',
+    },
+    surface: 'Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1299 > Mini Yaprak Menteşe': {
+    code: '1299',
+    name: 'Mini Yaprak Menteşe',
+    description: '• Genel olarak düz kapak panellerde kullanılır.\n• Tırtıllı pim paslanmazdır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '299 > Yaprak Menteşe': {
+    code: '299',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak-panellerde kullanılır.\n• Civatalı versiyonlarda M5 civata kullanılmıştır. Civata boyu 8.5 mm dir.\n• Tırtıllı pim paslanmazdır. 40 mm x 40 mm civatalı ve civatasız versiyonu vardır',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '199 > Yaprak Menteşe': {
+    code: '199',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak - panellerde kullanılır.\n• Civatalı versiyonlarda M6 civata kullanılmıştır. Civata boyu 12 mm\n• Tırtıllı pim paslanmazdır. 50 mm x 50 mm civatalı ve civatasız versiyonu vardır',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '099 > Yaprak Menteşe': {
+    code: '099',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak-panellerde kullanılır.\n• Civatalı versiyonlarda M6 civata kullanılmıştır. Civata boyu 12 mm\n• Tırtıllı pim paslanmazdır.\n• Civatalı ve civatasız versiyonları vardır.\n\n– 50 mm x 50 mm\n– 50 mm x 63 mm\n– 50 mm x 76 mm',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '099111', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 50' },
+      { 'Ürün Kodu': '099121', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 50' },
+      { 'Ürün Kodu': '099112', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 50' },
+      { 'Ürün Kodu': '099122', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 50' },
+      { 'Ürün Kodu': '099114', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 50' },
+      { 'Ürün Kodu': '099124', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 50' },
+      { 'Ürün Kodu': '099115', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 63' },
+      { 'Ürün Kodu': '099125', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 63' },
+      { 'Ürün Kodu': '099116', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 76' },
+      { 'Ürün Kodu': '099126', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 76' },
+      { 'Ürün Kodu': '099117', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 63' },
+      { 'Ürün Kodu': '099127', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 63' },
+      { 'Ürün Kodu': '099118', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 63' },
+      { 'Ürün Kodu': '099128', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 63' },
+      { 'Ürün Kodu': '099119', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 76' },
+      { 'Ürün Kodu': '099129', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 76' },
+      { 'Ürün Kodu': '0991110', 'Malzeme': 'Zamak', 'Yüzey': 'Krom Kaplama', 'Ölçü': '50 x 76' },
+      { 'Ürün Kodu': '0991210', 'Malzeme': 'Zamak', 'Yüzey': 'Siyah Boya', 'Ölçü': '50 x 76' },
+    ],
+    relatedProducts: [],
+  },
+  '399 > Yaprak Menteşe': {
+    code: '399',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak-panellerde ve zolasyonlu ağır kapaklarda kullanılır.\n• Civatalı versiyonlarda M8 civata kullanılmıştır. Civata boyu 14 mm\n• Tırtıllı pim paslanmazdır. 60 mm x 60 mm - 60 mm x 90 mm ve 60 x 120 mm civatalı ve civatasız versiyonu vardır',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1399 > Yaprak Menteşe': {
+    code: '1399',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• Civatalı versiyonlarda M8 civata kullanılmıştır. Civata boyu 14 mm\n• Menteşe pimi paslanmaz çeliktir.\n- 80 mm x 70 mm\n- 80 mm x 110 mm\n- 80 mm x 150 mm\ncivatalı versiyonları vardır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1699 > Kaldır - Çıkar Menteşe': {
+    code: '1699',
+    name: 'Kaldır - Çıkar Menteşe',
+    description: '• İçeriden montaj sayesinde dışarıdan müdahale imkansız.\n• Kabin kapısının menteşeleri sökmeden çıkarılabilmesi amaçlı kullanılır.\n• Düz kapaklı kabinlerde kullanılır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1499 > Kaldır - Çıkar Menteşe': {
+    code: '1499',
+    name: 'Kaldır - Çıkar Menteşe',
+    description: '• İçeriden montaj sayesinde dışarıdan müdahale imkansız.\n• Kabin kapağı 45˚de iken, menteşeleri sökmeden çıkarılabilmesi amaçlı kullanılır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '900 > Yaprak Menteşe': {
+    code: '900',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• 6 adet M8 civata bağlantısı ve fiberli somunlar ile güçlü bir bağlantı sağlar\n• 270° derece açılabilir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+      'CİVATA': 'Çelik',
+    },
+    surface: 'Krom kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '899 > Kaldır - Çıkar Menteşe': {
+    code: '899',
+    name: 'Kaldır - Çıkar Menteşe',
+    description: '• Ağır hizmet tipi kaldır - çıkar menteşe\n• Sağ ve sol kapak için versiyonlar mevcuttur.\n• Açılma açısı 180 derecedir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Çelik',
+    },
+    surface: 'Çinko kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '499 > Yaprak Menteşe': {
+    code: '499',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• Çelik malzemesi ve M8 x 12 mm özel bağlantı civataları sayesinde yüksek mukavemet sağlar.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '599 > Yaprak Menteşe': {
+    code: '599',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak - panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• Dış ortam şartlarına uygundur.\n• 180° açılabilir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1599 > Yaprak Menteşe': {
+    code: '1599',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• Dış ortam şartlarına uygundur.\n• 180 ° açılabilir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Paslanmaz çelik',
+    },
+    surface: 'Çinko kaplama veya siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '799 > Yaprak Menteşe': {
+    code: '799',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak panellerde ve izolasyonlu ağır kapaklarda kullanılır.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '4599 > Yaprak Menteşe': {
+    code: '4599',
+    name: 'Yaprak Menteşe',
+    description: '• Genel olarak düz kapak-panellerde ve izolasyonlu ağır kapaklarda kullanılır.\n• Her iki parça da vida ve somun ile montaj olur.\n• 180° açılabilir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Paslanmaz Çelik (AISI 303)',
+    },
+    surface: 'Çinko kaplama veya Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '2899 > Yaprak Menteşe': {
+    code: '2899',
+    name: 'Yaprak Menteşe',
+    description: '',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '4299 > Kaldır - Çıkar Menteşe': {
+    code: '4299',
+    name: 'Kaldır - Çıkar Menteşe',
+    description: '• Genel olarak düz kapak-panellerde kullanılır.\n• Sağ veya sol uygulama yapılabilir.',
+    materials: {
+      'GÖVDE': 'Çelik',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: 'Çinko Kaplama',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1199 > Yaprak Menteşe': {
+    code: '1199',
+    name: 'Yaprak Menteşe',
+    description: '• Düz kapak ve profillerde kullanılır. Civatalı versiyonda m5 civata kullanılır.\n• Tırtıllı pim paslanmaz çeliktir.',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '2099 > Tork Menteşe': {
+    code: '2099',
+    name: 'Tork Menteşe',
+    description: '• 2.3 Nm simetrik tork özelliğine sahiptir.\n• 25.000 ± 20 % çalışma çevriminde tork sabit değerini korur.\n• M4 civata ile bağlanır.\n• Farklı tork talepleri için satış ekibimizle iletişime geçiniz.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '2199 > Tork Menteşe': {
+    code: '2199',
+    name: 'Tork Menteşe',
+    description: '• 3.4 Nm simetrik tork özelliğine sahiptir.\n• 25.000 ± 20 % çalışma çevriminde tork sabit değerini korur.\n• M5 civata ile bağlanır.\n• Farklı tork talepleri için satış ekibimizle iletişime geçiniz.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '2599 > Yaprak Menteşe': {
+    code: '2599',
+    name: 'Yaprak Menteşe',
+    description: '• Farklı açı ve tork seçeneği mevcuttur\n• Kapılarda pozisyon kontrolu sağlar.\n• 80º, 115º, 150º lik açılarda kapının durmasını sağlanır.',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA6 GFR 30',
+      'PİM': 'Plastik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '2399 > Ayarlı Tork Menteşe': {
+    code: '2399',
+    name: 'Ayarlı Tork Menteşe',
+    description: '• Kullanıcı tarafından ayarlanabilen tork\n• Kapılarda pozisyon kontrolu sağlar.\n• Sağ - Sol uygulaması mevcuttur.\n• M4 civata ile bağlanır.',
+    materials: {
+      'GÖVDE': 'Delrin',
+      'AYARLANABİLİR CİVATA VE SOMUN': 'Paslanmaz Çelik (AISI 304)',
+    },
+    surface: '',
+    technicalSpecs: {
+      'PERFORMANS DETAYLARI': '',
+      'Eksenel Kuvvetler (N)': 'Çalışma Yükü: 700, Yükteki kırılma aralığı: 1100',
+      'Radyal Kuvvetler (N)': 'Çalışma Yükü: 1400, Yükteki kırılma aralığı: 1800',
+      'Tork değeri': '0.8 N.m.',
+      'Çalışma sıcaklık aralığı': '- 5ºC + 65ºC',
+      'Bağlantı elemanları': 'Civata ve Somun: M4 (Menteşe ile verilmez)',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '2499 > Ayarlı Tork Menteşe': {
+    code: '2499',
+    name: 'Ayarlı Tork Menteşe',
+    description: '• Kullanıcı tarafından ayarlanabilen tork\n• Kapılarda pozisyon kontrolu sağlar.\n• Sağ - Sol uygulaması mevcuttur.\n• M6 civata ile bağlanır.',
+    materials: {
+      'GÖVDE': 'Delrin',
+      'AYARLANABİLİR CİVATA ve SOMUN': 'Paslanmaz Çelik (AISI 304)',
+    },
+    surface: '',
+    technicalSpecs: {
+      'PERFORMANS DETAYLARI': '',
+      'Eksenel Kuvvetler (N)': 'Çalışma Yükü: 1500, Yükteki kırılma aralığı: 2350',
+      'Radyal Kuvvetler (N)': 'Çalışma Yükü: 2250, Yükteki kırılma aralığı: 3200',
+      'Tork değeri': '4 N.m.',
+      'Çalışma sıcaklık aralığı': '- 5ºC + 65ºC',
+      'Bağlantı elemanları': 'Civata ve somun: M6 (Menteşe ile verilmez)',
+    },
+    versions: [],
+    relatedProducts: [],
+  },
+  '699 > Kaldır - Çıkar Menteşe': {
+    code: '699',
+    name: 'Kaldır - Çıkar Menteşe',
+    description: '• İçeriden montaj sayesinde dışarıdan müdahale imkansız.\n• Kabin kapağının menteşeleri sökmeden çıkarılabilmesi amaçlı kullanılır.\n• Sağ veya sol uygulama yapılabilir.\n• Düz kapaklı kabinlerde kullanılır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '693 > Yataklı Menteşe': {
+    code: '693',
+    name: 'Yataklı Menteşe',
+    description: '',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+      'YATAK': 'Delrin',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '800 > Klima Santral Menteşesi (3D)': {
+    code: '800',
+    name: 'Klima Santral Menteşesi (3D)',
+    description: '• 3 boyutlu kapı ayarı menteşeden yapılabilir.\n• Düz kapaklar için uygundur.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Çelik',
+      'YATAK': 'Delrin',
+    },
+    surface: 'Siyah boya',
+    versions: [
+      { 'Ürün Kodu': '32002017', 'Ürün Adı': 'Menteşe Kapağı', 'Malzeme': 'Plastik', 'Yüzey': 'Siyah Boya' },
+    ],
+    relatedProducts: [],
+  },
+  '500 > Klima Santral Menteşesi': {
+    code: '500',
+    name: 'Klima Santral Menteşesi',
+    description: '• Genel olarak düz kapak ve panellerde ve izolasyonlu kapaklarda kullanılır.\n• Klima santralleri için özel dizayn edilmiştir.\n• Menteşe kapağı sayesinde estetik bir görünüm sağlar. Pim paslanmaz çeliktir.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+      'YATAK': 'Delrin',
+      'COVER': 'PA6 GFR 30',
+    },
+    surface: 'Siyah boya',
+    versions: [],
+    relatedProducts: [],
+  },
+  '300 > Klima Santral Menteşesi': {
+    code: '300',
+    name: 'Klima Santral Menteşesi',
+    description: '',
+    materials: {
+      'GÖVDE': 'Polyamide DIN-EN ISO 1043-1 PA 6 GFR 30',
+      'PİM': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '1500 > Klima Santral Menteşesi': {
+    code: '1500',
+    name: 'Klima Santral Menteşesi',
+    description: '• Çift cidarlı yalıtımlı kapılarda kolay montaj için özel tasarlanmıştır.\n• 180° açılabilme özelliğine sahiptir.\n• X, Y ve Z eksenlerinde 3 mm ayar özelliği\n• Cıvatalar ve setskur vidalar ürün üzerine montajlıdır.',
+    materials: {
+      'GÖVDE': 'Zamak DIN-EN 1774-ZnAl4Cu1',
+      'PİM': 'Paslanmaz Çelik',
+      'CİVATA': 'Paslanmaz Çelik',
+    },
+    surface: '',
+    versions: [],
+    relatedProducts: [],
+  },
+  '0000 > Karoser Menteşe': {
+    code: '0000',
+    name: 'Karoser Menteşe',
+    description: '• Tır dorse ve frigofrik kamyon kasalarının arka kapaklarında kullanılan mukavemeti yüksek bir menteşedir.\n• 270 derece açılabilir.\n• Siyah boyalı ve çinko kaplamalı temin edilir.\n• Sağ-sol kullanım için uygundur.\n• Farklı ölçüler için Mesan ile iletişime geçiniz.',
+    materials: {
+      'Kenar Parça': 'Çelik',
+      'Orta Parça': 'Çelik',
+    },
+    surface: '',
+    versions: [
+      { 'Ürün Kodu': '34008024', 'Ürün Adı': 'Karoser Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Çinko Kaplama' },
+      { 'Ürün Kodu': '34008025', 'Ürün Adı': 'Karoser Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Siyah Boya' },
+      { 'Ürün Kodu': '34008023', 'Ürün Adı': 'Karoser Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Çinko Kaplama' },
+      { 'Ürün Kodu': '34008029', 'Ürün Adı': 'Karoser Menteşe', 'Malzeme': 'Çelik', 'Yüzey': 'Siyah Boya' },
+    ],
+    relatedProducts: [],
+  },
 }
 
 // Ürün logoları mapping
@@ -4555,7 +5634,7 @@ function ProductDetail() {
   const productDetail = productDetails[productName]
   
   // Kollu kilit ürünleri için otomatik detay sayfası
-  const isLockProduct = productInfo && (productInfo.name.includes('Kollu Kilit') || productInfo.name.includes('Dikey Hareketli') || productInfo.name.includes('İspanyolet') || productInfo.name.includes('Dikey Mekanizmalı') || productInfo.name.includes('İç Kilitleme') || productInfo.name.includes('ispanyolet') || productInfo.name.includes('Kabin Kilidi') || productInfo.name.includes('T Kollu') || productInfo.name.includes('"T" Kollu') || productInfo.name.includes('\'T\' Kollu') || productInfo.name.includes('Trafo Kilidi') || productInfo.name.includes('Klima Santral Kilidi') || productInfo.name.includes('Klima Kabin Kilidi') || productInfo.name.includes('Fonsiyonel Kilit Menteşe') || productInfo.name.includes('Profil Bağlantı Parçası') || productInfo.name.includes('Sıkıştırmalı Kilit') || productInfo.name.includes('Çubuk') || productInfo.code === 'IC' || productInfo.code === 'CT1' || productInfo.code === 'CT2' || productInfo.code === 'CY1' || productInfo.code === 'CY2')
+  const isLockProduct = productInfo && (productInfo.name.includes('Kollu Kilit') || productInfo.name.includes('Dikey Hareketli') || productInfo.name.includes('İspanyolet') || productInfo.name.includes('Dikey Mekanizmalı') || productInfo.name.includes('İç Kilitleme') || productInfo.name.includes('ispanyolet') || productInfo.name.includes('Kabin Kilidi') || productInfo.name.includes('T Kollu') || productInfo.name.includes('"T" Kollu') || productInfo.name.includes('\'T\' Kollu') || productInfo.name.includes('Trafo Kilidi') || productInfo.name.includes('Klima Santral Kilidi') || productInfo.name.includes('Klima Kabin Kilidi') || productInfo.name.includes('Fonsiyonel Kilit Menteşe') || productInfo.name.includes('Profil Bağlantı Parçası') || productInfo.name.includes('Sıkıştırmalı Kilit') || productInfo.name.includes('Çubuk') || productInfo.name.includes('Köşe Menteşe') || productInfo.name.includes('Kenar Menteşe') || productInfo.name.includes('Gizli Menteşe') || productInfo.name.includes('Klima Santral Menteşesi') || productInfo.code === 'IC' || productInfo.code === 'CT1' || productInfo.code === 'CT2' || productInfo.code === 'CY1' || productInfo.code === 'CY2')
   const hasDetail = !!productDetail || isLockProduct
   
   // Kollu kilit resim mapping (ürün koduna göre)
@@ -4834,6 +5913,82 @@ function ProductDetail() {
       
       // Fallback - dosya yoksa genel resim
       return productImage || '/cesitliurunler/cucesitli.jpg'
+    }
+    
+    // KENAR MENTEŞELER için özel resim mapping
+    if (code === '090' || code === '091' || code === '092' || code === '093' || code === '191' || code === '192' || code === '193' || code === '293' || code === '393' || code === '493' || code === '593' || code === '693' || code === '793' || code === '893' || code === '993' || code === '1093' || code === '1193') {
+      const kenarMenteselerImageMap = {
+        '090': '/kenarmenteseler/090_nikel.jpg',
+        '091': '/kenarmenteseler/091_nikel.jpg',
+        '092': '/kenarmenteseler/092_krom.jpg',
+        '192': '/kenarmenteseler/192_krom.jpg',
+        '093': '/kenarmenteseler/093_krom.jpg',
+        '193': '/kenarmenteseler/193_krom.jpg',
+        '793': '/kenarmenteseler/793.jpg',
+        '893': '/kenarmenteseler/893.jpg',
+        '191': '/kenarmenteseler/191.jpg',
+        '1093': '/kenarmenteseler/1093.jpg',
+        '993': '/kenarmenteseler/993.jpg',
+        '1193': '/kenarmenteseler/1193_krom.jpg',
+        '393': '/kenarmenteseler/393.jpg',
+        '293': '/kenarmenteseler/293.jpg',
+        '493': '/kenarmenteseler/493_v1_krom.jpg',
+        '593': '/kenarmenteseler/593_krom.jpg',
+        '693': '/kenarmenteseler/693_kenar_krom.jpg',
+      }
+      
+      if (kenarMenteselerImageMap[code]) {
+        return kenarMenteselerImageMap[code]
+      }
+      
+      // Fallback - dosya yoksa genel resim
+      return productImage || '/kenarmenteseler.png'
+    }
+    
+    // GİZLİ MENTEŞELER için özel resim mapping
+    if (code === '094' || code === '095' || code === '096' || code === '194' || code === '195' || code === '196' || code === '294' || code === '295' || code === '296' || code === '394' || code === '395' || code === '595' || code === '695' || code === '795' || code === '895' || code === '995' || code === '1095' || code === '1495' || code === '1795' || code === '1995' || code === '089' || code === '189' || code === '289' || code === '389') {
+      const gizliMenteselerImageMap = {
+        '094': '/gizlimenteseler/094.jpg',
+        '194': '/gizlimenteseler/194.jpg',
+        '096': '/gizlimenteseler/096_1.jpg',
+        '196': '/gizlimenteseler/196.jpg',
+        '294': '/gizlimenteseler/294.jpg',
+        '296': '/gizlimenteseler/296.jpg',
+        '095': '/gizlimenteseler/095_1.jpg',
+        '195': '/gizlimenteseler/195_1.jpg',
+        '295': '/gizlimenteseler/295_v3.jpg',
+        '395': '/gizlimenteseler/395_1.jpg',
+        '695': '/gizlimenteseler/695_v1.jpg',
+        '795': '/gizlimenteseler/795.jpg',
+        '1795': '/gizlimenteseler/1795.jpg',
+        '895': '/gizlimenteseler/895.jpg',
+        '1095': '/gizlimenteseler/1095.jpg',
+        '1995': '/gizlimenteseler/1995_v4.jpg',
+        '595': '/gizlimenteseler/595.jpeg',
+        '189': '/gizlimenteseler/189.jpg',
+        '389': '/gizlimenteseler/389.jpg',
+        '089': '/gizlimenteseler/089.jpg',
+        '289': '/gizlimenteseler/289_v2.jpg',
+        '394': '/gizlimenteseler/394.jpg',
+        '1495': '/gizlimenteseler/1495.jpg',
+      }
+      
+      // 995 için v1 ve v2 ayrımı
+      if (code === '995') {
+        if (productName?.includes('v1')) {
+          return '/gizlimenteseler/995_v1.jpg'
+        } else if (productName?.includes('v2')) {
+          return '/gizlimenteseler/995_v2.jpg'
+        }
+        return '/gizlimenteseler/995_v1.jpg' // Fallback
+      }
+      
+      if (gizliMenteselerImageMap[code]) {
+        return gizliMenteselerImageMap[code]
+      }
+      
+      // Fallback - dosya yoksa genel resim
+      return productImage || '/gizlimenteseler.png'
     }
     
     // 466 > Mini Butonlu Kilit için özel resim mapping
@@ -6108,6 +7263,322 @@ function ProductDetail() {
     
     if (code === '3201' && fullName?.includes('Elektronik Dolap Kilidi')) {
       return '/elektronikdolapkilitleri/3201-elektronik-dolap-kilidi.pdf'
+    }
+    
+    // KENAR MENTEŞELER için özel PDF mapping
+    if (code === '090' && fullName?.includes('Kenar Menteşe (10mm)')) {
+      return '/kenarmenteseler/090-kenar-mentese-10mm.pdf'
+    }
+    
+    if (code === '091' && fullName?.includes('Kenar Menteşe (12mm)')) {
+      return '/kenarmenteseler/091-kenar-mentese-12mm.pdf'
+    }
+    
+    if (code === '092' && fullName?.includes('Kenar Menteşe (12mm)')) {
+      return '/kenarmenteseler/092-kenar-mentese-12mm.pdf'
+    }
+    
+    if (code === '192' && fullName?.includes('Kenar Menteşe (12mm)')) {
+      return '/kenarmenteseler/192-kenar-mentese-12mm.pdf'
+    }
+    
+    if (code === '093' && fullName?.includes('Kenar Menteşe (14mm)')) {
+      return '/kenarmenteseler/093-kenar-mentese-14mm.pdf'
+    }
+    
+    if (code === '193' && fullName?.includes('Kenar Menteşe (16mm)')) {
+      return '/kenarmenteseler/193-kenar-mentese-16mm.pdf'
+    }
+    
+    if (code === '793' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/793-kenar-mentese.pdf'
+    }
+    
+    if (code === '893' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/893-kenar-mentese.pdf'
+    }
+    
+    if (code === '191' && fullName?.includes('Kenar Menteşe (10mm)')) {
+      return '/kenarmenteseler/191-kenar-mentese-10mm.pdf'
+    }
+    
+    if (code === '1093' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/1093-kenar-mentese.pdf'
+    }
+    
+    if (code === '993' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/993-kenar-mentese.pdf'
+    }
+    
+    if (code === '1193' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/1193-kenar-mentese.pdf'
+    }
+    
+    if (code === '393' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/393-kenar-mentese.pdf'
+    }
+    
+    if (code === '293' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/293-kenar-mentese.pdf'
+    }
+    
+    if (code === '493' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/493-kenar-mentese.pdf'
+    }
+    
+    if (code === '593' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/593-kenar-mentese.pdf'
+    }
+    
+    if (code === '693' && fullName?.includes('Kenar Menteşe')) {
+      return '/kenarmenteseler/693-kenar-mentese.pdf'
+    }
+    
+    // GİZLİ MENTEŞELER için özel PDF mapping
+    if (code === '094' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/094-gizli-mentese.pdf'
+    }
+    
+    if (code === '194' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/194-gizli-mentese.pdf'
+    }
+    
+    if (code === '096' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/096-gizli-mentese.pdf'
+    }
+    
+    if (code === '196' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/196-gizli-mentese.pdf'
+    }
+    
+    if (code === '294' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/294-gizli-mentese.pdf'
+    }
+    
+    if (code === '296' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/296-gizli-mentese.pdf'
+    }
+    
+    if (code === '095' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/095-gizli-mentese.pdf'
+    }
+    
+    if (code === '195' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/195-gizli-mentese.pdf'
+    }
+    
+    if (code === '295' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/295-gizli-mentese.pdf'
+    }
+    
+    if (code === '395' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/395-gizli-mentese.pdf'
+    }
+    
+    if (code === '695' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/695-gizli-mentese.pdf'
+    }
+    
+    if (code === '795' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/795-gizli-mentese.pdf'
+    }
+    
+    if (code === '1795' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/1795-gizli-mentese.pdf'
+    }
+    
+    if (code === '895' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/895-gizli-mentese.pdf'
+    }
+    
+    if (code === '1095' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/1095-gizli-mentese.pdf'
+    }
+    
+    if (code === '995') {
+      if (fullName?.includes('v1') || fullName?.includes('Gizli Menteşe v1')) {
+        return '/gizlimenteseler/995-gizli-mentese-v1.pdf'
+      }
+      if (fullName?.includes('v2') || fullName?.includes('Gizli Menteşe v2')) {
+        return '/gizlimenteseler/995-gizli-mentese-v2.pdf'
+      }
+    }
+    
+    if (code === '1995' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/1995-gizli-mentese.pdf'
+    }
+    
+    if (code === '595' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/595-gizli-mentese.pdf'
+    }
+    
+    if (code === '189' && fullName?.includes('Yaylı Mil Menteşe')) {
+      return '/gizlimenteseler/189-yayli-mil-mentese.pdf'
+    }
+    
+    if (code === '389' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/389-gizli-mentese.pdf'
+    }
+    
+    if (code === '089' && fullName?.includes('Yaylı Mil Menteşe')) {
+      return '/gizlimenteseler/089-yayli-mil-mentese.pdf'
+    }
+    
+    if (code === '289' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/289-gizli-mentese.pdf'
+    }
+    
+    if (code === '394' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/394-gizli-mentese.pdf'
+    }
+    
+    if (code === '1495' && fullName?.includes('Gizli Menteşe')) {
+      return '/gizlimenteseler/1495-gizli-mentese.pdf'
+    }
+    
+    // Köşe Menteşeler için özel PDF mapping
+    if (fullName?.includes('Köşe Menteşe') || fullName?.includes('Klima Santral Menteşesi')) {
+      if (code === '097' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/097-kose-mentese.pdf'
+      }
+      if (code === '197' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/197-kose-mentese.pdf'
+      }
+      if (code === '297' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/297-kose-mentese.pdf'
+      }
+      if (code === '397' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/397-kose-mentese.pdf'
+      }
+      if (code === '298' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/298-kose-mentese.pdf'
+      }
+      if (code === '098' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/098-kose-mentese.pdf'
+      }
+      if (code === '398' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/398-kose-mentese.pdf'
+      }
+      if (code === '497' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/497-kose-mentese.pdf'
+      }
+      if (code === '498' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/498-kose-mentese.pdf'
+      }
+      if (code === '400' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/400-kose-mentese.pdf'
+      }
+      if (code === '200' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/200-kose-mentese.pdf'
+      }
+      if (code === '100' && fullName?.includes('Köşe Menteşe')) {
+        return '/kosementeseler/100-kose-mentese.pdf'
+      }
+      if (code === '600') {
+        if (fullName?.includes('Klima Santral Menteşesi')) {
+          return '/kosementeseler/600-klima-santral-mentesesi.pdf'
+        }
+        if (fullName?.includes('Köşe Menteşe')) {
+          return '/kosementeseler/600-kose-mentese.pdf'
+        }
+      }
+      if (code === '700' && fullName?.includes('Klima Santral Menteşesi')) {
+        return '/kosementeseler/700-klima-santral-mentesesi.pdf'
+      }
+    }
+    
+    // Düz Menteşeler için özel PDF mapping
+    if (fullName?.includes('Yaprak Menteşe') || fullName?.includes('Kaldır - Çıkar Menteşe') || fullName?.includes('Tork Menteşe') || fullName?.includes('Ayarlı Tork Menteşe') || fullName?.includes('Yataklı Menteşe') || fullName?.includes('Karoser Menteşe')) {
+      if (code === '1299' && fullName?.includes('Mini Yaprak Menteşe')) {
+        return '/duzmenteseler/1299-mini-yaprak-mentese.pdf'
+      }
+      if (code === '299' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/299-yaprak-mentese.pdf'
+      }
+      if (code === '199' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/199-yaprak-mentese.pdf'
+      }
+      if (code === '099' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/099-yaprak-mentese.pdf'
+      }
+      if (code === '399' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/399-yaprak-mentese.pdf'
+      }
+      if (code === '1399' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/1399-yaprak-mentese.pdf'
+      }
+      if (code === '1699' && fullName?.includes('Kaldır - Çıkar Menteşe')) {
+        return '/duzmenteseler/1699-kaldir-cikar-mentese.pdf'
+      }
+      if (code === '1499' && fullName?.includes('Kaldır - Çıkar Menteşe')) {
+        return '/duzmenteseler/1499-kaldir-cikar-mentese.pdf'
+      }
+      if (code === '900' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/900-yaprak-mentese.pdf'
+      }
+      if (code === '899' && fullName?.includes('Kaldır - Çıkar Menteşe')) {
+        return '/duzmenteseler/899-kaldir-cikar-mentese.pdf'
+      }
+      if (code === '499' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/499-yaprak-mentese.pdf'
+      }
+      if (code === '599' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/599-yaprak-mentese.pdf'
+      }
+      if (code === '1599' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/1599-yaprak-mentese.pdf'
+      }
+      if (code === '799' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/799-yaprak-mentese.pdf'
+      }
+      if (code === '4599' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/4599-yaprak-mentese.pdf'
+      }
+      if (code === '2899' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/2899-yaprak-mentese.pdf'
+      }
+      if (code === '4299' && fullName?.includes('Kaldır - Çıkar Menteşe')) {
+        return '/duzmenteseler/4299-kaldir-cikar-mentese.pdf'
+      }
+      if (code === '1199' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/1199-yaprak-mentese.pdf'
+      }
+      if (code === '2099' && fullName?.includes('Tork Menteşe')) {
+        return '/duzmenteseler/2099-tork-mentese.pdf'
+      }
+      if (code === '2199' && fullName?.includes('Tork Menteşe')) {
+        return '/duzmenteseler/2199-tork-mentese.pdf'
+      }
+      if (code === '2599' && fullName?.includes('Yaprak Menteşe')) {
+        return '/duzmenteseler/2599-yaprak-mentese.pdf'
+      }
+      if (code === '2399' && fullName?.includes('Ayarlı Tork Menteşe')) {
+        return '/duzmenteseler/2399-ayarli-tork-mentese.pdf'
+      }
+      if (code === '2499' && fullName?.includes('Ayarlı Tork Menteşe')) {
+        return '/duzmenteseler/2499-ayarli-tork-mentese.pdf'
+      }
+      if (code === '699' && fullName?.includes('Kaldır - Çıkar Menteşe')) {
+        return '/duzmenteseler/699-kaldir-cikar-mentese.pdf'
+      }
+      if (code === '693' && fullName?.includes('Yataklı Menteşe')) {
+        return '/duzmenteseler/693-yatakli-mentese.pdf'
+      }
+      if (code === '800' && fullName?.includes('Klima Santral Menteşesi (3D)')) {
+        return '/duzmenteseler/800-klima-santral-mentesesi-3d.pdf'
+      }
+      if (code === '500' && fullName?.includes('Klima Santral Menteşesi')) {
+        return '/duzmenteseler/500-klima-santral-mentesesi.pdf'
+      }
+      if (code === '300' && fullName?.includes('Klima Santral Menteşesi')) {
+        return '/duzmenteseler/300-klima-santral-mentesesi.pdf'
+      }
+      if (code === '1500' && fullName?.includes('Klima Santral Menteşesi')) {
+        return '/duzmenteseler/1500-klima-santral-mentesesi.pdf'
+      }
+      if (code === '0000' && fullName?.includes('Karoser Menteşe')) {
+        return '/duzmenteseler/0000-karoser-mentese.pdf'
+      }
     }
     
     // Kod bazlı PDF mapping
