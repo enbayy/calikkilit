@@ -5,7 +5,6 @@ const initialForm = {
   email: '',
   phone: '',
   company: '',
-  topic: '',
   message: '',
 }
 
@@ -73,9 +72,6 @@ function Contact() {
               <div>
                 <p className="text-xs uppercase tracking-[0.12em] text-slate-500">Form</p>
                 <h2 className="text-xl font-semibold text-slate-900">Mesaj bırakın</h2>
-                <p className="mt-2 text-sm text-slate-600">
-                  Talebinizi ilgili ekibe yönlendirelim. Zorunlu alanlar işaretlidir.
-                </p>
               </div>
               <span className="rounded-full bg-[#166534]/15 px-3 py-1 text-xs font-semibold uppercase text-[#14532d]">
                 7/24
@@ -131,21 +127,6 @@ function Contact() {
                   onChange={(e) => updateField('company', e.target.value)}
                   placeholder="Firma Adı"
                 />
-              </label>
-              <label className="md:col-span-2 space-y-1 text-sm font-medium text-slate-700">
-                Konu
-                <select
-                  className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/40"
-                  value={form.topic}
-                  onChange={(e) => updateField('topic', e.target.value)}
-                >
-                  <option value="">Seçiniz</option>
-                  <option value="satis">Satış / Teklif</option>
-                  <option value="teknik">Teknik Destek</option>
-                  <option value="proje">Proje / Uygulama</option>
-                  <option value="ik">İnsan Kaynakları</option>
-                  <option value="diger">Diğer</option>
-                </select>
               </label>
               <label className="md:col-span-2 space-y-1 text-sm font-medium text-slate-700">
                 Mesaj*
