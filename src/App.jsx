@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import InfoPage from './pages/InfoPage'
@@ -6,6 +6,7 @@ import ProductDetail from './pages/ProductDetail'
 import Products, { catalogGroups, sectionSlugMap, stainlessSteelSlugMap } from './pages/Products'
 import SectionProducts from './pages/SectionProducts'
 import Contact from './pages/Contact'
+import Medya from './pages/Medya'
 
 // Footer data removed - footer is now built inline with site content
 
@@ -144,10 +145,43 @@ const secondaryNav = [
 ]
 
 
+// Tüm ürünleri ve başlıkları topla
+const getAllProductsAndSections = () => {
+  const allProducts = []
+  const allSections = []
+  
+  catalogGroups.forEach((group) => {
+    group.sections.forEach((section) => {
+      // Başlıkları ekle
+      allSections.push({
+        name: section.title,
+        section: section.title,
+        group: group.title,
+        type: 'section',
+      })
+      
+      // Ürünleri ekle
+      if (section.items && Array.isArray(section.items)) {
+        section.items.forEach((item) => {
+          allProducts.push({
+            name: item,
+            section: section.title,
+            group: group.title,
+            type: 'product',
+          })
+        })
+      }
+    })
+  })
+  
+  return { products: allProducts, sections: allSections }
+}
+
 function App() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [mobileSubOpen, setMobileSubOpen] = useState(null)
   const [searchQuery, setSearchQuery] = useState('')
+  const [showSearchResults, setShowSearchResults] = useState(false)
 
   useEffect(() => {
     if (typeof document !== 'undefined') {
@@ -155,6 +189,109 @@ function App() {
       localStorage.removeItem('theme')
     }
   }, [])
+
+  // Tüm ürünleri ve başlıkları al
+  const { products: allProducts, sections: allSections } = useMemo(() => getAllProductsAndSections(), [])
+
+  // Türkçe karakterleri normalize et
+  const normalizeTurkish = (text) => {
+    if (!text) return ''
+    return String(text)
+      .replace(/İ/g, 'i')
+      .replace(/ı/g, 'i')
+      .replace(/I/g, 'i')
+      .replace(/Ğ/g, 'g')
+      .replace(/ğ/g, 'g')
+      .replace(/Ü/g, 'u')
+      .replace(/ü/g, 'u')
+      .replace(/Ş/g, 's')
+      .replace(/ş/g, 's')
+      .replace(/Ö/g, 'o')
+      .replace(/ö/g, 'o')
+      .replace(/Ç/g, 'c')
+      .replace(/ç/g, 'c')
+      .toLowerCase()
+      .trim()
+  }
+
+  // Arama sonuçlarını filtrele (başlıklar önce, sonra ürünler)
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return []
+    const normalizedQuery = normalizeTurkish(searchQuery)
+    if (!normalizedQuery) return []
+    
+    // Önce başlıkları filtrele
+    const matchedSections = allSections.filter((section) => {
+      const normalizedName = normalizeTurkish(section.name)
+      const normalizedGroup = normalizeTurkish(section.group)
+      
+      return (
+        normalizedName.includes(normalizedQuery) ||
+        normalizedGroup.includes(normalizedQuery)
+      )
+    })
+    
+    // Sonra ürünleri filtrele
+    const matchedProducts = allProducts.filter((product) => {
+      const normalizedName = normalizeTurkish(product.name)
+      const normalizedSection = normalizeTurkish(product.section)
+      const normalizedGroup = normalizeTurkish(product.group)
+      
+      return (
+        normalizedName.includes(normalizedQuery) ||
+        normalizedSection.includes(normalizedQuery) ||
+        normalizedGroup.includes(normalizedQuery)
+      )
+    })
+    
+    // Başlıkları önce göster, sonra ürünleri (toplam 10 sonuç)
+    const sectionsToShow = matchedSections.slice(0, 3) // Maksimum 3 başlık
+    const productsToShow = matchedProducts.slice(0, 10 - sectionsToShow.length) // Kalan yer ürünler için
+    
+    return [...sectionsToShow, ...productsToShow]
+  }, [searchQuery, allProducts, allSections])
+
+  // Kategori resim mapping
+  const categoryImageMap = {
+    'KOLLU KİLİTLER': '/kollukilit.png',
+    'İSPANYOLET SİSTEMLİ KİLİTLER': '/ispanyoletsistemlikilitler.png',
+    'TRAFO VE KABİN KİLİTLERİ': '/trafovekabinkilitleri.png',
+    'KİLİMA SANTRAL ÜRÜNLERİ': '/klimasantralurunleri.png',
+    'ÇEŞİTLİ ÜRÜNLER': '/cesitliurunler/cucesitli.jpg',
+    'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR': '/dilleranahtarlarcubuklarve.png',
+    'ÇEYREK DÖNÜŞLÜ KİLİTLER': '/ceyrekdonuslukilitler.png',
+    'SİLİNDİRLİ KİLİTLER': '/silindirlikilitler.png',
+    'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ': '/mobilyavecelikesya.png',
+    'KENAR MENTEŞELER': '/kenarmentese.png',
+    'GİZLİ MENTEŞELER': '/gizlimentese.png',
+    'KÖŞE MENTEŞELER': '/kosementese.png',
+    'DÜZ MENTEŞELER': '/duzmentese.png',
+    'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA': '/sizdirmazlik.jpg',
+    'YAPIŞKANLI CONTALAR': '/yapiskanlicontalar.jpg',
+    'KULPLAR': '/kulplar.png',
+    'AKSESUARLAR': '/aksesuarlar.png',
+    'KİLİTLER': '/kilitler.png',
+    'MENTEŞELER': '/menteseler.png',
+    'ELEKTRONİK KOLLU KİLİTLER': '/elektronikkollu.jpg',
+    'İZLEME VE ERİŞİM KONTROL SİSTEMİ': '/izlemeveerisim.jpg',
+    'ELEKTRONİK DOLAP KİLİTLERİ': '/elektronikdolap.jpg',
+    'DİĞER ELEKTRONİK KİLİTLER': '/digerelektronik.jpg',
+  }
+
+  // Ürün resmi al
+  const getProductImage = (productName, sectionTitle) => {
+    // Önce kategori resmini kontrol et
+    if (sectionTitle && categoryImageMap[sectionTitle]) {
+      return categoryImageMap[sectionTitle]
+    }
+    // Varsayılan resim
+    return '/kollukilit.png'
+  }
+
+  // Ürün slug oluştur
+  const getProductSlug = (productName) => {
+    return encodeURIComponent(productName.toLowerCase().replace(/\s+/g, '-'))
+  }
 
   return (
     <BrowserRouter>
@@ -238,9 +375,88 @@ function App() {
                   type="text"
                   placeholder="Ürün ara..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => {
+                    setSearchQuery(e.target.value)
+                    setShowSearchResults(true)
+                  }}
+                  onFocus={() => setShowSearchResults(true)}
+                  onBlur={() => {
+                    // Kısa bir gecikme ile kapat, böylece tıklama işlemi tamamlanabilir
+                    setTimeout(() => setShowSearchResults(false), 200)
+                  }}
                   className="w-64 rounded-lg border border-white/30 bg-white px-4 py-2 pr-10 text-sm text-slate-700 placeholder-slate-400 shadow-sm transition focus:border-white focus:outline-none focus:ring-2 focus:ring-white/20"
                 />
+                {showSearchResults && searchResults.length > 0 && (
+                  <div className="absolute top-full left-0 z-50 mt-2 w-96 max-h-96 overflow-y-auto rounded-lg border border-slate-200 bg-white shadow-xl">
+                    <div className="p-2">
+                      <div className="mb-2 px-2 text-xs font-semibold uppercase tracking-wide text-slate-500">
+                        {searchResults.length} sonuç bulundu
+                      </div>
+                      {searchResults.map((item, index) => {
+                        // Başlık ise
+                        if (item.type === 'section') {
+                          const sectionSlug = sectionSlugMap[item.name] || stainlessSteelSlugMap[item.name]
+                          return (
+                            <NavLink
+                              key={`section-${item.name}-${index}`}
+                              to={sectionSlug ? `/urunler/${sectionSlug}` : '/urunler'}
+                              onClick={() => {
+                                setSearchQuery('')
+                                setShowSearchResults(false)
+                              }}
+                              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition hover:bg-slate-100 border-b border-slate-100 mb-1"
+                            >
+                              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded bg-[#166534]/10">
+                                <img
+                                  src={getProductImage('', item.name)}
+                                  alt={item.name}
+                                  className="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="font-semibold text-[#166534] break-words">{item.name}</div>
+                                <div className="text-xs text-slate-500 break-words">{item.group}</div>
+                              </div>
+                              <span className="text-xs text-slate-400">Kategori</span>
+                            </NavLink>
+                          )
+                        }
+                        
+                        // Ürün ise
+                        const productSlug = getProductSlug(item.name)
+                        const sectionSlug = sectionSlugMap[item.section] || stainlessSteelSlugMap[item.section]
+                        return (
+                          <NavLink
+                            key={`product-${item.name}-${index}`}
+                            to={sectionSlug ? `/urunler/${sectionSlug}` : `/urun-detay/${productSlug}`}
+                            onClick={() => {
+                              setSearchQuery('')
+                              setShowSearchResults(false)
+                            }}
+                            className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition hover:bg-slate-100"
+                          >
+                            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded bg-slate-100">
+                              <img
+                                src={getProductImage(item.name, item.section)}
+                                alt={item.name}
+                                className="h-full w-full object-contain"
+                              />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-slate-900 break-words">{item.name}</div>
+                              <div className="text-xs text-slate-500 break-words">{item.section}</div>
+                            </div>
+                          </NavLink>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )}
+                {showSearchResults && searchQuery.trim() && searchResults.length === 0 && (
+                  <div className="absolute top-full left-0 z-50 mt-2 w-96 rounded-lg border border-slate-200 bg-white p-4 text-sm text-slate-500 shadow-xl">
+                    Sonuç bulunamadı
+                  </div>
+                )}
               </div>
               <button
                 onClick={() => setMobileOpen((prev) => !prev)}
@@ -384,7 +600,7 @@ function App() {
             />
             <Route
               path="/medya"
-              element={<InfoPage {...pageContent.medya} />}
+              element={<Medya />}
             />
             <Route
               path="/iletisim"
