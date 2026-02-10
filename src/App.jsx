@@ -314,7 +314,7 @@ function App() {
               </div>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://instagram.com"
+                  href="https://instagram.com/konyakilit"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white/20 text-white transition hover:bg-white/30 hover:text-white"
@@ -770,7 +770,7 @@ function App() {
               <div className="border-t border-white/10 px-4 py-4">
                 <div className="flex items-center justify-center gap-3">
                   <a
-                    href="https://instagram.com"
+                    href="https://instagram.com/konyakilit"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/5 text-white transition-all hover:border-[#166534] hover:bg-[#166534]/20 hover:scale-110"
@@ -852,7 +852,7 @@ function App() {
                 </p>
                 <div className="flex gap-3 justify-center md:justify-start">
                   <a
-                    href="https://instagram.com"
+                    href="https://instagram.com/konyakilit"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white transition hover:bg-white/20 hover:scale-110"
@@ -863,7 +863,7 @@ function App() {
                     </svg>
                   </a>
                   <a
-                    href="https://wa.me/902120000000"
+                    href="https://wa.me/905060920342"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white transition hover:bg-white/20 hover:scale-110"
@@ -981,13 +981,18 @@ function App() {
                       42050 Karatay/Konya
                     </span>
                   </li>
-                  <li className="flex items-center gap-3 justify-center md:justify-start">
-                    <span className="text-white">📞</span>
+                  <li className="flex flex-col items-start gap-3 justify-center md:justify-start">
                     <a
-                      href="tel:+902120000000"
+                      href="tel:+905068750358"
                       className="transition hover:text-white hover:underline"
                     >
-                      +90 212 000 00 00
+                      📞 0 506 875 03 58
+                    </a>
+                    <a
+                      href="tel:+905060920342"
+                      className="transition hover:text-white hover:underline"
+                    >
+                      📞 0 506 092 03 42
                     </a>
                   </li>
                   <li className="flex items-center gap-3 justify-center md:justify-start">
