@@ -3,7 +3,7 @@ import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import InfoPage from './pages/InfoPage'
 import ProductDetail from './pages/ProductDetail'
-import Products from './pages/Products'
+import Products, { catalogGroups, sectionSlugMap, stainlessSteelSlugMap } from './pages/Products'
 import SectionProducts from './pages/SectionProducts'
 import Contact from './pages/Contact'
 
@@ -267,9 +267,10 @@ function App() {
               </button>
             </div>
           </div>
+        </header>
 
         {mobileOpen ? (
-          <div className="fixed inset-0 z-50 lg:hidden" role="dialog" aria-label="Mobil menü">
+          <div className="fixed inset-0 z-[9999] lg:hidden" role="dialog" aria-label="Mobil menü">
             <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
             <div className="relative ml-auto h-full w-[90vw] max-w-sm overflow-y-auto border-l border-slate-200 bg-white shadow-2xl">
               <div className="flex items-center justify-between px-6 py-3">
@@ -307,26 +308,46 @@ function App() {
               <div className="mt-4 border-t border-slate-100 px-4 pt-4">
                 <p className="px-2 text-xs font-semibold uppercase tracking-[0.08em] text-slate-500">Kategoriler</p>
                 <div className="mt-2 space-y-2">
-                  {secondaryNav.map((item) => (
-                    <div key={item.label} className="rounded-xl border border-slate-200">
+                  {catalogGroups.map((group) => (
+                    <div key={group.title} className="rounded-xl border border-slate-200">
                       <button
-                        onClick={() => setMobileSubOpen((prev) => (prev === item.label ? null : item.label))}
+                        onClick={() => setMobileSubOpen((prev) => (prev === group.title ? null : group.title))}
                         className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-slate-800"
                       >
-                        <span>{item.label}</span>
-                        <span className="text-xs text-slate-500">{mobileSubOpen === item.label ? '▲' : '▼'}</span>
+                        <span>{group.title}</span>
+                        <span className="text-xs text-slate-500">{mobileSubOpen === group.title ? '▲' : '▼'}</span>
                       </button>
-                      {mobileSubOpen === item.label ? (
+                      {mobileSubOpen === group.title ? (
                         <div className="space-y-1 px-4 pb-4">
-                          {item.links.map((link) => (
-                            <a
-                              key={link}
-                              href="#"
-                              className="block rounded-lg px-3 py-2 text-sm text-slate-700 transition hover:bg-slate-100"
-                            >
-                              {link}
-                            </a>
-                          ))}
+                          {group.sections.map((section) => {
+                            // Paslanmaz çelik ürünler için özel slug kontrolü
+                            let slug = sectionSlugMap[section.title]
+                            if (!slug && group.title === 'PASLANMAZ ÇELİK ÜRÜNLER') {
+                              slug = stainlessSteelSlugMap[section.title]
+                            }
+                            // Eğer slugMap'te yoksa, otomatik slug oluştur
+                            if (!slug) {
+                              slug = section.title.toLowerCase()
+                                .replace(/ş/g, 's')
+                                .replace(/ğ/g, 'g')
+                                .replace(/ü/g, 'u')
+                                .replace(/ö/g, 'o')
+                                .replace(/ç/g, 'c')
+                                .replace(/ı/g, 'i')
+                                .replace(/İ/g, 'i')
+                                .replace(/\s+/g, '-')
+                            }
+                            return (
+                              <NavLink
+                                key={section.title}
+                                to={`/urunler/${slug}`}
+                                onClick={() => setMobileOpen(false)}
+                                className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-800 transition hover:bg-slate-100"
+                              >
+                                {section.title}
+                              </NavLink>
+                            )
+                          })}
                         </div>
                       ) : null}
                     </div>
@@ -337,7 +358,6 @@ function App() {
             </div>
           </div>
         ) : null}
-        </header>
 
         <main className="pt-2">
           <Routes>
@@ -381,18 +401,18 @@ function App() {
           <div className="mx-auto max-w-7xl px-1.5 py-12 lg:px-2">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
               {/* Şirket Bilgileri */}
-              <div className="space-y-4 lg:col-span-1">
-                <NavLink to="/" className="inline-block">
+              <div className="space-y-4 text-center md:text-left lg:col-span-1">
+                <NavLink to="/" className="inline-block mx-auto md:mx-0">
                   <img
                     src="/konyakilitlogo.png"
                     alt="Konya Kilit logo"
-                    className="h-12 w-auto"
+                    className="h-20 w-auto"
                   />
                 </NavLink>
                 <p className="text-sm leading-relaxed text-slate-300">
                   Kilit, menteşe, conta ve elektronik güvenlik sistemleri sektöründe kaliteli ürünler ve çözümler sunuyoruz.
                 </p>
-                <div className="flex gap-3">
+                <div className="flex gap-3 justify-center md:justify-start">
                   <a
                     href="https://instagram.com"
                     target="_blank"
@@ -419,7 +439,7 @@ function App() {
               </div>
 
               {/* Hızlı Linkler */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-center md:text-left">
                 <h4 className="text-sm font-bold uppercase tracking-[0.1em] text-white">Hızlı Linkler</h4>
                 <ul className="space-y-2.5 text-sm">
                   <li>
@@ -458,7 +478,7 @@ function App() {
               </div>
 
               {/* Ürün Kategorileri */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-center md:text-left">
                 <h4 className="text-sm font-bold uppercase tracking-[0.1em] text-white">Ürün Kategorileri</h4>
                 <ul className="space-y-2.5 text-sm">
                   <li>
@@ -513,17 +533,17 @@ function App() {
               </div>
 
               {/* İletişim Bilgileri */}
-              <div className="space-y-4">
+              <div className="space-y-4 text-center md:text-left">
                 <h4 className="text-sm font-bold uppercase tracking-[0.1em] text-white">İletişim</h4>
                 <ul className="space-y-3 text-sm text-slate-300">
-                  <li className="flex items-start gap-3">
+                  <li className="flex items-start gap-3 justify-center md:justify-start">
                     <span className="mt-0.5 text-white">📍</span>
                     <span>
                       Fevziçakmak, Medcezir Cd. no:8/B D:06<br />
                       42050 Karatay/Konya
                     </span>
                   </li>
-                  <li className="flex items-center gap-3">
+                  <li className="flex items-center gap-3 justify-center md:justify-start">
                     <span className="text-white">📞</span>
                     <a
                       href="tel:+902120000000"
@@ -532,7 +552,7 @@ function App() {
                       +90 212 000 00 00
                     </a>
                   </li>
-                  <li className="flex items-center gap-3">
+                  <li className="flex items-center gap-3 justify-center md:justify-start">
                     <span className="text-white">✉️</span>
                     <a
                       href="mailto:info@konyakilit.com"
@@ -541,7 +561,7 @@ function App() {
                       info@konyakilit.com
                     </a>
                   </li>
-                  <li className="flex items-start gap-3 pt-1">
+                  <li className="flex items-start gap-3 pt-1 justify-center md:justify-start">
                     <span className="mt-0.5 text-white">🕒</span>
                     <span>
                       <span className="font-semibold text-white">Pazartesi - Cuma:</span> 08:30 - 18:00<br />

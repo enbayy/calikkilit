@@ -7,38 +7,32 @@ function ProductCategoriesSection() {
     {
       title: 'Kilitler',
       description: 'Kollu Kilitler, Silindirli Kilitler, Çeyrek Dönüşlü Kilitler ve daha fazlası',
-      icon: '🔒',
       image: '/kollukilit.png',
     },
     {
       title: 'Menteşeler',
       description: 'Kenar Menteşeler, Gizli Menteşeler, Köşe Menteşeler',
-      icon: '🔗',
-      image: '/menteselerslider.png',
+      image: '/kenarmentese.png',
     },
     {
       title: 'Contalar',
       description: 'Sızdırmazlık Profilleri, Yapışkanlı Contalar',
-      icon: '⚙️',
-      image: '/cesitliurunler.jpg',
+      image: '/sizdirmazlik.jpg',
     },
     {
       title: 'Aksesuarlar ve Kulplar',
       description: 'Kulplar ve çeşitli aksesuarlar',
-      icon: '🎯',
-      image: '/dilleranahtarlarcubuklarve.png',
+      image: '/kulplar.png',
     },
     {
       title: 'Paslanmaz Çelik Ürünler',
       description: 'Kilitler, Menteşeler ve Aksesuarlar',
-      icon: '✨',
-      image: '/paslanmazslider.png',
+      image: '/kilitler.png',
     },
     {
       title: 'Elektronik',
       description: 'Elektronik Kollu Kilitler, Erişim Kontrol Sistemleri',
-      icon: '📱',
-      image: '/trafovekabinkilitleri.png',
+      image: '/elektronikkollu.jpg',
     },
   ]
 
@@ -63,39 +57,34 @@ function ProductCategoriesSection() {
   }
 
   return (
-    <section className="mx-auto w-full max-w-7xl px-1.5 py-12 sm:px-2 lg:px-3">
-      <div className="mb-8 text-center">
-        <h2 className="text-3xl font-bold text-slate-900 sm:text-4xl">ÜRÜN GRUP ÇEŞİTLERİ</h2>
+    <section className="mx-auto w-full max-w-7xl px-3 py-8 sm:px-4 sm:py-12 md:px-6 lg:px-8">
+      <div className="mb-6 text-center sm:mb-8">
+        <h2 className="text-2xl font-bold text-slate-900 sm:text-3xl md:text-4xl">ÜRÜN GRUP ÇEŞİTLERİ</h2>
       </div>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 md:gap-6 lg:grid-cols-3">
         {categories.map((category, index) => (
           <div
             key={index}
             onClick={() => handleCategoryClick(category)}
-            className="group relative cursor-pointer overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#166534]/40 hover:shadow-xl"
+            className="group relative flex flex-col cursor-pointer overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#166534]/40 hover:shadow-lg sm:rounded-2xl sm:hover:-translate-y-2 sm:hover:shadow-xl"
           >
-            <div className="relative h-48 w-full overflow-hidden bg-slate-100">
+            <div className="relative h-48 w-full overflow-hidden bg-white flex items-center justify-center sm:h-56 md:h-64">
               <img
                 src={category.image}
                 alt={category.title}
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105 sm:group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
-            <div className="p-6">
-              <div className="mb-4 flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#166534]/10 text-2xl transition-all duration-300 group-hover:bg-[#166534] group-hover:text-white">
-                  {category.icon}
-                </div>
-              </div>
-              <h3 className="mb-2 text-xl font-bold text-slate-900">{category.title}</h3>
-              <p className="mb-4 text-sm leading-relaxed text-slate-600">{category.description}</p>
-              <div className="inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
+            <div className="flex flex-col flex-1 p-4 sm:p-5 md:p-6">
+              <h3 className="mb-2 text-lg font-bold text-slate-900 sm:text-xl">{category.title}</h3>
+              <p className="mb-3 flex-1 text-xs leading-relaxed text-slate-600 sm:mb-4 sm:text-sm">{category.description}</p>
+              <div className="inline-flex items-center gap-2 text-xs font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3 sm:text-sm mt-auto">
                 Detayları Görüntüle
-                <span className="text-base">→</span>
+                <span className="text-sm sm:text-base">→</span>
               </div>
             </div>
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#166534]/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-[#166534]/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:rounded-2xl" />
           </div>
         ))}
       </div>

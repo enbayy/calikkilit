@@ -444,7 +444,38 @@ const electronicSections = [
   },
 ]
 
-const catalogGroups = [
+// Slug mapping'i export et
+export const sectionSlugMap = {
+  'KOLLU KİLİTLER': 'kollu-kilitler',
+  'İSPANYOLET SİSTEMLİ KİLİTLER': 'ispanyolet-sistemli-kilitler',
+  'TRAFO VE KABİN KİLİTLERİ': 'trafo-ve-kabin-kilitleri',
+  'KİLİMA SANTRAL ÜRÜNLERİ': 'kilima-santral-urunleri',
+  'ÇEŞİTLİ ÜRÜNLER': 'cesitli-urunler',
+  'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR': 'diller-anahtarlar-cubuk-ve-lamalar',
+  'ÇEYREK DÖNÜŞLÜ KİLİTLER': 'ceyrek-donuslu-kilitler',
+  'SİLİNDİRLİ KİLİTLER': 'silindirli-kilitler',
+  'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ': 'mobilya-ve-celik-esya-kilitleri',
+  'KENAR MENTEŞELER': 'kenar-menteseler',
+  'GİZLİ MENTEŞELER': 'gizli-menteseler',
+  'KÖŞE MENTEŞELER': 'kose-menteseler',
+  'DÜZ MENTEŞELER': 'duz-menteseler',
+  'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA': 'sizdirmazlik-profilleri-ve-kenar-koruma',
+  'YAPIŞKANLI CONTALAR': 'yapiskanli-contalar',
+  'KULPLAR': 'kulplar',
+  'AKSESUARLAR': 'aksesuarlar',
+  'ELEKTRONİK KOLLU KİLİTLER': 'elektronik-kollu-kilitler',
+  'İZLEME VE ERİŞİM KONTROL SİSTEMİ': 'izleme-ve-erisim-kontrol-sistemi',
+  'ELEKTRONİK DOLAP KİLİTLERİ': 'elektronik-dolap-kilitleri',
+  'DİĞER ELEKTRONİK KİLİTLER': 'diger-elektronik-kilitler',
+}
+
+export const stainlessSteelSlugMap = {
+  'KİLİTLER': 'paslanmaz-celik-urunler/kilitler',
+  'MENTEŞELER': 'paslanmaz-celik-urunler/menteseler',
+  'AKSESUARLAR': 'paslanmaz-celik-urunler/aksesuarlar',
+}
+
+export const catalogGroups = [
   { title: 'KİLİTLER', sections: lockSections },
   { title: 'MENTEŞELER', sections: hingeSections },
   { title: 'CONTALAR', sections: sealSections },
@@ -470,6 +501,20 @@ function Products() {
     'ÇEYREK DÖNÜŞLÜ KİLİTLER': '/ceyrekdonuslukilitler.png',
     'SİLİNDİRLİ KİLİTLER': '/silindirlikilitler.png',
     'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ': '/mobilyavecelikesya.png',
+    'KENAR MENTEŞELER': '/kenarmentese.png',
+    'GİZLİ MENTEŞELER': '/gizlimentese.png',
+    'KÖŞE MENTEŞELER': '/kosementese.png',
+    'DÜZ MENTEŞELER': '/duzmentese.png',
+    'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA': '/sizdirmazlik.jpg',
+    'YAPIŞKANLI CONTALAR': '/yapiskanlicontalar.jpg',
+    'KULPLAR': '/kulplar.png',
+    'AKSESUARLAR': '/aksesuarlar.png',
+    'KİLİTLER': '/kilitler.png',
+    'MENTEŞELER': '/menteseler.png',
+    'ELEKTRONİK KOLLU KİLİTLER': '/elektronikkollu.jpg',
+    'İZLEME VE ERİŞİM KONTROL SİSTEMİ': '/izlemeveerisim.jpg',
+    'ELEKTRONİK DOLAP KİLİTLERİ': '/elektronikdolap.jpg',
+    'DİĞER ELEKTRONİK KİLİTLER': '/digerelektronik.jpg',
   }
 
   useEffect(() => {
@@ -521,12 +566,7 @@ function Products() {
     // Paslanmaz çelik ürünler için özel kontrol
     const stainlessSteelGroup = catalogGroups.find((g) => g.title === 'PASLANMAZ ÇELİK ÜRÜNLER')
     if (stainlessSteelGroup && stainlessSteelGroup.sections.some((s) => s.title === sectionTitle)) {
-      const stainlessSlugMap = {
-        'KİLİTLER': 'paslanmaz-celik-urunler/kilitler',
-        'MENTEŞELER': 'paslanmaz-celik-urunler/menteseler',
-        'AKSESUARLAR': 'paslanmaz-celik-urunler/aksesuarlar',
-      }
-      const slug = stainlessSlugMap[sectionTitle]
+      const slug = stainlessSteelSlugMap[sectionTitle]
       if (slug) {
         navigate(`/urunler/${slug}`)
         return
@@ -534,30 +574,7 @@ function Products() {
     }
     
     // Belirli alt başlıklar için ayrı sayfaya yönlendir
-    const slugMap = {
-      'KOLLU KİLİTLER': 'kollu-kilitler',
-      'İSPANYOLET SİSTEMLİ KİLİTLER': 'ispanyolet-sistemli-kilitler',
-      'TRAFO VE KABİN KİLİTLERİ': 'trafo-ve-kabin-kilitleri',
-      'KİLİMA SANTRAL ÜRÜNLERİ': 'kilima-santral-urunleri',
-      'ÇEŞİTLİ ÜRÜNLER': 'cesitli-urunler',
-      'DİLLER - ANAHTARLAR ÇUBUK VE LAMALAR': 'diller-anahtarlar-cubuk-ve-lamalar',
-      'ÇEYREK DÖNÜŞLÜ KİLİTLER': 'ceyrek-donuslu-kilitler',
-      'SİLİNDİRLİ KİLİTLER': 'silindirli-kilitler',
-      'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ': 'mobilya-ve-celik-esya-kilitleri',
-      'KENAR MENTEŞELER': 'kenar-menteseler',
-      'GİZLİ MENTEŞELER': 'gizli-menteseler',
-      'KÖŞE MENTEŞELER': 'kose-menteseler',
-      'DÜZ MENTEŞELER': 'duz-menteseler',
-      'SIZDIRMAZLIK PROFİLLERİ VE KENAR KORUMA': 'sizdirmazlik-profilleri-ve-kenar-koruma',
-      'YAPIŞKANLI CONTALAR': 'yapiskanli-contalar',
-      'KULPLAR': 'kulplar',
-      'AKSESUARLAR': 'aksesuarlar',
-      'ELEKTRONİK KOLLU KİLİTLER': 'elektronik-kollu-kilitler',
-      'İZLEME VE ERİŞİM KONTROL SİSTEMİ': 'izleme-ve-erisim-kontrol-sistemi',
-      'ELEKTRONİK DOLAP KİLİTLERİ': 'elektronik-dolap-kilitleri',
-      'DİĞER ELEKTRONİK KİLİTLER': 'diger-elektronik-kilitler',
-    }
-    const slug = slugMap[sectionTitle]
+    const slug = sectionSlugMap[sectionTitle]
     if (slug) {
       navigate(`/urunler/${slug}`)
       return
@@ -1048,7 +1065,11 @@ function Products() {
   }
 
   // Alt başlık resimleri için placeholder
-  const getSectionImage = (sectionTitle) => {
+  const getSectionImage = (sectionTitle, groupTitle = null) => {
+    // PASLANMAZ ÇELİK ÜRÜNLER altındaki AKSESUARLAR için özel görsel
+    if ((groupTitle === 'PASLANMAZ ÇELİK ÜRÜNLER' || activeGroup === 'PASLANMAZ ÇELİK ÜRÜNLER') && sectionTitle === 'AKSESUARLAR') {
+      return '/aksesuarlar1.jpg'
+    }
     return categoryImageMap[sectionTitle] || `https://via.placeholder.com/320x200.png?text=${encodeURIComponent(sectionTitle)}`
   }
 
@@ -1076,7 +1097,11 @@ function Products() {
                     <div className="ml-3 space-y-2 border-l border-slate-200 pl-3">
                       {group.sections.map((section) => {
                         const isActive = activeSection === section.title
+                        // categoryImageMap'te tanımlı görseli kontrol et
                         const categoryImage = categoryImageMap[section.title]
+                        // PASLANMAZ ÇELİK ÜRÜNLER altındaki AKSESUARLAR için özel kontrol
+                        const isStainlessSteelAccessories = group.title === 'PASLANMAZ ÇELİK ÜRÜNLER' && section.title === 'AKSESUARLAR'
+                        const sectionImage = isStainlessSteelAccessories ? '/aksesuarlar1.jpg' : categoryImage
                         return (
                           <div key={section.title} className="space-y-1">
                             <button
@@ -1086,9 +1111,9 @@ function Products() {
                               }`}
                             >
                               <div className="flex items-center gap-2">
-                                {categoryImage && (
+                                {sectionImage && (
                                   <img 
-                                    src={categoryImage} 
+                                    src={sectionImage} 
                                     alt={section.title}
                                     className="h-10 w-10 rounded object-contain"
                                   />
@@ -1140,7 +1165,7 @@ function Products() {
             // Ana başlık seçilmiş, alt başlıkları kartlar halinde göster
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {currentGroupSections.map((section) => {
-                const img = getSectionImage(section.title)
+                const img = getSectionImage(section.title, activeGroup)
                 return (
                   <button
                     key={section.title}

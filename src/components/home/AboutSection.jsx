@@ -4,13 +4,13 @@ function AboutSection() {
       <div className="space-y-6">
         <div className="flex items-center gap-3">
           <span className="h-1 w-10 rounded-full bg-[#166534]" />
-          <h2 className="text-2xl font-bold text-slate-900">ESSENTRA COMPONENTS KİMDİR?</h2>
+          <h2 className="text-2xl font-bold text-slate-900">KONYA KİLİT</h2>
         </div>
         <p className="text-base leading-relaxed text-slate-600">
-          Biz hayati bileşen parçalarının yüzlerce pazar ve binlerce ürün için üreticileri ve distribütörüyüz.
+          Biz kilit, menteşe, conta ve aksesuar ürünlerinin endüstriyel ve ticari uygulamalar için üreticileri ve distribütörüyüz.
         </p>
         <p className="text-base leading-relaxed text-slate-600">
-          Özellikle nasıl çalıştığımızı seveceğinizi düşünüyoruz. Bir üreticinin uzmanlığını ve esnekliğini bir distribütörün servis ve servis alanı ile birleştirerek işinizi kolaylaştırıyoruz.
+          Özellikle nasıl çalıştığımızı seveceğinizi düşünüyoruz. Bir üreticinin uzmanlığını ve esnekliğini bir distribütörün servis ve hizmet alanı ile birleştirerek işinizi kolaylaştırıyoruz.
         </p>
         <a
           href="#"
@@ -22,9 +22,9 @@ function AboutSection() {
       </div>
       <div className="relative min-h-[300px] overflow-hidden rounded-2xl bg-slate-100 shadow-lg sm:min-h-[400px]">
         <img
-          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800"
-          alt="Hakkımızda görseli"
-          className="h-full w-full object-cover"
+          src="/konyakilitlogo.png"
+          alt="Konya Kilit Hakkımızda"
+          className="h-full w-full object-contain"
         />
       </div>
     </section>

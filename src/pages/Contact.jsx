@@ -101,7 +101,7 @@ function Contact() {
                   className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/40"
                   value={form.name}
                   onChange={(e) => updateField('name', e.target.value)}
-                  placeholder="Ör. Elif Yılmaz"
+                  placeholder="Ad Soyad"
                 />
               </label>
               <label className="space-y-1 text-sm font-medium text-slate-700">
@@ -111,7 +111,7 @@ function Contact() {
                   value={form.email}
                   onChange={(e) => updateField('email', e.target.value)}
                   type="email"
-                  placeholder="ornek@konyakilit.com"
+                  placeholder="E-posta"
                 />
               </label>
               <label className="space-y-1 text-sm font-medium text-slate-700">
@@ -120,7 +120,7 @@ function Contact() {
                   className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/40"
                   value={form.phone}
                   onChange={(e) => updateField('phone', e.target.value)}
-                  placeholder="0506 092 03 42"
+                  placeholder="Telefon"
                 />
               </label>
               <label className="space-y-1 text-sm font-medium text-slate-700">
@@ -129,7 +129,7 @@ function Contact() {
                   className="w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#166534] focus:ring-2 focus:ring-[#166534]/40"
                   value={form.company}
                   onChange={(e) => updateField('company', e.target.value)}
-                  placeholder="Şirket adı"
+                  placeholder="Firma Adı"
                 />
               </label>
               <label className="md:col-span-2 space-y-1 text-sm font-medium text-slate-700">
@@ -153,7 +153,7 @@ function Contact() {
                   className="min-h-[140px] w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-900 outline-none transition focus:border-[#16a34a] focus:ring-2 focus:ring-[#16a34a]/40"
                   value={form.message}
                   onChange={(e) => updateField('message', e.target.value)}
-                  placeholder="İhtiyacınızı kısaca anlatabilirsiniz."
+                  placeholder="Mesaj"
                 />
               </label>
               <div className="md:col-span-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
