@@ -299,11 +299,16 @@ function App() {
         <header className="relative z-40 backdrop-blur bg-[#1a1a1a]/95 shadow-sm shadow-slate-200/70">
           <div className="border-b border-[#2d2d2d]">
             <div className="relative mx-auto flex w-full max-w-7xl items-center justify-between px-1.5 py-1.5 text-xs text-white">
-              <div className="flex items-center gap-4">
-                <span className="hidden sm:inline-flex items-center gap-1">
-                  📞 0506 092 03 42
-                </span>
-                <span className="hidden md:inline-flex items-center gap-1">
+              <div className="flex flex-row items-center gap-3 sm:gap-4">
+                <div className="flex flex-col items-start gap-1">
+                  <span className="inline-flex items-center gap-1">
+                    📞 0 506 875 03 58
+                  </span>
+                  <span className="inline-flex items-center gap-1">
+                    📞 0 506 092 03 42
+                  </span>
+                </div>
+                <span className="inline-flex items-center gap-1">
                   ✉️ info@konyakilit.com
                 </span>
               </div>
@@ -487,61 +492,205 @@ function App() {
 
         {mobileOpen ? (
           <div className="fixed inset-0 z-[9999] lg:hidden" role="dialog" aria-label="Mobil menü">
-            <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
-            <div className="relative ml-auto h-full w-[90vw] max-w-sm overflow-y-auto border-l border-slate-200 bg-white shadow-2xl">
-              <div className="flex items-center justify-between px-6 py-3">
+            <div 
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300" 
+              onClick={() => setMobileOpen(false)} 
+            />
+            <div className="relative ml-auto h-full w-[85vw] max-w-md overflow-y-auto bg-gradient-to-b from-[#1a1a1a] via-[#1f1f1f] to-[#1a1a1a] shadow-2xl border-l border-white/10 animate-slide-in-right">
+              {/* Header */}
+              <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#1a1a1a]/95 backdrop-blur-sm px-6 py-4">
                 <div className="flex items-center">
-                  <img src="/konyakilitlogo.png" alt="Konya Kilit logo" className="h-16 w-auto" />
+                  <img src="/konyakilitlogo.png" alt="Konya Kilit logo" className="h-14 w-auto brightness-0 invert" />
                 </div>
                 <button
                   onClick={() => setMobileOpen(false)}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-100 text-slate-700 transition hover:bg-slate-200"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-white/5 text-white transition-all hover:border-white/40 hover:bg-white/10 hover:rotate-90"
                   aria-label="Menüyü kapat"
                 >
-                  ✕
+                  <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
                 </button>
               </div>
 
-              <div className="space-y-2 px-4">
-                {navItems.map((item) => (
-                  <NavLink
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setMobileOpen(false)}
-                    className={({ isActive }) =>
-                      `flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition ${
-                        isActive ? 'bg-white text-[#166534]' : 'text-slate-800 hover:bg-slate-100'
-                      }`
-                    }
-                    end={item.path === '/'}
-                  >
-                    <span>{item.label}</span>
-                    <span className="text-xs text-slate-400">›</span>
-                  </NavLink>
-                ))}
+              {/* Mobile Search */}
+              <div className="px-4 pt-4 pb-2">
+                <div className="relative">
+                  <input
+                    type="text"
+                    placeholder="Ürün ara..."
+                    value={searchQuery}
+                    onChange={(e) => {
+                      setSearchQuery(e.target.value)
+                      setShowSearchResults(true)
+                    }}
+                    onFocus={() => setShowSearchResults(true)}
+                    onBlur={() => {
+                      setTimeout(() => setShowSearchResults(false), 200)
+                    }}
+                    className="w-full rounded-xl border border-white/20 bg-white/5 px-4 py-3 pl-11 text-sm text-white placeholder-white/50 shadow-sm transition focus:border-[#166534] focus:bg-white/10 focus:outline-none focus:ring-2 focus:ring-[#166534]/30"
+                  />
+                  <svg className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                {showSearchResults && searchResults.length > 0 && (
+                  <div className="mt-2 max-h-64 overflow-y-auto rounded-xl border border-white/10 bg-[#1f1f1f] shadow-xl">
+                    <div className="p-2">
+                      <div className="mb-2 px-2 text-xs font-semibold uppercase tracking-wide text-white/60">
+                        {searchResults.length} sonuç bulundu
+                      </div>
+                      {searchResults.map((item, index) => {
+                        if (item.type === 'section') {
+                          const sectionSlug = sectionSlugMap[item.name] || stainlessSteelSlugMap[item.name]
+                          return (
+                            <NavLink
+                              key={`section-${item.name}-${index}`}
+                              to={sectionSlug ? `/urunler/${sectionSlug}` : '/urunler'}
+                              onClick={() => {
+                                setSearchQuery('')
+                                setShowSearchResults(false)
+                                setMobileOpen(false)
+                              }}
+                              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition hover:bg-white/5 border-b border-white/5 mb-1"
+                            >
+                              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-[#166534]/20">
+                                <img
+                                  src={getProductImage('', item.name)}
+                                  alt={item.name}
+                                  className="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="font-semibold text-white break-words">{item.name}</div>
+                                <div className="text-xs text-white/60 break-words">{item.group}</div>
+                              </div>
+                              <span className="text-xs text-white/40">Kategori</span>
+                            </NavLink>
+                          )
+                        }
+                        const productSlug = getProductSlug(item.name)
+                        const sectionSlug = sectionSlugMap[item.section] || stainlessSteelSlugMap[item.section]
+                        return (
+                          <NavLink
+                            key={`product-${item.name}-${index}`}
+                            to={sectionSlug ? `/urunler/${sectionSlug}` : `/urun-detay/${productSlug}`}
+                            onClick={() => {
+                              setSearchQuery('')
+                              setShowSearchResults(false)
+                              setMobileOpen(false)
+                            }}
+                            className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition hover:bg-white/5"
+                          >
+                            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white/5">
+                              <img
+                                src={getProductImage(item.name, item.section)}
+                                alt={item.name}
+                                className="h-full w-full object-contain"
+                              />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-white break-words">{item.name}</div>
+                              <div className="text-xs text-white/60 break-words">{item.section}</div>
+                            </div>
+                          </NavLink>
+                        )
+                      })}
+                    </div>
+                  </div>
+                )}
+                {showSearchResults && searchQuery.trim() && searchResults.length === 0 && (
+                  <div className="mt-2 rounded-xl border border-white/10 bg-[#1f1f1f] p-4 text-sm text-white/60 shadow-xl">
+                    Sonuç bulunamadı
+                  </div>
+                )}
               </div>
 
-              <div className="mt-4 border-t border-slate-100 px-4 pt-4">
-                <p className="px-2 text-xs font-semibold uppercase tracking-[0.08em] text-slate-500">Kategoriler</p>
-                <div className="mt-2 space-y-2">
+              {/* Navigation Items */}
+              <div className="px-4 py-2">
+                <div className="space-y-1">
+                  {navItems.map((item) => (
+                    <NavLink
+                      key={item.path}
+                      to={item.path}
+                      onClick={() => setMobileOpen(false)}
+                      className={({ isActive }) =>
+                        `group flex items-center justify-between rounded-xl px-4 py-3.5 text-base font-semibold transition-all ${
+                          isActive
+                            ? 'bg-gradient-to-r from-[#166534] to-[#14532d] text-white shadow-lg shadow-[#166534]/20'
+                            : 'text-white/90 hover:bg-white/5 hover:text-white'
+                        }`
+                      }
+                      end={item.path === '/'}
+                    >
+                      <span className="flex items-center gap-3">
+                        {item.path === '/' && (
+                          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                          </svg>
+                        )}
+                        {item.path === '/urunler' && (
+                          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                          </svg>
+                        )}
+                        {item.path === '/medya' && (
+                          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                        )}
+                        {item.path === '/hakkimizda' && (
+                          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                        )}
+                        {item.path === '/iletisim' && (
+                          <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                          </svg>
+                        )}
+                        <span>{item.label}</span>
+                      </span>
+                      <svg className="h-5 w-5 text-white/40 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+
+              {/* Categories Section */}
+              <div className="mt-4 border-t border-white/10 px-4 pt-4">
+                <div className="mb-3 flex items-center gap-2">
+                  <svg className="h-4 w-4 text-[#166534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                  <p className="text-xs font-bold uppercase tracking-[0.1em] text-white/80">Ürün Kategorileri</p>
+                </div>
+                <div className="space-y-2">
                   {catalogGroups.map((group) => (
-                    <div key={group.title} className="rounded-xl border border-slate-200">
+                    <div key={group.title} className="overflow-hidden rounded-xl border border-white/10 bg-white/5 transition-all hover:border-white/20">
                       <button
                         onClick={() => setMobileSubOpen((prev) => (prev === group.title ? null : group.title))}
-                        className="flex w-full items-center justify-between px-4 py-3 text-left text-sm font-semibold text-slate-800"
+                        className="flex w-full items-center justify-between px-4 py-3.5 text-left transition-all hover:bg-white/5"
                       >
-                        <span>{group.title}</span>
-                        <span className="text-xs text-slate-500">{mobileSubOpen === group.title ? '▲' : '▼'}</span>
+                        <span className="text-sm font-semibold text-white">{group.title}</span>
+                        <svg 
+                          className={`h-5 w-5 text-white/60 transition-transform duration-300 ${mobileSubOpen === group.title ? 'rotate-180' : ''}`}
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
                       </button>
-                      {mobileSubOpen === group.title ? (
-                        <div className="space-y-1 px-4 pb-4">
+                      {mobileSubOpen === group.title && (
+                        <div className="space-y-1 border-t border-white/10 bg-white/5 px-4 pb-3 pt-2 animate-fade-in">
                           {group.sections.map((section) => {
-                            // Paslanmaz çelik ürünler için özel slug kontrolü
                             let slug = sectionSlugMap[section.title]
                             if (!slug && group.title === 'PASLANMAZ ÇELİK ÜRÜNLER') {
                               slug = stainlessSteelSlugMap[section.title]
                             }
-                            // Eğer slugMap'te yoksa, otomatik slug oluştur
                             if (!slug) {
                               slug = section.title.toLowerCase()
                                 .replace(/ş/g, 's')
@@ -558,19 +707,92 @@ function App() {
                                 key={section.title}
                                 to={`/urunler/${slug}`}
                                 onClick={() => setMobileOpen(false)}
-                                className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-800 transition hover:bg-slate-100"
+                                className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-white/80 transition-all hover:bg-white/10 hover:text-white"
                               >
+                                <span className="h-1.5 w-1.5 rounded-full bg-[#166534]"></span>
                                 {section.title}
                               </NavLink>
                             )
                           })}
                         </div>
-                      ) : null}
+                      )}
                     </div>
                   ))}
                 </div>
               </div>
 
+              {/* Contact Section */}
+              <div className="mt-4 border-t border-white/10 px-4 pt-4 pb-6">
+                <div className="mb-3 flex items-center gap-2">
+                  <svg className="h-4 w-4 text-[#166534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <p className="text-xs font-bold uppercase tracking-[0.1em] text-white/80">İletişim</p>
+                </div>
+                <div className="space-y-2.5">
+                  <a 
+                    href="tel:05068750358" 
+                    className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 text-sm text-white/90 transition-all hover:bg-white/10 hover:text-white"
+                  >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#166534]/20">
+                      <svg className="h-5 w-5 text-[#166534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <span className="font-medium">0 506 875 03 58</span>
+                  </a>
+                  <a 
+                    href="tel:05060920342" 
+                    className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 text-sm text-white/90 transition-all hover:bg-white/10 hover:text-white"
+                  >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#166534]/20">
+                      <svg className="h-5 w-5 text-[#166534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
+                    </div>
+                    <span className="font-medium">0506 092 03 42</span>
+                  </a>
+                  <a 
+                    href="mailto:info@konyakilit.com" 
+                    className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 text-sm text-white/90 transition-all hover:bg-white/10 hover:text-white"
+                  >
+                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#166534]/20">
+                      <svg className="h-5 w-5 text-[#166534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                    <span className="font-medium">info@konyakilit.com</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Social Media */}
+              <div className="border-t border-white/10 px-4 py-4">
+                <div className="flex items-center justify-center gap-3">
+                  <a
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/5 text-white transition-all hover:border-[#166534] hover:bg-[#166534]/20 hover:scale-110"
+                    aria-label="Instagram"
+                  >
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </a>
+                  <a
+                    href="https://wa.me/905060920342"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/5 text-white transition-all hover:border-[#166534] hover:bg-[#166534]/20 hover:scale-110"
+                    aria-label="WhatsApp"
+                  >
+                    <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         ) : null}

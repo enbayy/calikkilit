@@ -14,7 +14,7 @@ function Contact() {
 
   const contactCards = useMemo(
     () => [
-      { title: 'Satış ve Teklif', detail: ['+90 506 875 03 58', '+90 506 092 03 42']},
+      { title: 'İletişim', detail: ['0 506 875 03 58', '0 506 092 03 42']},
       { title: 'E-posta', detail: 'info@konyakilit.com'},
       { title: 'Adres', detail: 'Fevziçakmak, Medcezir Cd. no:8/B D:06, 42050 Karatay/Konya'},
     ],
