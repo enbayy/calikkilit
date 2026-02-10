@@ -734,7 +734,7 @@ function App() {
                       to="/urunler"
                       className="text-white transition hover:text-white hover:underline"
                     >
-                      Elektronik Sistemler
+                      Paslanmaz Çelik Ürünler
                     </NavLink>
                   </li>
                   <li>
@@ -742,7 +742,7 @@ function App() {
                       to="/urunler"
                       className="text-white transition hover:text-white hover:underline"
                     >
-                      Paslanmaz Çelik Ürünler
+                      Elektronik Sistemler
                     </NavLink>
                   </li>
                 </ul>
@@ -793,6 +793,9 @@ function App() {
           <div className="border-t border-white/10">
             <div className="mx-auto max-w-7xl px-1.5 py-6 text-center text-xs text-slate-200 lg:px-2">
               <p>© {new Date().getFullYear()} Konya Kilit. Tüm hakları saklıdır.</p>
+              <p className="mt-2 text-[10px] text-slate-400/70">
+                Designed & Developed by ENBAYTECH
+              </p>
             </div>
           </div>
         </footer>
