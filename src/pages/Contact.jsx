@@ -156,11 +156,7 @@ function Contact() {
               <ul className="mt-3 space-y-2 text-sm text-slate-700">
                 <li className="flex items-center justify-between">
                   <span>Pazartesi - Cuma</span>
-                  <span className="font-semibold text-slate-900">08:30 - 18:00</span>
-                </li>
-                <li className="flex items-center justify-between">
-                  <span>Cumartesi</span>
-                  <span className="font-semibold text-slate-900">09:00 - 13:00</span>
+                  <span className="font-semibold text-slate-900">07:00 - 17:00</span>
                 </li>
               </ul>
             </div>

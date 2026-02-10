@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 const hydraulicSections = [
   {
@@ -486,6 +486,7 @@ export const catalogGroups = [
 
 function Products() {
   const navigate = useNavigate()
+  const location = useLocation()
   const [activeSection, setActiveSection] = useState(null)
   const [activeGroup, setActiveGroup] = useState(null)
   const [openGroups, setOpenGroups] = useState([])
@@ -518,10 +519,19 @@ function Products() {
   }
 
   useEffect(() => {
-    // Sayfa açıldığında KİLİTLER kategorisini açık olarak getir
-    setOpenGroups(['KİLİTLER'])
-    setActiveGroup('KİLİTLER')
-  }, [])
+    // Sayfa her açıldığında en üstten başla
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+    }
+
+    // Anasayfadan gelen ilk grup bilgisi varsa onu kullan, yoksa varsayılan KİLİTLER olsun
+    const initialGroupFromState = location.state && location.state.initialGroup
+    const validInitialGroup = catalogGroups.find((g) => g.title === initialGroupFromState)
+    const initialGroup = validInitialGroup ? validInitialGroup.title : 'KİLİTLER'
+
+    setOpenGroups([initialGroup])
+    setActiveGroup(initialGroup)
+  }, [location.state])
 
   const currentItems = useMemo(() => {
     if (!activeSection) return []

@@ -37,23 +37,29 @@ function ProductCategoriesSection() {
   ]
 
   const handleCategoryClick = (category) => {
-    const slug = category.title.toLowerCase()
-      .replace(/ş/g, 's')
-      .replace(/ğ/g, 'g')
-      .replace(/ü/g, 'u')
-      .replace(/ö/g, 'o')
-      .replace(/ç/g, 'c')
-      .replace(/ı/g, 'i')
-      .replace(/\s+/g, '-')
-      .replace(/[^a-z0-9-]/g, '')
-    
-    navigate(`/urun-detay/${slug}`, {
-      state: {
-        productName: category.title,
-        productImage: category.image,
-        productLogo: category.image,
-      },
-    })
+    // Anasayfadaki ürün grup kartlarına tıklayınca ilgili ana kategori sayfasına git
+    const groupMap = {
+      Kilitler: 'KİLİTLER',
+      Menteşeler: 'MENTEŞELER',
+      Contalar: 'CONTALAR',
+      'Aksesuarlar ve Kulplar': 'AKSESUARLAR VE KULPLAR',
+      'Paslanmaz Çelik Ürünler': 'PASLANMAZ ÇELİK ÜRÜNLER',
+      Elektronik: 'ELEKTRONİK',
+    }
+
+    const targetGroup = groupMap[category.title]
+
+    // İlgili ana kategori ile ürünler sayfasına yönlendir
+    if (targetGroup) {
+      navigate('/urunler', {
+        state: {
+          initialGroup: targetGroup,
+        },
+      })
+    } else {
+      // Eşleşme olmazsa genel ürünler sayfasına git
+      navigate('/urunler')
+    }
   }
 
   return (
