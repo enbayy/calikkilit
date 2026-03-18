@@ -22,7 +22,7 @@ function AboutSection() {
       </div>
       <div className="relative min-h-[250px] overflow-hidden rounded-xl bg-slate-100 shadow-lg sm:min-h-[300px] sm:rounded-2xl md:min-h-[350px] lg:min-h-[400px]">
         <img
-          src="/konyakilitlogo.png"
+          src="/caliklogo.png"
           alt="Konya Kilit Hakkımızda"
           className="h-full w-full object-contain p-4 sm:p-6 md:p-8"
         />

@@ -490,6 +490,70 @@ function Products() {
   const [activeSection, setActiveSection] = useState(null)
   const [activeGroup, setActiveGroup] = useState(null)
   const [openGroups, setOpenGroups] = useState([])
+  const [activeBrand, setActiveBrand] = useState('Mesan')
+  const [openBrands, setOpenBrands] = useState(['Mesan'])
+  const brands = ['Mesan', 'Atos', 'Güneş', 'Oskar']
+
+  const brandCatalogGroups = useMemo(() => {
+    const findByTitle = (title) => catalogGroups.find((g) => g.title === title)
+
+    // Atos menüsünde kullanıcı isteğine göre sadece 3 ana kategori gösteriyoruz.
+    if (activeBrand === 'Atos') {
+      // Kullanıcının istediği Atos -> Kilitler alt başlıkları (her biri farklı URL'ye gider).
+      const atosKilitlerSections = [
+        { title: 'Kollu Pano Kilitleri', items: [] },
+        { title: 'Silindirli Mandallı Kilitler', items: [] },
+        { title: 'Silindirli Kelebek Kilitler', items: [] },
+        { title: 'Asma Kilit Hamilli Pano Kilitleri', items: [] },
+        { title: 'Yaylı Pano Kilidi', items: [] },
+        { title: 'Pano Kapak Kilitleri', items: [] },
+        { title: 'Trafo Kilitleri', items: [] },
+        { title: 'Kabin Kilitleri', items: [] },
+        { title: 'Yangın Dolabı Kilitleri', items: [] },
+        { title: 'Diller', items: [] },
+      ]
+
+      // Atos -> Menteşeler alt başlıkları
+      const atosMenteselerSections = [
+        { title: 'Geçme Menteşeler', items: [] },
+        { title: 'Gizli Menteşeler', items: [] },
+        { title: 'Kenar Menteşeler', items: [] },
+        { title: 'Yaprak Menteşeler', items: [] },
+        { title: 'Pano Kapak Menteşesi', items: [] },
+        { title: 'Torklu Menteşeler', items: [] },
+      ]
+
+      // Atos -> Aksesuarlar alt başlıkları
+      const atosAksesuarlarSections = [
+        { title: 'Anahtarlar', items: [] },
+        { title: 'Kapak Stoplama Makası', items: [] },
+        { title: 'İspanyolet Aksesuarları', items: [] },
+        { title: 'Contalar', items: [] },
+        { title: 'Geçme Fitiller', items: [] },
+        { title: 'Fırçalar', items: [] },
+        { title: 'Sayaç Camları', items: [] },
+        { title: 'Proje Cepleri', items: [] },
+        { title: 'Kapak Kulpları', items: [] },
+        { title: 'Kilit tutamakları', items: [] },
+        { title: 'Köşe Takozları', items: [] },
+        { title: 'Havalandırma Panjurları', items: [] },
+      ]
+
+      return [
+        { title: 'KİLİTLER', displayTitle: 'Kilitler', sections: atosKilitlerSections },
+        { title: 'MENTEŞELER', displayTitle: 'Menteşeler', sections: atosMenteselerSections },
+        { title: 'AKSESUARLAR VE KULPLAR', displayTitle: 'Aksesuarlar', sections: atosAksesuarlarSections },
+      ].filter((g) => Boolean(g))
+    }
+
+    // Mesan: mevcut tüm kategori yapısı
+    if (activeBrand === 'Mesan') {
+      return catalogGroups.map((g) => ({ ...g, displayTitle: g.title }))
+    }
+
+    // Diğer markalar şimdilik boş
+    return []
+  }, [activeBrand])
 
   // Kategori resim mapping
   const categoryImageMap = {
@@ -524,13 +588,12 @@ function Products() {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     }
 
-    // Anasayfadan gelen ilk grup bilgisi varsa onu kullan, yoksa varsayılan KİLİTLER olsun
-    const initialGroupFromState = location.state && location.state.initialGroup
-    const validInitialGroup = catalogGroups.find((g) => g.title === initialGroupFromState)
-    const initialGroup = validInitialGroup ? validInitialGroup.title : 'KİLİTLER'
-
-    setOpenGroups([initialGroup])
-    setActiveGroup(initialGroup)
+    // İlk açılışta Mesan açık gelsin.
+    setActiveBrand('Mesan')
+    setOpenBrands(['Mesan'])
+    setOpenGroups([])
+    setActiveGroup(null)
+    setActiveSection(null)
   }, [location.state])
 
   const currentItems = useMemo(() => {
@@ -572,7 +635,77 @@ function Products() {
     setOpenGroups((prev) => (prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]))
   }
 
+  const toggleBrand = (brand) => {
+    if (brand === 'Mesan') {
+      setActiveBrand('Mesan')
+      setOpenBrands(['Mesan'])
+      // Mesan açılır ama alt kategoriler (KİLİTLER vb.) kapalı kalsın.
+      setActiveGroup(null)
+      setOpenGroups([])
+      setActiveSection(null)
+    } else {
+      setActiveBrand(brand)
+      setOpenBrands([brand])
+      setActiveGroup(null)
+      setActiveSection(null)
+      setOpenGroups([])
+    }
+  }
+
   const handleSectionClick = (sectionTitle) => {
+    // Sol menüdeki alt kategoriler sadece Mesan altında gösteriliyor.
+    if (activeBrand) {
+      setOpenBrands([activeBrand])
+    } else {
+      setOpenBrands(['Mesan'])
+    }
+
+    // Atos özel: kullanıcıdan gelen başlıklar -> farklı /urunler URL'leri.
+    if (activeBrand === 'Atos') {
+      const atosSectionUrlMap = {
+        'Kollu Pano Kilitleri': { baseSlug: 'ispanyolet-sistemli-kilitler', tail: 'kollu-pano-kilitleri' },
+        'Silindirli Mandallı Kilitler': { baseSlug: 'silindirli-kilitler', tail: 'silindirli-mandalli' },
+        'Silindirli Kelebek Kilitler': { baseSlug: 'silindirli-kilitler', tail: 'silindirli-kelebek' },
+        'Asma Kilit Hamilli Pano Kilitleri': { baseSlug: 'ceyrek-donuslu-kilitler', tail: 'asma-hamilli-pano' },
+        'Yaylı Pano Kilidi': { baseSlug: 'ceyrek-donuslu-kilitler', tail: 'yayli-pano' },
+        'Pano Kapak Kilitleri': { baseSlug: 'mobilya-ve-celik-esya-kilitleri', tail: 'pano-kapak' },
+        'Trafo Kilitleri': { baseSlug: 't-kollu-kabin-kilitleri', tail: 'trafo-kilitleri' },
+        'Kabin Kilitleri': { baseSlug: 'kabin-kilitleri', tail: 'kabin-kilitleri' },
+        'Yangın Dolabı Kilitleri': { baseSlug: 'mobilya-ve-celik-esya-kilitleri', tail: 'yangin-dolabi' },
+        'Diller': { baseSlug: 'diller', tail: 'diller' },
+
+        // Atos -> Menteşeler
+        'Geçme Menteşeler': { baseSlug: 'duz-menteseler', tail: 'gecme-menteseler' },
+        'Gizli Menteşeler': { baseSlug: 'gizli-menteseler', tail: 'gizli-menteseler' },
+        'Kenar Menteşeler': { baseSlug: 'kenar-menteseler', tail: 'kenar-menteseler' },
+        'Yaprak Menteşeler': { baseSlug: 'duz-menteseler', tail: 'yaprak-menteseler' },
+        'Pano Kapak Menteşesi': { baseSlug: 'kose-menteseler', tail: 'pano-kapak-mentesesi' },
+        'Torklu Menteşeler': { baseSlug: 'duz-menteseler', tail: 'torklu-menteseler' },
+
+        // Atos -> Aksesuarlar
+        'Anahtarlar': { baseSlug: 'anahtarlar', tail: 'anahtarlar' },
+        'Kapak Stoplama Makası': { baseSlug: 'aksesuarlar', tail: 'kapak-stoplama-makasi' },
+        'İspanyolet Aksesuarları': { baseSlug: 'ispanyolet-cubuk-ve-aksesuarlari', tail: 'ispanyolet-aksesuarlar' },
+        'Contalar': { baseSlug: 'yapiskanli-contalar', tail: 'contalar' },
+        'Geçme Fitiller': { baseSlug: 'sizdirmazlik-profilleri-ve-kenar-koruma', tail: 'gecme-fitiller' },
+        'Fırçalar': { baseSlug: 'aksesuarlar', tail: 'fircilar' },
+        'Sayaç Camları': { baseSlug: 'aksesuarlar', tail: 'sayac-camlari' },
+        'Proje Cepleri': { baseSlug: 'aksesuarlar', tail: 'proje-cepleri' },
+        'Kapak Kulpları': { baseSlug: 'kulplar', tail: 'kapak-kulplari' },
+        'Kilit tutamakları': { baseSlug: 'kulplar', tail: 'kilit-tutamaklari' },
+        'Köşe Takozları': { baseSlug: 'aksesuarlar', tail: 'kose-takozlari' },
+        'Havalandırma Panjurları': { baseSlug: 'aksesuarlar', tail: 'havalandirma-panjurlari' },
+      }
+
+      const mapped = atosSectionUrlMap[sectionTitle]
+      if (mapped) {
+        // SectionProducts route'u `/urunler/:sectionSlug/*` kullandığı için farklı tail'ler
+        // URL'leri ayırır; sectionSlug bazında içerik doğru şekilde seçilir.
+        navigate(`/urunler/${mapped.baseSlug}/${mapped.tail}`)
+        return
+      }
+    }
+
     // Paslanmaz çelik ürünler için özel kontrol
     const stainlessSteelGroup = catalogGroups.find((g) => g.title === 'PASLANMAZ ÇELİK ÜRÜNLER')
     if (stainlessSteelGroup && stainlessSteelGroup.sections.some((s) => s.title === sectionTitle)) {
@@ -1085,77 +1218,113 @@ function Products() {
 
   return (
     <div className="bg-slate-50 pb-16 text-slate-900">
-      <section className="mx-auto flex w-full max-w-[85%] flex-col gap-6 px-1.5 pt-8 sm:gap-8 sm:px-2 lg:flex-row lg:px-3">
-        <aside className="w-full lg:w-96">
+      <section className="mx-auto flex w-full max-w-[85%] flex-col gap-6 px-1.5 pt-8 sm:gap-8 sm:px-2 lg:px-3">
+        <div className="flex w-full flex-wrap justify-center items-center gap-2">
+          {brands.map((brand) => {
+            const isActive = activeBrand === brand
+            return (
+              <button
+                key={brand}
+                onClick={() => toggleBrand(brand)}
+                className={`rounded-xl border px-4 py-2 text-sm font-semibold transition ${
+                  isActive ? 'border-[#166534] bg-[#166534]/10 text-[#166534]' : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'
+                }`}
+              >
+                {brand}
+              </button>
+            )
+          })}
+        </div>
+
+        <div className="flex w-full flex-col gap-6 lg:flex-row">
+          <aside className="w-full lg:w-96">
           <div className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:sticky lg:top-28">
             <h3 className="text-base font-bold text-slate-900">KATEGORİLER</h3>
-            {catalogGroups.map((group) => {
-              const groupOpen = openGroups.includes(group.title)
-              const isActiveGroup = activeGroup === group.title
-              return (
-                <div key={group.title} className="space-y-2">
-                  <button
-                    onClick={() => toggleGroup(group.title)}
-                    className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm font-semibold transition ${
-                      isActiveGroup ? 'bg-[#166534]/10 text-[#166534]' : groupOpen ? 'bg-slate-100 text-slate-800' : 'text-slate-800 hover:bg-slate-100'
-                    }`}
-                  >
-                    <span>{group.title}</span>
-                    <span className={`text-xs ${groupOpen ? 'rotate-90' : ''} transition`}>›</span>
-                  </button>
-                  {groupOpen ? (
-                    <div className="ml-3 space-y-2 border-l border-slate-200 pl-3">
-                      {group.sections.map((section) => {
-                        const isActive = activeSection === section.title
-                        // categoryImageMap'te tanımlı görseli kontrol et
-                        const categoryImage = categoryImageMap[section.title]
-                        // PASLANMAZ ÇELİK ÜRÜNLER altındaki AKSESUARLAR için özel kontrol
-                        const isStainlessSteelAccessories = group.title === 'PASLANMAZ ÇELİK ÜRÜNLER' && section.title === 'AKSESUARLAR'
-                        const sectionImage = isStainlessSteelAccessories ? '/aksesuarlar1.jpg' : categoryImage
-                        return (
-                          <div key={section.title} className="space-y-1">
-                            <button
-                              onClick={() => handleSectionClick(section.title)}
-                              className={`flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left text-sm font-light transition ${
-                                isActive ? 'text-[#166534]' : 'text-slate-700 hover:text-[#166534]'
-                              }`}
-                            >
-                              <div className="flex items-center gap-2">
-                                {sectionImage && (
-                                  <img 
-                                    src={sectionImage} 
-                                    alt={section.title}
-                                    className="h-10 w-10 rounded object-contain"
-                                  />
-                                )}
-                                <span>{section.title}</span>
+
+            {brandCatalogGroups.length > 0 ? (
+              <div className="ml-3 space-y-2 border-l border-slate-200 pl-3">
+                {brandCatalogGroups.map((group) => {
+                  const groupOpen = openGroups.includes(group.title)
+                  const isActiveGroup = activeGroup === group.title
+                  const titleToShow = group.displayTitle ?? group.title
+
+                  return (
+                    <div key={group.title} className="space-y-2">
+                      <button
+                        onClick={() => toggleGroup(group.title)}
+                        className={`flex w-full items-center justify-between rounded-xl px-3 py-2 text-left text-sm font-semibold transition ${
+                          isActiveGroup
+                            ? 'bg-[#166534]/10 text-[#166534]'
+                            : groupOpen
+                              ? 'bg-slate-100 text-slate-800'
+                              : 'text-slate-800 hover:bg-slate-100'
+                        }`}
+                      >
+                        <span>{titleToShow}</span>
+                        <span className={`text-xs ${groupOpen ? 'rotate-90' : ''} transition`}>›</span>
+                      </button>
+
+                      {groupOpen ? (
+                        <div className="ml-3 space-y-2 border-l border-slate-200 pl-3">
+                          {group.sections.map((section) => {
+                            const isActive = activeSection === section.title
+                            // categoryImageMap'te tanımlı görseli kontrol et
+                            const categoryImage = categoryImageMap[section.title]
+                            // PASLANMAZ ÇELİK ÜRÜNLER altındaki AKSESUARLAR için özel kontrol
+                            const isStainlessSteelAccessories =
+                              group.title === 'PASLANMAZ ÇELİK ÜRÜNLER' && section.title === 'AKSESUARLAR'
+                            const sectionImage = isStainlessSteelAccessories ? '/aksesuarlar1.jpg' : categoryImage
+
+                            return (
+                              <div key={section.title} className="space-y-1">
+                                <button
+                                  onClick={() => handleSectionClick(section.title)}
+                                  className={`flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left text-sm font-light transition ${
+                                    isActive ? 'text-[#166534]' : 'text-slate-700 hover:text-[#166534]'
+                                  }`}
+                                >
+                                  <div className="flex items-center gap-2">
+                                    {sectionImage && (
+                                      <img
+                                        src={sectionImage}
+                                        alt={section.title}
+                                        className="h-10 w-10 rounded object-contain"
+                                      />
+                                    )}
+                                    <span>{section.title}</span>
+                                  </div>
+                                  <span
+                                    className={`text-xs transition ${isActive ? 'text-[#166534]' : 'text-slate-400'}`}
+                                    aria-hidden
+                                  >
+                                    ›
+                                  </span>
+                                </button>
                               </div>
-                              <span
-                                className={`text-xs transition ${isActive ? 'text-[#166534]' : 'text-slate-400'}`}
-                                aria-hidden
-                              >
-                                ›
-                              </span>
-                            </button>
-                          </div>
-                        )
-                      })}
+                            )
+                          })}
+                        </div>
+                      ) : null}
                     </div>
-                  ) : null}
-                </div>
-              )
-            })}
+                  )
+                })}
+              </div>
+            ) : (
+              <div className="ml-3 border-l border-slate-200 pl-3 text-sm text-slate-500">
+                Bu marka için kategori eklenmemiş.
+              </div>
+            )}
           </div>
-        </aside>
+          </aside>
 
         <div className="flex-1 space-y-5">
           <div className="flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.12em] text-[#166534]">
-                {activeGroup ? 'Ana Kategori' : activeSection ? 'Alt Kategori' : 'Seçim'}
+                {activeSection ? 'Alt Kategori' : activeGroup ? 'Ana Kategori' : 'Seçim'}
               </p>
               <h2 className="text-xl font-semibold">
-                {activeSection ?? activeGroup ?? 'Henüz seçilmedi'}
+                {activeSection ?? activeGroup ?? activeBrand ?? 'Henüz seçilmedi'}
               </h2>
             </div>
             <span className="text-sm text-slate-500">
@@ -1163,13 +1332,19 @@ function Products() {
                 ? `${currentItems.length} ürün`
                 : activeGroup
                   ? `${currentGroupSections.length} alt kategori`
-                  : 'Seçim yapın'}
+                  : activeBrand === 'Mesan'
+                    ? 'Seçim yapın'
+                    : 'Yakında'}
             </span>
           </div>
 
           {!activeGroup && !activeSection ? (
             <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-sm text-slate-500 shadow-sm">
-              Bir kategori seçin, ürünleri listeleyelim.
+              {!activeBrand
+                ? 'Bir marka seçin.'
+                : activeBrand === 'Mesan' || activeBrand === 'Atos'
+                  ? 'Bir kategori seçin, ürünleri listeleyelim.'
+                  : `${activeBrand} için ürünler yakında.`}
             </div>
           ) : activeGroup && !activeSection ? (
             // Ana başlık seçilmiş, alt başlıkları kartlar halinde göster
@@ -1274,6 +1449,7 @@ function Products() {
             </div>
           ) : null}
         </div>
+      </div>
       </section>
     </div>
   )

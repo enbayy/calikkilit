@@ -343,7 +343,7 @@ function App() {
             <div className="flex items-center">
               <NavLink to="/" className="flex items-center">
                 <img
-                  src="/konyakilitlogo.png"
+                  src="/caliklogo.png"
                   alt="Konya Kilit logo"
                   className="h-20 w-auto"
                 />
@@ -500,7 +500,7 @@ function App() {
               {/* Header */}
               <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#1a1a1a]/95 backdrop-blur-sm px-6 py-4">
                 <div className="flex items-center">
-                  <img src="/konyakilitlogo.png" alt="Konya Kilit logo" className="h-14 w-auto brightness-0 invert" />
+                  <img src="/caliklogo.png" alt="Konya Kilit logo" className="h-14 w-auto brightness-0 invert" />
                 </div>
                 <button
                   onClick={() => setMobileOpen(false)}
@@ -842,7 +842,7 @@ function App() {
               <div className="space-y-4 text-center md:text-left lg:col-span-1">
                 <NavLink to="/" className="inline-block mx-auto md:mx-0">
                   <img
-                    src="/konyakilitlogo.png"
+                    src="/caliklogo.png"
                     alt="Konya Kilit logo"
                     className="h-20 w-auto"
                   />
