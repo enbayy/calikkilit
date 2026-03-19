@@ -526,17 +526,21 @@ function Products() {
   const [activeSection, setActiveSection] = useState(null)
   const [activeAtosSection, setActiveAtosSection] = useState(null)
   const [activeOskarSection, setActiveOskarSection] = useState(null)
+  const [activeGunesSection, setActiveGunesSection] = useState(null)
   const [activeGroup, setActiveGroup] = useState(null)
   const [openGroups, setOpenGroups] = useState([])
   const [activeBrand, setActiveBrand] = useState('Mesan')
   const [atosCatalog, setAtosCatalog] = useState(null)
   const [oskarCatalog, setOskarCatalog] = useState(null)
+  const [gunesCatalog, setGunesCatalog] = useState(null)
   const [openBrands, setOpenBrands] = useState(['Mesan'])
 
   const defaultAtosGroupTitle = 'KİLİTLER'
   const defaultAtosSectionTitle = 'Kollu Pano Kilitleri'
   const defaultOskarGroupTitle = 'KİLİTLER'
   const defaultOskarSectionTitle = 'Kollu Kilitler Ve Aksesuarlar'
+  const defaultGunesGroupTitle = 'Kollu Kilitler'
+  const defaultGunesSectionTitle = 'Kollu Kilitler'
   const brands = ['Mesan', 'Atos', 'Güneş', 'Oskar']
   // Marka butonlarında gösterilecek logolar (dosyalar `public/` altında olmalı)
   const brandLogoMap = {
@@ -688,6 +692,34 @@ function Products() {
       ]
     }
 
+    // Güneş: linklerle verilen kategorileri birebir gösterelim.
+    if (activeBrand === 'Güneş') {
+      if (!gunesCatalog) {
+        const secs = [
+          'Kollu Kilitler',
+          'Çeyrek Dönüşlü Kilitler',
+          'Menteşeler',
+          'Contalar',
+          'Trafo ve Kabin Kilitleri',
+          'Dolap Kilitleri',
+          'Mobilya ve Çelik Eşya',
+          'Aksesuarlar',
+          'Diğer Ürünler',
+        ].map((t) => ({ title: t, items: [] }))
+        // Güneş sol menüsünde "Güneş Kilit" gibi bir üst başlık istemiyoruz; direkt alt kategorileri gösteriyoruz.
+        return [{ title: '__GUNES__', displayTitle: null, sections: secs }]
+      }
+
+      const sections = (gunesCatalog || []).map((main) => ({
+        title: main.name,
+        items: (main?.subcategories?.[0]?.products || [])
+          .map((p) => p.detailUrl || p.slug || p.name)
+          .filter(Boolean),
+      }))
+      // Güneş sol menüsünde "Güneş Kilit" gibi bir üst başlık istemiyoruz; direkt alt kategorileri gösteriyoruz.
+      return [{ title: '__GUNES__', displayTitle: null, sections }]
+    }
+
     // Mesan: mevcut tüm kategori yapısı
     if (activeBrand === 'Mesan') {
       return catalogGroups.map((g) => ({ ...g, displayTitle: g.title }))
@@ -695,7 +727,7 @@ function Products() {
 
     // Diğer markalar şimdilik boş
     return []
-  }, [activeBrand, atosCatalog, oskarCatalog])
+  }, [activeBrand, atosCatalog, oskarCatalog, gunesCatalog])
 
   // Kategori resim mapping
   const categoryImageMap = {
@@ -746,6 +778,7 @@ function Products() {
     const storedActiveSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveSection') : null
     const storedActiveAtosSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveAtosSection') : null
     const storedActiveOskarSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveOskarSection') : null
+    const storedActiveGunesSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveGunesSection') : null
 
     const shouldDefaultAtos = initialBrand === 'Atos' && (!storedActiveAtosSection || String(storedActiveAtosSection) === '')
     const defaultAtosOpenGroups = shouldDefaultAtos ? [defaultAtosGroupTitle] : Array.isArray(storedOpenGroups) ? storedOpenGroups : []
@@ -756,11 +789,18 @@ function Products() {
     // Oskar'da ana başlıklar sadece aç/kapa; varsayılan alt kategori seçili gelmesin.
     const defaultActiveOskarSection = shouldDefaultOskar ? null : storedActiveOskarSection || null
 
+    const shouldDefaultGunes = initialBrand === 'Güneş' && (!storedActiveGunesSection || String(storedActiveGunesSection) === '')
+    // Güneş sol menüsünde üst grup olmadığı için varsayılan açık grup yok.
+    const defaultGunesOpenGroups = shouldDefaultGunes ? [] : Array.isArray(storedOpenGroups) ? storedOpenGroups : []
+    const defaultActiveGunesSection = shouldDefaultGunes ? defaultGunesSectionTitle : storedActiveGunesSection || null
+
     const finalOpenGroups =
       initialBrand === 'Atos'
         ? defaultAtosOpenGroups
         : initialBrand === 'Oskar'
           ? defaultOskarOpenGroups
+          : initialBrand === 'Güneş'
+            ? defaultGunesOpenGroups
           : defaultAtosOpenGroups
 
     setOpenGroups(finalOpenGroups)
@@ -769,14 +809,21 @@ function Products() {
         ? null
         : initialBrand === 'Oskar'
           ? null
+          : initialBrand === 'Güneş'
+            ? null
           : storedActiveGroup || null
     )
 
     // Atos'ta sağ panel, Mesan'ın hardcode ürünleriyle çakışmasın diye
     // `activeSection` kullanılmıyor; Atos seçimi ayrı state olarak tutuluyor.
-    setActiveSection(initialBrand === 'Atos' || initialBrand === 'Oskar' ? null : storedActiveSection || null)
+    setActiveSection(
+      initialBrand === 'Atos' || initialBrand === 'Oskar' || initialBrand === 'Güneş'
+        ? null
+        : storedActiveSection || null
+    )
     setActiveAtosSection(initialBrand === 'Atos' ? defaultActiveAtosSection : null)
     setActiveOskarSection(initialBrand === 'Oskar' ? defaultActiveOskarSection : null)
+    setActiveGunesSection(initialBrand === 'Güneş' ? defaultActiveGunesSection : null)
   }, [location.state])
 
   // Kullanıcı geri gelince aynı yerde devam edebilmek için seçim durumunu saklıyoruz.
@@ -788,7 +835,8 @@ function Products() {
     sessionStorage.setItem('productsActiveSection', activeSection || '')
     sessionStorage.setItem('productsActiveAtosSection', activeAtosSection || '')
     sessionStorage.setItem('productsActiveOskarSection', activeOskarSection || '')
-  }, [activeBrand, openGroups, activeGroup, activeSection, activeAtosSection, activeOskarSection])
+    sessionStorage.setItem('productsActiveGunesSection', activeGunesSection || '')
+  }, [activeBrand, openGroups, activeGroup, activeSection, activeAtosSection, activeOskarSection, activeGunesSection])
 
   useEffect(() => {
     if (activeBrand !== 'Atos' || atosCatalog) return
@@ -830,6 +878,26 @@ function Products() {
       cancelled = true
     }
   }, [activeBrand, oskarCatalog])
+
+  useEffect(() => {
+    if (activeBrand !== 'Güneş' || gunesCatalog) return
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        const res = await fetch('/gunes-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+        if (!cancelled) setGunesCatalog(json)
+      } catch {
+        if (!cancelled) setGunesCatalog(null)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [activeBrand, gunesCatalog])
 
   const currentItems = useMemo(() => {
     if (!activeSection) return []
@@ -901,6 +969,7 @@ function Products() {
       setActiveSection(null)
       setActiveAtosSection(null)
       setActiveOskarSection(null)
+      setActiveGunesSection(null)
     } else {
       setActiveBrand(brand)
       setOpenBrands([brand])
@@ -911,16 +980,26 @@ function Products() {
         setOpenGroups([defaultAtosGroupTitle])
         setActiveAtosSection(defaultAtosSectionTitle)
         setActiveOskarSection(null)
+        setActiveGunesSection(null)
       } else if (brand === 'Oskar') {
         setOpenGroups([defaultOskarGroupTitle])
         // Oskar'da ana başlık tıklamaları sadece aç/kapa; sağ tarafta alt-kategori kartı çıkmasın.
         setActiveGroup(null)
         setActiveOskarSection(null)
         setActiveAtosSection(null)
+        setActiveGunesSection(null)
+      } else if (brand === 'Güneş') {
+        setOpenGroups([])
+        // Güneş marka seçilince sadece sol menü açık gelsin; sağ tarafta kart/varsayılan seçim olmasın.
+        setActiveGroup(null)
+        setActiveGunesSection(null)
+        setActiveAtosSection(null)
+        setActiveOskarSection(null)
       } else {
         setOpenGroups([])
         setActiveAtosSection(null)
         setActiveOskarSection(null)
+        setActiveGunesSection(null)
       }
     }
   }
@@ -1057,6 +1136,42 @@ function Products() {
 
         // SectionProducts route'u `/urunler/:sectionSlug/*` kullandığı için farklı tail'ler
         // URL'leri ayırır; sectionSlug bazında içerik doğru şekilde seçilir.
+        navigate(`/urunler/${mapped.baseSlug}/${mapped.tail}`)
+        return
+      }
+    }
+
+    if (activeBrand === 'Güneş') {
+      const gunesSectionUrlMap = {
+        'Kollu Kilitler': { baseSlug: 'gunes', tail: 'gunes-kollu-kilitler' },
+        'Çeyrek Dönüşlü Kilitler': { baseSlug: 'gunes', tail: 'gunes-ceyrek-donuslu-kilitler' },
+        'Menteşeler': { baseSlug: 'gunes', tail: 'gunes-menteseler' },
+        'Contalar': { baseSlug: 'gunes', tail: 'gunes-contalar' },
+        'Trafo ve Kabin Kilitleri': { baseSlug: 'gunes', tail: 'gunes-trafo-ve-kabin-kilitleri' },
+        'Dolap Kilitleri': { baseSlug: 'gunes', tail: 'gunes-dolap-kilitleri' },
+        'Mobilya ve Çelik Eşya': { baseSlug: 'gunes', tail: 'gunes-mobilya-ve-celik-esya' },
+        'Aksesuarlar': { baseSlug: 'gunes', tail: 'gunes-aksesuarlar' },
+        'Diğer Ürünler': { baseSlug: 'gunes', tail: 'gunes-diger-urunler' },
+      }
+
+      const mapped = gunesSectionUrlMap[sectionTitle]
+      if (mapped) {
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('productsActiveBrand', 'Güneş')
+          sessionStorage.setItem('productsOpenGroups', JSON.stringify([]))
+          sessionStorage.setItem('productsActiveGroup', '')
+          sessionStorage.setItem('productsActiveSection', '')
+          sessionStorage.setItem('productsActiveAtosSection', '')
+          sessionStorage.setItem('productsActiveOskarSection', '')
+          sessionStorage.setItem('productsActiveGunesSection', sectionTitle)
+        }
+
+        setActiveGunesSection(sectionTitle)
+        setOpenGroups([])
+        setActiveGroup(null)
+        setActiveSection(null)
+        setActiveAtosSection(null)
+        setActiveOskarSection(null)
         navigate(`/urunler/${mapped.baseSlug}/${mapped.tail}`)
         return
       }
@@ -1609,7 +1724,41 @@ function Products() {
 
             {brandCatalogGroups.length > 0 ? (
               <div className="ml-3 space-y-2 border-l border-slate-200 pl-3">
-                {brandCatalogGroups.map((group) => {
+                {activeBrand === 'Güneş' ? (
+                  // Güneş: üst grup başlığı göstermeden direkt alt kategorileri listele
+                  (brandCatalogGroups[0]?.sections || []).map((section) => {
+                    const isActive = activeGunesSection === section.title
+                    const categoryImage = categoryImageMap[section.title]
+                    return (
+                      <div key={section.title} className="space-y-1">
+                        <button
+                          onClick={() => handleSectionClick(section.title)}
+                          className={`flex w-full items-center justify-between rounded-lg px-2 py-1.5 text-left text-sm font-light transition ${
+                            isActive ? 'text-[#166534]' : 'text-slate-700 hover:text-[#166534]'
+                          }`}
+                        >
+                          <div className="flex items-center gap-2">
+                            {categoryImage && (
+                              <img
+                                src={categoryImage}
+                                alt={section.title}
+                                className="h-10 w-10 rounded object-contain"
+                              />
+                            )}
+                            <span>{section.title}</span>
+                          </div>
+                          <span
+                            className={`text-xs transition ${isActive ? 'text-[#166534]' : 'text-slate-400'}`}
+                            aria-hidden
+                          >
+                            ›
+                          </span>
+                        </button>
+                      </div>
+                    )
+                  })
+                ) : (
+                  brandCatalogGroups.map((group) => {
                   const groupOpen = openGroups.includes(group.title)
                   const isActiveGroup = activeGroup === group.title
                   const titleToShow = group.displayTitle ?? group.title
@@ -1638,6 +1787,8 @@ function Products() {
                                 ? activeAtosSection === section.title
                                 : activeBrand === 'Oskar'
                                   ? activeOskarSection === section.title
+                                  : activeBrand === 'Güneş'
+                                    ? activeGunesSection === section.title
                                   : activeSection === section.title
                             // categoryImageMap'te tanımlı görseli kontrol et
                             const categoryImage = categoryImageMap[section.title]
@@ -1678,7 +1829,8 @@ function Products() {
                       ) : null}
                     </div>
                   )
-                })}
+                })
+                )}
               </div>
             ) : (
               <div className="ml-3 border-l border-slate-200 pl-3 text-sm text-slate-500">
@@ -1703,7 +1855,7 @@ function Products() {
                 ? `${currentItems.length} ürün`
                 : activeGroup
                   ? `${currentGroupSections.length} alt kategori`
-                  : activeBrand === 'Mesan'
+                  : activeBrand
                     ? 'Seçim yapın'
                     : 'Yakında'}
             </span>
@@ -1713,7 +1865,7 @@ function Products() {
             <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-sm text-slate-500 shadow-sm">
               {!activeBrand
                 ? 'Bir marka seçin.'
-                : activeBrand === 'Mesan' || activeBrand === 'Atos' || activeBrand === 'Oskar'
+                : activeBrand === 'Mesan' || activeBrand === 'Atos' || activeBrand === 'Oskar' || activeBrand === 'Güneş'
                   ? 'Bir kategori seçin, ürünleri listeleyelim.'
                   : `${activeBrand} için ürünler yakında.`}
             </div>

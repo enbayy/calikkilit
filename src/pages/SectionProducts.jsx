@@ -117,6 +117,31 @@ const oskarTailSlugToState = {
   'oskar-paslanmaz-celik-urunler': { openGroup: 'PASLANMAZ ÇELİK ÜRÜNLER', activeOskarSection: 'PASLANMAZ ÇELİK ÜRÜNLER' },
 }
 
+// Güneş route'ları: `/urunler/:baseSlug/:tail`
+const gunesTailSlugs = new Set([
+  'gunes-kollu-kilitler',
+  'gunes-ceyrek-donuslu-kilitler',
+  'gunes-menteseler',
+  'gunes-contalar',
+  'gunes-trafo-ve-kabin-kilitleri',
+  'gunes-dolap-kilitleri',
+  'gunes-mobilya-ve-celik-esya',
+  'gunes-aksesuarlar',
+  'gunes-diger-urunler',
+])
+
+const gunesTailSlugToState = {
+  'gunes-kollu-kilitler': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Kollu Kilitler' },
+  'gunes-ceyrek-donuslu-kilitler': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Çeyrek Dönüşlü Kilitler' },
+  'gunes-menteseler': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Menteşeler' },
+  'gunes-contalar': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Contalar' },
+  'gunes-trafo-ve-kabin-kilitleri': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Trafo ve Kabin Kilitleri' },
+  'gunes-dolap-kilitleri': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Dolap Kilitleri' },
+  'gunes-mobilya-ve-celik-esya': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Mobilya ve Çelik Eşya' },
+  'gunes-aksesuarlar': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Aksesuarlar' },
+  'gunes-diger-urunler': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Diğer Ürünler' },
+}
+
 // Tüm section'ları import et
 const lockSections = [
   {
@@ -671,6 +696,7 @@ function SectionProducts() {
     const backTailSlug = parts.length === 2 ? parts[1] : null
     const isAtos = !!backTailSlug && atosTailSlugs.has(backTailSlug)
     const isOskar = !!backTailSlug && oskarTailSlugs.has(backTailSlug)
+    const isGunes = !!backTailSlug && gunesTailSlugs.has(backTailSlug)
 
     if (isAtos) {
       const state = backTailSlug ? atosTailSlugToState[backTailSlug] : null
@@ -696,6 +722,21 @@ function SectionProducts() {
       sessionStorage.setItem('productsActiveOskarSection', state?.activeOskarSection || '')
 
       navigate('/urunler', { state: { initialBrand: 'Oskar' } })
+      return
+    }
+
+    if (isGunes) {
+      const state = backTailSlug ? gunesTailSlugToState[backTailSlug] : null
+
+      sessionStorage.setItem('productsActiveBrand', 'Güneş')
+      sessionStorage.setItem('productsOpenGroups', JSON.stringify(state?.openGroup ? [state.openGroup] : []))
+      sessionStorage.setItem('productsActiveGroup', '')
+      sessionStorage.setItem('productsActiveSection', '')
+      sessionStorage.setItem('productsActiveAtosSection', '')
+      sessionStorage.setItem('productsActiveOskarSection', '')
+      sessionStorage.setItem('productsActiveGunesSection', state?.activeGunesSection || '')
+
+      navigate('/urunler', { state: { initialBrand: 'Güneş' } })
       return
     }
 
@@ -725,11 +766,18 @@ function SectionProducts() {
     return !!tailSlug && oskarTailSlugs.has(tailSlug)
   }, [tailSlug])
 
+  const isGunesRouteCandidate = useMemo(() => {
+    return !!tailSlug && gunesTailSlugs.has(tailSlug)
+  }, [tailSlug])
+
   const [atosCatalog, setAtosCatalog] = useState(null)
   const [atosCatalogError, setAtosCatalogError] = useState(null)
 
   const [oskarCatalog, setOskarCatalog] = useState(null)
   const [oskarCatalogError, setOskarCatalogError] = useState(null)
+
+  const [gunesCatalog, setGunesCatalog] = useState(null)
+  const [gunesCatalogError, setGunesCatalogError] = useState(null)
 
   // Atos sayfalarına doğrudan girilirse (refresh/back vb.) `Products` geri döndüğünde
   // doğru markayı seçebilsin diye aynı değeri saklıyoruz.
@@ -759,6 +807,20 @@ function SectionProducts() {
     sessionStorage.setItem('productsActiveAtosSection', '')
     sessionStorage.setItem('productsActiveOskarSection', state?.activeOskarSection || '')
   }, [isOskarRouteCandidate, tailSlug])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (!isGunesRouteCandidate) return
+    const state = tailSlug ? gunesTailSlugToState[tailSlug] : null
+
+    sessionStorage.setItem('productsActiveBrand', 'Güneş')
+    sessionStorage.setItem('productsOpenGroups', JSON.stringify(state?.openGroup ? [state.openGroup] : []))
+    sessionStorage.setItem('productsActiveGroup', '')
+    sessionStorage.setItem('productsActiveSection', '')
+    sessionStorage.setItem('productsActiveAtosSection', '')
+    sessionStorage.setItem('productsActiveOskarSection', '')
+    sessionStorage.setItem('productsActiveGunesSection', state?.activeGunesSection || '')
+  }, [isGunesRouteCandidate, tailSlug])
 
   useEffect(() => {
     if (!isAtosRouteCandidate || atosCatalog) return
@@ -802,6 +864,27 @@ function SectionProducts() {
     }
   }, [isOskarRouteCandidate, oskarCatalog])
 
+  useEffect(() => {
+    if (!isGunesRouteCandidate || gunesCatalog) return
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        setGunesCatalogError(null)
+        const res = await fetch('/gunes-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+        if (!cancelled) setGunesCatalog(json)
+      } catch (e) {
+        if (!cancelled) setGunesCatalogError(e?.message || String(e))
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [isGunesRouteCandidate, gunesCatalog])
+
   const atosSubcategory = useMemo(() => {
     if (!atosCatalog || !tailSlug) return null
     for (const main of atosCatalog) {
@@ -822,12 +905,23 @@ function SectionProducts() {
     return null
   }, [oskarCatalog, tailSlug])
 
+  const gunesSubcategory = useMemo(() => {
+    if (!gunesCatalog || !tailSlug) return null
+    for (const main of gunesCatalog) {
+      for (const sub of main?.subcategories || []) {
+        if (sub?.slug === tailSlug) return sub
+      }
+    }
+    return null
+  }, [gunesCatalog, tailSlug])
+
   // Slug'dan section title'ı bul
   const sectionTitle = useMemo(() => {
     // Atos'ta header ve ürün kartları doğrudan subcategory adını kullanmalı.
     // Veri gelene kadar `sectionTitle` null döndürerek Mesan hardcode listelerini bastırıyoruz.
     if (isAtosRouteCandidate) return atosSubcategory?.name ?? null
     if (isOskarRouteCandidate) return oskarSubcategory?.name ?? null
+    if (isGunesRouteCandidate) return gunesSubcategory?.name ?? null
 
     const slugToTitle = {
       'kollu-kilitler': 'KOLLU KİLİTLER',
@@ -850,7 +944,6 @@ function SectionProducts() {
       'paslanmaz-ispanyolet-cubuk-ve-aksesuarlari': 'Paslanmaz İspanyolet Çubuk ve Aksesuarları',
       'paslanmaz-ispanyolet-lama-ve-aksesuarlari': 'Paslanmaz İspanyolet Lama ve Aksesuarları',
       'anahtarlar': 'Anahtarlar',
-      'ceyrek-donuslu-kilitler': 'ÇEYREK DÖNÜŞLÜ KİLİTLER',
       'kolay-montaj-cd-kilitler': 'Kolay Montaj Ç.D. Kilitler',
       'silindirli-kilitler': 'SİLİNDİRLİ KİLİTLER',
       'mobilya-ve-celik-esya-kilitleri': 'MOBİLYA VE ÇELİK EŞYA KİLİTLERİ',
@@ -871,7 +964,16 @@ function SectionProducts() {
       'paslanmaz-celik-urunler/aksesuarlar': 'PASLANMAZ ÇELİK AKSESUARLAR',
     }
     return slugToTitle[fullSectionSlug] || slugToTitle[sectionSlug] || null
-  }, [fullSectionSlug, sectionSlug, isAtosRouteCandidate, atosSubcategory, isOskarRouteCandidate, oskarSubcategory])
+  }, [
+    fullSectionSlug,
+    sectionSlug,
+    isAtosRouteCandidate,
+    atosSubcategory,
+    isOskarRouteCandidate,
+    oskarSubcategory,
+    isGunesRouteCandidate,
+    gunesSubcategory,
+  ])
 
   // Section'ın ürünlerini bul
   const currentItems = useMemo(() => {
@@ -2320,6 +2422,127 @@ function SectionProducts() {
                     to={`/urun-detay/${p.slug}`}
                     state={{
                       brand: 'Oskar',
+                      productSlug: p.slug,
+                      productName: p.name,
+                      detailUrl: p.detailUrl,
+                    }}
+                    className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-[#166534]/50 hover:shadow-xl"
+                  >
+                    <div className="relative flex h-80 items-center justify-center overflow-hidden bg-white p-6">
+                      <img
+                        src={img}
+                        alt={p.name}
+                        className="h-full w-full object-contain transition-all duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col justify-between border-t border-slate-100 bg-white p-5">
+                      <div>
+                        <h3 className="line-clamp-2 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#166534]">
+                          {p.name}
+                        </h3>
+                      </div>
+                      <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
+                        Detayları Görüntüle
+                        <span className="text-base">→</span>
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          )}
+        </section>
+      </div>
+    )
+  }
+
+  const isGunesLoading = isGunesRouteCandidate && !gunesCatalog && !gunesCatalogError
+
+  if (isGunesRouteCandidate) {
+    if (isGunesLoading) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Güneş verileri yükleniyor...</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    if (!gunesSubcategory) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Güneş alt kategori bulunamadı.</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    const gunesProducts = gunesSubcategory.products || []
+
+    return (
+      <div className="bg-slate-50 pb-16 text-slate-900">
+        <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
+          <button
+            onClick={handleBack}
+            className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Geri Dön
+          </button>
+
+          <div className="mb-8 flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-20 w-20 items-center justify-center rounded-lg border border-slate-200 bg-white">
+                <span className="text-sm font-semibold text-slate-600">Güneş</span>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.12em] text-[#166534]">Kategori</p>
+                <h2 className="text-xl font-semibold">{gunesSubcategory.name}</h2>
+              </div>
+            </div>
+            <span className="text-sm text-slate-500">{gunesProducts.length} ürün</span>
+          </div>
+
+          {gunesProducts.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Bu kategori için ürün bulunamadı.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {gunesProducts.map((p) => {
+                const img = p.image || `https://via.placeholder.com/320x200.png?text=${encodeURIComponent(p.name)}`
+                return (
+                  <Link
+                    key={p.slug}
+                    to={`/urun-detay/${p.slug}`}
+                    state={{
+                      brand: 'Güneş',
                       productSlug: p.slug,
                       productName: p.name,
                       detailUrl: p.detailUrl,
