@@ -4,7 +4,7 @@ function AboutSection() {
       <div className="space-y-4 sm:space-y-5 md:space-y-6">
         <div className="flex items-center gap-2 sm:gap-3">
           <span className="h-1 w-8 rounded-full bg-[#166534] sm:w-10" />
-          <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">KONYA KİLİT</h2>
+          <h2 className="text-xl font-bold text-slate-900 sm:text-2xl md:text-3xl">ÇALIK ENDÜSTRİYEL KİLİT</h2>
         </div>
         <p className="text-sm leading-relaxed text-slate-600 sm:text-base md:text-lg">
           Biz kilit, menteşe, conta ve aksesuar ürünlerinin endüstriyel ve ticari uygulamalar için üreticileri ve distribütörüyüz.
@@ -22,7 +22,7 @@ function AboutSection() {
       </div>
       <div className="relative min-h-[250px] overflow-hidden rounded-xl bg-slate-100 shadow-lg sm:min-h-[300px] sm:rounded-2xl md:min-h-[350px] lg:min-h-[400px]">
         <img
-          src="/caliklogo.png"
+          src="/caliklogohome.png"
           alt="Konya Kilit Hakkımızda"
           className="h-full w-full object-contain p-4 sm:p-6 md:p-8"
         />

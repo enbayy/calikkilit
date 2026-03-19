@@ -25,7 +25,7 @@ const pageContent = {
     sections: [
       {
         heading: 'Şirketimiz',
-        body: 'Konya Kilit, 1978 yılından beri hidrolik ve pnömatik sektöründe faaliyet gösteren köklü bir firmadır. Yılların getirdiği deneyim ve uzman kadromuzla, endüstriyel ve mobil uygulamalar için en kaliteli ürünleri ve çözümleri sunmaktayız.',
+        body: 'Çalık Endüstriyel Kilit, 1978 yılından beri hidrolik ve pnömatik sektöründe faaliyet gösteren köklü bir firmadır. Yılların getirdiği deneyim ve uzman kadromuzla, endüstriyel ve mobil uygulamalar için en kaliteli ürünleri ve çözümleri sunmaktayız.',
       },
       {
         heading: 'Misyonumuz',
@@ -302,14 +302,11 @@ function App() {
               <div className="flex flex-row items-center gap-3 sm:gap-4">
                 <div className="flex flex-col items-start gap-1">
                   <span className="inline-flex items-center gap-1">
-                    📞 0 506 875 03 58
-                  </span>
-                  <span className="inline-flex items-center gap-1">
                     📞 0 506 092 03 42
                   </span>
                 </div>
                 <span className="inline-flex items-center gap-1">
-                  ✉️ info@konyakilit.com
+                  ✉️ Murat@calikendkilit.com
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -344,7 +341,7 @@ function App() {
               <NavLink to="/" className="flex items-center">
                 <img
                   src="/caliklogo.png"
-                  alt="Konya Kilit logo"
+                  alt="Çalık Endüstriyel Kilit logo"
                   className="h-20 w-auto"
                 />
               </NavLink>
@@ -500,7 +497,7 @@ function App() {
               {/* Header */}
               <div className="sticky top-0 z-10 flex items-center justify-between border-b border-white/10 bg-[#1a1a1a]/95 backdrop-blur-sm px-6 py-4">
                 <div className="flex items-center">
-                  <img src="/caliklogo.png" alt="Konya Kilit logo" className="h-14 w-auto brightness-0 invert" />
+                  <img src="/caliklogo.png" alt="Çalık Endüstriyel Kilit logo" className="h-14 w-auto brightness-0 invert" />
                 </div>
                 <button
                   onClick={() => setMobileOpen(false)}
@@ -731,17 +728,6 @@ function App() {
                 </div>
                 <div className="space-y-2.5">
                   <a 
-                    href="tel:05068750358" 
-                    className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 text-sm text-white/90 transition-all hover:bg-white/10 hover:text-white"
-                  >
-                    <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#166534]/20">
-                      <svg className="h-5 w-5 text-[#166534]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                    </div>
-                    <span className="font-medium">0 506 875 03 58</span>
-                  </a>
-                  <a 
                     href="tel:05060920342" 
                     className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 text-sm text-white/90 transition-all hover:bg-white/10 hover:text-white"
                   >
@@ -843,7 +829,7 @@ function App() {
                 <NavLink to="/" className="inline-block mx-auto md:mx-0">
                   <img
                     src="/caliklogo.png"
-                    alt="Konya Kilit logo"
+                    alt="Çalık Endüstriyel Kilit logo"
                     className="h-20 w-auto"
                   />
                 </NavLink>
@@ -983,12 +969,6 @@ function App() {
                   </li>
                   <li className="flex flex-col items-start gap-3 justify-center md:justify-start">
                     <a
-                      href="tel:+905068750358"
-                      className="transition hover:text-white hover:underline"
-                    >
-                      📞 0 506 875 03 58
-                    </a>
-                    <a
                       href="tel:+905060920342"
                       className="transition hover:text-white hover:underline"
                     >
@@ -1018,7 +998,7 @@ function App() {
           {/* Alt Kısım */}
           <div className="border-t border-white/10">
             <div className="mx-auto max-w-7xl px-1.5 py-6 text-center text-xs text-slate-200 lg:px-2">
-              <p>© {new Date().getFullYear()} Konya Kilit. Tüm hakları saklıdır.</p>
+              <p>© {new Date().getFullYear()} Çalık Endüstriyel Kilit. Tüm hakları saklıdır.</p>
               <p className="mt-2 text-[10px] text-slate-400/70">
                 Designed & Developed by ENBAYTECH
               </p>
