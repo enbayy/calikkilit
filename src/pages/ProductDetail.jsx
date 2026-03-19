@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
 
 // Ürün detay verileri
 const productDetails = {
@@ -7397,7 +7397,8 @@ const sizdirmazlikProfilleriDetails = {
 function ProductDetail() {
   const location = useLocation()
   const navigate = useNavigate()
-  const { productName, productImage, productLogo } = location.state || {}
+  const { slug } = useParams()
+  const { productName, productImage, productLogo, brand, productSlug } = location.state || {}
   const [isPdfFullscreen, setIsPdfFullscreen] = useState(false)
 
   // ESC tuşu ile tam ekran modunu kapat
@@ -7412,6 +7413,156 @@ function ProductDetail() {
       return () => document.removeEventListener('keydown', handleEscape)
     }
   }, [isPdfFullscreen])
+
+  // Atos ürün detay sayfası: Atos için ayrı bir render akışı kullanalım.
+  const [atosProduct, setAtosProduct] = useState(null)
+  const [atosLoading, setAtosLoading] = useState(false)
+  const [atosError, setAtosError] = useState(null)
+
+  useEffect(() => {
+    if (brand !== 'Atos') return
+    const targetSlug = productSlug || slug
+    if (!targetSlug) return
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        setAtosError(null)
+        setAtosLoading(true)
+        const res = await fetch('/atos-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+
+        let found = null
+        for (const main of json || []) {
+          for (const sub of main?.subcategories || []) {
+            const hit = (sub?.products || []).find((p) => p?.slug === targetSlug)
+            if (hit) {
+              found = hit
+              break
+            }
+          }
+          if (found) break
+        }
+
+        if (!cancelled) setAtosProduct(found)
+      } catch (e) {
+        if (!cancelled) setAtosError(e?.message || String(e))
+      } finally {
+        if (!cancelled) setAtosLoading(false)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [brand, productSlug, slug])
+
+  if (brand === 'Atos') {
+    if (atosLoading) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={() => navigate('/urunler')}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Atos ürün verisi yükleniyor...</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    if (!atosProduct) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={() => navigate('/urunler')}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Atos ürün bulunamadı.</p>
+              {atosError ? <p className="mt-2 text-xs text-slate-500">{atosError}</p> : null}
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    return (
+      <div className="bg-slate-50 pb-16 text-slate-900">
+        <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
+          <button
+            onClick={() => navigate('/urunler')}
+            className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Geri Dön
+          </button>
+
+          <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-1">
+              <div className="flex items-center justify-center rounded-xl border border-slate-200 bg-white p-4">
+                <img
+                  src={atosProduct.image || `https://via.placeholder.com/320x200.png?text=${encodeURIComponent(atosProduct.name)}`}
+                  alt={atosProduct.name}
+                  className="max-h-64 w-auto object-contain"
+                />
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-2">
+              <h1 className="text-2xl font-bold text-slate-900">{atosProduct.name}</h1>
+
+              {(() => {
+                const raw = String(atosProduct.teknikOzellikler ?? '')
+                const lines = raw.split(/\r?\n/)
+
+                // PDF satırlarını temizliyoruz (örn: "KI01_11_PDF ( PDF ) - https://...pdf").
+                const cleaned = lines
+                  .filter((line) => {
+                    const l = line.trim()
+                    if (!l) return true
+                    if (/(PDF\s*\(\s*PDF\s*\))|(\.pdf\b)/i.test(l)) return false
+                    if (/\bPDF\b/i.test(l) && /https?:\/\//i.test(l)) return false
+                    return true
+                  })
+                  .join('\n')
+
+                if (!cleaned.trim()) return null
+
+                return (
+                  <div className="mt-5 space-y-4">
+                    <div className="rounded-xl border border-slate-100 bg-slate-50 p-4">
+                      <div className="mb-2 text-sm font-semibold text-slate-900">Teknik Özellikler</div>
+                      <div className="whitespace-pre-line text-sm leading-relaxed text-slate-700">
+                        {cleaned}
+                      </div>
+                    </div>
+                  </div>
+                )
+              })()}
+            </div>
+          </div>
+        </section>
+      </div>
+    )
+  }
 
   // Eğer state yoksa geri dön
   if (!productName) {

@@ -1,5 +1,38 @@
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom'
+
+// Atos route'ları `/urunler/:baseSlug/:tail` şeklinde geliyor; `tail` Atos subcategory slug'ı.
+// Bu liste sadece Atos sayfalarını yakalamak için (Mesan'ın iç içe route'larıyla çakışmasın diye).
+const atosTailSlugs = new Set([
+  'kollu-pano-kilitleri',
+  'silindirli-mandalli-kilitler',
+  'silindirli-kelebek-kilitler',
+  'asma-kilit-hamilli-pano-kilitleri',
+  'yayli-pano-kilidi',
+  'pano-kapak-kilitleri',
+  'trafo-kilitleri',
+  'kabin-kilitleri',
+  'yangin-dolabi-kilitleri',
+  'diller',
+  'gecme-menteseler',
+  'gizli-menteseler',
+  'kenar-menteseler',
+  'yaprak-menteseler',
+  'pano-kapak-mentesesi',
+  'torklu-menteseler',
+  'anahtarlar',
+  'kapak-stoplama-makasi',
+  'ispanyolet-aksesuarlari',
+  'contalar',
+  'gecme-fitiller',
+  'fircalar',
+  'sayac-camlari',
+  'proje-cepleri',
+  'kapak-kulplari',
+  'kilit-tutamaklari',
+  'kose-takozlari',
+  'havalandirma-panjurlari',
+])
 
 // Tüm section'ları import et
 const lockSections = [
@@ -545,8 +578,55 @@ function SectionProducts() {
   // location.pathname'den tam path'i al (ceyrek-donuslu-kilitler/sikistirmali-kilitler gibi)
   const fullSectionSlug = location.pathname.replace('/urunler/', '')
 
+  const tailSlug = useMemo(() => {
+    const parts = fullSectionSlug.split('/').filter(Boolean)
+    return parts.length === 2 ? parts[1] : null
+  }, [fullSectionSlug])
+
+  const isAtosRouteCandidate = useMemo(() => {
+    return !!tailSlug && atosTailSlugs.has(tailSlug)
+  }, [tailSlug])
+
+  const [atosCatalog, setAtosCatalog] = useState(null)
+  const [atosCatalogError, setAtosCatalogError] = useState(null)
+
+  useEffect(() => {
+    if (!isAtosRouteCandidate || atosCatalog) return
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        setAtosCatalogError(null)
+        const res = await fetch('/atos-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+        if (!cancelled) setAtosCatalog(json)
+      } catch (e) {
+        if (!cancelled) setAtosCatalogError(e?.message || String(e))
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [isAtosRouteCandidate, atosCatalog])
+
+  const atosSubcategory = useMemo(() => {
+    if (!atosCatalog || !tailSlug) return null
+    for (const main of atosCatalog) {
+      for (const sub of main?.subcategories || []) {
+        if (sub?.slug === tailSlug) return sub
+      }
+    }
+    return null
+  }, [atosCatalog, tailSlug])
+
   // Slug'dan section title'ı bul
   const sectionTitle = useMemo(() => {
+    // Atos'ta header ve ürün kartları doğrudan subcategory adını kullanmalı.
+    // Veri gelene kadar `sectionTitle` null döndürerek Mesan hardcode listelerini bastırıyoruz.
+    if (isAtosRouteCandidate) return atosSubcategory?.name ?? null
+
     const slugToTitle = {
       'kollu-kilitler': 'KOLLU KİLİTLER',
       'ispanyolet-sistemli-kilitler': 'İSPANYOLET SİSTEMLİ KİLİTLER',
@@ -589,10 +669,15 @@ function SectionProducts() {
       'paslanmaz-celik-urunler/aksesuarlar': 'PASLANMAZ ÇELİK AKSESUARLAR',
     }
     return slugToTitle[fullSectionSlug] || slugToTitle[sectionSlug] || null
-  }, [fullSectionSlug, sectionSlug])
+  }, [fullSectionSlug, sectionSlug, isAtosRouteCandidate, atosSubcategory])
 
   // Section'ın ürünlerini bul
   const currentItems = useMemo(() => {
+    if (isAtosRouteCandidate) {
+      if (!atosSubcategory) return []
+      return (atosSubcategory.products || []).map((p) => p.name).filter(Boolean)
+    }
+
     if (!sectionTitle) return []
     // KİLİMA SANTRAL ÜRÜNLERİ için özel ürün listesi
     if (sectionTitle === 'KİLİMA SANTRAL ÜRÜNLERİ') {
@@ -1082,7 +1167,7 @@ function SectionProducts() {
       }
     }
     return []
-  }, [sectionTitle, location])
+  }, [sectionTitle, location, isAtosRouteCandidate, atosSubcategory])
 
   // Kategori resim mapping
   const categoryImageMap = {
@@ -1743,7 +1828,151 @@ function SectionProducts() {
     return logoMap[itemName] || logos[itemName.length % logos.length]
   }
 
+  const isAtosLoading = isAtosRouteCandidate && !atosCatalog && !atosCatalogError
+
+  // Atos sayfalarında (kullandığımız `/urunler/:baseSlug/:tail` rotası) Mesan'ın
+  // hardcoded mantığına girmeden direkt ürün kartlarını Atos ürünlerine bağlayalım.
+  if (isAtosRouteCandidate) {
+    if (isAtosLoading) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={() => navigate('/urunler')}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Atos verileri yükleniyor...</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    if (!atosSubcategory) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={() => navigate('/urunler')}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Atos alt kategori bulunamadı.</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    const atosProducts = atosSubcategory.products || []
+
+    return (
+      <div className="bg-slate-50 pb-16 text-slate-900">
+        <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
+          <button
+            onClick={() => navigate('/urunler')}
+            className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Geri Dön
+          </button>
+
+          <div className="mb-8 flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-20 w-20 items-center justify-center rounded-lg border border-slate-200 bg-white">
+                <span className="text-sm font-semibold text-slate-600">Atos</span>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.12em] text-[#166534]">Kategori</p>
+                <h2 className="text-xl font-semibold">{atosSubcategory.name}</h2>
+              </div>
+            </div>
+            <span className="text-sm text-slate-500">{atosProducts.length} ürün</span>
+          </div>
+
+          {atosProducts.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Bu kategori için ürün bulunamadı.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {atosProducts.map((p) => {
+                const img = p.image || `https://via.placeholder.com/320x200.png?text=${encodeURIComponent(p.name)}`
+                return (
+                  <Link
+                    key={p.slug}
+                    to={`/urun-detay/${p.slug}`}
+                    state={{
+                      brand: 'Atos',
+                      productSlug: p.slug,
+                      productName: p.name,
+                      detailUrl: p.detailUrl,
+                    }}
+                    className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-[#166534]/50 hover:shadow-xl"
+                  >
+                    <div className="relative flex h-80 items-center justify-center overflow-hidden bg-white p-6">
+                      <img
+                        src={img}
+                        alt={p.name}
+                        className="h-full w-full object-contain transition-all duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col justify-between border-t border-slate-100 bg-white p-5">
+                      <div>
+                        <h3 className="line-clamp-2 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#166534]">
+                          {p.name}
+                        </h3>
+                      </div>
+                      <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
+                        Detayları Görüntüle
+                        <span className="text-base">→</span>
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          )}
+        </section>
+      </div>
+    )
+  }
+
   if (!sectionTitle || currentItems.length === 0) {
+    if (isAtosLoading) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={() => navigate('/urunler')}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Atos verileri yükleniyor...</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     return (
       <div className="bg-slate-50 pb-16 text-slate-900">
         <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
@@ -2426,8 +2655,8 @@ function SectionProducts() {
             return (
               <Link
                 key={item}
-                to={sectionSlug ? `/urunler/${sectionSlug}` : `/urun-detay/${productSlug}`}
-                state={sectionSlug ? {} : { 
+                to={isAtosRouteCandidate ? location.pathname : sectionSlug ? `/urunler/${sectionSlug}` : `/urun-detay/${productSlug}`}
+                state={isAtosRouteCandidate ? {} : sectionSlug ? {} : { 
                   productName: item, 
                   productImage: img, 
                   productLogo: getProductLogo(item),

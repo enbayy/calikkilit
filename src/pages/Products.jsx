@@ -491,59 +491,88 @@ function Products() {
   const [activeGroup, setActiveGroup] = useState(null)
   const [openGroups, setOpenGroups] = useState([])
   const [activeBrand, setActiveBrand] = useState('Mesan')
+  const [atosCatalog, setAtosCatalog] = useState(null)
   const [openBrands, setOpenBrands] = useState(['Mesan'])
   const brands = ['Mesan', 'Atos', 'Güneş', 'Oskar']
+  // Marka butonlarında gösterilecek logolar (dosyalar `public/` altında olmalı)
+  const brandLogoMap = {
+    Mesan: '/mesanlogo.png',
+    Atos: '/atoslogo.png',
+    'Güneş': '/guneslogo.png',
+    Oskar: '/oskarlogo.png',
+  }
 
   const brandCatalogGroups = useMemo(() => {
     const findByTitle = (title) => catalogGroups.find((g) => g.title === title)
 
     // Atos menüsünde kullanıcı isteğine göre sadece 3 ana kategori gösteriyoruz.
     if (activeBrand === 'Atos') {
-      // Kullanıcının istediği Atos -> Kilitler alt başlıkları (her biri farklı URL'ye gider).
-      const atosKilitlerSections = [
-        { title: 'Kollu Pano Kilitleri', items: [] },
-        { title: 'Silindirli Mandallı Kilitler', items: [] },
-        { title: 'Silindirli Kelebek Kilitler', items: [] },
-        { title: 'Asma Kilit Hamilli Pano Kilitleri', items: [] },
-        { title: 'Yaylı Pano Kilidi', items: [] },
-        { title: 'Pano Kapak Kilitleri', items: [] },
-        { title: 'Trafo Kilitleri', items: [] },
-        { title: 'Kabin Kilitleri', items: [] },
-        { title: 'Yangın Dolabı Kilitleri', items: [] },
-        { title: 'Diller', items: [] },
-      ]
+      // Veri gelene kadar iskelet gösteriyoruz.
+      if (!atosCatalog) {
+        const atosKilitlerSections = [
+          { title: 'Kollu Pano Kilitleri', items: [] },
+          { title: 'Silindirli Mandallı Kilitler', items: [] },
+          { title: 'Silindirli Kelebek Kilitler', items: [] },
+          { title: 'Asma Kilit Hamilli Pano Kilitleri', items: [] },
+          { title: 'Yaylı Pano Kilidi', items: [] },
+          { title: 'Pano Kapak Kilitleri', items: [] },
+          { title: 'Trafo Kilitleri', items: [] },
+          { title: 'Kabin Kilitleri', items: [] },
+          { title: 'Yangın Dolabı Kilitleri', items: [] },
+          { title: 'Diller', items: [] },
+        ]
 
-      // Atos -> Menteşeler alt başlıkları
-      const atosMenteselerSections = [
-        { title: 'Geçme Menteşeler', items: [] },
-        { title: 'Gizli Menteşeler', items: [] },
-        { title: 'Kenar Menteşeler', items: [] },
-        { title: 'Yaprak Menteşeler', items: [] },
-        { title: 'Pano Kapak Menteşesi', items: [] },
-        { title: 'Torklu Menteşeler', items: [] },
-      ]
+        const atosMenteselerSections = [
+          { title: 'Geçme Menteşeler', items: [] },
+          { title: 'Gizli Menteşeler', items: [] },
+          { title: 'Kenar Menteşeler', items: [] },
+          { title: 'Yaprak Menteşeler', items: [] },
+          { title: 'Pano Kapak Menteşesi', items: [] },
+          { title: 'Torklu Menteşeler', items: [] },
+        ]
 
-      // Atos -> Aksesuarlar alt başlıkları
-      const atosAksesuarlarSections = [
-        { title: 'Anahtarlar', items: [] },
-        { title: 'Kapak Stoplama Makası', items: [] },
-        { title: 'İspanyolet Aksesuarları', items: [] },
-        { title: 'Contalar', items: [] },
-        { title: 'Geçme Fitiller', items: [] },
-        { title: 'Fırçalar', items: [] },
-        { title: 'Sayaç Camları', items: [] },
-        { title: 'Proje Cepleri', items: [] },
-        { title: 'Kapak Kulpları', items: [] },
-        { title: 'Kilit tutamakları', items: [] },
-        { title: 'Köşe Takozları', items: [] },
-        { title: 'Havalandırma Panjurları', items: [] },
-      ]
+        const atosAksesuarlarSections = [
+          { title: 'Anahtarlar', items: [] },
+          { title: 'Kapak Stoplama Makası', items: [] },
+          { title: 'İspanyolet Aksesuarları', items: [] },
+          { title: 'Contalar', items: [] },
+          { title: 'Geçme Fitiller', items: [] },
+          { title: 'Fırçalar', items: [] },
+          { title: 'Sayaç Camları', items: [] },
+          { title: 'Proje Cepleri', items: [] },
+          { title: 'Kapak Kulpları', items: [] },
+          { title: 'Kilit tutamakları', items: [] },
+          { title: 'Köşe Takozları', items: [] },
+          { title: 'Havalandırma Panjurları', items: [] },
+        ]
 
-      return [
-        { title: 'KİLİTLER', displayTitle: 'Kilitler', sections: atosKilitlerSections },
-        { title: 'MENTEŞELER', displayTitle: 'Menteşeler', sections: atosMenteselerSections },
-        { title: 'AKSESUARLAR VE KULPLAR', displayTitle: 'Aksesuarlar', sections: atosAksesuarlarSections },
-      ].filter((g) => Boolean(g))
+        return [
+          { title: 'KİLİTLER', displayTitle: 'Kilitler', sections: atosKilitlerSections },
+          { title: 'MENTEŞELER', displayTitle: 'Menteşeler', sections: atosMenteselerSections },
+          { title: 'AKSESUARLAR VE KULPLAR', displayTitle: 'Aksesuarlar', sections: atosAksesuarlarSections },
+        ].filter((g) => Boolean(g))
+      }
+
+      const mainToGroup = {
+        Kilitler: { title: 'KİLİTLER', displayTitle: 'Kilitler' },
+        Menteşeler: { title: 'MENTEŞELER', displayTitle: 'Menteşeler' },
+        Aksesuarlar: { title: 'AKSESUARLAR VE KULPLAR', displayTitle: 'Aksesuarlar' },
+      }
+
+      return atosCatalog
+        .filter((main) => Boolean(mainToGroup[main?.name]))
+        .map((main) => {
+          const group = mainToGroup[main.name]
+          return {
+            title: group.title,
+            displayTitle: group.displayTitle,
+            sections: (main?.subcategories || []).map((sub) => ({
+              title: sub.name,
+              // Sol menüde "ürün çeşidi" sayısını göstermek için sadece uzunluğu kullanıyoruz.
+              items: (sub?.products || []).map((p) => p.detailUrl || p.slug || p.name).filter(Boolean),
+            })),
+          }
+        })
     }
 
     // Mesan: mevcut tüm kategori yapısı
@@ -553,7 +582,7 @@ function Products() {
 
     // Diğer markalar şimdilik boş
     return []
-  }, [activeBrand])
+  }, [activeBrand, atosCatalog])
 
   // Kategori resim mapping
   const categoryImageMap = {
@@ -596,6 +625,27 @@ function Products() {
     setActiveSection(null)
   }, [location.state])
 
+  useEffect(() => {
+    if (activeBrand !== 'Atos' || atosCatalog) return
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        const res = await fetch('/atos-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+        if (!cancelled) setAtosCatalog(json)
+      } catch (e) {
+        // Hata durumunda sadece menü boş kalır; sayfa çalışmaya devam eder.
+        if (!cancelled) setAtosCatalog(null)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [activeBrand, atosCatalog])
+
   const currentItems = useMemo(() => {
     if (!activeSection) return []
     // activeSection benzersiz olduğu için tüm gruplarda ara
@@ -618,11 +668,22 @@ function Products() {
 
   const currentGroupSections = useMemo(() => {
     if (!activeGroup) return []
-    const group = catalogGroups.find((g) => g.title === activeGroup)
+    // Aktif marka Atos ise alt kategorileri Mesan'dan değil Atos kataloğundan çekmeliyiz.
+    // Bu yüzden her zaman `catalogGroups` yerine `brandCatalogGroups` kullanılacak.
+    const group = (brandCatalogGroups || []).find((g) => g.title === activeGroup)
     return group ? group.sections : []
-  }, [activeGroup])
+  }, [activeGroup, brandCatalogGroups])
 
   const toggleGroup = (title) => {
+    // Atos'ta grup başlıklarına tıklama sadece sol menüde aç/kapa yapılmalı.
+    // Sağ içerik alanını değiştirmemek için `activeGroup/activeSection` set etmiyoruz.
+    if (activeBrand === 'Atos') {
+      setOpenGroups((prev) => (prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]))
+      setActiveGroup(null)
+      setActiveSection(null)
+      return
+    }
+
     if (activeGroup === title) {
       // Aynı gruba tekrar tıklanırsa kapat
       setActiveGroup(null)
@@ -664,14 +725,14 @@ function Products() {
     if (activeBrand === 'Atos') {
       const atosSectionUrlMap = {
         'Kollu Pano Kilitleri': { baseSlug: 'ispanyolet-sistemli-kilitler', tail: 'kollu-pano-kilitleri' },
-        'Silindirli Mandallı Kilitler': { baseSlug: 'silindirli-kilitler', tail: 'silindirli-mandalli' },
-        'Silindirli Kelebek Kilitler': { baseSlug: 'silindirli-kilitler', tail: 'silindirli-kelebek' },
-        'Asma Kilit Hamilli Pano Kilitleri': { baseSlug: 'ceyrek-donuslu-kilitler', tail: 'asma-hamilli-pano' },
-        'Yaylı Pano Kilidi': { baseSlug: 'ceyrek-donuslu-kilitler', tail: 'yayli-pano' },
-        'Pano Kapak Kilitleri': { baseSlug: 'mobilya-ve-celik-esya-kilitleri', tail: 'pano-kapak' },
+        'Silindirli Mandallı Kilitler': { baseSlug: 'silindirli-kilitler', tail: 'silindirli-mandalli-kilitler' },
+        'Silindirli Kelebek Kilitler': { baseSlug: 'silindirli-kilitler', tail: 'silindirli-kelebek-kilitler' },
+        'Asma Kilit Hamilli Pano Kilitleri': { baseSlug: 'ceyrek-donuslu-kilitler', tail: 'asma-kilit-hamilli-pano-kilitleri' },
+        'Yaylı Pano Kilidi': { baseSlug: 'ceyrek-donuslu-kilitler', tail: 'yayli-pano-kilidi' },
+        'Pano Kapak Kilitleri': { baseSlug: 'mobilya-ve-celik-esya-kilitleri', tail: 'pano-kapak-kilitleri' },
         'Trafo Kilitleri': { baseSlug: 't-kollu-kabin-kilitleri', tail: 'trafo-kilitleri' },
         'Kabin Kilitleri': { baseSlug: 'kabin-kilitleri', tail: 'kabin-kilitleri' },
-        'Yangın Dolabı Kilitleri': { baseSlug: 'mobilya-ve-celik-esya-kilitleri', tail: 'yangin-dolabi' },
+        'Yangın Dolabı Kilitleri': { baseSlug: 'mobilya-ve-celik-esya-kilitleri', tail: 'yangin-dolabi-kilitleri' },
         'Diller': { baseSlug: 'diller', tail: 'diller' },
 
         // Atos -> Menteşeler
@@ -685,10 +746,10 @@ function Products() {
         // Atos -> Aksesuarlar
         'Anahtarlar': { baseSlug: 'anahtarlar', tail: 'anahtarlar' },
         'Kapak Stoplama Makası': { baseSlug: 'aksesuarlar', tail: 'kapak-stoplama-makasi' },
-        'İspanyolet Aksesuarları': { baseSlug: 'ispanyolet-cubuk-ve-aksesuarlari', tail: 'ispanyolet-aksesuarlar' },
+        'İspanyolet Aksesuarları': { baseSlug: 'ispanyolet-cubuk-ve-aksesuarlari', tail: 'ispanyolet-aksesuarlari' },
         'Contalar': { baseSlug: 'yapiskanli-contalar', tail: 'contalar' },
         'Geçme Fitiller': { baseSlug: 'sizdirmazlik-profilleri-ve-kenar-koruma', tail: 'gecme-fitiller' },
-        'Fırçalar': { baseSlug: 'aksesuarlar', tail: 'fircilar' },
+        'Fırçalar': { baseSlug: 'aksesuarlar', tail: 'fircalar' },
         'Sayaç Camları': { baseSlug: 'aksesuarlar', tail: 'sayac-camlari' },
         'Proje Cepleri': { baseSlug: 'aksesuarlar', tail: 'proje-cepleri' },
         'Kapak Kulpları': { baseSlug: 'kulplar', tail: 'kapak-kulplari' },
@@ -1222,15 +1283,25 @@ function Products() {
         <div className="flex w-full flex-wrap justify-center items-center gap-2">
           {brands.map((brand) => {
             const isActive = activeBrand === brand
+            const logoSrc = brandLogoMap[brand]
             return (
               <button
                 key={brand}
                 onClick={() => toggleBrand(brand)}
-                className={`rounded-xl border px-4 py-2 text-sm font-semibold transition ${
+                className={`flex items-center gap-2 rounded-xl border px-4 py-2 text-sm font-semibold transition ${
                   isActive ? 'border-[#166534] bg-[#166534]/10 text-[#166534]' : 'border-slate-200 bg-white text-slate-800 hover:bg-slate-100'
                 }`}
               >
-                {brand}
+                {logoSrc && (
+                  <img
+                    src={logoSrc}
+                    alt={`${brand} logo`}
+                    className="h-5 w-5 object-contain"
+                  />
+                )}
+                <span>
+                  {brand} Kilit
+                </span>
               </button>
             )
           })}
