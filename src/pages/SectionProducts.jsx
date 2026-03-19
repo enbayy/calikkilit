@@ -612,12 +612,37 @@ function SectionProducts() {
   const location = useLocation()
 
   const handleBack = () => {
-    // Kullanıcı aynı akışta geldiyse (örn. Atos ürün detayına girdi -> list'e geri dön)
-    // history üzerinden dönmek doğru state'i korur.
-    if (typeof window !== 'undefined' && window.history.length > 1) {
+    if (typeof window === 'undefined') {
+      navigate('/urunler')
+      return
+    }
+
+    // Atos kart listesindeyken “geri”ye basınca Products tarafında Mesan'a kayma olmasın diye
+    // Atos state'ini sessionStorage'a yazıp kontrollü dönüyoruz.
+    const fullSectionSlugForBack = location.pathname.replace('/urunler/', '')
+    const parts = fullSectionSlugForBack.split('/').filter(Boolean)
+    const backTailSlug = parts.length === 2 ? parts[1] : null
+    const isAtos = !!backTailSlug && atosTailSlugs.has(backTailSlug)
+
+    if (isAtos) {
+      const state = backTailSlug ? atosTailSlugToState[backTailSlug] : null
+
+      sessionStorage.setItem('productsActiveBrand', 'Atos')
+      sessionStorage.setItem('productsOpenGroups', JSON.stringify(state?.openGroup ? [state.openGroup] : []))
+      sessionStorage.setItem('productsActiveGroup', '')
+      sessionStorage.setItem('productsActiveSection', '')
+      sessionStorage.setItem('productsActiveAtosSection', state?.activeAtosSection || '')
+
+      navigate('/urunler', { state: { initialBrand: 'Atos' } })
+      return
+    }
+
+    // Kullanıcı aynı akışta geldiyse (örn. Mesan ürün detayına girdi -> list'e geri dön)
+    if (window.history.length > 1) {
       navigate(-1)
       return
     }
+
     // Direkt URL ile açıldıysa history olmayabilir; güvenli fallback.
     navigate('/urunler')
   }
