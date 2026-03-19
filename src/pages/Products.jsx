@@ -1709,8 +1709,8 @@ function Products() {
                     className="h-6 w-6 object-contain"
                   />
                 )}
-                <span>
-                  {brand} Kilit
+                <span className="uppercase">
+                  {`${brand.toLocaleUpperCase('tr')} KİLİT`}
                 </span>
               </button>
             )
@@ -1847,7 +1847,15 @@ function Products() {
                 {activeSection ? 'Alt Kategori' : activeGroup ? 'Ana Kategori' : 'Seçim'}
               </p>
               <h2 className="text-xl font-semibold">
-                {activeSection ?? activeGroup ?? activeBrand ?? 'Henüz seçilmedi'}
+                {(
+                  activeSection
+                    ? activeSection
+                    : activeGroup
+                      ? activeGroup
+                      : activeBrand
+                        ? `${activeBrand.toLocaleUpperCase('tr')} KİLİT`
+                        : 'Henüz seçilmedi'
+                ).toLocaleUpperCase('tr')}
               </h2>
             </div>
             <span className="text-sm text-slate-500">
@@ -1856,8 +1864,8 @@ function Products() {
                 : activeGroup
                   ? `${currentGroupSections.length} alt kategori`
                   : activeBrand
-                    ? 'Seçim yapın'
-                    : 'Yakında'}
+                    ? 'Seçim yapın'.toLocaleUpperCase('tr')
+                    : 'Yakında'.toLocaleUpperCase('tr')}
             </span>
           </div>
 
