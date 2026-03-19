@@ -255,6 +255,121 @@ async function scrapeProductDetail(detailUrl) {
   }
 }
 
+const MANUAL_OVERRIDES_BY_CODE = {
+  DC: {
+    manual: {
+      aciklama:
+        'Poliüretan Conta, Poliüretan Malzemeden Üretilmiş, Tek Tarafı Yapışkanlı Bir Conta Bandıdır. Mükemmel Sızdırmazlık ve Dayanıklılık Sunarak, Çeşitli Uygulamalarda Kullanılmak İçin İdealdir.',
+      teknikOzellikler: normalizeText(`Malzeme: Poliüretan
+Renk: Siyah
+Kalınlık: [Farklı kalınlık seçeneklerini belirtin]
+Genişlik: [Farklı genişlik seçeneklerini belirtin]
+Uzunluk: [Metre cinsinden belirtin]
+Yapışkan: Akrilik yapıştırıcı
+Sıcaklık Aralığı: -40°C ila +100°C`),
+      ozellikler: normalizeText(`Su, hava ve toz geçirmez
+Kimyasallara ve UV ışınlarına dayanıklı
+Esnek ve kolay uygulanabilir
+Farklı yüzeylere yapışır
+Titreşimi ve gürültüyü azaltır`),
+      kullanimAlanlari: normalizeText(`Elektrik ve makine endüstrileri
+Klima ve havalandırma sistemleri
+Boru ve kablo bağlantıları
+Mobilya ve karoser imalatı
+Beyaz eşya ve elektronik cihazlar
+Otomotiv ve denizcilik uygulamaları`),
+      faydalar: normalizeText(`Kolay kurulum: Yapışkanlı arka yüz sayesinde aletsiz ve hızlı bir şekilde monte edilebilir.
+Temiz görünüm: Estetik açıdan hoş bir görünüm sunar ve yüzeye pürüzsüz bir şekilde yapışır.
+Uzun ömürlü: Dayanıklı poliüretan malzemesi sayesinde uzun yıllar boyunca kullanılabilir.
+Çok yönlülük: Farklı boyutlarda ve şekillerde mevcuttur ve çeşitli uygulamalarda kullanılabilir.`),
+    },
+  },
+  EPDM: {
+    manual: {
+      aciklama:
+        'EPDM conta, EPDM kauçuktan üretilmiş, tek tarafı yapışkanlı bir conta bandıdır. Mükemmel sızdırmazlık ve dayanıklılık sunarak, çeşitli uygulamalarda kullanılmak için idealdir.',
+      teknikOzellikler: normalizeText(`Malzeme: EPDM kauçuk
+Renk: Siyah
+Kalınlık: [Farklı kalınlık seçeneklerini belirtin]
+Genişlik: [Farklı genişlik seçeneklerini belirtin]
+Uzunluk: [Metre cinsinden belirtin]
+Yapışkan: Akrilik yapıştırıcı
+Sıcaklık Aralığı: -40°C ila +120°C`),
+      ozellikler: normalizeText(`Su, hava ve toz geçirmez
+Kimyasallara ve UV ışınlarına dayanıklı
+Esnek ve kolay uygulanabilir
+Farklı yüzeylere yapışır
+Titreşimi ve gürültüyü azaltır`),
+      kullanimAlanlari: normalizeText(`Elektrik ve makine endüstrileri
+Klima ve havalandırma sistemleri
+Boru ve kablo bağlantıları
+Mobilya ve karoser imalatı
+Beyaz eşya ve elektronik cihazlar
+Otomotiv ve denizcilik uygulamaları`),
+      faydalar: normalizeText(`Kolay kurulum: Yapışkanlı arka yüz sayesinde aletsiz ve hızlı bir şekilde monte edilebilir.
+Temiz görünüm: Estetik açıdan hoş bir görünüm sunar ve yüzeye pürüzsüz bir şekilde yapışır.
+Uzun ömürlü: Dayanıklı EPDM kauçuk malzemesi sayesinde uzun yıllar boyunca kullanılabilir.
+Çok yönlülük: Farklı boyutlarda ve şekillerde mevcuttur ve çeşitli uygulamalarda kullanılabilir.`),
+    },
+  },
+  MB: {
+    manual: {
+      aciklama:
+        'Çift Taraflı Montaj Bandı, Polietilen Malzemeden Üretilmiş, Çift Tarafı Yapışkanlı Bir Conta Bandıdır. Mükemmel Sızdırmazlık ve Dayanıklılık Sunarak, Çeşitli Uygulamalarda Kullanılmak İçin İdealdir.',
+      teknikOzellikler: normalizeText(`Malzeme: Polietilen
+Renk: Beyaz
+Kalınlık: [Farklı kalınlık seçeneklerini belirtin]
+Genişlik: [Farklı genişlik seçeneklerini belirtin]
+Uzunluk: [Metre cinsinden belirtin]
+Yapışkan: Akrilik yapıştırıcı
+Sıcaklık Aralığı: -30°C ila +90°C`),
+      ozellikler: normalizeText(`Su, hava ve toz geçirmez
+Kimyasallara ve UV ışınlarına dayanıklı
+Esnek ve kolay uygulanabilir
+Farklı yüzeylere yapışır
+Titreşimi ve gürültüyü azaltır`),
+      kullanimAlanlari: normalizeText(`Elektrik ve makine endüstrileri
+Klima ve havalandırma sistemleri
+Boru ve kablo bağlantıları
+Mobilya ve karoser imalatı
+Beyaz eşya ve elektronik cihazlar
+Otomotiv ve denizcilik uygulamaları`),
+      faydalar: normalizeText(`Kolay kurulum: Yapışkanlı ön ve arka yüz sayesinde aletsiz ve hızlı bir şekilde monte edilebilir.
+Temiz görünüm: Estetik açıdan hoş bir görünüm sunar ve yüzeye pürüzsüz bir şekilde yapışır.
+Uzun ömürlü: Dayanıklı polietilen malzemesi sayesinde uzun yıllar boyunca kullanılabilir.
+Çok yönlülük: Farklı boyutlarda ve şekillerde mevcuttur ve çeşitli uygulamalarda kullanılabilir.`),
+    },
+  },
+  PE: {
+    manual: {
+      aciklama:
+        'Polietilen Conta, Polietilen Malzemeden Üretilmiş, Tek Tarafı Yapışkanlı Bir Conta Bandıdır. Mükemmel Sızdırmazlık ve Dayanıklılık Sunarak, Çeşitli Uygulamalarda Kullanılmak İçin İdealdir.',
+      teknikOzellikler: normalizeText(`Malzeme: Polietilen
+Renk: Siyah
+Kalınlık: [Farklı kalınlık seçeneklerini belirtin]
+Genişlik: [Farklı genişlik seçeneklerini belirtin]
+Uzunluk: [Metre cinsinden belirtin]
+Yapışkan: Akrilik yapıştırıcı
+Sıcaklık Aralığı: -30°C ila +90°C`),
+      ozellikler: normalizeText(`Su, hava ve toz geçirmez
+Kimyasallara ve UV ışınlarına dayanıklı
+Esnek ve kolay uygulanabilir
+Farklı yüzeylere yapışır
+Titreşimi ve gürültüyü azaltır`),
+      kullanimAlanlari: normalizeText(`Elektrik ve makine endüstrileri
+Klima ve havalandırma sistemleri
+Boru ve kablo bağlantıları
+Mobilya ve karoser imalatı
+Beyaz eşya ve elektronik cihazlar
+Otomotiv ve denizcilik uygulamaları`),
+      faydalar: normalizeText(`Kolay kurulum: Yapışkanlı arka yüz sayesinde aletsiz ve hızlı bir şekilde monte edilebilir.
+Temiz görünüm: Estetik açıdan hoş bir görünüm sunar ve yüzeye pürüzsüz bir şekilde yapışır.
+Uzun ömürlü: Dayanıklı polietilen malzemesi sayesinde uzun yıllar boyunca kullanılabilir.
+Çok yönlülük: Farklı boyutlarda ve şekillerde mevcuttur ve çeşitli uygulamalarda kullanılabilir.`),
+    },
+  },
+}
+
 async function main() {
   console.log('Güneş Kilit scraper başlıyor...')
 
@@ -284,10 +399,12 @@ async function main() {
       try {
         if (idx > 0) await sleep(80)
         const d = await scrapeProductDetail(p.detailUrl)
-        return { ...p, ...d }
+        const manual = MANUAL_OVERRIDES_BY_CODE[p.code]?.manual || null
+        return manual ? { ...p, ...d, ...manual } : { ...p, ...d }
       } catch (err) {
         console.log(`  ! Detay hata: ${p.detailUrl} (${err.message})`)
-        return p
+        const manual = MANUAL_OVERRIDES_BY_CODE[p.code]?.manual || null
+        return manual ? { ...p, ...manual } : p
       }
     })
 

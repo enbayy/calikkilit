@@ -7756,6 +7756,11 @@ function ProductDetail() {
 
     const malzeme = String(gunesProduct.malzemeDetaylari || '').trim()
     const teknikCizimUrl = String(gunesProduct.teknikCizimUrl || '').trim()
+    const aciklama = String(gunesProduct.aciklama || '').trim()
+    const teknik = String(gunesProduct.teknikOzellikler || '').trim()
+    const ozellikler = String(gunesProduct.ozellikler || '').trim()
+    const kullanim = String(gunesProduct.kullanimAlanlari || '').trim()
+    const faydalar = String(gunesProduct.faydalar || '').trim()
 
     return (
       <div className="bg-slate-50 pb-16 text-slate-900">
@@ -7786,6 +7791,41 @@ function ProductDetail() {
 
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-2">
               <h1 className="text-2xl font-bold text-slate-900">{gunesProduct.name}</h1>
+
+              {aciklama ? (
+                <div className="mt-5 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-900">Açıklama</div>
+                  <div className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{aciklama}</div>
+                </div>
+              ) : null}
+
+              {teknik ? (
+                <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-900">Teknik Özellikler</div>
+                  <div className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{teknik}</div>
+                </div>
+              ) : null}
+
+              {ozellikler ? (
+                <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-900">Özellikler</div>
+                  <div className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{ozellikler}</div>
+                </div>
+              ) : null}
+
+              {kullanim ? (
+                <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-900">Kullanım Alanları</div>
+                  <div className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{kullanim}</div>
+                </div>
+              ) : null}
+
+              {faydalar ? (
+                <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-900">Faydaları</div>
+                  <div className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{faydalar}</div>
+                </div>
+              ) : null}
 
               {teknikCizimUrl ? (
                 <div className="mt-5 rounded-xl border border-slate-100 bg-white p-4">
