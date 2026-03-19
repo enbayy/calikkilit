@@ -34,6 +34,42 @@ const atosTailSlugs = new Set([
   'havalandirma-panjurlari',
 ])
 
+const atosTailSlugToState = {
+  // Atos -> KİLİTLER
+  'kollu-pano-kilitleri': { openGroup: 'KİLİTLER', activeAtosSection: 'Kollu Pano Kilitleri' },
+  'silindirli-mandalli-kilitler': { openGroup: 'KİLİTLER', activeAtosSection: 'Silindirli Mandallı Kilitler' },
+  'silindirli-kelebek-kilitler': { openGroup: 'KİLİTLER', activeAtosSection: 'Silindirli Kelebek Kilitler' },
+  'asma-kilit-hamilli-pano-kilitleri': { openGroup: 'KİLİTLER', activeAtosSection: 'Asma Kilit Hamilli Pano Kilitleri' },
+  'yayli-pano-kilidi': { openGroup: 'KİLİTLER', activeAtosSection: 'Yaylı Pano Kilidi' },
+  'pano-kapak-kilitleri': { openGroup: 'KİLİTLER', activeAtosSection: 'Pano Kapak Kilitleri' },
+  'trafo-kilitleri': { openGroup: 'KİLİTLER', activeAtosSection: 'Trafo Kilitleri' },
+  'kabin-kilitleri': { openGroup: 'KİLİTLER', activeAtosSection: 'Kabin Kilitleri' },
+  'yangin-dolabi-kilitleri': { openGroup: 'KİLİTLER', activeAtosSection: 'Yangın Dolabı Kilitleri' },
+  'diller': { openGroup: 'KİLİTLER', activeAtosSection: 'Diller' },
+
+  // Atos -> MENTEŞELER
+  'gecme-menteseler': { openGroup: 'MENTEŞELER', activeAtosSection: 'Geçme Menteşeler' },
+  'gizli-menteseler': { openGroup: 'MENTEŞELER', activeAtosSection: 'Gizli Menteşeler' },
+  'kenar-menteseler': { openGroup: 'MENTEŞELER', activeAtosSection: 'Kenar Menteşeler' },
+  'yaprak-menteseler': { openGroup: 'MENTEŞELER', activeAtosSection: 'Yaprak Menteşeler' },
+  'pano-kapak-mentesesi': { openGroup: 'MENTEŞELER', activeAtosSection: 'Pano Kapak Menteşesi' },
+  'torklu-menteseler': { openGroup: 'MENTEŞELER', activeAtosSection: 'Torklu Menteşeler' },
+
+  // Atos -> AKSESUARLAR VE KULPLAR
+  'anahtarlar': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Anahtarlar' },
+  'kapak-stoplama-makasi': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Kapak Stoplama Makası' },
+  'ispanyolet-aksesuarlari': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'İspanyolet Aksesuarları' },
+  'contalar': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Contalar' },
+  'gecme-fitiller': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Geçme Fitiller' },
+  'fircalar': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Fırçalar' },
+  'sayac-camlari': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Sayaç Camları' },
+  'proje-cepleri': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Proje Cepleri' },
+  'kapak-kulplari': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Kapak Kulpları' },
+  'kilit-tutamaklari': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Kilit tutamakları' },
+  'kose-takozlari': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Köşe Takozları' },
+  'havalandirma-panjurlari': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Havalandırma Panjurları' },
+}
+
 // Tüm section'ları import et
 const lockSections = [
   {
@@ -575,6 +611,17 @@ function SectionProducts() {
   const navigate = useNavigate()
   const location = useLocation()
 
+  const handleBack = () => {
+    // Kullanıcı aynı akışta geldiyse (örn. Atos ürün detayına girdi -> list'e geri dön)
+    // history üzerinden dönmek doğru state'i korur.
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      navigate(-1)
+      return
+    }
+    // Direkt URL ile açıldıysa history olmayabilir; güvenli fallback.
+    navigate('/urunler')
+  }
+
   // location.pathname'den tam path'i al (ceyrek-donuslu-kilitler/sikistirmali-kilitler gibi)
   const fullSectionSlug = location.pathname.replace('/urunler/', '')
 
@@ -589,6 +636,20 @@ function SectionProducts() {
 
   const [atosCatalog, setAtosCatalog] = useState(null)
   const [atosCatalogError, setAtosCatalogError] = useState(null)
+
+  // Atos sayfalarına doğrudan girilirse (refresh/back vb.) `Products` geri döndüğünde
+  // doğru markayı seçebilsin diye aynı değeri saklıyoruz.
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (!isAtosRouteCandidate) return
+    const state = tailSlug ? atosTailSlugToState[tailSlug] : null
+
+    sessionStorage.setItem('productsActiveBrand', 'Atos')
+    sessionStorage.setItem('productsOpenGroups', JSON.stringify(state?.openGroup ? [state.openGroup] : []))
+    sessionStorage.setItem('productsActiveGroup', '')
+    sessionStorage.setItem('productsActiveSection', '')
+    sessionStorage.setItem('productsActiveAtosSection', state?.activeAtosSection || '')
+  }, [isAtosRouteCandidate, tailSlug])
 
   useEffect(() => {
     if (!isAtosRouteCandidate || atosCatalog) return
@@ -1838,7 +1899,7 @@ function SectionProducts() {
         <div className="bg-slate-50 pb-16 text-slate-900">
           <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
             <button
-              onClick={() => navigate('/urunler')}
+              onClick={handleBack}
               className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
             >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1859,7 +1920,7 @@ function SectionProducts() {
         <div className="bg-slate-50 pb-16 text-slate-900">
           <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
             <button
-              onClick={() => navigate('/urunler')}
+              onClick={handleBack}
               className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
             >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1881,7 +1942,7 @@ function SectionProducts() {
       <div className="bg-slate-50 pb-16 text-slate-900">
         <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
           <button
-            onClick={() => navigate('/urunler')}
+            onClick={handleBack}
             className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
           >
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1957,7 +2018,7 @@ function SectionProducts() {
         <div className="bg-slate-50 pb-16 text-slate-900">
           <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
             <button
-              onClick={() => navigate('/urunler')}
+              onClick={handleBack}
               className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
             >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1977,7 +2038,7 @@ function SectionProducts() {
       <div className="bg-slate-50 pb-16 text-slate-900">
         <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
           <button
-            onClick={() => navigate('/urunler')}
+            onClick={handleBack}
             className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
           >
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1998,7 +2059,7 @@ function SectionProducts() {
       <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
         {/* Geri Dön Butonu */}
         <button
-          onClick={() => navigate('/urunler')}
+          onClick={handleBack}
           className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
         >
           <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

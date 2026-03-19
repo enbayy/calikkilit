@@ -7401,6 +7401,15 @@ function ProductDetail() {
   const { productName, productImage, productLogo, brand, productSlug } = location.state || {}
   const [isPdfFullscreen, setIsPdfFullscreen] = useState(false)
 
+  const handleBack = () => {
+    // Aynı akışta (liste -> detay) geldiyse history'den dönmek doğru state'i korur.
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      navigate(-1)
+      return
+    }
+    navigate('/urunler')
+  }
+
   // ESC tuşu ile tam ekran modunu kapat
   useEffect(() => {
     const handleEscape = (e) => {
@@ -7464,7 +7473,7 @@ function ProductDetail() {
         <div className="bg-slate-50 pb-16 text-slate-900">
           <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
             <button
-              onClick={() => navigate('/urunler')}
+              onClick={handleBack}
               className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
             >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7485,7 +7494,7 @@ function ProductDetail() {
         <div className="bg-slate-50 pb-16 text-slate-900">
           <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
             <button
-              onClick={() => navigate('/urunler')}
+              onClick={handleBack}
               className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
             >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -7506,7 +7515,7 @@ function ProductDetail() {
       <div className="bg-slate-50 pb-16 text-slate-900">
         <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
           <button
-            onClick={() => navigate('/urunler')}
+            onClick={handleBack}
             className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
           >
             <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

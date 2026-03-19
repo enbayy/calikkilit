@@ -484,15 +484,55 @@ export const catalogGroups = [
   { title: 'ELEKTRONİK', sections: electronicSections },
 ]
 
+const atosSectionToGroupTitle = {
+  // Atos -> KİLİTLER
+  'Kollu Pano Kilitleri': 'KİLİTLER',
+  'Silindirli Mandallı Kilitler': 'KİLİTLER',
+  'Silindirli Kelebek Kilitler': 'KİLİTLER',
+  'Asma Kilit Hamilli Pano Kilitleri': 'KİLİTLER',
+  'Yaylı Pano Kilidi': 'KİLİTLER',
+  'Pano Kapak Kilitleri': 'KİLİTLER',
+  'Trafo Kilitleri': 'KİLİTLER',
+  'Kabin Kilitleri': 'KİLİTLER',
+  'Yangın Dolabı Kilitleri': 'KİLİTLER',
+  'Diller': 'KİLİTLER',
+
+  // Atos -> MENTEŞELER
+  'Geçme Menteşeler': 'MENTEŞELER',
+  'Gizli Menteşeler': 'MENTEŞELER',
+  'Kenar Menteşeler': 'MENTEŞELER',
+  'Yaprak Menteşeler': 'MENTEŞELER',
+  'Pano Kapak Menteşesi': 'MENTEŞELER',
+  'Torklu Menteşeler': 'MENTEŞELER',
+
+  // Atos -> AKSESUARLAR VE KULPLAR
+  'Anahtarlar': 'AKSESUARLAR VE KULPLAR',
+  'Kapak Stoplama Makası': 'AKSESUARLAR VE KULPLAR',
+  'İspanyolet Aksesuarları': 'AKSESUARLAR VE KULPLAR',
+  'Contalar': 'AKSESUARLAR VE KULPLAR',
+  'Geçme Fitiller': 'AKSESUARLAR VE KULPLAR',
+  'Fırçalar': 'AKSESUARLAR VE KULPLAR',
+  'Sayaç Camları': 'AKSESUARLAR VE KULPLAR',
+  'Proje Cepleri': 'AKSESUARLAR VE KULPLAR',
+  'Kapak Kulpları': 'AKSESUARLAR VE KULPLAR',
+  'Kilit tutamakları': 'AKSESUARLAR VE KULPLAR',
+  'Köşe Takozları': 'AKSESUARLAR VE KULPLAR',
+  'Havalandırma Panjurları': 'AKSESUARLAR VE KULPLAR',
+}
+
 function Products() {
   const navigate = useNavigate()
   const location = useLocation()
   const [activeSection, setActiveSection] = useState(null)
+  const [activeAtosSection, setActiveAtosSection] = useState(null)
   const [activeGroup, setActiveGroup] = useState(null)
   const [openGroups, setOpenGroups] = useState([])
   const [activeBrand, setActiveBrand] = useState('Mesan')
   const [atosCatalog, setAtosCatalog] = useState(null)
   const [openBrands, setOpenBrands] = useState(['Mesan'])
+
+  const defaultAtosGroupTitle = 'KİLİTLER'
+  const defaultAtosSectionTitle = 'Kollu Pano Kilitleri'
   const brands = ['Mesan', 'Atos', 'Güneş', 'Oskar']
   // Marka butonlarında gösterilecek logolar (dosyalar `public/` altında olmalı)
   const brandLogoMap = {
@@ -617,13 +657,44 @@ function Products() {
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
     }
 
-    // İlk açılışta Mesan açık gelsin.
-    setActiveBrand('Mesan')
-    setOpenBrands(['Mesan'])
-    setOpenGroups([])
-    setActiveGroup(null)
-    setActiveSection(null)
+    // Back/hardware back ile buraya dönülünce `activeBrand` varsayılan olarak Mesan'a
+    // düşmesin diye son seçilen markayı (ve varsa location.state içeriğini) geri yüklüyoruz.
+    const storedBrand =
+      typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveBrand') : null
+    const initialBrand = location?.state?.initialBrand || storedBrand || 'Mesan'
+
+    setActiveBrand(initialBrand)
+    setOpenBrands([initialBrand])
+    // UI açık kalacak yerleri (özellikle Atos'ta hangi ana kategori açık kaldı) geri yükle.
+    const storedOpenGroupsJson = typeof window !== 'undefined' ? sessionStorage.getItem('productsOpenGroups') : null
+    const storedOpenGroups = storedOpenGroupsJson ? JSON.parse(storedOpenGroupsJson) : []
+
+    const storedActiveGroup = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveGroup') : null
+    const storedActiveSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveSection') : null
+    const storedActiveAtosSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveAtosSection') : null
+
+    const shouldDefaultAtos = initialBrand === 'Atos' && (!storedActiveAtosSection || String(storedActiveAtosSection) === '')
+    const defaultAtosOpenGroups = shouldDefaultAtos ? [defaultAtosGroupTitle] : Array.isArray(storedOpenGroups) ? storedOpenGroups : []
+    const defaultActiveAtosSection = shouldDefaultAtos ? defaultAtosSectionTitle : storedActiveAtosSection || null
+
+    setOpenGroups(defaultAtosOpenGroups)
+    setActiveGroup(initialBrand === 'Atos' ? null : storedActiveGroup || null)
+
+    // Atos'ta sağ panel, Mesan'ın hardcode ürünleriyle çakışmasın diye
+    // `activeSection` kullanılmıyor; Atos seçimi ayrı state olarak tutuluyor.
+    setActiveSection(initialBrand === 'Atos' ? null : storedActiveSection || null)
+    setActiveAtosSection(initialBrand === 'Atos' ? defaultActiveAtosSection : null)
   }, [location.state])
+
+  // Kullanıcı geri gelince aynı yerde devam edebilmek için seçim durumunu saklıyoruz.
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    sessionStorage.setItem('productsActiveBrand', activeBrand || '')
+    sessionStorage.setItem('productsOpenGroups', JSON.stringify(openGroups || []))
+    sessionStorage.setItem('productsActiveGroup', activeGroup || '')
+    sessionStorage.setItem('productsActiveSection', activeSection || '')
+    sessionStorage.setItem('productsActiveAtosSection', activeAtosSection || '')
+  }, [activeBrand, openGroups, activeGroup, activeSection, activeAtosSection])
 
   useEffect(() => {
     if (activeBrand !== 'Atos' || atosCatalog) return
@@ -704,12 +775,20 @@ function Products() {
       setActiveGroup(null)
       setOpenGroups([])
       setActiveSection(null)
+      setActiveAtosSection(null)
     } else {
       setActiveBrand(brand)
       setOpenBrands([brand])
       setActiveGroup(null)
       setActiveSection(null)
-      setOpenGroups([])
+      // Atos açıldığında varsayılan olarak `KİLİTLER` açık, `Kollu Pano Kilitleri` seçili gelsin.
+      if (brand === 'Atos') {
+        setOpenGroups([defaultAtosGroupTitle])
+        setActiveAtosSection(defaultAtosSectionTitle)
+      } else {
+        setOpenGroups([])
+        setActiveAtosSection(null)
+      }
     }
   }
 
@@ -760,6 +839,23 @@ function Products() {
 
       const mapped = atosSectionUrlMap[sectionTitle]
       if (mapped) {
+        const groupTitle = atosSectionToGroupTitle[sectionTitle] || null
+
+        // SectionProducts'a geçerken state kayboluyor; geri gelince aynı Atos bölümünde
+        // kalabilmek için seçim bilgisini saklıyoruz.
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('productsActiveBrand', 'Atos')
+          sessionStorage.setItem('productsOpenGroups', JSON.stringify(groupTitle ? [groupTitle] : []))
+          sessionStorage.setItem('productsActiveGroup', '')
+          sessionStorage.setItem('productsActiveSection', '')
+          sessionStorage.setItem('productsActiveAtosSection', sectionTitle)
+        }
+
+        setActiveAtosSection(sectionTitle)
+        setOpenGroups(groupTitle ? [groupTitle] : [])
+        setActiveGroup(null)
+        setActiveSection(null)
+
         // SectionProducts route'u `/urunler/:sectionSlug/*` kullandığı için farklı tail'ler
         // URL'leri ayırır; sectionSlug bazında içerik doğru şekilde seçilir.
         navigate(`/urunler/${mapped.baseSlug}/${mapped.tail}`)
@@ -1296,7 +1392,7 @@ function Products() {
                   <img
                     src={logoSrc}
                     alt={`${brand} logo`}
-                    className="h-5 w-5 object-contain"
+                    className="h-6 w-6 object-contain"
                   />
                 )}
                 <span>
@@ -1338,7 +1434,10 @@ function Products() {
                       {groupOpen ? (
                         <div className="ml-3 space-y-2 border-l border-slate-200 pl-3">
                           {group.sections.map((section) => {
-                            const isActive = activeSection === section.title
+                            const isActive =
+                              activeBrand === 'Atos'
+                                ? activeAtosSection === section.title
+                                : activeSection === section.title
                             // categoryImageMap'te tanımlı görseli kontrol et
                             const categoryImage = categoryImageMap[section.title]
                             // PASLANMAZ ÇELİK ÜRÜNLER altındaki AKSESUARLAR için özel kontrol
