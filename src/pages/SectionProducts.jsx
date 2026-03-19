@@ -70,6 +70,53 @@ const atosTailSlugToState = {
   'havalandirma-panjurlari': { openGroup: 'AKSESUARLAR VE KULPLAR', activeAtosSection: 'Havalandırma Panjurları' },
 }
 
+// Oskar route'ları: `/urunler/:baseSlug/:tail` şeklinde geliyor; `tail` sadece Oskar alt kategori slug'ı.
+// `tail` slug'larında `oskar-` prefix’i kullandığımız için Atos ile çakışmaması garanti edilir.
+const oskarTailSlugs = new Set([
+  'oskar-kollu-kilitler-ve-aksesuarlar',
+  'oskar-ispanyolet-sistemli-kollu-pano-kilitleri',
+  'oskar-kollu-pano-kilitleri',
+  'oskar-ispanyolet-cubuklar-ve-aksesuarlari',
+  'oskar-anahtarlar',
+  'oskar-kabin-kilitleri',
+  'oskar-ceyrek-donuslu-kiltler',
+  'oskar-cekmece-ve-dolap-kilitleri',
+  'oskar-cesitli-kilitler',
+  'oskar-kenar-menteseler',
+  'oskar-kose-menteseler',
+  'oskar-gizli-pano-menteseleri',
+  'oskar-yaprak-menteseler',
+  'oskar-pano-aksesuarlari',
+  'oskar-contalar',
+  'oskar-paslanmaz-celik-urunler',
+])
+
+const oskarTailSlugToState = {
+  // Oskar -> KİLİTLER
+  'oskar-kollu-kilitler-ve-aksesuarlar': { openGroup: 'KİLİTLER', activeOskarSection: 'Kollu Kilitler Ve Aksesuarlar' },
+  'oskar-ispanyolet-sistemli-kollu-pano-kilitleri': { openGroup: 'KİLİTLER', activeOskarSection: 'İspanyolet Sistemli Kollu Pano Kilitleri' },
+  'oskar-kollu-pano-kilitleri': { openGroup: 'KİLİTLER', activeOskarSection: 'Kollu Pano Kilitleri' },
+  'oskar-ispanyolet-cubuklar-ve-aksesuarlari': { openGroup: 'KİLİTLER', activeOskarSection: 'ispanyolet Çubuklar Ve Aksesuarları' },
+  'oskar-anahtarlar': { openGroup: 'KİLİTLER', activeOskarSection: 'Anahtarlar' },
+  'oskar-kabin-kilitleri': { openGroup: 'KİLİTLER', activeOskarSection: 'Kabin Kilitleri' },
+  'oskar-ceyrek-donuslu-kiltler': { openGroup: 'KİLİTLER', activeOskarSection: 'Çeyrek Dönüşlü Kitler' },
+  'oskar-cekmece-ve-dolap-kilitleri': { openGroup: 'KİLİTLER', activeOskarSection: 'Çekmece ve Dolap Kilitleri' },
+  'oskar-cesitli-kilitler': { openGroup: 'KİLİTLER', activeOskarSection: 'Çeşitli Kilitler' },
+
+  // Oskar -> MENTEŞELER
+  'oskar-kenar-menteseler': { openGroup: 'MENTEŞELER', activeOskarSection: 'Kenar Menteşeler' },
+  'oskar-kose-menteseler': { openGroup: 'MENTEŞELER', activeOskarSection: 'Köşe Menteşeler' },
+  'oskar-gizli-pano-menteseleri': { openGroup: 'MENTEŞELER', activeOskarSection: 'Gizli Pano Menteşeleri' },
+  'oskar-yaprak-menteseler': { openGroup: 'MENTEŞELER', activeOskarSection: 'Yaprak Menteşeler' },
+
+  // Oskar -> AKSESUARLAR
+  'oskar-pano-aksesuarlari': { openGroup: 'AKSESUARLAR', activeOskarSection: 'Pano Aksesuarları' },
+  'oskar-contalar': { openGroup: 'AKSESUARLAR', activeOskarSection: 'Contalar' },
+
+  // Oskar -> PASLANMAZ ÇELİK ÜRÜNLER
+  'oskar-paslanmaz-celik-urunler': { openGroup: 'PASLANMAZ ÇELİK ÜRÜNLER', activeOskarSection: 'PASLANMAZ ÇELİK ÜRÜNLER' },
+}
+
 // Tüm section'ları import et
 const lockSections = [
   {
@@ -623,6 +670,7 @@ function SectionProducts() {
     const parts = fullSectionSlugForBack.split('/').filter(Boolean)
     const backTailSlug = parts.length === 2 ? parts[1] : null
     const isAtos = !!backTailSlug && atosTailSlugs.has(backTailSlug)
+    const isOskar = !!backTailSlug && oskarTailSlugs.has(backTailSlug)
 
     if (isAtos) {
       const state = backTailSlug ? atosTailSlugToState[backTailSlug] : null
@@ -634,6 +682,20 @@ function SectionProducts() {
       sessionStorage.setItem('productsActiveAtosSection', state?.activeAtosSection || '')
 
       navigate('/urunler', { state: { initialBrand: 'Atos' } })
+      return
+    }
+
+    if (isOskar) {
+      const state = backTailSlug ? oskarTailSlugToState[backTailSlug] : null
+
+      sessionStorage.setItem('productsActiveBrand', 'Oskar')
+      sessionStorage.setItem('productsOpenGroups', JSON.stringify(state?.openGroup ? [state.openGroup] : []))
+      sessionStorage.setItem('productsActiveGroup', '')
+      sessionStorage.setItem('productsActiveSection', '')
+      sessionStorage.setItem('productsActiveAtosSection', '')
+      sessionStorage.setItem('productsActiveOskarSection', state?.activeOskarSection || '')
+
+      navigate('/urunler', { state: { initialBrand: 'Oskar' } })
       return
     }
 
@@ -659,8 +721,15 @@ function SectionProducts() {
     return !!tailSlug && atosTailSlugs.has(tailSlug)
   }, [tailSlug])
 
+  const isOskarRouteCandidate = useMemo(() => {
+    return !!tailSlug && oskarTailSlugs.has(tailSlug)
+  }, [tailSlug])
+
   const [atosCatalog, setAtosCatalog] = useState(null)
   const [atosCatalogError, setAtosCatalogError] = useState(null)
+
+  const [oskarCatalog, setOskarCatalog] = useState(null)
+  const [oskarCatalogError, setOskarCatalogError] = useState(null)
 
   // Atos sayfalarına doğrudan girilirse (refresh/back vb.) `Products` geri döndüğünde
   // doğru markayı seçebilsin diye aynı değeri saklıyoruz.
@@ -675,6 +744,21 @@ function SectionProducts() {
     sessionStorage.setItem('productsActiveSection', '')
     sessionStorage.setItem('productsActiveAtosSection', state?.activeAtosSection || '')
   }, [isAtosRouteCandidate, tailSlug])
+
+  // Oskar sayfalarına doğrudan girilirse (refresh/back vb.) `Products` geri döndüğünde
+  // doğru markayı seçebilsin diye aynı değeri saklıyoruz.
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (!isOskarRouteCandidate) return
+    const state = tailSlug ? oskarTailSlugToState[tailSlug] : null
+
+    sessionStorage.setItem('productsActiveBrand', 'Oskar')
+    sessionStorage.setItem('productsOpenGroups', JSON.stringify(state?.openGroup ? [state.openGroup] : []))
+    sessionStorage.setItem('productsActiveGroup', '')
+    sessionStorage.setItem('productsActiveSection', '')
+    sessionStorage.setItem('productsActiveAtosSection', '')
+    sessionStorage.setItem('productsActiveOskarSection', state?.activeOskarSection || '')
+  }, [isOskarRouteCandidate, tailSlug])
 
   useEffect(() => {
     if (!isAtosRouteCandidate || atosCatalog) return
@@ -697,6 +781,27 @@ function SectionProducts() {
     }
   }, [isAtosRouteCandidate, atosCatalog])
 
+  useEffect(() => {
+    if (!isOskarRouteCandidate || oskarCatalog) return
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        setOskarCatalogError(null)
+        const res = await fetch('/oskar-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+        if (!cancelled) setOskarCatalog(json)
+      } catch (e) {
+        if (!cancelled) setOskarCatalogError(e?.message || String(e))
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [isOskarRouteCandidate, oskarCatalog])
+
   const atosSubcategory = useMemo(() => {
     if (!atosCatalog || !tailSlug) return null
     for (const main of atosCatalog) {
@@ -707,11 +812,22 @@ function SectionProducts() {
     return null
   }, [atosCatalog, tailSlug])
 
+  const oskarSubcategory = useMemo(() => {
+    if (!oskarCatalog || !tailSlug) return null
+    for (const main of oskarCatalog) {
+      for (const sub of main?.subcategories || []) {
+        if (sub?.slug === tailSlug) return sub
+      }
+    }
+    return null
+  }, [oskarCatalog, tailSlug])
+
   // Slug'dan section title'ı bul
   const sectionTitle = useMemo(() => {
     // Atos'ta header ve ürün kartları doğrudan subcategory adını kullanmalı.
     // Veri gelene kadar `sectionTitle` null döndürerek Mesan hardcode listelerini bastırıyoruz.
     if (isAtosRouteCandidate) return atosSubcategory?.name ?? null
+    if (isOskarRouteCandidate) return oskarSubcategory?.name ?? null
 
     const slugToTitle = {
       'kollu-kilitler': 'KOLLU KİLİTLER',
@@ -755,7 +871,7 @@ function SectionProducts() {
       'paslanmaz-celik-urunler/aksesuarlar': 'PASLANMAZ ÇELİK AKSESUARLAR',
     }
     return slugToTitle[fullSectionSlug] || slugToTitle[sectionSlug] || null
-  }, [fullSectionSlug, sectionSlug, isAtosRouteCandidate, atosSubcategory])
+  }, [fullSectionSlug, sectionSlug, isAtosRouteCandidate, atosSubcategory, isOskarRouteCandidate, oskarSubcategory])
 
   // Section'ın ürünlerini bul
   const currentItems = useMemo(() => {
@@ -2003,6 +2119,207 @@ function SectionProducts() {
                     to={`/urun-detay/${p.slug}`}
                     state={{
                       brand: 'Atos',
+                      productSlug: p.slug,
+                      productName: p.name,
+                      detailUrl: p.detailUrl,
+                    }}
+                    className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-[#166534]/50 hover:shadow-xl"
+                  >
+                    <div className="relative flex h-80 items-center justify-center overflow-hidden bg-white p-6">
+                      <img
+                        src={img}
+                        alt={p.name}
+                        className="h-full w-full object-contain transition-all duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                    <div className="flex flex-1 flex-col justify-between border-t border-slate-100 bg-white p-5">
+                      <div>
+                        <h3 className="line-clamp-2 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#166534]">
+                          {p.name}
+                        </h3>
+                      </div>
+                      <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
+                        Detayları Görüntüle
+                        <span className="text-base">→</span>
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          )}
+        </section>
+      </div>
+    )
+  }
+
+  const isOskarLoading = isOskarRouteCandidate && !oskarCatalog && !oskarCatalogError
+
+  // Oskar sayfalarında (kullandığımız `/urunler/:baseSlug/:tail` rotası) direkt Oskar ürün kartlarını bağlayalım.
+  if (isOskarRouteCandidate) {
+    if (isOskarLoading) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Oskar verileri yükleniyor...</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    if (!oskarSubcategory) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Oskar alt kategori bulunamadı.</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    const oskarProducts = oskarSubcategory.products || []
+
+    // Container: Kollu Kilitler Ve Aksesuarlar -> alt başlık kartlarını göster.
+    if (tailSlug === 'oskar-kollu-kilitler-ve-aksesuarlar') {
+      const children = [
+        { title: 'İspanyolet Sistemli Kollu Pano Kilitleri', tail: 'oskar-ispanyolet-sistemli-kollu-pano-kilitleri' },
+        { title: 'Kollu Pano Kilitleri', tail: 'oskar-kollu-pano-kilitleri' },
+        { title: 'ispanyolet Çubuklar Ve Aksesuarları', tail: 'oskar-ispanyolet-cubuklar-ve-aksesuarlari' },
+        { title: 'Anahtarlar', tail: 'oskar-anahtarlar' },
+      ]
+
+      const imageForChildTail = (childTail) => {
+        const sub = oskarCatalog
+          ? (oskarCatalog || [])
+              .flatMap((m) => m?.subcategories || [])
+              .find((s) => s?.slug === childTail)
+          : null
+        const first = (sub?.products || [])[0]
+        return (
+          first?.image ||
+          '/kilitler.png'
+        )
+      }
+
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+
+            <div className="mb-8 flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-center gap-4">
+                <div className="flex h-20 w-20 items-center justify-center rounded-lg border border-slate-200 bg-white">
+                  <span className="text-sm font-semibold text-slate-600">Oskar</span>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-[0.12em] text-[#166534]">Kategori</p>
+                  <h2 className="text-xl font-semibold">Kollu Kilitler Ve Aksesuarlar</h2>
+                </div>
+              </div>
+              <span className="text-sm text-slate-500">{children.length} alt başlık</span>
+            </div>
+
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {children.map((c) => (
+                <Link
+                  key={c.tail}
+                  to={`/urunler/oskar/${c.tail}`}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-2 hover:border-[#166534]/40 hover:shadow-xl"
+                >
+                  <div className="mb-6 flex items-center justify-center">
+                    <div className="relative flex h-64 w-full items-center justify-center overflow-hidden rounded-xl">
+                      <img
+                        src={imageForChildTail(c.tail)}
+                        alt={c.title}
+                        className="h-full w-full object-contain transition-all duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col">
+                    <h3 className="mb-2 text-xl font-bold text-slate-900">{c.title}</h3>
+                    <div className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
+                      Detayları Görüntüle
+                      <span className="text-base">→</span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        </div>
+      )
+    }
+
+    return (
+      <div className="bg-slate-50 pb-16 text-slate-900">
+        <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
+          <button
+            onClick={handleBack}
+            className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Geri Dön
+          </button>
+
+          <div className="mb-8 flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-20 w-20 items-center justify-center rounded-lg border border-slate-200 bg-white">
+                <span className="text-sm font-semibold text-slate-600">Oskar</span>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.12em] text-[#166534]">Kategori</p>
+                <h2 className="text-xl font-semibold">{oskarSubcategory.name}</h2>
+              </div>
+            </div>
+            <span className="text-sm text-slate-500">{oskarProducts.length} ürün</span>
+          </div>
+
+          {oskarProducts.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Bu kategori için ürün bulunamadı.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {oskarProducts.map((p) => {
+                const img = p.image || `https://via.placeholder.com/320x200.png?text=${encodeURIComponent(p.name)}`
+                return (
+                  <Link
+                    key={p.slug}
+                    to={`/urun-detay/${p.slug}`}
+                    state={{
+                      brand: 'Oskar',
                       productSlug: p.slug,
                       productName: p.name,
                       detailUrl: p.detailUrl,

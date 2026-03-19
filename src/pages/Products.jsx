@@ -525,14 +525,18 @@ function Products() {
   const location = useLocation()
   const [activeSection, setActiveSection] = useState(null)
   const [activeAtosSection, setActiveAtosSection] = useState(null)
+  const [activeOskarSection, setActiveOskarSection] = useState(null)
   const [activeGroup, setActiveGroup] = useState(null)
   const [openGroups, setOpenGroups] = useState([])
   const [activeBrand, setActiveBrand] = useState('Mesan')
   const [atosCatalog, setAtosCatalog] = useState(null)
+  const [oskarCatalog, setOskarCatalog] = useState(null)
   const [openBrands, setOpenBrands] = useState(['Mesan'])
 
   const defaultAtosGroupTitle = 'KİLİTLER'
   const defaultAtosSectionTitle = 'Kollu Pano Kilitleri'
+  const defaultOskarGroupTitle = 'KİLİTLER'
+  const defaultOskarSectionTitle = 'Kollu Kilitler Ve Aksesuarlar'
   const brands = ['Mesan', 'Atos', 'Güneş', 'Oskar']
   // Marka butonlarında gösterilecek logolar (dosyalar `public/` altında olmalı)
   const brandLogoMap = {
@@ -615,6 +619,75 @@ function Products() {
         })
     }
 
+    // Oskar: kullanıcı isteğindeki 4 ana başlığı aynı şekilde gösterelim.
+    if (activeBrand === 'Oskar') {
+      if (!oskarCatalog) {
+        const oskarKilitlerSections = [
+          { title: 'Kollu Kilitler Ve Aksesuarlar', items: [] },
+          { title: 'Kabin Kilitleri', items: [] },
+          { title: 'Çeyrek Dönüşlü Kitler', items: [] },
+          { title: 'Çekmece ve Dolap Kilitleri', items: [] },
+          { title: 'Çeşitli Kilitler', items: [] },
+        ]
+        const oskarMenteselerSections = [
+          { title: 'Kenar Menteşeler', items: [] },
+          { title: 'Köşe Menteşeler', items: [] },
+          { title: 'Gizli Pano Menteşeleri', items: [] },
+          { title: 'Yaprak Menteşeler', items: [] },
+        ]
+        const oskarAksesuarlarSections = [
+          { title: 'Pano Aksesuarları', items: [] },
+          { title: 'Contalar', items: [] },
+        ]
+        const oskarPaslanmazSections = [{ title: 'PASLANMAZ ÇELİK ÜRÜNLER', items: [] }]
+
+        return [
+          { title: 'KİLİTLER', displayTitle: 'Kilitler', sections: oskarKilitlerSections },
+          { title: 'MENTEŞELER', displayTitle: 'Menteşeler', sections: oskarMenteselerSections },
+          { title: 'AKSESUARLAR', displayTitle: 'Aksesuarlar', sections: oskarAksesuarlarSections },
+          {
+            title: 'PASLANMAZ ÇELİK ÜRÜNLER',
+            displayTitle: 'Paslanmaz Çelik Ürünler',
+            sections: oskarPaslanmazSections,
+          },
+        ]
+      }
+
+      const getMain = (name) => (oskarCatalog || []).find((m) => m?.name === name)
+      const mkSections = (mainName) => {
+        const main = getMain(mainName)
+        return (
+          (main?.subcategories || []).map((sub) => ({
+            title: sub.name,
+            items: (sub?.products || []).map((p) => p.detailUrl || p.slug || p.name).filter(Boolean),
+          })) || []
+        )
+      }
+
+      return [
+        {
+          title: 'KİLİTLER',
+          displayTitle: 'Kilitler',
+          // Container (Kollu Kilitler...) kalsın; onun child’ları SectionProducts içinde gösterilecek.
+          sections: mkSections('KİLİTLER').filter(
+            (s) =>
+              s.title === 'Kollu Kilitler Ve Aksesuarlar' ||
+              s.title === 'Kabin Kilitleri' ||
+              s.title === 'Çeyrek Dönüşlü Kitler' ||
+              s.title === 'Çekmece ve Dolap Kilitleri' ||
+              s.title === 'Çeşitli Kilitler'
+          ),
+        },
+        { title: 'MENTEŞELER', displayTitle: 'Menteşeler', sections: mkSections('MENTEŞELER') },
+        { title: 'AKSESUARLAR', displayTitle: 'Aksesuarlar', sections: mkSections('AKSESUARLAR') },
+        {
+          title: 'PASLANMAZ ÇELİK ÜRÜNLER',
+          displayTitle: 'Paslanmaz Çelik Ürünler',
+          sections: mkSections('PASLANMAZ ÇELİK ÜRÜNLER'),
+        },
+      ]
+    }
+
     // Mesan: mevcut tüm kategori yapısı
     if (activeBrand === 'Mesan') {
       return catalogGroups.map((g) => ({ ...g, displayTitle: g.title }))
@@ -622,7 +695,7 @@ function Products() {
 
     // Diğer markalar şimdilik boş
     return []
-  }, [activeBrand, atosCatalog])
+  }, [activeBrand, atosCatalog, oskarCatalog])
 
   // Kategori resim mapping
   const categoryImageMap = {
@@ -672,18 +745,38 @@ function Products() {
     const storedActiveGroup = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveGroup') : null
     const storedActiveSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveSection') : null
     const storedActiveAtosSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveAtosSection') : null
+    const storedActiveOskarSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveOskarSection') : null
 
     const shouldDefaultAtos = initialBrand === 'Atos' && (!storedActiveAtosSection || String(storedActiveAtosSection) === '')
     const defaultAtosOpenGroups = shouldDefaultAtos ? [defaultAtosGroupTitle] : Array.isArray(storedOpenGroups) ? storedOpenGroups : []
     const defaultActiveAtosSection = shouldDefaultAtos ? defaultAtosSectionTitle : storedActiveAtosSection || null
 
-    setOpenGroups(defaultAtosOpenGroups)
-    setActiveGroup(initialBrand === 'Atos' ? null : storedActiveGroup || null)
+    const shouldDefaultOskar = initialBrand === 'Oskar' && (!storedActiveOskarSection || String(storedActiveOskarSection) === '')
+    const defaultOskarOpenGroups = shouldDefaultOskar ? [defaultOskarGroupTitle] : Array.isArray(storedOpenGroups) ? storedOpenGroups : []
+    // Oskar'da ana başlıklar sadece aç/kapa; varsayılan alt kategori seçili gelmesin.
+    const defaultActiveOskarSection = shouldDefaultOskar ? null : storedActiveOskarSection || null
+
+    const finalOpenGroups =
+      initialBrand === 'Atos'
+        ? defaultAtosOpenGroups
+        : initialBrand === 'Oskar'
+          ? defaultOskarOpenGroups
+          : defaultAtosOpenGroups
+
+    setOpenGroups(finalOpenGroups)
+    setActiveGroup(
+      initialBrand === 'Atos'
+        ? null
+        : initialBrand === 'Oskar'
+          ? null
+          : storedActiveGroup || null
+    )
 
     // Atos'ta sağ panel, Mesan'ın hardcode ürünleriyle çakışmasın diye
     // `activeSection` kullanılmıyor; Atos seçimi ayrı state olarak tutuluyor.
-    setActiveSection(initialBrand === 'Atos' ? null : storedActiveSection || null)
+    setActiveSection(initialBrand === 'Atos' || initialBrand === 'Oskar' ? null : storedActiveSection || null)
     setActiveAtosSection(initialBrand === 'Atos' ? defaultActiveAtosSection : null)
+    setActiveOskarSection(initialBrand === 'Oskar' ? defaultActiveOskarSection : null)
   }, [location.state])
 
   // Kullanıcı geri gelince aynı yerde devam edebilmek için seçim durumunu saklıyoruz.
@@ -694,7 +787,8 @@ function Products() {
     sessionStorage.setItem('productsActiveGroup', activeGroup || '')
     sessionStorage.setItem('productsActiveSection', activeSection || '')
     sessionStorage.setItem('productsActiveAtosSection', activeAtosSection || '')
-  }, [activeBrand, openGroups, activeGroup, activeSection, activeAtosSection])
+    sessionStorage.setItem('productsActiveOskarSection', activeOskarSection || '')
+  }, [activeBrand, openGroups, activeGroup, activeSection, activeAtosSection, activeOskarSection])
 
   useEffect(() => {
     if (activeBrand !== 'Atos' || atosCatalog) return
@@ -716,6 +810,26 @@ function Products() {
       cancelled = true
     }
   }, [activeBrand, atosCatalog])
+
+  useEffect(() => {
+    if (activeBrand !== 'Oskar' || oskarCatalog) return
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        const res = await fetch('/oskar-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+        if (!cancelled) setOskarCatalog(json)
+      } catch {
+        if (!cancelled) setOskarCatalog(null)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [activeBrand, oskarCatalog])
 
   const currentItems = useMemo(() => {
     if (!activeSection) return []
@@ -755,6 +869,16 @@ function Products() {
       return
     }
 
+    // Oskar: sol menüdeki ana başlıklar (KİLİTLER/MENTEŞELER/AKSESUARLAR/PASLANMAZ ÇELİK ÜRÜNLER)
+    // sadece aç/kapa yapmalı; sağ içerik alanı ve mevcut seçim değişmemeli.
+    if (
+      activeBrand === 'Oskar' &&
+      (title === 'KİLİTLER' || title === 'MENTEŞELER' || title === 'AKSESUARLAR' || title === 'PASLANMAZ ÇELİK ÜRÜNLER')
+    ) {
+      setOpenGroups((prev) => (prev.includes(title) ? prev.filter((t) => t !== title) : [...prev, title]))
+      return
+    }
+
     if (activeGroup === title) {
       // Aynı gruba tekrar tıklanırsa kapat
       setActiveGroup(null)
@@ -776,6 +900,7 @@ function Products() {
       setOpenGroups([])
       setActiveSection(null)
       setActiveAtosSection(null)
+      setActiveOskarSection(null)
     } else {
       setActiveBrand(brand)
       setOpenBrands([brand])
@@ -785,9 +910,17 @@ function Products() {
       if (brand === 'Atos') {
         setOpenGroups([defaultAtosGroupTitle])
         setActiveAtosSection(defaultAtosSectionTitle)
+        setActiveOskarSection(null)
+      } else if (brand === 'Oskar') {
+        setOpenGroups([defaultOskarGroupTitle])
+        // Oskar'da ana başlık tıklamaları sadece aç/kapa; sağ tarafta alt-kategori kartı çıkmasın.
+        setActiveGroup(null)
+        setActiveOskarSection(null)
+        setActiveAtosSection(null)
       } else {
         setOpenGroups([])
         setActiveAtosSection(null)
+        setActiveOskarSection(null)
       }
     }
   }
@@ -801,6 +934,72 @@ function Products() {
     }
 
     // Atos özel: kullanıcıdan gelen başlıklar -> farklı /urunler URL'leri.
+    if (activeBrand === 'Oskar') {
+      const oskarSectionUrlMap = {
+        'Kollu Kilitler Ve Aksesuarlar': { baseSlug: 'oskar', tail: 'oskar-kollu-kilitler-ve-aksesuarlar' },
+        'İspanyolet Sistemli Kollu Pano Kilitleri': { baseSlug: 'oskar', tail: 'oskar-ispanyolet-sistemli-kollu-pano-kilitleri' },
+        'Kollu Pano Kilitleri': { baseSlug: 'oskar', tail: 'oskar-kollu-pano-kilitleri' },
+        'ispanyolet Çubuklar Ve Aksesuarları': { baseSlug: 'oskar', tail: 'oskar-ispanyolet-cubuklar-ve-aksesuarlari' },
+        'Anahtarlar': { baseSlug: 'oskar', tail: 'oskar-anahtarlar' },
+        'Kabin Kilitleri': { baseSlug: 'oskar', tail: 'oskar-kabin-kilitleri' },
+        'Çeyrek Dönüşlü Kitler': { baseSlug: 'oskar', tail: 'oskar-ceyrek-donuslu-kiltler' },
+        'Çekmece ve Dolap Kilitleri': { baseSlug: 'oskar', tail: 'oskar-cekmece-ve-dolap-kilitleri' },
+        'Çeşitli Kilitler': { baseSlug: 'oskar', tail: 'oskar-cesitli-kilitler' },
+
+        'Kenar Menteşeler': { baseSlug: 'oskar', tail: 'oskar-kenar-menteseler' },
+        'Köşe Menteşeler': { baseSlug: 'oskar', tail: 'oskar-kose-menteseler' },
+        'Gizli Pano Menteşeleri': { baseSlug: 'oskar', tail: 'oskar-gizli-pano-menteseleri' },
+        'Yaprak Menteşeler': { baseSlug: 'oskar', tail: 'oskar-yaprak-menteseler' },
+
+        'Pano Aksesuarları': { baseSlug: 'oskar', tail: 'oskar-pano-aksesuarlari' },
+        'Contalar': { baseSlug: 'oskar', tail: 'oskar-contalar' },
+
+        'PASLANMAZ ÇELİK ÜRÜNLER': { baseSlug: 'oskar', tail: 'oskar-paslanmaz-celik-urunler' },
+      }
+
+      const oskarSectionToGroupTitle = {
+        'Kollu Kilitler Ve Aksesuarlar': 'KİLİTLER',
+        'İspanyolet Sistemli Kollu Pano Kilitleri': 'KİLİTLER',
+        'Kollu Pano Kilitleri': 'KİLİTLER',
+        'ispanyolet Çubuklar Ve Aksesuarları': 'KİLİTLER',
+        'Anahtarlar': 'KİLİTLER',
+        'Kabin Kilitleri': 'KİLİTLER',
+        'Çeyrek Dönüşlü Kitler': 'KİLİTLER',
+        'Çekmece ve Dolap Kilitleri': 'KİLİTLER',
+        'Çeşitli Kilitler': 'KİLİTLER',
+
+        'Kenar Menteşeler': 'MENTEŞELER',
+        'Köşe Menteşeler': 'MENTEŞELER',
+        'Gizli Pano Menteşeleri': 'MENTEŞELER',
+        'Yaprak Menteşeler': 'MENTEŞELER',
+
+        'Pano Aksesuarları': 'AKSESUARLAR',
+        'Contalar': 'AKSESUARLAR',
+
+        'PASLANMAZ ÇELİK ÜRÜNLER': 'PASLANMAZ ÇELİK ÜRÜNLER',
+      }
+
+      const mapped = oskarSectionUrlMap[sectionTitle]
+      if (mapped) {
+        const groupTitle = oskarSectionToGroupTitle[sectionTitle] || null
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('productsActiveBrand', 'Oskar')
+          sessionStorage.setItem('productsOpenGroups', JSON.stringify(groupTitle ? [groupTitle] : []))
+          sessionStorage.setItem('productsActiveGroup', '')
+          sessionStorage.setItem('productsActiveSection', '')
+          sessionStorage.setItem('productsActiveOskarSection', sectionTitle)
+        }
+
+        setActiveOskarSection(sectionTitle)
+        setOpenGroups(groupTitle ? [groupTitle] : [])
+        setActiveGroup(null)
+        setActiveSection(null)
+        setActiveAtosSection(null)
+        navigate(`/urunler/${mapped.baseSlug}/${mapped.tail}`)
+        return
+      }
+    }
+
     if (activeBrand === 'Atos') {
       const atosSectionUrlMap = {
         'Kollu Pano Kilitleri': { baseSlug: 'ispanyolet-sistemli-kilitler', tail: 'kollu-pano-kilitleri' },
@@ -1437,7 +1636,9 @@ function Products() {
                             const isActive =
                               activeBrand === 'Atos'
                                 ? activeAtosSection === section.title
-                                : activeSection === section.title
+                                : activeBrand === 'Oskar'
+                                  ? activeOskarSection === section.title
+                                  : activeSection === section.title
                             // categoryImageMap'te tanımlı görseli kontrol et
                             const categoryImage = categoryImageMap[section.title]
                             // PASLANMAZ ÇELİK ÜRÜNLER altındaki AKSESUARLAR için özel kontrol
@@ -1512,7 +1713,7 @@ function Products() {
             <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-sm text-slate-500 shadow-sm">
               {!activeBrand
                 ? 'Bir marka seçin.'
-                : activeBrand === 'Mesan' || activeBrand === 'Atos'
+                : activeBrand === 'Mesan' || activeBrand === 'Atos' || activeBrand === 'Oskar'
                   ? 'Bir kategori seçin, ürünleri listeleyelim.'
                   : `${activeBrand} için ürünler yakında.`}
             </div>
