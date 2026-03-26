@@ -94,7 +94,7 @@ const pageContent = {
     sections: [
       {
         heading: 'Merkez',
-        body: 'Fevziçakmak, Medcezir Cd. no:8/B D:06, 42050 Karatay/Konya',
+        body: 'Fevzi Çakmak Mah. Ahmet Petekçi cad. No16/AP, KARATAY / KONYA',
         items: ['Telefon', 'E-posta', 'Çalışma saatleri'],
       },
     ],
@@ -311,7 +311,7 @@ function App() {
               </div>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://instagram.com/konyakilit"
+                  href="https://www.instagram.com/calikendkilit"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-white/20 text-white transition hover:bg-white/30 hover:text-white"
@@ -739,7 +739,7 @@ function App() {
                     <span className="font-medium">0506 092 03 42</span>
                   </a>
                   <a 
-                    href="mailto:info@konyakilit.com" 
+                    href="mailto:Murat@calikendkilit.com" 
                     className="flex items-center gap-3 rounded-xl bg-white/5 px-4 py-3 text-sm text-white/90 transition-all hover:bg-white/10 hover:text-white"
                   >
                     <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#166534]/20">
@@ -747,7 +747,7 @@ function App() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </div>
-                    <span className="font-medium">info@konyakilit.com</span>
+                    <span className="font-medium">Murat@calikendkilit.com</span>
                   </a>
                 </div>
               </div>
@@ -756,7 +756,7 @@ function App() {
               <div className="border-t border-white/10 px-4 py-4">
                 <div className="flex items-center justify-center gap-3">
                   <a
-                    href="https://instagram.com/konyakilit"
+                    href="https://www.instagram.com/calikendkilit"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-white/20 bg-white/5 text-white transition-all hover:border-[#166534] hover:bg-[#166534]/20 hover:scale-110"
@@ -838,7 +838,7 @@ function App() {
                 </p>
                 <div className="flex gap-3 justify-center md:justify-start">
                   <a
-                    href="https://instagram.com/konyakilit"
+                    href="https://www.instagram.com/calikendkilit"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white transition hover:bg-white/20 hover:scale-110"
@@ -963,8 +963,8 @@ function App() {
                   <li className="flex items-start gap-3 justify-center md:justify-start">
                     <span className="mt-0.5 text-white">📍</span>
                     <span>
-                      Fevziçakmak, Medcezir Cd. no:8/B D:06<br />
-                      42050 Karatay/Konya
+                      Fevzi Çakmak Mah. Ahmet Petekçi cad. No16/AP<br />
+                      KARATAY / KONYA
                     </span>
                   </li>
                   <li className="flex flex-col items-start gap-3 justify-center md:justify-start">
@@ -978,10 +978,10 @@ function App() {
                   <li className="flex items-center gap-3 justify-center md:justify-start">
                     <span className="text-white">✉️</span>
                     <a
-                      href="mailto:info@konyakilit.com"
+                      href="mailto:Murat@calikendkilit.com"
                       className="transition hover:text-white hover:underline"
                     >
-                      info@konyakilit.com
+                      Murat@calikendkilit.com
                     </a>
                   </li>
                   <li className="flex items-start gap-3 pt-1 justify-center md:justify-start">

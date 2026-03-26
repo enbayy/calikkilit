@@ -14,7 +14,7 @@ function CatalogSection() {
           </p>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-[1.2fr_0.8fr] md:items-center">
             <select className="h-12 rounded-lg border border-slate-200 bg-white px-4 text-sm font-semibold text-slate-700 shadow-sm focus:border-[#166534] focus:outline-none focus:ring-2 focus:ring-[#166534]/20">
-              <option>Konya Kilit Ürün Kataloğu</option>
+              <option>Çalık Endüstriyel Kilit Ürün Kataloğu</option>
               <option>Kilit Sistemleri</option>
               <option>Menteşe ve Aksesuarlar</option>
             </select>

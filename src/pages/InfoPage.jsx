@@ -4,7 +4,7 @@ function InfoPage({ title, subtitle, sections = [], hideHeader = false }) {
       {!hideHeader ? (
         <section className="bg-slate-50">
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-1.5 py-6 sm:px-2 sm:py-8 lg:px-3">
-            <p className="text-xs uppercase tracking-[0.14em] text-slate-600">Konya Kilit</p>
+            <p className="text-xs uppercase tracking-[0.14em] text-slate-600">Çalık Endüstriyel Kilit</p>
             <h1 className="text-3xl font-semibold sm:text-4xl text-slate-900">{title}</h1>
             {subtitle ? <p className="max-w-3xl text-slate-600">{subtitle}</p> : null}
           </div>

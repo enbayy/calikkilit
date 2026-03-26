@@ -8,7 +8,7 @@ export const heroSlides = [
   {
     title: 'MENTEŞELER',
     description:
-      'Konya Kilit olarak, endüstriyel ve ticari uygulamalar için güvenilir kilit sistemleri sunuyoruz. Modern teknoloji ve geleneksel kaliteyi bir araya getiriyoruz.',
+      'Çalık Endüstriyel Kilit olarak, endüstriyel ve ticari uygulamalar için güvenilir kilit sistemleri sunuyoruz. Modern teknoloji ve geleneksel kaliteyi bir araya getiriyoruz.',
     image: '/menteselerslider.png',
   },
   {

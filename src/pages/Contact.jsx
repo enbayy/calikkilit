@@ -15,8 +15,8 @@ function Contact() {
   const contactCards = useMemo(
     () => [
       { title: 'İletişim', detail: ['0 506 092 03 42']},
-      { title: 'E-posta', detail: 'info@konyakilit.com'},
-      { title: 'Adres', detail: 'Fevziçakmak, Medcezir Cd. no:8/B D:06, 42050 Karatay/Konya'},
+      { title: 'E-posta', detail: 'Murat@calikendkilit.com'},
+      { title: 'Adres', detail: ['Fevzi Çakmak Mah. Ahmet Petekçi cad. No16/AP', 'KARATAY / KONYA']},
     ],
     []
   )
@@ -163,8 +163,8 @@ function Contact() {
 
             <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
               <iframe
-                title="Konya Kilit Konum"
-                src="https://www.google.com/maps?q=Fevziçakmak,+Medcezir+Cd.+no:8/B+D:06,+42050+Karatay/Konya&hl=tr&z=15&output=embed"
+                title="Çalık Endüstriyel Kilit Konum"
+                src="https://www.google.com/maps?q=Fevzi+%C3%87akmak+Mah.+Ahmet+Petek%C3%A7i+cad.+No16/AP,+KARATAY+/+KONYA&hl=tr&z=15&output=embed"
                 className="h-[320px] w-full border-0"
                 allowFullScreen=""
                 loading="lazy"
