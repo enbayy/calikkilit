@@ -3,23 +3,23 @@ export const heroSlides = [
     title: 'KOLU KİLİTLER',
     description:
       'Yüzlerce pazar ve binlerce ürün için yaşamsal bileşen aksamının küresel üreticisi ve distribütörüyüz. Yaptığımız işten gurur duyuyor ve en küçük parçaların bile oynayacak büyük rolü olduğuna inanıyoruz.',
-    image: '/kollukilitslider.png',
+    image: '/kollukilitslider.jpeg',
   },
   {
     title: 'MENTEŞELER',
     description:
       'Çalık Endüstriyel Kilit olarak, endüstriyel ve ticari uygulamalar için güvenilir kilit sistemleri sunuyoruz. Modern teknoloji ve geleneksel kaliteyi bir araya getiriyoruz.',
-    image: '/menteselerslider.png',
+    image: '/menteselerslider.jpeg',
   },
   {
     title: 'PANO KİLİTLERİ',
     description: '1978\'den bu yana güvenlik sektöründe hizmet veren firmamız, geniş ürün yelpazesi ve uzman ekibiyle yanınızdayız.',
-    image: '/panokilitlerislider.png',
+    image: '/panokilitlerislider.jpeg',
   },
   {
     title: 'PASLANMAZ ÇELİK ÜRÜNLER',
     description: 'Elektronik kilit sistemlerinden geleneksel çözümlere kadar geniş bir yelpazede hizmet sunuyoruz.',
-    image: '/paslanmazslider.png',
+    image: '/paslanmazslider.jpeg',
   },
 ]
 

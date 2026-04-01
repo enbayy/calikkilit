@@ -6,7 +6,7 @@ function InfoPage({ title, subtitle, sections = [], hideHeader = false }) {
           <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-1.5 py-6 sm:px-2 sm:py-8 lg:px-3">
             <p className="text-xs uppercase tracking-[0.14em] text-slate-600">Çalık Endüstriyel Kilit</p>
             <h1 className="text-3xl font-semibold sm:text-4xl text-slate-900">{title}</h1>
-            {subtitle ? <p className="max-w-3xl text-slate-600">{subtitle}</p> : null}
+            {subtitle ? <p className="w-full text-slate-600 leading-relaxed">{subtitle}</p> : null}
           </div>
         </section>
       ) : null}
@@ -26,7 +26,11 @@ function InfoPage({ title, subtitle, sections = [], hideHeader = false }) {
               className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
             >
               <h2 className="text-xl font-semibold text-slate-900">{section.heading}</h2>
-              <p className="mt-3 text-base leading-relaxed text-slate-600">{section.body}</p>
+              {(Array.isArray(section.body) ? section.body : [section.body]).filter(Boolean).map((para, i) => (
+                <p key={i} className={`text-base leading-relaxed text-slate-600 ${i === 0 ? 'mt-3' : 'mt-4'}`}>
+                  {para}
+                </p>
+              ))}
               {section.items ? (
                 <ul className="mt-4 space-y-2 text-sm text-slate-700">
                   {section.items.map((item) => (

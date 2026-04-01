@@ -1,5 +1,5 @@
 import { useEffect, useState, useMemo } from 'react'
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom'
+import { HashRouter, NavLink, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import InfoPage from './pages/InfoPage'
 import ProductDetail from './pages/ProductDetail'
@@ -21,29 +21,33 @@ const navItems = [
 const pageContent = {
   hakkimizda: {
     title: 'Hakkımızda',
-    subtitle: '1978\'den bu yana hidrolik ve pnömatik sektöründe güçlü markalar ve mühendislik çözümleri sunuyoruz.',
+    subtitle:
+      'Yılların tecrübesini genç girişim ruhuyla birleştirerek 2026 yılında yola çıktık. Hidrolik ve pnömatik sektöründe edindiğimiz saha deneyimini, yenilikçi bakış açımızla bir araya getirerek müşterilerimize güvenilir çözümler sunuyoruz.',
     sections: [
       {
         heading: 'Şirketimiz',
-        body: 'Çalık Endüstriyel Kilit, 1978 yılından beri hidrolik ve pnömatik sektöründe faaliyet gösteren köklü bir firmadır. Yılların getirdiği deneyim ve uzman kadromuzla, endüstriyel ve mobil uygulamalar için en kaliteli ürünleri ve çözümleri sunmaktayız.',
+        body: [
+          'Çalık Endüstriyel, sektörde uzun yıllar edinilmiş bilgi birikiminin üzerine kurulmuş, genç ve dinamik bir girişimdir. Küçük yaşlardan itibaren sektörün içinde yetişmiş olmanın verdiği tecrübe ile, bugün kendi markamız altında daha güçlü ve özgür bir şekilde hizmet veriyoruz.',
+          'Endüstriyel ve mobil uygulamalar için kaliteli, ekonomik ve hızlı çözümler sunarak müşterilerimizin ihtiyaçlarına birebir karşılık veriyoruz.',
+        ],
       },
       {
         heading: 'Misyonumuz',
-        body: 'Müşterilerimize en yüksek kalitede hidrolik ve pnömatik ürünleri sunarak, sektörde öncü bir konumda yer almak. Teknik destek ve mühendislik çözümlerimizle müşteri memnuniyetini en üst seviyede tutmak.',
+        body: 'Genç, dinamik ve çözüm odaklı yapımızla; müşterilerimize en doğru ürünleri, en uygun fiyatlarla ve en hızlı şekilde ulaştırmak. Sadece satış değil, aynı zamanda güven ve uzun vadeli iş ortaklıkları kurmak.',
       },
       {
         heading: 'Vizyonumuz',
-        body: 'Türkiye\'nin önde gelen hidrolik ve pnömatik sistem tedarikçisi olmak, uluslararası standartlarda hizmet vermek ve sürekli gelişen teknolojiye ayak uydurarak sektörde lider konumda kalmak.',
+        body: 'Kısa sürede sektörde güvenilir ve tercih edilen bir marka haline gelmek. Sürekli gelişen teknolojiye uyum sağlayarak, yenilikçi çözümlerle Türkiye genelinde güçlü bir konuma ulaşmak.',
       },
       {
         heading: 'Değerlerimiz',
         body: 'İşimizi yaparken öncelik verdiğimiz temel değerlerimiz:',
         items: [
-          'Kalite ve güvenilirlik',
-          'Müşteri odaklılık',
-          'Teknik uzmanlık',
+          'Kalite ve güven',
+          'Müşteri memnuniyeti',
+          'Dürüstlük ve etik değerler',
           'Sürekli gelişim',
-          'Etik değerler',
+          'Hızlı ve çözüm odaklı hizmet',
         ],
       },
     ],
@@ -294,7 +298,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="min-h-screen bg-slate-50 text-slate-900">
         <header className="relative z-40 backdrop-blur bg-[#1a1a1a]/95 shadow-sm shadow-slate-200/70">
           <div className="border-b border-[#2d2d2d]">
@@ -987,7 +991,7 @@ function App() {
                   <li className="flex items-start gap-3 pt-1 justify-center md:justify-start">
                     <span className="mt-0.5 text-white">🕒</span>
                     <span>
-                      <span className="font-semibold text-white">Pazartesi - Cuma:</span> 07:00 - 17:00
+                      <span className="font-semibold text-white">Pazartesi - Cuma:</span> 08:00 - 17:00
                     </span>
                   </li>
                 </ul>
@@ -1006,7 +1010,7 @@ function App() {
           </div>
         </footer>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
