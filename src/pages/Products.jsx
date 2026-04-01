@@ -527,12 +527,14 @@ function Products() {
   const [activeAtosSection, setActiveAtosSection] = useState(null)
   const [activeOskarSection, setActiveOskarSection] = useState(null)
   const [activeGunesSection, setActiveGunesSection] = useState(null)
+  const [activeBimedSection, setActiveBimedSection] = useState(null)
   const [activeGroup, setActiveGroup] = useState(null)
   const [openGroups, setOpenGroups] = useState([])
   const [activeBrand, setActiveBrand] = useState('Mesan')
   const [atosCatalog, setAtosCatalog] = useState(null)
   const [oskarCatalog, setOskarCatalog] = useState(null)
   const [gunesCatalog, setGunesCatalog] = useState(null)
+  const [bimedCatalog, setBimedCatalog] = useState(null)
   const [openBrands, setOpenBrands] = useState(['Mesan'])
 
   const defaultAtosGroupTitle = 'KİLİTLER'
@@ -541,13 +543,15 @@ function Products() {
   const defaultOskarSectionTitle = 'Kollu Kilitler Ve Aksesuarlar'
   const defaultGunesGroupTitle = 'Kollu Kilitler'
   const defaultGunesSectionTitle = 'Kollu Kilitler'
-  const brands = ['Mesan', 'Atos', 'Güneş', 'Oskar']
+  const defaultBimedSectionTitle = 'Endüstriyel Kablo Rakorları'
+  const brands = ['Mesan', 'Atos', 'Güneş', 'Oskar', 'Bimedteknik']
   // Marka butonlarında gösterilecek logolar (dosyalar `public/` altında olmalı)
   const brandLogoMap = {
     Mesan: '/mesanlogo.png',
     Atos: '/atoslogo.png',
     'Güneş': '/guneslogo.png',
     Oskar: '/oskarlogo.png',
+    Bimedteknik: 'https://www.bimedteknik.com/logo/bimed%20logo%2070x180%20pxl.png',
   }
 
   const brandCatalogGroups = useMemo(() => {
@@ -720,6 +724,19 @@ function Products() {
       return [{ title: '__GUNES__', displayTitle: null, sections }]
     }
 
+    if (activeBrand === 'Bimedteknik') {
+      if (!bimedCatalog) {
+        return [{ title: '__BIMED__', displayTitle: null, sections: [{ title: defaultBimedSectionTitle, items: [] }] }]
+      }
+      const sections = (bimedCatalog || []).flatMap((main) =>
+        (main?.subcategories || []).map((sub) => ({
+          title: sub.name,
+          items: (sub?.products || []).map((p) => p.detailUrl || p.slug || p.name).filter(Boolean),
+        }))
+      )
+      return [{ title: '__BIMED__', displayTitle: null, sections }]
+    }
+
     // Mesan: mevcut tüm kategori yapısı
     if (activeBrand === 'Mesan') {
       return catalogGroups.map((g) => ({ ...g, displayTitle: g.title }))
@@ -727,7 +744,7 @@ function Products() {
 
     // Diğer markalar şimdilik boş
     return []
-  }, [activeBrand, atosCatalog, oskarCatalog, gunesCatalog])
+  }, [activeBrand, atosCatalog, oskarCatalog, gunesCatalog, bimedCatalog])
 
   // Kategori resim mapping
   const categoryImageMap = {
@@ -779,6 +796,7 @@ function Products() {
     const storedActiveAtosSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveAtosSection') : null
     const storedActiveOskarSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveOskarSection') : null
     const storedActiveGunesSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveGunesSection') : null
+    const storedActiveBimedSection = typeof window !== 'undefined' ? sessionStorage.getItem('productsActiveBimedSection') : null
 
     const shouldDefaultAtos = initialBrand === 'Atos' && (!storedActiveAtosSection || String(storedActiveAtosSection) === '')
     const defaultAtosOpenGroups = shouldDefaultAtos ? [defaultAtosGroupTitle] : Array.isArray(storedOpenGroups) ? storedOpenGroups : []
@@ -793,6 +811,10 @@ function Products() {
     // Güneş sol menüsünde üst grup olmadığı için varsayılan açık grup yok.
     const defaultGunesOpenGroups = shouldDefaultGunes ? [] : Array.isArray(storedOpenGroups) ? storedOpenGroups : []
     const defaultActiveGunesSection = shouldDefaultGunes ? defaultGunesSectionTitle : storedActiveGunesSection || null
+    const shouldDefaultBimed =
+      initialBrand === 'Bimedteknik' && (!storedActiveBimedSection || String(storedActiveBimedSection) === '')
+    const defaultBimedOpenGroups = shouldDefaultBimed ? [] : Array.isArray(storedOpenGroups) ? storedOpenGroups : []
+    const defaultActiveBimedSection = shouldDefaultBimed ? defaultBimedSectionTitle : storedActiveBimedSection || null
 
     const finalOpenGroups =
       initialBrand === 'Atos'
@@ -801,6 +823,8 @@ function Products() {
           ? defaultOskarOpenGroups
           : initialBrand === 'Güneş'
             ? defaultGunesOpenGroups
+            : initialBrand === 'Bimedteknik'
+              ? defaultBimedOpenGroups
           : defaultAtosOpenGroups
 
     setOpenGroups(finalOpenGroups)
@@ -818,12 +842,14 @@ function Products() {
     // `activeSection` kullanılmıyor; Atos seçimi ayrı state olarak tutuluyor.
     setActiveSection(
       initialBrand === 'Atos' || initialBrand === 'Oskar' || initialBrand === 'Güneş'
+      || initialBrand === 'Bimedteknik'
         ? null
         : storedActiveSection || null
     )
     setActiveAtosSection(initialBrand === 'Atos' ? defaultActiveAtosSection : null)
     setActiveOskarSection(initialBrand === 'Oskar' ? defaultActiveOskarSection : null)
     setActiveGunesSection(initialBrand === 'Güneş' ? defaultActiveGunesSection : null)
+    setActiveBimedSection(initialBrand === 'Bimedteknik' ? defaultActiveBimedSection : null)
   }, [location.state])
 
   // Kullanıcı geri gelince aynı yerde devam edebilmek için seçim durumunu saklıyoruz.
@@ -836,7 +862,8 @@ function Products() {
     sessionStorage.setItem('productsActiveAtosSection', activeAtosSection || '')
     sessionStorage.setItem('productsActiveOskarSection', activeOskarSection || '')
     sessionStorage.setItem('productsActiveGunesSection', activeGunesSection || '')
-  }, [activeBrand, openGroups, activeGroup, activeSection, activeAtosSection, activeOskarSection, activeGunesSection])
+    sessionStorage.setItem('productsActiveBimedSection', activeBimedSection || '')
+  }, [activeBrand, openGroups, activeGroup, activeSection, activeAtosSection, activeOskarSection, activeGunesSection, activeBimedSection])
 
   useEffect(() => {
     if (activeBrand !== 'Atos' || atosCatalog) return
@@ -898,6 +925,24 @@ function Products() {
       cancelled = true
     }
   }, [activeBrand, gunesCatalog])
+
+  useEffect(() => {
+    if (activeBrand !== 'Bimedteknik' || bimedCatalog) return
+    let cancelled = false
+    ;(async () => {
+      try {
+        const res = await fetch('/bimed-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+        if (!cancelled) setBimedCatalog(json)
+      } catch {
+        if (!cancelled) setBimedCatalog(null)
+      }
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [activeBrand, bimedCatalog])
 
   const currentItems = useMemo(() => {
     if (!activeSection) return []
@@ -970,6 +1015,7 @@ function Products() {
       setActiveAtosSection(null)
       setActiveOskarSection(null)
       setActiveGunesSection(null)
+      setActiveBimedSection(null)
     } else {
       setActiveBrand(brand)
       setOpenBrands([brand])
@@ -981,6 +1027,7 @@ function Products() {
         setActiveAtosSection(defaultAtosSectionTitle)
         setActiveOskarSection(null)
         setActiveGunesSection(null)
+        setActiveBimedSection(null)
       } else if (brand === 'Oskar') {
         setOpenGroups([defaultOskarGroupTitle])
         // Oskar'da ana başlık tıklamaları sadece aç/kapa; sağ tarafta alt-kategori kartı çıkmasın.
@@ -988,6 +1035,7 @@ function Products() {
         setActiveOskarSection(null)
         setActiveAtosSection(null)
         setActiveGunesSection(null)
+        setActiveBimedSection(null)
       } else if (brand === 'Güneş') {
         setOpenGroups([])
         // Güneş marka seçilince sadece sol menü açık gelsin; sağ tarafta kart/varsayılan seçim olmasın.
@@ -995,11 +1043,20 @@ function Products() {
         setActiveGunesSection(null)
         setActiveAtosSection(null)
         setActiveOskarSection(null)
+        setActiveBimedSection(null)
+      } else if (brand === 'Bimedteknik') {
+        setOpenGroups([])
+        setActiveGroup(null)
+        setActiveBimedSection(null)
+        setActiveAtosSection(null)
+        setActiveOskarSection(null)
+        setActiveGunesSection(null)
       } else {
         setOpenGroups([])
         setActiveAtosSection(null)
         setActiveOskarSection(null)
         setActiveGunesSection(null)
+        setActiveBimedSection(null)
       }
     }
   }
@@ -1173,6 +1230,31 @@ function Products() {
         setActiveAtosSection(null)
         setActiveOskarSection(null)
         navigate(`/urunler/${mapped.baseSlug}/${mapped.tail}`)
+        return
+      }
+    }
+    if (activeBrand === 'Bimedteknik') {
+      const allSubs = (bimedCatalog || []).flatMap((m) => m?.subcategories || [])
+      const selected = allSubs.find((s) => s?.name === sectionTitle)
+      if (selected) {
+        if (typeof window !== 'undefined') {
+          sessionStorage.setItem('productsActiveBrand', 'Bimedteknik')
+          sessionStorage.setItem('productsOpenGroups', JSON.stringify([]))
+          sessionStorage.setItem('productsActiveGroup', '')
+          sessionStorage.setItem('productsActiveSection', '')
+          sessionStorage.setItem('productsActiveAtosSection', '')
+          sessionStorage.setItem('productsActiveOskarSection', '')
+          sessionStorage.setItem('productsActiveGunesSection', '')
+          sessionStorage.setItem('productsActiveBimedSection', sectionTitle)
+        }
+        setActiveBimedSection(sectionTitle)
+        setOpenGroups([])
+        setActiveGroup(null)
+        setActiveSection(null)
+        setActiveAtosSection(null)
+        setActiveOskarSection(null)
+        setActiveGunesSection(null)
+        navigate(`/urunler/bimed/${selected.slug}`)
         return
       }
     }
@@ -1724,10 +1806,10 @@ function Products() {
 
             {brandCatalogGroups.length > 0 ? (
               <div className="ml-3 space-y-2 border-l border-slate-200 pl-3">
-                {activeBrand === 'Güneş' ? (
+                {activeBrand === 'Güneş' || activeBrand === 'Bimedteknik' ? (
                   // Güneş: üst grup başlığı göstermeden direkt alt kategorileri listele
                   (brandCatalogGroups[0]?.sections || []).map((section) => {
-                    const isActive = activeGunesSection === section.title
+                    const isActive = activeBrand === 'Güneş' ? activeGunesSection === section.title : activeBimedSection === section.title
                     const categoryImage = categoryImageMap[section.title]
                     return (
                       <div key={section.title} className="space-y-1">
@@ -1789,6 +1871,8 @@ function Products() {
                                   ? activeOskarSection === section.title
                                   : activeBrand === 'Güneş'
                                     ? activeGunesSection === section.title
+                                    : activeBrand === 'Bimedteknik'
+                                      ? activeBimedSection === section.title
                                   : activeSection === section.title
                             // categoryImageMap'te tanımlı görseli kontrol et
                             const categoryImage = categoryImageMap[section.title]
@@ -1873,7 +1957,7 @@ function Products() {
             <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-sm text-slate-500 shadow-sm">
               {!activeBrand
                 ? 'Bir marka seçin.'
-                : activeBrand === 'Mesan' || activeBrand === 'Atos' || activeBrand === 'Oskar' || activeBrand === 'Güneş'
+                : activeBrand === 'Mesan' || activeBrand === 'Atos' || activeBrand === 'Oskar' || activeBrand === 'Güneş' || activeBrand === 'Bimedteknik'
                   ? 'Bir kategori seçin, ürünleri listeleyelim.'
                   : `${activeBrand} için ürünler yakında.`}
             </div>

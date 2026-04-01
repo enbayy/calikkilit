@@ -142,6 +142,8 @@ const gunesTailSlugToState = {
   'gunes-diger-urunler': { openGroup: 'GÜNEŞ KİLİT', activeGunesSection: 'Diğer Ürünler' },
 }
 
+const isBimedTailSlug = (slug) => typeof slug === 'string' && slug.startsWith('bimed-')
+
 // Tüm section'ları import et
 const lockSections = [
   {
@@ -697,6 +699,7 @@ function SectionProducts() {
     const isAtos = !!backTailSlug && atosTailSlugs.has(backTailSlug)
     const isOskar = !!backTailSlug && oskarTailSlugs.has(backTailSlug)
     const isGunes = !!backTailSlug && gunesTailSlugs.has(backTailSlug)
+    const isBimed = !!backTailSlug && isBimedTailSlug(backTailSlug)
 
     if (isAtos) {
       const state = backTailSlug ? atosTailSlugToState[backTailSlug] : null
@@ -740,6 +743,18 @@ function SectionProducts() {
       return
     }
 
+    if (isBimed) {
+      sessionStorage.setItem('productsActiveBrand', 'Bimedteknik')
+      sessionStorage.setItem('productsOpenGroups', JSON.stringify([]))
+      sessionStorage.setItem('productsActiveGroup', '')
+      sessionStorage.setItem('productsActiveSection', '')
+      sessionStorage.setItem('productsActiveAtosSection', '')
+      sessionStorage.setItem('productsActiveOskarSection', '')
+      sessionStorage.setItem('productsActiveGunesSection', '')
+      navigate('/urunler', { state: { initialBrand: 'Bimedteknik' } })
+      return
+    }
+
     // Kullanıcı aynı akışta geldiyse (örn. Mesan ürün detayına girdi -> list'e geri dön)
     if (window.history.length > 1) {
       navigate(-1)
@@ -770,6 +785,10 @@ function SectionProducts() {
     return !!tailSlug && gunesTailSlugs.has(tailSlug)
   }, [tailSlug])
 
+  const isBimedRouteCandidate = useMemo(() => {
+    return !!tailSlug && isBimedTailSlug(tailSlug)
+  }, [tailSlug])
+
   const [atosCatalog, setAtosCatalog] = useState(null)
   const [atosCatalogError, setAtosCatalogError] = useState(null)
 
@@ -778,6 +797,8 @@ function SectionProducts() {
 
   const [gunesCatalog, setGunesCatalog] = useState(null)
   const [gunesCatalogError, setGunesCatalogError] = useState(null)
+  const [bimedCatalog, setBimedCatalog] = useState(null)
+  const [bimedCatalogError, setBimedCatalogError] = useState(null)
 
   // Atos sayfalarına doğrudan girilirse (refresh/back vb.) `Products` geri döndüğünde
   // doğru markayı seçebilsin diye aynı değeri saklıyoruz.
@@ -821,6 +842,18 @@ function SectionProducts() {
     sessionStorage.setItem('productsActiveOskarSection', '')
     sessionStorage.setItem('productsActiveGunesSection', state?.activeGunesSection || '')
   }, [isGunesRouteCandidate, tailSlug])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (!isBimedRouteCandidate) return
+    sessionStorage.setItem('productsActiveBrand', 'Bimedteknik')
+    sessionStorage.setItem('productsOpenGroups', JSON.stringify([]))
+    sessionStorage.setItem('productsActiveGroup', '')
+    sessionStorage.setItem('productsActiveSection', '')
+    sessionStorage.setItem('productsActiveAtosSection', '')
+    sessionStorage.setItem('productsActiveOskarSection', '')
+    sessionStorage.setItem('productsActiveGunesSection', '')
+  }, [isBimedRouteCandidate])
 
   useEffect(() => {
     if (!isAtosRouteCandidate || atosCatalog) return
@@ -885,6 +918,25 @@ function SectionProducts() {
     }
   }, [isGunesRouteCandidate, gunesCatalog])
 
+  useEffect(() => {
+    if (!isBimedRouteCandidate || bimedCatalog) return
+    let cancelled = false
+    ;(async () => {
+      try {
+        setBimedCatalogError(null)
+        const res = await fetch('/bimed-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+        if (!cancelled) setBimedCatalog(json)
+      } catch (e) {
+        if (!cancelled) setBimedCatalogError(e?.message || String(e))
+      }
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [isBimedRouteCandidate, bimedCatalog])
+
   const atosSubcategory = useMemo(() => {
     if (!atosCatalog || !tailSlug) return null
     for (const main of atosCatalog) {
@@ -915,6 +967,22 @@ function SectionProducts() {
     return null
   }, [gunesCatalog, tailSlug])
 
+  const bimedSubcategory = useMemo(() => {
+    if (!bimedCatalog || !tailSlug) return null
+    for (const main of bimedCatalog) {
+      for (const sub of main?.subcategories || []) {
+        if (sub?.slug === tailSlug) return sub
+      }
+    }
+    return null
+  }, [bimedCatalog, tailSlug])
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (!isBimedRouteCandidate || !bimedSubcategory?.name) return
+    sessionStorage.setItem('productsActiveBimedSection', bimedSubcategory.name)
+  }, [isBimedRouteCandidate, bimedSubcategory])
+
   // Slug'dan section title'ı bul
   const sectionTitle = useMemo(() => {
     // Atos'ta header ve ürün kartları doğrudan subcategory adını kullanmalı.
@@ -922,6 +990,7 @@ function SectionProducts() {
     if (isAtosRouteCandidate) return atosSubcategory?.name ?? null
     if (isOskarRouteCandidate) return oskarSubcategory?.name ?? null
     if (isGunesRouteCandidate) return gunesSubcategory?.name ?? null
+    if (isBimedRouteCandidate) return bimedSubcategory?.name ?? null
 
     const slugToTitle = {
       'kollu-kilitler': 'KOLLU KİLİTLER',
@@ -973,6 +1042,8 @@ function SectionProducts() {
     oskarSubcategory,
     isGunesRouteCandidate,
     gunesSubcategory,
+    isBimedRouteCandidate,
+    bimedSubcategory,
   ])
 
   // Section'ın ürünlerini bul
@@ -2555,6 +2626,119 @@ function SectionProducts() {
                         alt={p.name}
                         className="h-full w-full object-contain transition-all duration-500 group-hover:scale-105"
                       />
+                    </div>
+                    <div className="flex flex-1 flex-col justify-between border-t border-slate-100 bg-white p-5">
+                      <div>
+                        <h3 className="line-clamp-2 text-base font-semibold leading-tight text-slate-900 transition-colors duration-300 group-hover:text-[#166534]">
+                          {p.name}
+                        </h3>
+                      </div>
+                      <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[#166534] transition-all duration-300 group-hover:gap-3">
+                        Detayları Görüntüle
+                        <span className="text-base">→</span>
+                      </div>
+                    </div>
+                  </Link>
+                )
+              })}
+            </div>
+          )}
+        </section>
+      </div>
+    )
+  }
+
+  const isBimedLoading = isBimedRouteCandidate && !bimedCatalog && !bimedCatalogError
+  if (isBimedRouteCandidate) {
+    if (isBimedLoading) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Bimedteknik verileri yükleniyor...</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    if (!bimedSubcategory) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Bimedteknik alt kategori bulunamadı.</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    const bimedProducts = bimedSubcategory.products || []
+    return (
+      <div className="bg-slate-50 pb-16 text-slate-900">
+        <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
+          <button
+            onClick={handleBack}
+            className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Geri Dön
+          </button>
+          <div className="mb-8 flex flex-col gap-2 rounded-2xl border border-slate-200 bg-white px-5 py-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-4">
+              <div className="flex h-20 w-20 items-center justify-center rounded-lg border border-slate-200 bg-white">
+                <span className="text-sm font-semibold text-slate-600">Bimed</span>
+              </div>
+              <div>
+                <p className="text-xs uppercase tracking-[0.12em] text-[#166534]">Kategori</p>
+                <h2 className="text-xl font-semibold">{bimedSubcategory.name}</h2>
+              </div>
+            </div>
+            <span className="text-sm text-slate-500">{bimedProducts.length} ürün</span>
+          </div>
+          {bimedProducts.length === 0 ? (
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Bu kategori için ürün bulunamadı.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {bimedProducts.map((p) => {
+                const img = p.image || `https://via.placeholder.com/320x200.png?text=${encodeURIComponent(p.name)}`
+                return (
+                  <Link
+                    key={p.slug}
+                    to={`/urun-detay/${p.slug}`}
+                    state={{
+                      brand: 'Bimedteknik',
+                      productSlug: p.slug,
+                      productName: p.name,
+                      detailUrl: p.detailUrl,
+                    }}
+                    className="group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:border-[#166534]/50 hover:shadow-xl"
+                  >
+                    <div className="relative flex h-80 items-center justify-center overflow-hidden bg-white p-6">
+                      <img src={img} alt={p.name} className="h-full w-full object-contain transition-all duration-500 group-hover:scale-105" />
                     </div>
                     <div className="flex flex-1 flex-col justify-between border-t border-slate-100 bg-white p-5">
                       <div>

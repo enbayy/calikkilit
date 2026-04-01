@@ -7670,6 +7670,9 @@ function ProductDetail() {
   const [gunesProduct, setGunesProduct] = useState(null)
   const [gunesLoading, setGunesLoading] = useState(false)
   const [gunesError, setGunesError] = useState(null)
+  const [bimedProduct, setBimedProduct] = useState(null)
+  const [bimedLoading, setBimedLoading] = useState(false)
+  const [bimedError, setBimedError] = useState(null)
 
   useEffect(() => {
     if (brand !== 'Güneş') return
@@ -7702,6 +7705,45 @@ function ProductDetail() {
         if (!cancelled) setGunesError(e?.message || String(e))
       } finally {
         if (!cancelled) setGunesLoading(false)
+      }
+    })()
+
+    return () => {
+      cancelled = true
+    }
+  }, [brand, productSlug, slug])
+
+  useEffect(() => {
+    if (brand !== 'Bimedteknik') return
+    const targetSlug = productSlug || slug
+    if (!targetSlug) return
+
+    let cancelled = false
+    ;(async () => {
+      try {
+        setBimedError(null)
+        setBimedLoading(true)
+        const res = await fetch('/bimed-products.json')
+        if (!res.ok) throw new Error(`HTTP ${res.status}`)
+        const json = await res.json()
+
+        let found = null
+        for (const main of json || []) {
+          for (const sub of main?.subcategories || []) {
+            const hit = (sub?.products || []).find((p) => p?.slug === targetSlug)
+            if (hit) {
+              found = hit
+              break
+            }
+          }
+          if (found) break
+        }
+
+        if (!cancelled) setBimedProduct(found)
+      } catch (e) {
+        if (!cancelled) setBimedError(e?.message || String(e))
+      } finally {
+        if (!cancelled) setBimedLoading(false)
       }
     })()
 
@@ -7848,6 +7890,208 @@ function ProductDetail() {
               )}
             </div>
           </div>
+        </section>
+      </div>
+    )
+  }
+
+  if (brand === 'Bimedteknik') {
+    if (bimedLoading) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Bimedteknik ürün verisi yükleniyor...</p>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    if (!bimedProduct) {
+      return (
+        <div className="bg-slate-50 pb-16 text-slate-900">
+          <div className="mx-auto max-w-7xl px-1.5 pt-10 sm:px-2 lg:px-3">
+            <button
+              onClick={handleBack}
+              className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Geri Dön
+            </button>
+            <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-8 text-center shadow-sm">
+              <p className="text-base text-slate-600">Bimedteknik ürün bulunamadı.</p>
+              {bimedError ? <p className="mt-2 text-xs text-slate-500">{bimedError}</p> : null}
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    const bimedDescription = String(bimedProduct.description || '').trim()
+    const bimedTechnical = String(bimedProduct.teknikOzellikler || '').trim()
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .filter((l) => l && !/^\{\{|\$t\(|Zurücksetzen|Oops, there was an error|Generate Code|Get File$/i.test(l))
+      .join('\n')
+    const bimedDocs = String(bimedProduct.ekstraBilgiler || '')
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .filter(Boolean)
+    const bimedTables = (Array.isArray(bimedProduct.tables) ? bimedProduct.tables : []).filter((table) => {
+      const headers = Array.isArray(table?.headers) ? table.headers : []
+      const rows = Array.isArray(table?.rows) ? table.rows : []
+      if (headers.length === 0 || rows.length === 0) return false
+      const hasRealRow = rows.some((row) => {
+        const cells = Array.isArray(row) ? row.map((c) => String(c || '').trim()) : []
+        const nonEmpty = cells.filter(Boolean)
+        if (nonEmpty.length < 2) return false
+        const joined = nonEmpty.join(' ').toLowerCase()
+        if (/(pdf|get file|generate code|datasheet|3d file|ordering code)/i.test(joined) && nonEmpty.length <= 3) return false
+        return true
+      })
+      return hasRealRow
+    })
+    const galleryImages = Array.isArray(bimedProduct.gallery) ? bimedProduct.gallery : []
+
+    return (
+      <div className="bg-slate-50 pb-16 text-slate-900">
+        <section className="mx-auto w-full max-w-7xl px-1.5 pt-8 sm:px-2 lg:px-3">
+          <button
+            onClick={handleBack}
+            className="mb-6 flex items-center gap-2 text-sm font-medium text-slate-600 transition-colors hover:text-[#166534]"
+          >
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Geri Dön
+          </button>
+
+          <div className="mb-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-1">
+              <div className="flex items-center justify-center rounded-xl border border-slate-200 bg-white p-4">
+                <img
+                  src={
+                    bimedProduct.image ||
+                    `https://via.placeholder.com/320x200.png?text=${encodeURIComponent(bimedProduct.name)}`
+                  }
+                  alt={bimedProduct.name}
+                  className="max-h-64 w-auto object-contain"
+                />
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm lg:col-span-2">
+              <h1 className="text-2xl font-bold text-slate-900">{bimedProduct.name}</h1>
+
+              {bimedDescription ? (
+                <div className="mt-5 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-900">Açıklama</div>
+                  <div className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{bimedDescription}</div>
+                </div>
+              ) : null}
+
+              {bimedTechnical ? (
+                <div className="mt-4 rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-900">Teknik Notlar</div>
+                  <div className="whitespace-pre-line text-sm leading-relaxed text-slate-700">{bimedTechnical}</div>
+                </div>
+              ) : null}
+
+              {bimedDocs.length > 0 ? (
+                <div className="mt-4 rounded-xl border border-slate-100 bg-white p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-900">Dokümanlar</div>
+                  <div className="space-y-2">
+                    {bimedDocs.map((line, idx) => {
+                      const m = line.match(/^(.*?)\s*-\s*(https?:\/\/\S+)$/i)
+                      const url = m ? m[2] : /^https?:\/\//i.test(line) ? line : ''
+                      const label = m ? m[1] : line
+                      if (!url) {
+                        return <div key={`${line}-${idx}`} className="text-sm text-slate-700">{label}</div>
+                      }
+                      return (
+                        <a
+                          key={`${url}-${idx}`}
+                          href={url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="block text-sm font-medium text-[#166534] hover:underline break-all"
+                        >
+                          {label}
+                        </a>
+                      )
+                    })}
+                  </div>
+                </div>
+              ) : null}
+            </div>
+          </div>
+
+          {bimedTables.length > 0 ? (
+            <div className="space-y-6">
+              {bimedTables.map((table, i) => (
+                <div key={`${table.title}-${i}`} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <div className="mb-4 flex items-center gap-2">
+                    <div className="h-1 w-8 rounded-full bg-[#166534]" />
+                    <h3 className="text-xl font-bold text-slate-900">{table.title || `Teknik Tablo ${i + 1}`}</h3>
+                  </div>
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full border-collapse">
+                      {Array.isArray(table.headers) && table.headers.length > 0 ? (
+                        <thead>
+                          <tr className="bg-slate-50">
+                            {table.headers.map((h, idx) => (
+                              <th key={`${h}-${idx}`} className="border border-slate-200 px-4 py-3 text-left text-sm font-semibold text-slate-900">
+                                {h}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                      ) : null}
+                      <tbody>
+                        {(table.rows || []).map((row, rowIdx) => (
+                          <tr key={rowIdx} className="hover:bg-slate-50/60">
+                            {row.map((cell, cellIdx) => (
+                              <td key={`${rowIdx}-${cellIdx}`} className="border border-slate-200 px-4 py-3 text-sm text-slate-700">
+                                {cell}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : null}
+
+          {galleryImages.length > 0 ? (
+            <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-4 flex items-center gap-2">
+                <div className="h-1 w-8 rounded-full bg-[#166534]" />
+                <h3 className="text-xl font-bold text-slate-900">Ürün Görselleri</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
+                {galleryImages.map((img, idx) => (
+                  <a key={`${img}-${idx}`} href={img} target="_blank" rel="noreferrer" className="rounded-lg border border-slate-200 bg-slate-50 p-2">
+                    <img src={img} alt={`${bimedProduct.name} ${idx + 1}`} className="h-28 w-full object-contain" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </section>
       </div>
     )
