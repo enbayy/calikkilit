@@ -50,8 +50,8 @@ function Medya() {
     'yeni-urunler (1).pdf',
   ]
 
-  // Kalite Belgeleri klasöründeki PDF'ler
-  const kaliteBelgeleriPdfs = [
+  // Mesan kalite belgeleri — public/kalitebelgeleri
+  const mesanKaliteBelgeleriPdfs = [
     'bilgi-guvenligi-yonetim-sistemi.pdf',
     'cevre-yonetim-sistemi.pdf',
     'enerji-yonetim-sistemi.pdf',
@@ -63,7 +63,13 @@ function Medya() {
     'tsek-kalite-belgesi (1).pdf',
   ]
 
-  const currentPdfs = activeTab === 'kataloglar' ? katalogPdfs : kaliteBelgeleriPdfs
+  // Oskar kalite belgeleri — public kökündeki kb*.pdf dosyaları
+  const oskarKaliteBelgeleri = [
+    { href: '/kb1.pdf', label: 'Oskar Kalite Belgesi 1' },
+    { href: '/kb2.pdf', label: 'Oskar Kalite Belgesi 2' },
+    { href: '/kb3.pdf', label: 'Oskar Kalite Belgesi 3' },
+    { href: '/kb4.pdf', label: 'Oskar Kalite Belgesi 4' },
+  ]
 
   // PDF adını Türkçe yazım kurallarına göre düzenle
   const formatPdfName = (filename) => {
@@ -74,27 +80,47 @@ function Medya() {
       .replace(/-/g, ' ') // Tireleri boşluğa çevir
       .replace(/\s+/g, ' ') // Birden fazla boşluğu tek boşluğa çevir
       .trim() // Başta ve sonda boşlukları kaldır
-    
+
     // Türkçe karakterleri koruyarak başlık formatına çevir
     return formatted
       .split(' ')
-      .filter(word => word.length > 0) // Boş kelimeleri filtrele
-      .map(word => {
+      .filter((word) => word.length > 0) // Boş kelimeleri filtrele
+      .map((word) => {
         // İlk harfi büyük yap (Türkçe karakterleri koruyarak)
         const firstChar = word.charAt(0)
         const rest = word.slice(1).toLowerCase()
-        
+
         // Türkçe büyük harf dönüşümü
         const turkishUpper = {
-          'ı': 'I', 'i': 'İ', 'ş': 'Ş', 'ğ': 'Ğ',
-          'ü': 'Ü', 'ö': 'Ö', 'ç': 'Ç'
+          ı: 'I',
+          i: 'İ',
+          ş: 'Ş',
+          ğ: 'Ğ',
+          ü: 'Ü',
+          ö: 'Ö',
+          ç: 'Ç',
         }
-        
+
         const upperFirst = turkishUpper[firstChar.toLowerCase()] || firstChar.toUpperCase()
         return upperFirst + rest
       })
       .join(' ')
   }
+
+  const pdfItems =
+    activeTab === 'kataloglar'
+      ? katalogPdfs.map((pdf) => ({
+          href: `/kataloglar/${pdf}`,
+          label: formatPdfName(pdf),
+        }))
+      : activeTab === 'mesanKalite'
+        ? mesanKaliteBelgeleriPdfs.map((pdf) => ({
+            href: `/kalitebelgeleri/${pdf}`,
+            label: formatPdfName(pdf),
+          }))
+        : oskarKaliteBelgeleri
+
+  const isQualityTab = activeTab === 'mesanKalite' || activeTab === 'oskarKalite'
 
   return (
     <div className="space-y-6 pb-16">
@@ -110,32 +136,45 @@ function Medya() {
 
       <section className="mx-auto w-full max-w-7xl px-1.5 sm:px-2 lg:px-3">
         {/* Butonlar */}
-        <div className="mb-8 flex justify-center gap-4">
+        <div className="mb-8 flex flex-wrap justify-center gap-3 sm:gap-4">
           <button
+            type="button"
             onClick={() => setActiveTab('kataloglar')}
-            className={`rounded-xl px-6 py-3 text-base font-semibold transition-all ${
+            className={`rounded-xl px-5 py-3 text-sm font-semibold transition-all sm:px-6 sm:text-base ${
               activeTab === 'kataloglar'
                 ? 'bg-[#166534] text-white shadow-lg'
-                : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50'
+                : 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
             Kataloglar
           </button>
           <button
-            onClick={() => setActiveTab('kalite')}
-            className={`rounded-xl px-6 py-3 text-base font-semibold transition-all ${
-              activeTab === 'kalite'
+            type="button"
+            onClick={() => setActiveTab('mesanKalite')}
+            className={`rounded-xl px-5 py-3 text-sm font-semibold transition-all sm:px-6 sm:text-base ${
+              activeTab === 'mesanKalite'
                 ? 'bg-[#166534] text-white shadow-lg'
-                : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-50'
+                : 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
             }`}
           >
-            Kalite Belgeleri
+            Mesan Kalite Belgeleri
+          </button>
+          <button
+            type="button"
+            onClick={() => setActiveTab('oskarKalite')}
+            className={`rounded-xl px-5 py-3 text-sm font-semibold transition-all sm:px-6 sm:text-base ${
+              activeTab === 'oskarKalite'
+                ? 'bg-[#166534] text-white shadow-lg'
+                : 'border border-slate-200 bg-white text-slate-700 hover:bg-slate-50'
+            }`}
+          >
+            Oskar Kalite Belgeleri
           </button>
         </div>
 
-        {/* PDF Listesi */}
+        {/* Kataloglar: liste | Kalite: küçük gömülü önizleme */}
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
-          {currentPdfs.length === 0 ? (
+          {pdfItems.length === 0 ? (
             <div className="py-12 text-center">
               <svg
                 className="mx-auto h-12 w-12 text-slate-400"
@@ -151,19 +190,59 @@ function Medya() {
                 />
               </svg>
               <p className="mt-4 text-base font-medium text-slate-600">
-                {activeTab === 'kalite'
-                  ? 'Kalite belgeleri yakında eklenecektir.'
-                  : 'Henüz PDF bulunmamaktadır.'}
+                {isQualityTab ? 'Kalite belgeleri yakında eklenecektir.' : 'Henüz PDF bulunmamaktadır.'}
               </p>
+            </div>
+          ) : isQualityTab ? (
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-5">
+              {pdfItems.map((item, index) => (
+                <div
+                  key={`${item.href}-${index}`}
+                  className="flex w-[10rem] flex-col gap-2 sm:w-[11.5rem]"
+                >
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#166534] focus-visible:ring-offset-2"
+                  >
+                    <div className="relative h-48 w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-sm ring-slate-200 transition group-hover:border-[#166534]/50 group-hover:shadow-md sm:h-56">
+                      {/* Taşan iframe ile iç kaydırma çubukları kırpılır; etkileşim kapalı */}
+                      <iframe
+                        title={item.label}
+                        src={`${item.href}#page=1&view=FitH&toolbar=0&navpanes=0`}
+                        className="pointer-events-none absolute left-0 top-0 select-none border-0"
+                        style={{
+                          width: 'calc(100% + 20px)',
+                          height: 'calc(100% + 20px)',
+                          marginRight: '-20px',
+                          marginBottom: '-20px',
+                        }}
+                        tabIndex={-1}
+                        scrolling="no"
+                      />
+                    </div>
+                  </a>
+                  <p className="line-clamp-3 text-center text-[10px] font-semibold leading-snug text-slate-800 sm:text-xs">
+                    {item.label}
+                  </p>
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-center text-[10px] font-medium text-[#166534] underline-offset-2 hover:underline sm:text-xs"
+                  >
+                    Tam belgeyi aç
+                  </a>
+                </div>
+              ))}
             </div>
           ) : (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {currentPdfs.map((pdf, index) => {
-                const folderPath = activeTab === 'kataloglar' ? '/kataloglar' : '/kalitebelgeleri'
-                return (
+              {pdfItems.map((item, index) => (
                 <a
-                  key={index}
-                  href={`${folderPath}/${pdf}`}
+                  key={`${item.href}-${index}`}
+                  href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 rounded-lg border border-slate-200 bg-slate-50 p-4 transition-all hover:border-[#166534] hover:bg-[#166534]/5 hover:shadow-md"
@@ -184,9 +263,7 @@ function Medya() {
                     </svg>
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm font-medium text-slate-900 group-hover:text-[#166534]">
-                      {formatPdfName(pdf)}
-                    </p>
+                    <p className="text-sm font-medium text-slate-900 group-hover:text-[#166534]">{item.label}</p>
                     <p className="mt-1 text-xs text-slate-500">PDF</p>
                   </div>
                   <svg
@@ -203,8 +280,7 @@ function Medya() {
                     />
                   </svg>
                 </a>
-                )
-              })}
+              ))}
             </div>
           )}
         </div>
